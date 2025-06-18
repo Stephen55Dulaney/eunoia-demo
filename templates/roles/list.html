@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% from "components/breadcrumbs.html" import render_breadcrumbs %}
+
+{% block content %}
+<div class="container">
+    {{ render_breadcrumbs([
+        {'text': 'Admin', 'url': url_for('admin_dashboard')},
+        {'text': 'Roles', 'url': '#'}
+    ]) }}
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Role Management</h1>
+        {% if current_user.has_permission('manage_roles') %}
+        <a href="{{ url_for('admin_new_role') }}" class="btn btn-primary">
+            <i class="fas fa-plus-circle"></i> Add New Role
+        </a>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Permissions</th>
+                            <th>Users</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for role in roles %}
+                        <tr>
+                            <td>{{ role.name }}</td>
+                            <td>{{ role.description }}</td>
+                            <td>
+                                {% for permission in role.permissions %}
+                                <span class="badge badge-info">{{ permission.name }}</span>
+                                {% endfor %}
+                            </td>
+                            <td>
+                                <span class="badge badge-primary">{{ role.users.count() }}</span>
+                            </td>
+                            <td>
+                                {% if current_user.has_permission('manage_roles') %}
+                                <a href="{{ url_for('admin_edit_role', role_id=role.id) }}" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                {% if role.users.count() == 0 %}
+                                <form method="POST" action="{{ url_for('admin_delete_role', role_id=role.id) }}" class="d-inline">
+                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this role?')">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                                {% endif %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

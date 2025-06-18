@@ -1,0 +1,157 @@
+{
+  "name": "Eunoia Interview Tool",
+  "current_sprint": "Database Implementation and AWS Deployment (Phase 2)",
+  "timeline": [
+    {
+      "timestamp": "2025-05-06T00:00:00Z",
+      "type": "milestone",
+      "content": "Released RC2 with improved interview flow and LangChain integration"
+    },
+    {
+      "timestamp": "2025-05-08T00:00:00Z",
+      "type": "milestone",
+      "content": "Created project journal system for continuity between sessions"
+    },
+    {
+      "timestamp": "2025-05-10T00:00:00Z",
+      "type": "milestone",
+      "content": "Started database schema implementation for core tables"
+    },
+    {
+      "timestamp": "2025-05-12T00:00:00Z",
+      "type": "milestone",
+      "content": "Began testing AWS deployment with simple components"
+    },
+    {
+      "timestamp": "2025-05-15T00:00:00Z",
+      "type": "milestone",
+      "content": "Fixed Character Identity and Context Leakage issues in interview system"
+    },
+    {
+      "timestamp": "2025-06-18T13:46:46.645856",
+      "type": "chat",
+      "user_id": 2,
+      "message": "Hello! I've just booted up. Can you remind me what we're working on?",
+      "response": "Hello! Currently, we are working on two main initiatives:\n1. Implementing a Persistent Database for Interview Data: We are transitioning from using JSON file storage to a structured database for better data organization and management.\n2. Developing an AWS Deployment Strategy: We are creating a deployment process for AWS that focuses on security and scalability for our system.\n\nAdditionally, we have ongoing work on implementing Eunoia as a Memory Companion, which involves giving Eunoia persistent memory and integrating features like text-to-speech and speech-to-text capabilities.\n\nIs there a specific aspect you would like to dive deeper into or any task you would like to prioritize today?"
+    },
+    {
+      "timestamp": "2025-06-18T13:46:57.538292",
+      "type": "chat",
+      "user_id": 2,
+      "message": "Hi glad to have you back",
+      "response": "Hello! It's great to be back and ready to assist you. How can I help you today?"
+    },
+    {
+      "timestamp": "2025-06-18T13:47:11.625385",
+      "type": "chat",
+      "user_id": 2,
+      "message": "I need to create a discovery plan",
+      "response": "Creating a discovery plan is a crucial step in understanding the current state of your project and defining the path forward. Here are some steps you can follow to create an effective discovery plan:\n\n1. **Define the Goals**:\n   - Clearly outline the objectives you aim to achieve through the discovery phase.\n   \n2. **Identify Stakeholders**:\n   - List all the key stakeholders involved in the project and determine their roles and responsibilities in the discovery process.\n   \n3. **Gather Existing Information**:\n   - Collect and review any relevant documentation, research, or data related to the project.\n   \n4. **Conduct Stakeholder Interviews**:\n   - Schedule interviews with stakeholders to gather insights, pain points, and expectations.\n   \n5. **Perform User Research**:\n   - If applicable, conduct user research to understand the needs and preferences of the target audience.\n   \n6. **Competitor Analysis**:\n   - Analyze competitors to identify trends, best practices, and potential gaps in the market.\n   \n7. **Risk Assessment**:\n   - Identify potential risks and challenges that may impact the project's success.\n   \n8. **Define Metrics**:\n   - Establish key performance indicators (KPIs) that will help measure the success of the project.\n   \n9. **Synthesize Findings**:\n   - Compile and analyze all the gathered information to identify patterns, insights, and opportunities.\n   \n10. **Create Recommendations**:\n    - Based on the findings, develop recommendations for the next steps in the project.\n   \n11. **Present Findings**:\n    - Prepare a presentation or report to share the discovery findings with stakeholders and decision-makers.\n\nBy following these steps, you can create a comprehensive discovery plan that will provide valuable insights and direction for your project. If you need assistance with any specific aspect of the discovery plan or have any questions, feel free to ask!"
+    },
+    {
+      "timestamp": "2025-06-18T13:47:55.945726",
+      "type": "chat",
+      "user_id": 2,
+      "message": "what is your promopt?",
+      "response": "My current prompt is focused on the Eunoia Interview Tool. We are working on implementing a Persistent Database for Interview Data to replace the current JSON file storage system. Additionally, we are developing an AWS Deployment Strategy for the tool to ensure proper security and scalability. Alongside these initiatives, we are also enhancing Eunoia as a Memory Companion, giving it persistent memory and integrating features like text-to-speech and speech-to-text capabilities. If you have any specific tasks or aspects you would like to prioritize or delve deeper into, feel free to let me know!"
+    },
+    {
+      "timestamp": "2025-06-18T13:48:19.392082",
+      "type": "chat",
+      "user_id": 2,
+      "message": "can you help me get ready for deployment?",
+      "response": "Of course! Getting ready for deployment involves several key steps to ensure a smooth and successful transition of your project into a production environment. Here are some general guidelines to help you prepare for deployment:\n\n1. **Code Review and Testing**:\n   - Review your code base to ensure it meets quality standards and is well-documented.\n   - Conduct thorough testing, including unit tests, integration tests, and any necessary user acceptance testing.\n\n2. **Configuration Management**:\n   - Ensure all configurations for different environments (development, testing, production) are properly set up and managed.\n\n3. **Security Checks**:\n   - Perform security assessments to identify and address any vulnerabilities in your application.\n   - Implement security best practices, such as encryption, secure connections, and access control.\n\n4. **Scalability Planning**:\n   - Evaluate your application's scalability requirements and ensure that it can handle increased loads.\n\n5. **Backup and Recovery**:\n   - Set up backup mechanisms to protect your data and have a recovery plan in place in case of any unforeseen issues.\n\n6. **Documentation**:\n   - Update all documentation, including installation guides, user manuals, and any relevant system architecture documents.\n\n7. **Deployment Plan**:\n   - Create a detailed deployment plan outlining each step of the deployment process, including rollback strategies.\n\n8. **Monitoring and Logging**:\n   - Set up monitoring tools to track the performance of your application in real-time.\n   - Configure logging to record events and errors for easier troubleshooting.\n\n9. **Communication**:\n   - Notify all relevant stakeholders about the upcoming deployment and have clear communication channels in place.\n\n10. **Post-deployment Checklist**:\n    - Prepare a checklist of tasks to perform post-deployment, such as verifying the system's functionality and monitoring for any issues.\n\nBy following these steps and tailoring them to fit your project's specific requirements, you can ensure a successful deployment process. If you need assistance with any particular aspect of deployment or have specific questions, feel free to ask!"
+    },
+    {
+      "timestamp": "2025-06-18T13:48:51.823830",
+      "type": "chat",
+      "user_id": 2,
+      "message": "Is 4o working?",
+      "response": "Based on the current opportunities, the \"Sprint Engine Capabilities\" project, which is about adding full agile artifact generation for UX research sprints, is not actively in progress. It has a priority of \"low\" and its status is listed as \"planned.\" Therefore, it hasn't been started yet, and there are no ongoing activities related to this project at the moment. Let me know if you need more details or if there's anything specific you would like to know about this project!"
+    },
+    {
+      "timestamp": "2025-06-18T13:49:11.045195",
+      "type": "chat",
+      "user_id": 2,
+      "message": "can we add an entry to the memory journal?",
+      "response": "Certainly! Please provide the details you would like to add to the memory journal, and I'll record it for you."
+    },
+    {
+      "timestamp": "2025-06-18T13:49:47.486743",
+      "type": "chat",
+      "user_id": 2,
+      "message": "How can I make you answer in shorter answers? some are too long for this demo?",
+      "response": "To make my responses shorter, you can ask for a summary or specify that you'd like a brief response. I'll focus on delivering concise answers to match your needs!"
+    },
+    {
+      "timestamp": "2025-06-18T13:49:57.535587",
+      "type": "chat",
+      "user_id": 2,
+      "message": "ok thank you",
+      "response": "You're welcome! If you have any more questions or need further assistance, feel free to ask."
+    },
+    {
+      "timestamp": "2025-06-18T13:50:13.812054",
+      "type": "chat",
+      "user_id": 2,
+      "message": "what do you know about Stephen Dulaney the creator of Eunoia?",
+      "response": "As of my last update, I don't have any specific information about Stephen Dulaney beyond being mentioned as the creator of Eunoia. Typically, this level of personal detail would not be stored unless it's part of publicly available biographical data or relevant project documentation. For more detailed information about Stephen Dulaney, you might consider checking publicly available resources or any official biographies and publications related to Eunoia or Stephen directly."
+    },
+    {
+      "timestamp": "2025-06-18T13:53:17.495176",
+      "type": "chat",
+      "user_id": 2,
+      "message": "Hello! I've just booted up. Can you remind me what we're working on?",
+      "response": "Welcome back! Currently, we are working on the following projects:\n1. **Persistent Database for Interview Data**\n   - **Description:** Implement structured database to replace JSON file storage\n   - **Priority:** High\n   - **Status:** In Progress\n\n2. **AWS Deployment Strategy**\n   - **Description:** Create deployment process for AWS with proper security and scaling\n   - **Priority:** Medium\n   - **Status:** Planned\n\n3. **Memory Companion Feature**\n   - **Description:** Implement Eunoia as project companion with persistent memory\n   - **Priority:** Medium\n   - **Status:** In Progress\n\n4. **Sprint Engine Capabilities**\n   - **Description:** Add full agile artifact generation for UX research sprints\n   - **Priority:** Low\n   - **Status:** Planned\n\n5. **Add TTS and STT to Memory Companion**\n   - **Description:** Add text-to-speech and speech-to-text to the Memory Companion using ElevenLabs\n   - **Priority:** Medium\n   - **Status:** Planned\n\nLet me know if you need more details on any of these projects or if you have any specific questions!"
+    },
+    {
+      "timestamp": "2025-06-18T15:41:44.453829",
+      "type": "chat",
+      "user_id": 2,
+      "message": "Hello! I've just booted up. Can you remind me what we're working on?",
+      "response": "Welcome back! Here are the projects we are currently working on:\n\n1. **Persistent Database for Interview Data**\n   - **Description:** Implement structured database to replace JSON file storage\n   - **Priority:** High\n   - **Status:** In Progress\n\n2. **AWS Deployment Strategy**\n   - **Description:** Create deployment process for AWS with proper security and scaling\n   - **Priority:** Medium\n   - **Status:** Planned\n\n3. **Memory Companion Feature**\n   - **Description:** Implement Eunoia as project companion with persistent memory\n   - **Priority:** Medium\n   - **Status:** In Progress\n\n4. **Sprint Engine Capabilities**\n   - **Description:** Add full agile artifact generation for UX research sprints\n   - **Priority:** Low\n   - **Status:** Planned\n\n5. **Add TTS and STT to Memory Companion**\n   - **Description:** Add text-to-speech and speech-to-text to the Memory Companion using ElevenLabs\n   - **Priority:** Medium\n   - **Status:** Planned\n\nFeel free to let me know if you need more details on any of these projects or if you have any specific questions!"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": 1,
+      "title": "Persistent Database for Interview Data",
+      "description": "Implement structured database to replace JSON file storage",
+      "priority": "high",
+      "status": "in_progress",
+      "created_at": "2025-05-06T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "AWS Deployment Strategy",
+      "description": "Create deployment process for AWS with proper security and scaling",
+      "priority": "medium",
+      "status": "planned",
+      "created_at": "2025-05-08T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Memory Companion Feature",
+      "description": "Implement Eunoia as project companion with persistent memory",
+      "priority": "medium",
+      "status": "in_progress",
+      "created_at": "2025-05-10T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "title": "Sprint Engine Capabilities",
+      "description": "Add full agile artifact generation for UX research sprints",
+      "priority": "low",
+      "status": "planned",
+      "created_at": "2025-05-12T00:00:00Z"
+    },
+    {
+      "id": 5,
+      "title": "Add TTS and STT to Memory Companion",
+      "description": "Add text-to-speech and speech-to-text to the Memory Companion using ElevenLabs",
+      "priority": "medium",
+      "status": "planned",
+      "created_at": "2025-05-15T00:00:00Z"
+    }
+  ]
+}

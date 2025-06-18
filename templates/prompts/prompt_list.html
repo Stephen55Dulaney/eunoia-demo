@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Prompt Manager – Eunoia{% endblock %}
+{% block content %}
+<section class="eo-hero-section" style="background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('/static/cover_oregon_prototype/html/styles/img/Homepage4.png') center center/cover no-repeat; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.1); min-height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 2.5rem; padding: 3rem 1rem;">
+  <h1 class="eo-hero-title text-5xl font-extrabold mb-4" style="color: #fff;">Eunoia Research Council</h1>
+  <p class="text-lg font-semibold max-w-3xl mx-auto mb-2" style="color: #fff; background: rgba(0,0,0,0.5); border-radius: 0.5rem; padding: 0.5rem 1rem;">Eunoia is not merely a research assistant. She is the orchestrator of a deeply collaborative, agentic AI framework — a digital research council composed of specialized AI agents that think, remember, evaluate, and collaborate. This council powers next-generation UX discovery, opportunity mapping, and generative product development with explainability, memory, and purpose at its core.</p>
+</section>
+<div class="eo-container">
+  <h2 class="eo-hero-title text-2xl font-bold mb-6">All Prompts</h2>
+  <table class="eo-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Description</th>
+        <th>Version</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for agent in agents %}
+      <tr>
+        <td><a href="{{ url_for('prompts.view_prompt', agent=agent.name) }}" class="eo-link">{{ agent.name|capitalize }}</a></td>
+        <td>{{ agent.role }}</td>
+        <td>{{ agent.description[:60] }}...</td>
+        <td>{{ agent.version }}</td>
+        <td>
+          <a href="{{ url_for('prompts.view_prompt', agent=agent.name) }}" class="eo-action eo-view" title="View">View</a>
+          <a href="{{ url_for('prompts.edit_prompt', agent=agent.name) }}" class="eo-action eo-edit" title="Edit">Edit</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %} 

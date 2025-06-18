@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Edit Prompt – Eunoia{% endblock %}
+{% block content %}
+<div class="eo-container">
+  <!-- Top Bar -->
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between bg-white rounded-xl shadow p-6 mb-8">
+    <div class="flex items-center gap-4 mb-4 md:mb-0">
+      <h1 class="eo-hero-title text-3xl font-extrabold">Edit {{ agent|capitalize }} <span class="eo-badge">v{{ config.version }}</span></h1>
+    </div>
+    <div class="flex gap-2 flex-wrap">
+      <a href="{{ url_for('prompts.view_prompt', agent=agent) }}" class="eo-btn eo-btn-secondary">Back to Details</a>
+      <a href="{{ url_for('prompts.prompt_list') }}" class="eo-btn eo-btn-secondary">Cancel</a>
+    </div>
+  </div>
+  <!-- Main Content Area -->
+  <div class="flex flex-col md:flex-row gap-8">
+    <!-- Left: Edit Form -->
+    <div class="flex-1 min-w-0">
+      <form method="post" class="eo-card bg-white rounded-xl shadow p-6 mb-6 eo-form">
+        <h2 class="text-xl font-bold mb-4">Edit Prompt Details</h2>
+        <div class="eo-form-group mb-4">
+          <label for="description">Description</label>
+          <textarea name="description" id="description" class="eo-input" required>{{ config.description }}</textarea>
+        </div>
+        <div class="eo-form-group mb-4">
+          <label for="role">Role</label>
+          <input type="text" name="role" id="role" class="eo-input" value="{{ config.role }}" required>
+        </div>
+        <div class="eo-form-group mb-4">
+          <label for="tone">Tone</label>
+          <input type="text" name="tone" id="tone" class="eo-input" value="{{ config.tone }}">
+        </div>
+        <div class="eo-form-group mb-4">
+          <label for="dynamic_prompt_prefix">Dynamic Prompt Prefix</label>
+          <textarea name="dynamic_prompt_prefix" id="dynamic_prompt_prefix" class="eo-input" rows="3">{{ config.dynamic_prompt_prefix }}</textarea>
+        </div>
+        <div class="eo-form-group mb-4">
+          <label for="analysis_prompt">Analysis Prompt</label>
+          <textarea name="analysis_prompt" id="analysis_prompt" class="eo-input" rows="3">{{ config.analysis_prompt }}</textarea>
+        </div>
+        <div class="eo-form-group mb-4">
+          <label for="contextual_instructions">Contextual Instructions</label>
+          <textarea name="contextual_instructions" id="contextual_instructions" class="eo-input" rows="3">{{ config.contextual_instructions }}</textarea>
+        </div>
+        <div class="eo-form-group mb-4">
+          <label for="core_objectives">Core Objectives (one per line)</label>
+          <textarea name="core_objectives" id="core_objectives" class="eo-input" rows="4">{{ core_objectives }}</textarea>
+        </div>
+        <div class="eo-form-group mb-4">
+          <label for="evaluation_note">Add Evaluation Note</label>
+          <input type="text" name="evaluation_note" id="evaluation_note" class="eo-input">
+        </div>
+        <div class="eo-actions mt-6">
+          <button type="submit" class="eo-btn eo-btn-primary">Save Changes</button>
+          <a href="{{ url_for('prompts.view_prompt', agent=agent) }}" class="eo-btn eo-btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+    <!-- Right: Sidebar -->
+    <aside class="w-full md:w-80 flex-shrink-0">
+      <div class="eo-card bg-gray-50 rounded-xl shadow p-6 mb-6">
+        <h2 class="text-lg font-semibold mb-2">Versioning & Forking</h2>
+        <p><strong>Current Version:</strong> {{ config.version }}</p>
+        <p class="mb-2"><strong>Changelog:</strong></p>
+        <ul class="list-disc ml-6 mb-2">
+          {% for note in config.changelog or [] %}
+          <li>{{ note }}</li>
+          {% endfor %}
+          {% if not config.changelog %}<li>No changelog available.</li>{% endif %}
+        </ul>
+      </div>
+      <div class="eo-card bg-gray-50 rounded-xl shadow p-6 mb-6">
+        <h2 class="text-lg font-semibold mb-2">Performance & Feedback</h2>
+        <p><strong>Average Score:</strong> {{ performance.average_score or 'N/A' }}</p>
+        <p><strong>Total Sessions:</strong> {{ performance.total_sessions or 'N/A' }}</p>
+        <div class="mt-2 mb-2">
+          <strong>Evaluation Notes:</strong>
+          <ul class="list-disc ml-6">
+            {% for note in config.evaluation_notes %}
+            <li>{{ note }}</li>
+            {% endfor %}
+            {% if not config.evaluation_notes %}<li>No evaluation notes yet.</li>{% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="eo-card bg-gray-50 rounded-xl shadow p-6 mb-6">
+        <h2 class="text-lg font-semibold mb-2">Chaining & Handoff</h2>
+        <p><strong>Compatible Agents:</strong> {{ config.compatible_agents or '—' }}</p>
+        <p><strong>Last/Next Agent in Chain:</strong> {{ config.last_agent or '—' }} / {{ config.next_agent or '—' }}</p>
+        <p><strong>Handoff Data Format:</strong> {{ config.handoff_format or '—' }}</p>
+      </div>
+      <div class="eo-card bg-gray-50 rounded-xl shadow p-6">
+        <h2 class="text-lg font-semibold mb-2">Lifecycle & Audit Trail</h2>
+        <p><strong>Status:</strong> {{ config.status or 'Active' }}</p>
+        <p><strong>Usage Count:</strong> {{ config.usage_count or 'N/A' }}</p>
+        <p><strong>Last Used:</strong> {{ config.last_used or 'N/A' }}</p>
+      </div>
+    </aside>
+  </div>
+</div>
+{% endblock %} 

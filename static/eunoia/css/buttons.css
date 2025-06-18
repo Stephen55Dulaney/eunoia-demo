@@ -1,0 +1,285 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  buttons.css
+ * ===== VERSION: v0.5
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+/* Table of Contents
+  1. Main Button Class + Hover States
+     i.   Primary Action Buttons
+     ii.  Help/Support Buttons
+     iii. Secondary Action Buttons
+     iv.  Inactive Buttons
+     v.   Utility Buttons
+  2. Custom Checkbox, Radio
+      i.  Checkbox
+      ii. Radio
+*/
+
+ 
+/* =============================================================================
+   Main Button Class
+   ========================================================================== */
+   
+button,
+a.button,
+input.button {  
+  color: #FFF;
+  font-size: 12px;
+  font-family: 'Avenir_Black';
+  margin: 5px;
+  padding: 7px 15px 7px 15px;
+  text-align: center; 
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: none;
+  position: relative;
+  float: left;
+  min-width: 65px;
+}
+
+
+  /* Primary Action Buttons (Color ~ Green) E.g. Get Started, Compare, Start an Application etc.*/
+  button.green,
+  a.button.green,
+  input.button.green {
+    text-shadow: 1px 1px 1px #000;
+    border: 1px solid #559b1e;
+    background: #7BC93D;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#7BC93D), to(#559b1e));
+    background: -webkit-linear-gradient(#7BC93D, #559b1e);
+    background: -moz-linear-gradient(#7BC93D, #559b1e);
+    background: -ms-linear-gradient(#7BC93D, #559b1e);
+    background: -o-linear-gradient(#7BC93D, #559b1e);
+    background: linear-gradient(#7BC93D, #559b1e);
+    -pie-background: linear-gradient(#7BC93D, #559b1e);
+    behavior: url(scripts/PIE.htc);
+    color: #FFF;
+  }
+
+    button.green:hover,
+    a.button.green:hover,
+    input.button.green:hover {      
+      background: #559b1e;
+      background: -webkit-gradient(linear, 0 0, 0 bottom, from(#559b1e), to(#7BC93D));
+      background: -webkit-linear-gradient(#559b1e, #7BC93D);
+      background: -moz-linear-gradient(#559b1e, #7BC93D);
+      background: -ms-linear-gradient(#559b1e, #7BC93D);
+      background: -o-linear-gradient(#559b1e, #7BC93D);
+      background: linear-gradient(#559b1e, #7BC93D);
+      -pie-background: linear-gradient(#559b1e, #7BC93D);
+      behavior: url(scripts/PIE.htc);
+      color: #FFF;
+      text-decoration: none;
+    }
+
+    /* Get Started Button on Home Page*/
+    button.green.getStarted,
+    a.button.green.getStarted,
+    input.button.green.getStarted {
+      font-size: 16px;
+    }
+
+
+  /* Help/Support Buttons (Color ~ Blue) E.g. Find an Agent, Browse etc. */
+  button.blue,
+  a.button.blue,
+  input.button.blue {
+    border: 1px solid #001247;
+    background: #1c9ccc;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1c9ccc), to(#093750));
+    background: -webkit-linear-gradient(#1c9ccc, #093750);
+    background: -moz-linear-gradient(#1c9ccc, #093750);
+    background: -ms-linear-gradient(#1c9ccc, #093750);
+    background: -o-linear-gradient(#1c9ccc, #093750);
+    background: linear-gradient(#1c9ccc, #093750);
+    -pie-background: linear-gradient(#1c9ccc, #093750);
+    behavior: url(scripts/PIE.htc);
+    color: #FFF;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+    button.blue:hover,
+    a.button.blue:hover,
+    input.button.blue:hover {
+      background: #093750;
+      background: -webkit-gradient(linear, 0 0, 0 bottom, from(#093750), to(#1c9ccc));
+      background: -webkit-linear-gradient(#093750, #1c9ccc);
+      background: -moz-linear-gradient(#093750, #1c9ccc);
+      background: -ms-linear-gradient(#093750, #1c9ccc);
+      background: -o-linear-gradient(#093750, #1c9ccc);
+      background: linear-gradient(#093750, #1c9ccc);
+      -pie-background: linear-gradient(#093750, #1c9ccc);
+      behavior: url(scripts/PIE.htc);
+      color: #FFF;
+      text-decoration: none;   
+    }
+
+  /* Secondary Action Buttons E.g. Back, Cancel, Next, View Plans etc */
+  button.secondary,
+  a.button.secondary,
+  input.button.secondary { 
+    border: #dedddd 1px solid;  
+    color: #666666; 
+    background: #f9f9f9;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f9f9f9), to(#edebe9));
+    background: -webkit-linear-gradient(#f9f9f9, #edebe9);
+    background: -moz-linear-gradient(#f9f9f9, #edebe9);
+    background: -ms-linear-gradient(#f9f9f9, #edebe9);
+    background: -o-linear-gradient(#f9f9f9, #edebe9);
+    background: linear-gradient(#f9f9f9, #edebe9);
+    -pie-background: linear-gradient(#f9f9f9, #edebe9);
+    behavior: url(scripts/PIE.htc);
+  }
+
+    button.secondary:hover,
+    a.button.secondary:hover,
+    input.button.secondary:hover { 
+      background: #f9f9f9;
+      background: -webkit-gradient(linear, 0 0, 0 bottom, from(#edebe9), to(#f9f9f9));
+      background: -webkit-linear-gradient(#edebe9, #f9f9f9);
+      background: -moz-linear-gradient(#edebe9, #f9f9f9);
+      background: -ms-linear-gradient(#edebe9, #f9f9f9);
+      background: -o-linear-gradient(#edebe9, #f9f9f9);
+      background: linear-gradient(#edebe9, #f9f9f9);
+      -pie-background: linear-gradient(#edebe9, #f9f9f9);
+      behavior: url(scripts/PIE.htc);
+      text-decoration: none;
+    }
+
+
+  /* Inactive Buttons E.g. Login btn on home page*/
+  button.inactive,
+  a.button.inactive,
+  input.button.inactive {
+    border: 1px solid #cfcece;
+    background: #ededed;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ededed), to(#dbdbdb));
+    background: -webkit-linear-gradient(#ededed, #dbdbdb);
+    background: -moz-linear-gradient(#ededed, #dbdbdb);
+    background: -ms-linear-gradient(#ededed, #dbdbdb);
+    background: -o-linear-gradient(#ededed, #dbdbdb);
+    background: linear-gradient(#ededed, #dbdbdb);
+    -pie-background: linear-gradient(#ededed, #dbdbdb);
+    behavior: url(scripts/PIE.htc);  
+    color: #9d9d9d;
+    text-shadow: 1px 1px 1px #FFF;
+  }
+
+  /* Utility Buttons E.g. SortBy, Clear filters etc. */
+  button.utilityButton,
+  a.button.utilityButton,
+  input.button.utilityButton {
+    border: 1px solid #cfcece;
+    background: #f9f9f9;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f9f9f9), to(#e3e1e0));
+    background: -webkit-linear-gradient(#f9f9f9, #e3e1e0);
+    background: -moz-linear-gradient(#f9f9f9, #e3e1e0);
+    background: -ms-linear-gradient(#f9f9f9, #e3e1e0);
+    background: -o-linear-gradient(#f9f9f9, #e3e1e0);
+    background: linear-gradient(#f9f9f9, #e3e1e0);
+    -pie-background: linear-gradient(#f9f9f9, #e3e1e0);
+    behavior: url(scripts/PIE.htc);
+    color: #00324d;
+  }
+
+    button.utilityButton:hover,
+    a.button.utilityButton:hover,
+    input.button.utilityButton:hover {
+      background: #f9f9f9;
+      background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e3e1e0), to(#f9f9f9));
+      background: -webkit-linear-gradient(#e3e1e0, #f9f9f9);
+      background: -moz-linear-gradient(#e3e1e0, #f9f9f9);
+      background: -ms-linear-gradient(#e3e1e0, #f9f9f9);
+      background: -o-linear-gradient(#e3e1e0, #f9f9f9);
+      background: linear-gradient(#e3e1e0, #f9f9f9);
+      -pie-background: linear-gradient(#e3e1e0, #f9f9f9);
+      behavior: url(scripts/PIE.htc);
+      color: #00324d;
+      text-decoration: none;
+    }
+
+/* =============================================================================
+   Custom Checkbox Class
+   ========================================================================== */
+
+  /* Custom Checkbox, Radio - Start*/
+
+/*  .checkbox, .radio {
+    width: 26px;
+    height: 26px;
+    padding: 0 5px 0 0;
+    background: url(img/checkbox.png) no-repeat;
+    display: block;
+    clear: left;
+    float: left;
+    margin-top: -6px;
+  }
+
+  .radio {
+    background: url(img/radio.png) no-repeat;
+  }*/
+ 
+ /* Custom Checkbox, Radio - End*/
+
+/* =============================================================================
+   Custom Checkbox Radio Buttons CSS Only with no JS
+   ========================================================================== */
+
+  .compareRadioBtns {
+    float: right;
+    font-family: 'Avenir_Medium';
+    font-size: 14px;
+    margin-top: 4px;
+    padding-right: 20px;
+  }
+
+  /*#pageContainer input[type="radio"].radioBtnStyle {    
+    background: url(img/radio.png) no-repeat;
+    border: 0;
+    color: #063c5b;
+    height: 26px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 26px;
+    background-position: 0px -4px;
+    -webkit-appearance: none;
+    vertical-align: middle;
+  }*/
+
+    /*#pageContainer input[type="radio"].radioBtnStyle:checked {
+      background-position: 0px -68px;
+    }*/
+
+  #pageContainer input[type="checkbox"].checkboxBtnStyle {
+    background: url(img/checkbox.png) no-repeat;
+    border: 0;
+    color: #063c5b;
+    height: 26px;    
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 26px;
+    background-position: 0px -4px;
+    -webkit-appearance: none;
+    vertical-align: middle;
+  }
+
+    #pageContainer input[type="checkbox"].checkboxBtnStyle:checked {
+      background-position: 0px -64px;
+    } 
+
+
+
+
+  

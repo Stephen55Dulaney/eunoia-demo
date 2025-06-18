@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}View Prompt – Eunoia{% endblock %}
+{% block content %}
+<div class="eo-container">
+  <!-- Top Bar -->
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between bg-white rounded-xl shadow p-6 mb-8">
+    <div class="flex items-center gap-4 mb-4 md:mb-0">
+      <h1 class="eo-hero-title text-3xl font-extrabold">{{ agent|capitalize }} <span class="eo-badge">v{{ config.version }}</span></h1>
+    </div>
+    <div class="flex gap-2 flex-wrap">
+      <a href="{{ url_for('prompts.edit_prompt', agent=agent) }}" class="eo-btn eo-btn-primary">Edit</a>
+      <a href="{{ url_for('prompts.prompt_list') }}" class="eo-btn eo-btn-secondary">Back to List</a>
+      <a href="#" class="eo-btn eo-btn-secondary">Fork</a>
+      <a href="#" class="eo-btn eo-btn-secondary">Self-Improve</a>
+    </div>
+  </div>
+  <!-- Main Content Area -->
+  <div class="flex flex-col md:flex-row gap-8">
+    <!-- Left: Prompt Details -->
+    <div class="flex-1 min-w-0">
+      <div class="eo-card bg-white rounded-xl shadow p-6 mb-6">
+        <h2 class="text-xl font-bold mb-4">Prompt Metadata</h2>
+        <ul class="text-gray-700 mb-4">
+          <li><strong>Name:</strong> {{ agent }}</li>
+          <li><strong>Role:</strong> {{ config.role }}</li>
+          <li><strong>Author:</strong> {{ config.author or 'Unknown' }}</li>
+          <li><strong>Status:</strong> {{ config.status or 'Active' }}</li>
+          <li><strong>Created:</strong> {{ config.created_at or 'N/A' }}</li>
+          <li><strong>Last Modified:</strong> {{ config.updated_at or 'N/A' }}</li>
+          <li><strong>Parent Prompt:</strong> {{ config.parent or '—' }}</li>
+        </ul>
+        <h2 class="text-xl font-bold mb-2">Prompt Content</h2>
+        <p class="mb-2"><strong>Description:</strong> {{ config.description }}</p>
+        <p class="mb-2"><strong>Tone:</strong> {{ config.tone }}</p>
+        <p class="mb-2"><strong>Dynamic Prompt Prefix:</strong> {{ config.dynamic_prompt_prefix or '—' }}</p>
+        <p class="mb-2"><strong>Analysis Prompt:</strong> {{ config.analysis_prompt or '—' }}</p>
+        <p class="mb-2"><strong>Contextual Instructions:</strong> {{ config.contextual_instructions or '—' }}</p>
+        <div class="mt-2 mb-2">
+          <strong>Core Objectives:</strong>
+          <ul class="list-disc ml-6">
+            {% for obj in config.core_objectives %}
+            <li>{{ obj }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Sidebar -->
+    <aside class="w-full md:w-80 flex-shrink-0">
+      <div class="eo-card bg-gray-50 rounded-xl shadow p-6 mb-6">
+        <h2 class="text-lg font-semibold mb-2">Versioning & Forking</h2>
+        <p><strong>Current Version:</strong> {{ config.version }}</p>
+        <p class="mb-2"><strong>Changelog:</strong></p>
+        <ul class="list-disc ml-6 mb-2">
+          {% for note in config.changelog or [] %}
+          <li>{{ note }}</li>
+          {% endfor %}
+          {% if not config.changelog %}<li>No changelog available.</li>{% endif %}
+        </ul>
+      </div>
+      <div class="eo-card bg-gray-50 rounded-xl shadow p-6 mb-6">
+        <h2 class="text-lg font-semibold mb-2">Performance & Feedback</h2>
+        <p><strong>Average Score:</strong> {{ performance.average_score or 'N/A' }}</p>
+        <p><strong>Total Sessions:</strong> {{ performance.total_sessions or 'N/A' }}</p>
+        <div class="mt-2 mb-2">
+          <strong>Evaluation Notes:</strong>
+          <ul class="list-disc ml-6">
+            {% for note in config.evaluation_notes %}
+            <li>{{ note }}</li>
+            {% endfor %}
+            {% if not config.evaluation_notes %}<li>No evaluation notes yet.</li>{% endif %}
+          </ul>
+        </div>
+        <div class="mt-2 mb-2">
+          <strong>User Feedback:</strong>
+          <ul class="list-disc ml-6">
+            {% for fb in feedback %}
+            <li>{{ fb.timestamp }}: {{ fb.score }}/5 – {{ fb.notes }}</li>
+            {% endfor %}
+            {% if not feedback %}<li>No feedback yet.</li>{% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="eo-card bg-gray-50 rounded-xl shadow p-6 mb-6">
+        <h2 class="text-lg font-semibold mb-2">Chaining & Handoff</h2>
+        <p><strong>Compatible Agents:</strong> {{ config.compatible_agents or '—' }}</p>
+        <p><strong>Last/Next Agent in Chain:</strong> {{ config.last_agent or '—' }} / {{ config.next_agent or '—' }}</p>
+        <p><strong>Handoff Data Format:</strong> {{ config.handoff_format or '—' }}</p>
+      </div>
+      <div class="eo-card bg-gray-50 rounded-xl shadow p-6">
+        <h2 class="text-lg font-semibold mb-2">Lifecycle & Audit Trail</h2>
+        <p><strong>Status:</strong> {{ config.status or 'Active' }}</p>
+        <p><strong>Usage Count:</strong> {{ config.usage_count or 'N/A' }}</p>
+        <p><strong>Last Used:</strong> {{ config.last_used or 'N/A' }}</p>
+        <div class="mt-2">
+          <strong>Session Logs:</strong>
+          <ul class="list-disc ml-6">
+            {% for log in session_logs or [] %}
+            <li>{{ log }}</li>
+            {% endfor %}
+            {% if not session_logs %}<li>No session logs yet.</li>{% endif %}
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<section class="eo-hero-section" style="background: url('/static/cover_oregon_prototype/html/styles/img/CO_Mt. Hood-edited copy.jpg') center center/cover no-repeat; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.1); min-height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 2.5rem; padding: 3rem 1rem;">
+  <h1 class="eo-hero-title text-5xl font-extrabold mb-4" style="color: #fff;">Eunoia Research Council</h1>
+  <p class="text-lg font-semibold max-w-3xl mx-auto mb-2" style="color: #fff; background: rgba(0,0,0,0.7); border-radius: 0.5rem; padding: 0.5rem 1rem;">Eunoia is not merely a research assistant. She is the orchestrator of a deeply collaborative, agentic AI framework — a digital research council composed of specialized AI agents that think, remember, evaluate, and collaborate. This council powers next-generation UX discovery, opportunity mapping, and generative product development with explainability, memory, and purpose at its core.</p>
+</section>
+{% endblock %} 

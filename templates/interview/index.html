@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">AI Interview Assistant</h1>
+            <p class="mt-2 text-gray-600">Start a conversation with Eunoia to begin your research project.</p>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <!-- Messages Container -->
+            <div id="messages" class="h-[600px] overflow-y-auto p-6 space-y-4">
+                <!-- Messages will be inserted here -->
+            </div>
+
+            <!-- Input Form -->
+            <div class="border-t border-gray-200 p-4">
+                <form id="message-form" class="flex space-x-4">
+                    <input type="text" 
+                           id="message-input" 
+                           class="flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                           placeholder="Type your message..."
+                           required>
+                    <button type="submit" 
+                            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const messagesContainer = document.getElementById('messages');
+    const messageForm = document.getElementById('message-form');
+    const messageInput = document.getElementById('message-input');
+    const sessionId = {{ session.id }};
+
+    // Function to add a message to the chat
+    function addMessage(content, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+        
+        const messageBubble = document.createElement('div');
+        messageBubble.className = `max-w-[70%] rounded-lg px-4 py-2 ${
+            sender === 'user' 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-100 text-gray-900'
+        }`;
+        messageBubble.textContent = content;
+        
+        messageDiv.appendChild(messageBubble);
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    // Handle form submission
+    messageForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const message = messageInput.value.trim();
+        if (!message) return;
+        
+        // Add user message to chat
+        addMessage(message, 'user');
+        messageInput.value = '';
+        
+        try {
+            // Send message to server
+            const response = await fetch(`/interview/${sessionId}/message`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message }),
+            });
+            
+            const data = await response.json();
+            
+            // Add Eunoia's response
+            addMessage(data.eunoia_response, 'eunoia');
+            
+            // If Synthia was involved, add her response
+            if (data.synthia_response) {
+                addMessage(data.synthia_response, 'synthia');
+            }
+            
+        } catch (error) {
+            console.error('Error:', error);
+            addMessage('Sorry, there was an error processing your message.', 'system');
+        }
+    });
+
+    // Add initial greeting
+    addMessage('Hello! I\'m Eunoia, your research project manager. How can I help you today?', 'eunoia');
+});
+</script>
+{% endblock %} 
