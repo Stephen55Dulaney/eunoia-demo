@@ -71,3 +71,6 @@ WTForms==3.2.1
 yarl==1.20.1
 zstandard==0.23.0
 flask_migrate
+Flask
+gunicorn
+flask_migrate
