@@ -73,4 +73,4 @@ zstandard==0.23.0
 flask_migrate
 Flask
 gunicorn
-flask_migrate
+Flask-Migrate
