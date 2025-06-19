@@ -2,164 +2,521 @@
 
 {% block title %}Eunoia Memory Companion: Persistent Memory for Modular Research Assistants{% endblock %}
 
+{% block extra_css %}
+<style>
+  /* Enhanced case study styles */
+  .hero-section {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('/static/cover_oregon_prototype/html/styles/img/CO_Cannon Beach-edited copy.png') center center/cover no-repeat;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    margin-bottom: 3rem;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    border-radius: 1rem;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .hero-title {
+    font-size: 3.75rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    color: #fff;
+    opacity: 0.95;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.3);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(4px);
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-family: 'Avenir_Black', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 7px;
+    transition: all 0.2s;
+    margin: 0.5rem;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+  
+  .cta-button.primary {
+    background: #7BC93D;
+    background: linear-gradient(#7BC93D, #559b1e);
+    border: 1px solid #559b1e;
+    color: #FFF !important;
+  }
+  
+  .cta-button.primary:hover {
+    background: #559b1e;
+    background: linear-gradient(#559b1e, #7BC93D);
+    color: #000 !important;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  
+  .cta-button.secondary {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    color: white !important;
+    backdrop-filter: blur(4px);
+  }
+  
+  .cta-button.secondary:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .eo-demo-btn {
+    transition: all 0.2s ease;
+  }
+  .eo-demo-btn:hover {
+    background: #fff !important;
+    color: #000 !important;
+    border-color: #7BC93D !important;
+    text-shadow: none !important;
+  }
+  .eo-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  .eo-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background: #7BC93D;
+    border-radius: 50%;
+  }
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 0.45rem;
+    top: 1.5rem;
+    bottom: -2rem;
+    width: 2px;
+    background: linear-gradient(#7BC93D, transparent);
+  }
+  .timeline-item:last-child::after {
+    display: none;
+  }
+</style>
+{% endblock %}
+
 {% block content %}
-<section class="eo-hero-section" style="background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('/static/cover_oregon_prototype/html/styles/img/craterlake2.png') center center/cover no-repeat; color: #fff; min-height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 2.5rem; padding: 3rem 1rem;">
-  <h1 class="eo-hero-title text-5xl font-extrabold mb-4">Eunoia Memory Companion</h1>
-  <div style="background: rgba(0,0,0,0.7); color: #fff; border-radius: 0.5rem; padding: 0.75rem 1.5rem; max-width: 700px; margin: 0 auto 0.5rem auto;">
-    <p class="text-xl font-medium mb-2" style="color: #fff;">Persistent Memory for Modular Research Assistants</p>
-    <p class="text-lg opacity-90 mb-0" style="color: #fff;">Enabling persistent, context-aware AI research with modular memory</p>
-  </div>
-  <div class="mt-6 flex justify-center">
-    <a href="/memory-companion-demo"
-       class="inline-block px-6 py-3 rounded-lg font-bold text-lg shadow transition eo-demo-btn"
-       style="background-color: #6db33f; font-weight: bold; letter-spacing: 1px; color: #fff;"
-    >
-      View Memory Companion Demo
-    </a>
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Eunoia Memory Companion</h1>
+    <p class="hero-subtitle">Persistent Memory for Modular Research Assistants</p>
+    <p class="hero-description">Enabling truly continuous, context-rich research through AI memory persistence</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/memory-companion-demo" class="cta-button primary">
+        Try the Memory Companion Demo
+      </a>
+      <a href="#context" class="cta-button secondary">
+        Learn More
+      </a>
+    </div>
   </div>
 </section>
-<style>
-.eo-demo-btn {
-  color: #fff !important;
-  background-color: #6db33f;
-  transition: background 0.2s, color 0.2s;
-}
-.eo-demo-btn:hover, .eo-demo-btn:focus {
-  background-color: #5ca32e !important;
-  color: #111 !important;
-}
-</style>
+
 <article class="eo-container">
-
-
   <!-- Context & Business Problem -->
   <section id="context" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Context & Business Problem</h2>
-    <p><strong>Background:</strong> AI research assistants are increasingly used for interviews, synthesis, and project management. However, most LLM-based tools lose context between sessions, leading to fragmented research and repeated onboarding.</p>
-    <p><strong>Business Problem:</strong> Teams need a way to persist project memory, maintain continuity, and enable context-aware responses across research sessions and agent handoffs.</p>
-    <p><strong>Success Metrics:</strong> Number of sessions with full memory recall, reduction in repeated onboarding, user satisfaction with continuity.</p>
-    <p><strong>Role & Team:</strong> Lead AI Research Engineer; 3-person cross-functional team.</p>
-    <p><strong>Timeline:</strong> Build (4w), Integration (6w).</p>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6">Context & Challenge</h2>
+      
+      <div class="bg-gray-50 rounded-xl p-6 mb-6">
+        <p class="text-xl italic text-gray-700 mb-4">
+          "Meet Riley, a researcher who starts each morning re-explaining project context to their AI assistant—losing precious hours re-establishing background that should be remembered."
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">The Challenge</h3>
+          <p class="mb-4">AI research assistants are increasingly vital for interviews, synthesis, and project management. However, most LLM-based tools lose context between sessions, leading to:</p>
+          <ul class="list-disc ml-6 space-y-2">
+            <li>Fragmented research continuity</li>
+            <li>Repeated onboarding overhead</li>
+            <li>Lost insights and connections</li>
+            <li>Decreased trust in AI assistance</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Business Impact</h3>
+          <p class="mb-4">Teams urgently need:</p>
+          <ul class="list-disc ml-6 space-y-2">
+            <li>Persistent project memory across sessions</li>
+            <li>Seamless context handoff between agents</li>
+            <li>Auditability of research progression</li>
+            <li>Trust in AI's ability to build on past context</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h4 class="font-semibold mb-2">Role</h4>
+          <p>Lead AI Research Engineer</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h4 class="font-semibold mb-2">Team</h4>
+          <p>3-person cross-functional team</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h4 class="font-semibold mb-2">Timeline</h4>
+          <p>Build (4w), Integration (6w)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ambition Statement -->
+  <section class="full-width bg-gradient-to-r from-green-50 to-blue-50 py-16 mb-8 eo-section">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-semibold mb-6">Our Ambition</h2>
+      <blockquote class="text-2xl italic text-gray-700 mb-8">
+        "Enable research agents to remember, reason, and build on prior sessions for truly continuous, context-rich research."
+      </blockquote>
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <h3 class="font-semibold mb-2">Remember</h3>
+          <p>Persistent memory across sessions</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <h3 class="font-semibold mb-2">Reason</h3>
+          <p>Context-aware responses</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+          <h3 class="font-semibold mb-2">Build</h3>
+          <p>Continuous insight development</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Discovery Phase -->
   <section id="discovery" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Discovery Phase</h2>
-    <section id="week0" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Week 0: Kickoff & Planning</h3>
-      <p>Goals: Identify pain points in session continuity, define requirements for persistent memory, and map integration points with orchestration modules.</p>
-    </section>
-    <section id="stakeholder-interviews" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Stakeholder Interviews & Ambition Statement</h3>
-      <p>Interviewed researchers and product managers. Main themes: need for memory recall, auditability, and seamless agent handoff.</p>
-      <blockquote class="ambition-statement bg-gray-100 p-4 rounded mt-2">
-        "Ambition Statement: Enable research agents to remember, reason, and build on prior sessions for truly continuous, context-rich research."
-      </blockquote>
-    </section>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6">Discovery Phase</h2>
+      
+      <div class="timeline space-y-8">
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold mb-2">Week 0: Kickoff & Planning</h3>
+          <p>Mapped research workflows and pinpointed critical context loss points. Defined memory requirements and integration touchpoints with existing systems.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold mb-2">Stakeholder Interviews</h3>
+          <p>Deep-dive interviews with researchers and product managers revealed urgent needs:</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Automated memory recall</li>
+            <li>Session auditability</li>
+            <li>Seamless agent handoff</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold mb-2">Field Research</h3>
+          <p>Observed teams using LLM tools in real scenarios. Key pain points:</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Context loss between sessions</li>
+            <li>Repeated onboarding overhead</li>
+            <li>Fragmented research outputs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Personas & Recruitment -->
+  <!-- Personas & Journey -->
   <section id="personas" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Defining Target Personas & Recruitment</h2>
-    <p>Segments: Research Ops, Lead Researchers, AI Engineers. Key attributes: value continuity, need for audit trails, frequent multi-session projects.</p>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6">Personas & Journey Mapping</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <div class="w-20 h-20 bg-green-100 rounded-full mb-4 mx-auto flex items-center justify-center">
+            <span class="text-3xl">👩‍🔬</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Riley, Lead Researcher</h3>
+          <p class="italic mb-4">"I wish the AI remembered our last session—repeating context wastes hours."</p>
+          <ul class="list-disc ml-6">
+            <li>Needs continuous research flow</li>
+            <li>Values time efficiency</li>
+            <li>Frustrated by context loss</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <div class="w-20 h-20 bg-blue-100 rounded-full mb-4 mx-auto flex items-center justify-center">
+            <span class="text-3xl">👨‍💻</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Casey, AI Engineer</h3>
+          <p class="italic mb-4">"We need clear API boundaries for memory handoff."</p>
+          <ul class="list-disc ml-6">
+            <li>Focuses on integration</li>
+            <li>Needs stable API contracts</li>
+            <li>Values clean architecture</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <div class="w-20 h-20 bg-purple-100 rounded-full mb-4 mx-auto flex items-center justify-center">
+            <span class="text-3xl">👩‍💼</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-center">Taylor, Research Ops</h3>
+          <p class="italic mb-4">"Session logs give me confidence in reproducibility."</p>
+          <ul class="list-disc ml-6">
+            <li>Requires audit trails</li>
+            <li>Monitors compliance</li>
+            <li>Ensures reproducibility</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl">
+        <h3 class="text-xl font-semibold mb-4">Journey Map Highlights</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold mb-2">Current State</h4>
+            <div class="space-y-2">
+              <div class="flex items-center">
+                <span class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-2">1</span>
+                <p>Session Start</p>
+              </div>
+              <div class="flex items-center">
+                <span class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-2">2</span>
+                <p>Context Lost</p>
+              </div>
+              <div class="flex items-center">
+                <span class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-2">3</span>
+                <p>Repeated Onboarding</p>
+              </div>
+              <div class="flex items-center">
+                <span class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-2">4</span>
+                <p>Fragmented Output</p>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold mb-2">Future State</h4>
+            <div class="space-y-2">
+              <div class="flex items-center">
+                <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-2">1</span>
+                <p>Session Start</p>
+              </div>
+              <div class="flex items-center">
+                <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-2">2</span>
+                <p>Memory Loaded</p>
+              </div>
+              <div class="flex items-center">
+                <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-2">3</span>
+                <p>Seamless Query</p>
+              </div>
+              <div class="flex items-center">
+                <span class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-2">4</span>
+                <p>Insight Build-Up</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Field Research -->
-  <section id="field-research" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Field Research</h2>
-    <section id="contextual-inquiry" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Contextual Inquiries</h3>
-      <p>Observed research teams using LLM tools. Documented context loss and repeated onboarding as major pain points.</p>
-    </section>
-    <section id="interviews" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Individual & Group Interviews</h3>
-      <p>Key findings: need for persistent memory, structured project journals, and agent handoff logs.</p>
-    </section>
+  <!-- Solution & Implementation -->
+  <section id="solution" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6">Solution & Implementation</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Core Components</h3>
+          <ul class="list-disc ml-6 space-y-2">
+            <li><strong>Memory Journal:</strong> Persistent storage for session context</li>
+            <li><strong>Session Logger:</strong> Detailed activity tracking</li>
+            <li><strong>Agent Handoff API:</strong> Clean memory transfer</li>
+            <li><strong>Orchestration Module:</strong> Multi-agent coordination</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+          <ul class="list-disc ml-6 space-y-2">
+            <li><strong>Auto-Memory:</strong> Automatic context loading</li>
+            <li><strong>Session Resume:</strong> Pick up where you left off</li>
+            <li><strong>Audit Trails:</strong> Complete session history</li>
+            <li><strong>Memory Search:</strong> Quick context lookup</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl mb-8">
+        <h3 class="text-xl font-semibold mb-4">UI Components</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-2">Session Dashboard</h4>
+            <p>Browse and resume past sessions</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-2">Memory Summary</h4>
+            <p>Quick view of relevant context</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-2">Agent Handoff</h4>
+            <p>Configure memory transfer rules</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Synthesis -->
-  <section id="synthesis" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Synthesis: Persistent Memory & Modular Orchestration</h2>
-    <section id="persona-cards" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Persona Creation</h3>
-      <p>Developed archetypes for memory-focused researchers and orchestration engineers.</p>
-    </section>
-    <section id="journey-maps" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Journey Mapping</h3>
-      <p>Mapped the workflow from session start, memory recall, agent handoff, to research output.</p>
-    </section>
-  </section>
+  <!-- Outcomes & Impact -->
+  <section id="outcomes" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6">Outcomes & Impact</h2>
 
-  <!-- Opportunity Identification -->
-  <section id="opportunities" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Opportunity Identification & Prioritization</h2>
-    <section id="debrief-workshop" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Debrief Workshop</h3>
-      <p>Prioritized features: memory journal, session logs, agent handoff, and auditability.</p>
-    </section>
-    <section id="ideation" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Ideation: Modular Memory System</h3>
-      <p>Sketched architecture for memory journal, agent handoff, and orchestration modules.</p>
-    </section>
-    <section id="prioritization" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Prioritization Matrix (Effort vs Impact)</h3>
-      <p>Quick wins: persistent memory and session logs. Strategic bets: agent orchestration and chaining.</p>
-    </section>
-  </section>
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-green-50 p-6 rounded-xl text-center">
+          <h3 class="text-4xl font-bold text-green-600 mb-2">100%</h3>
+          <p>Session Continuity</p>
+        </div>
+        <div class="bg-blue-50 p-6 rounded-xl text-center">
+          <h3 class="text-4xl font-bold text-blue-600 mb-2">↓90%</h3>
+          <p>Context Loss</p>
+        </div>
+        <div class="bg-purple-50 p-6 rounded-xl text-center">
+          <h3 class="text-4xl font-bold text-purple-600 mb-2">↑80%</h3>
+          <p>Research Reproducibility</p>
+        </div>
+      </div>
 
-  <!-- Implementation Planning -->
-  <section id="implementation" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">From Opportunities to Implementation</h2>
-    <section id="epics-stories" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Epics & User Stories</h3>
-      <p>Backlog included: memory CRUD, session logs, agent handoff, and orchestration integration.</p>
-    </section>
-    <section id="design-sprints" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Design & Prototyping Sprints</h3>
-      <p>Iterative sprints delivered a working memory companion, session log UI, and orchestration hooks.</p>
-    </section>
-  </section>
-
-  <!-- Outcome & Impact -->
-  <section id="outcome" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Outcome & Impact</h2>
-    <section id="final-solution" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Final Solution Overview</h3>
-      <p>Launched Eunoia Memory Companion with persistent project memory, session continuity, and agent handoff support. Orchestration is available as a separate module for multi-agent chaining.</p>
-    </section>
-    <section id="metrics" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Quantitative Results</h3>
-      <ul class="list-disc ml-6">
-        <li>Session continuity ↑ 100%</li>
-        <li>Context loss ↓ 90%</li>
-        <li>Research reproducibility ↑ 80%</li>
-      </ul>
-    </section>
-    <section id="qualitative-feedback" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Qualitative Feedback</h3>
-      <blockquote class="bg-gray-100 p-4 rounded">"The memory companion made it possible to pick up research right where we left off, with no loss of context."</blockquote>
-    </section>
+      <div class="space-y-4">
+        <blockquote class="bg-gray-50 p-6 rounded-xl italic">
+          "The memory companion made it possible to pick up research right where we left off—no more wasted time."
+          <footer class="mt-2 font-semibold">— Riley, Lead Researcher</footer>
+        </blockquote>
+        <blockquote class="bg-gray-50 p-6 rounded-xl italic">
+          "Session logs give me complete confidence in our research reproducibility."
+          <footer class="mt-2 font-semibold">— Taylor, Research Ops</footer>
+        </blockquote>
+      </div>
+    </div>
   </section>
 
   <!-- Reflections & Next Steps -->
   <section id="reflections" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Reflections & Learnings</h2>
-    <h3 class="text-xl font-semibold mb-2">What Went Well</h3>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Persistent memory and session logs enabled seamless research continuity.</li>
-      <li>Orchestration hooks allow for future multi-agent chaining.</li>
-    </ul>
-    <h3 class="text-xl font-semibold mb-2">Challenges & Mitigations</h3>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Initial complexity in memory handoff—solved with structured JSON logs.</li>
-      <li>Orchestration integration required clear API boundaries.</li>
-    </ul>
-    <h3 class="text-xl font-semibold mb-2">Next Steps</h3>
-    <ul class="list-disc ml-6">
-      <li>Integrate authentication and user roles.</li>
-      <li>Expand orchestration to support more agent types and chaining logic.</li>
-      <li>Monitor memory performance and iterate on session handoff.</li>
-    </ul>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6">Reflections & Next Steps</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-4">What Went Well</h3>
+          <ul class="list-disc ml-6 space-y-2">
+            <li>Seamless memory persistence</li>
+            <li>Clean API boundaries</li>
+            <li>Strong user adoption</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-4">Challenges</h3>
+          <ul class="list-disc ml-6 space-y-2">
+            <li>Initial handoff complexity</li>
+            <li>Integration coordination</li>
+            <li>Performance at scale</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-4">Next Steps</h3>
+          <ul class="list-disc ml-6 space-y-2">
+            <li>Authentication & roles</li>
+            <li>Expanded orchestration</li>
+            <li>Semantic memory features</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center py-12 mb-8">
+    <h2 class="text-3xl font-semibold mb-6">Ready to Never Lose Context Again?</h2>
+    <a href="/memory-companion-demo" class="cta-button primary">
+      Try the Memory Companion Demo
+    </a>
   </section>
 </article>
-{% endblock %} 
+
+<script>
+// Fade in sections on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.eo-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => observer.observe(section));
+});
+</script>
+{% endblock %}

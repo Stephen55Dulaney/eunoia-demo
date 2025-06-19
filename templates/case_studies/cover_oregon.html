@@ -2,38 +2,132 @@
 
 {% block title %}Cover Oregon UX Case Study – Experience Architecture & Usability Lead: Stephen Dulaney{% endblock %}
 
-{% block content %}
-{% set hero_bg = url_for('static', filename='cover_oregon_prototype/html/styles/img/Homepage1.png') %}
+{% block extra_css %}
 <style>
-  .cover-oregon-hero-bg {
-    background-image: url('{{ hero_bg }}');
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px 8px 0 0;
-    overflow: hidden;
+  /* Enhanced case study styles */
+  .hero-section {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('/static/cover_oregon_prototype/html/styles/img/CO_Cannon Beach-edited copy.png') center center/cover no-repeat;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    margin-bottom: 3rem;
+    padding: 4rem 2rem;
+    position: relative;
   }
-  .eo-demo-btn {
-    color: #fff !important;
-    background-color: #6db33f;
-    transition: background 0.2s, color 0.2s;
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    border-radius: 1rem;
   }
-  .eo-demo-btn:hover, .eo-demo-btn:focus {
-    background-color: #5ca32e !important;
-    color: #111 !important;
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .hero-title {
+    font-size: 3.75rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    color: #fff;
+    opacity: 0.95;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.3);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(4px);
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-family: 'Avenir_Black', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 7px;
+    transition: all 0.2s;
+    margin: 0.5rem;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+  
+  .cta-button.primary {
+    background: #7BC93D;
+    background: linear-gradient(#7BC93D, #559b1e);
+    border: 1px solid #559b1e;
+    color: #FFF !important;
+  }
+  
+  .cta-button.primary:hover {
+    background: #559b1e;
+    background: linear-gradient(#559b1e, #7BC93D);
+    color: #000 !important;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  
+  .cta-button.secondary {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    color: white !important;
+    backdrop-filter: blur(4px);
+  }
+  
+  .cta-button.secondary:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    text-decoration: none;
   }
 </style>
-<header class="hero relative cover-oregon-hero-bg" role="banner">
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-  <div class="hero-content relative z-10 flex flex-col items-center justify-center" style="position: relative; padding: 4rem 1rem; text-align: center;">
-    <h1 class="text-4xl font-extrabold mb-2 text-white drop-shadow-lg">Cover Oregon UX Case Study</h1>
-    <p class="font-semibold text-lg text-white drop-shadow">Experience Architecture &amp; Usability Lead: Stephen Dulaney</p>
-    <ul class="key-metrics flex flex-wrap justify-center gap-2 mt-4">
-      <li class="px-3 py-1 rounded font-bold text-white">Role: UX Lead, Experience Architecture &amp; Usability</li>
-      <li class="px-3 py-1 rounded font-bold text-white">Engagement Period: July 2012 – May 2013</li>
-      <li class="px-3 py-1 rounded font-bold text-white">Focus: Enrollment workflow design &amp; extensive usability testing</li>
-    </ul>
+{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Cover Oregon UX Case Study</h1>
+    <p class="hero-subtitle">Experience Architecture & Usability Lead: Stephen Dulaney</p>
+    <div class="hero-description">
+      <ul class="key-metrics flex flex-wrap justify-center gap-2">
+        <li class="px-3 py-1 rounded font-bold text-white">Role: UX Lead, Experience Architecture &amp; Usability</li>
+        <li class="px-3 py-1 rounded font-bold text-white">Engagement Period: July 2012 – May 2013</li>
+        <li class="px-3 py-1 rounded font-bold text-white">Focus: Enrollment workflow design &amp; extensive usability testing</li>
+      </ul>
+    </div>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/cover-oregon-prototype" class="cta-button primary">View Interactive Prototype</a>
+      <a href="#context" class="cta-button secondary">Learn More</a>
+    </div>
   </div>
-</header>
+</section>
 
 <!-- Context & Background -->
 <section class="bg-white my-4 p-6 rounded shadow" id="context" aria-labelledby="context-heading">
@@ -259,19 +353,6 @@
     <li>Kaiser Permanente CMS redesign impact reports.</li>
     <li><a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener">WCAG 2.1 AA Guidelines</a></li>
   </ul>
-</section>
-
-<section class="bg-white my-8 p-6 rounded shadow text-center" id="prototype-demo">
-  <h2 class="text-2xl font-semibold mb-4">Explore the Interactive Prototype</h2>
-  <p class="mb-4">Click below to launch the full high-fidelity Cover Oregon prototype. You can explore the multi-step enrollment form, agent dashboard, and more as they appeared in the original clickable demo.</p>
-  <a href="/static/cover_oregon_prototype/html/index_individual.html"
-     target="_blank"
-     rel="noopener"
-     class="inline-block px-6 py-3 rounded-lg font-bold text-lg shadow transition eo-demo-btn"
-     style="background-color: #6db33f; color: #fff;"
-  >
-     View Interactive Prototype
-  </a>
 </section>
 
 <footer class="text-center text-gray-500 my-8">
