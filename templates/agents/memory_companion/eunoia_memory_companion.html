@@ -427,7 +427,74 @@
             // Clear input field
             userInput.value = '';
             
-            // Show thinking indicator
+            // Check for commands
+            const lowerMessage = message.toLowerCase();
+            
+            // Timeline event commands
+            if (lowerMessage.startsWith('add timeline:') || lowerMessage.startsWith('add event:')) {
+                const content = message.substring(message.indexOf(':') + 1).trim();
+                if (content) {
+                    showThinking();
+                    await addTimelineEventViaChat(content);
+                    hideThinking();
+                    return;
+                }
+            }
+            
+            // Update timeline event commands
+            if (lowerMessage.startsWith('update timeline') || lowerMessage.startsWith('update event')) {
+                const match = message.match(/(\d+):\s*(.+)/);
+                if (match) {
+                    const eventId = parseInt(match[1]) - 1; // Convert to 0-based index
+                    const content = match[2].trim();
+                    showThinking();
+                    await updateTimelineEvent(eventId, content);
+                    hideThinking();
+                    return;
+                }
+            }
+            
+            // Add opportunity commands
+            if (lowerMessage.startsWith('add opportunity:') || lowerMessage.startsWith('add opp:')) {
+                const parts = message.substring(message.indexOf(':') + 1).trim().split('|');
+                if (parts.length >= 2) {
+                    const title = parts[0].trim();
+                    const description = parts[1].trim();
+                    const priority = parts[2] ? parts[2].trim() : 'medium';
+                    showThinking();
+                    await addOpportunityViaChat(title, description, priority);
+                    hideThinking();
+                    return;
+                }
+            }
+            
+            // Update opportunity commands
+            if (lowerMessage.startsWith('update opportunity') || lowerMessage.startsWith('update opp')) {
+                const match = message.match(/(\d+):\s*(.+)/);
+                if (match) {
+                    const opportunityId = parseInt(match[1]);
+                    const updates = {};
+                    const updateText = match[2].trim();
+                    
+                    // Parse updates (format: "title: new title | description: new desc | priority: high")
+                    const updateParts = updateText.split('|');
+                    updateParts.forEach(part => {
+                        const [key, value] = part.split(':').map(s => s.trim());
+                        if (key && value) {
+                            updates[key.toLowerCase()] = value;
+                        }
+                    });
+                    
+                    if (Object.keys(updates).length > 0) {
+                        showThinking();
+                        await updateOpportunity(opportunityId, updates);
+                        hideThinking();
+                        return;
+                    }
+                }
+            }
+            
+            // Show thinking indicator for regular chat
             showThinking();
             
             try {
@@ -490,6 +557,164 @@
             await initializeMemoryJournal();
             runBootSequence();
         });
+
+        document.getElementById('timelineForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const eventText = document.getElementById('eventText').value;
+            
+            fetch('/api/timeline', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ content: eventText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    showMessage(`Error: ${data.error}`, true);
+                } else {
+                    showMessage('Timeline event added successfully!');
+                    clearForm('timelineForm');
+                    setTimeout(() => location.reload(), 1000);
+                }
+            })
+            .catch(error => {
+                showMessage(`Error: ${error.message}`, true);
+            });
+        });
+
+        // Helper function to show messages
+        function showMessage(message, isError = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `alert alert-${isError ? 'danger' : 'success'} alert-dismissible fade show`;
+            messageDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            // Insert at the top of the chat container
+            chatContainer.insertBefore(messageDiv, chatContainer.firstChild);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.remove();
+                }
+            }, 5000);
+        }
+
+        // Helper function to clear forms
+        function clearForm(formId) {
+            const form = document.getElementById(formId);
+            if (form) {
+                form.reset();
+            }
+        }
+
+        // Function to update timeline event
+        async function updateTimelineEvent(eventId, content) {
+            try {
+                const response = await fetch(`/api/memory_companion/timeline/${eventId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ content: content })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showMessage('Timeline event updated successfully!');
+                    // Refresh the memory journal
+                    await initializeMemoryJournal();
+                } else {
+                    showMessage(`Error: ${data.error}`, true);
+                }
+            } catch (error) {
+                showMessage(`Error: ${error.message}`, true);
+            }
+        }
+
+        // Function to update opportunity
+        async function updateOpportunity(opportunityId, updates) {
+            try {
+                const response = await fetch(`/api/memory_companion/opportunity/${opportunityId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(updates)
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showMessage('Opportunity updated successfully!');
+                    // Refresh the memory journal
+                    await initializeMemoryJournal();
+                } else {
+                    showMessage(`Error: ${data.error}`, true);
+                }
+            } catch (error) {
+                showMessage(`Error: ${error.message}`, true);
+            }
+        }
+
+        // Function to add timeline event via chat command
+        async function addTimelineEventViaChat(content) {
+            try {
+                const response = await fetch('/api/memory_companion/timeline', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ content: content })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showMessage('Timeline event added successfully!');
+                    // Refresh the memory journal
+                    await initializeMemoryJournal();
+                } else {
+                    showMessage(`Error: ${data.error}`, true);
+                }
+            } catch (error) {
+                showMessage(`Error: ${error.message}`, true);
+            }
+        }
+
+        // Function to add opportunity via chat command
+        async function addOpportunityViaChat(title, description, priority = 'medium') {
+            try {
+                const response = await fetch('/api/memory_companion/opportunity', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        title: title,
+                        description: description,
+                        priority: priority
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showMessage('Opportunity added successfully!');
+                    // Refresh the memory journal
+                    await initializeMemoryJournal();
+                } else {
+                    showMessage(`Error: ${data.error}`, true);
+                }
+            } catch (error) {
+                showMessage(`Error: ${error.message}`, true);
+            }
+        }
     </script>
 </body>
 </html> 

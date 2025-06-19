@@ -124,6 +124,41 @@
       "user_id": 3,
       "message": "Hello! I've just booted up. Can you remind me what we're working on?",
       "response": "Welcome back! Here are the projects we are currently working on:\n\n1. **Persistent Database for Interview Data**\n   - **Description:** Implement structured database to replace JSON file storage\n   - **Priority:** High\n   - **Status:** In Progress\n\n2. **AWS Deployment Strategy**\n   - **Description:** Create deployment process for AWS with proper security and scaling\n   - **Priority:** Medium\n   - **Status:** Planned\n\n3. **Memory Companion Feature**\n   - **Description:** Implement Eunoia as project companion with persistent memory\n   - **Priority:** Medium\n   - **Status:** In Progress\n\n4. **Sprint Engine Capabilities**\n   - **Description:** Add full agile artifact generation for UX research sprints\n   - **Priority:** Low\n   - **Status:** Planned\n\n5. **Add TTS and STT to Memory Companion**\n   - **Description:** Add text-to-speech and speech-to-text to the Memory Companion using ElevenLabs\n   - **Priority:** Medium\n   - **Status:** Planned\n\nFeel free to let me know if you need more details on any of these projects or if you have any specific questions!"
+    },
+    {
+      "timestamp": "2025-06-19T14:30:17.390215",
+      "type": "chat",
+      "user_id": 3,
+      "message": "what about the RabbitMQ task",
+      "response": "Currently, there is no RabbitMQ task listed in the recent timeline events or the list of current opportunities. If you have a specific RabbitMQ task or inquiry related to RabbitMQ, please provide more details so I can assist you effectively. If it's a new task or project you'd like to discuss or add to our current projects, feel free to share the details, and I can help incorporate it into our ongoing work."
+    },
+    {
+      "timestamp": "2025-06-19T14:30:31.107541",
+      "type": "chat",
+      "user_id": 3,
+      "message": "Hello! I've just booted up. Can you remind me what we're working on?",
+      "response": "Welcome back! Currently, we are working on the following projects:\n\n1. **Persistent Database for Interview Data**\n   - **Description:** Implement structured database to replace JSON file storage\n   - **Priority:** High\n   - **Status:** In Progress\n\n2. **AWS Deployment Strategy**\n   - **Description:** Create deployment process for AWS with proper security and scaling\n   - **Priority:** Medium\n   - **Status:** Planned\n\n3. **Memory Companion Feature**\n   - **Description:** Implement Eunoia as a project companion with persistent memory\n   - **Priority:** Medium\n   - **Status:** In Progress\n\n4. **Sprint Engine Capabilities**\n   - **Description:** Add full agile artifact generation for UX research sprints\n   - **Priority:** Low\n   - **Status:** Planned\n\n5. **Add TTS and STT to Memory Companion**\n   - **Description:** Add text-to-speech and speech-to-text to the Memory Companion using ElevenLabs\n   - **Priority:** Medium\n   - **Status:** Planned\n\nLet me know if you need more details on any of these projects or if you have any specific questions!"
+    },
+    {
+      "timestamp": "2025-06-19T14:30:52.946775",
+      "type": "chat",
+      "user_id": 3,
+      "message": "Do you know anything about messiging with Rabbit?",
+      "response": "Currently, there is no specific task related to RabbitMQ in our recent timeline events or the list of current opportunities. If you have a particular question or task pertaining to messaging with RabbitMQ, please provide more details so I can assist you effectively. \n\nIf you have a new task or project in mind that involves RabbitMQ or messaging systems, feel free to share the specifics, and I can help incorporate it into our ongoing work or guide you on how to proceed with it."
+    },
+    {
+      "timestamp": "2025-06-19T14:39:09.802489",
+      "type": "chat",
+      "user_id": 2,
+      "message": "How are you today?",
+      "response": "I don't have feelings, but I'm here and ready to assist you! How can I help you today?"
+    },
+    {
+      "timestamp": "2025-06-19T14:39:40.095446",
+      "type": "chat",
+      "user_id": 2,
+      "message": "We are getting ready to push and publish I just wanted to get the undefined out of the timeline",
+      "response": "It sounds like you're preparing for a deployment or publication. If you want to clean up or remove any undefined entries from the timeline, I can assist with that. Could you provide more details or specify which undefined entries you'd like to address?"
     }
   ],
   "opportunities": [

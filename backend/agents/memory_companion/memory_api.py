@@ -205,4 +205,68 @@ def update_sprint():
     memory['current_sprint'] = data.get('sprint', memory['current_sprint'])
     save_memory(memory)
     
-    return jsonify({'status': 'success', 'sprint': memory['current_sprint']}) 
+    return jsonify({'status': 'success', 'sprint': memory['current_sprint']})
+
+@memory_companion_bp.route('/api/memory_companion/timeline/<int:event_id>', methods=['PUT'])
+@login_required
+@require_permission('edit_projects')
+def update_timeline_event(event_id):
+    data = request.get_json()
+    memory = load_memory()
+    
+    # Find the event by index (since we don't have explicit IDs)
+    if event_id < 0 or event_id >= len(memory['timeline']):
+        return jsonify({'error': 'Timeline event not found'}), 404
+    
+    event = memory['timeline'][event_id]
+    
+    # Update fields if provided
+    if 'content' in data:
+        event['content'] = data['content']
+    if 'type' in data:
+        event['type'] = data['type']
+    if 'details' in data:
+        event['details'] = data['details']
+    
+    # Add update timestamp
+    event['updated_at'] = datetime.utcnow().isoformat()
+    event['updated_by'] = current_user.id
+    
+    save_memory(memory)
+    
+    return jsonify({'status': 'success', 'event': event})
+
+@memory_companion_bp.route('/api/memory_companion/opportunity/<int:opportunity_id>', methods=['PUT'])
+@login_required
+@require_permission('edit_projects')
+def update_opportunity(opportunity_id):
+    data = request.get_json()
+    memory = load_memory()
+    
+    # Find the opportunity by ID
+    opportunity = None
+    for opp in memory['opportunities']:
+        if opp['id'] == opportunity_id:
+            opportunity = opp
+            break
+    
+    if not opportunity:
+        return jsonify({'error': 'Opportunity not found'}), 404
+    
+    # Update fields if provided
+    if 'title' in data:
+        opportunity['title'] = data['title']
+    if 'description' in data:
+        opportunity['description'] = data['description']
+    if 'priority' in data:
+        opportunity['priority'] = data['priority']
+    if 'status' in data:
+        opportunity['status'] = data['status']
+    
+    # Add update timestamp
+    opportunity['updated_at'] = datetime.utcnow().isoformat()
+    opportunity['updated_by'] = current_user.id
+    
+    save_memory(memory)
+    
+    return jsonify({'status': 'success', 'opportunity': opportunity}) 
