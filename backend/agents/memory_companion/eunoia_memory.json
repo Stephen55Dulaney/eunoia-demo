@@ -159,6 +159,20 @@
       "user_id": 2,
       "message": "We are getting ready to push and publish I just wanted to get the undefined out of the timeline",
       "response": "It sounds like you're preparing for a deployment or publication. If you want to clean up or remove any undefined entries from the timeline, I can assist with that. Could you provide more details or specify which undefined entries you'd like to address?"
+    },
+    {
+      "timestamp": "2025-06-19T16:04:14.212766",
+      "type": "chat",
+      "user_id": 3,
+      "message": "Hello! I've just booted up. Can you remind me what we're working on?",
+      "response": "Welcome back! Currently, we are working on the following projects:\n\n1. **Persistent Database for Interview Data**\n   - **Description:** Implement structured database to replace JSON file storage\n   - **Priority:** High\n   - **Status:** In Progress\n\n2. **AWS Deployment Strategy**\n   - **Description:** Create deployment process for AWS with proper security and scaling\n   - **Priority:** Medium\n   - **Status:** Planned\n\n3. **Memory Companion Feature**\n   - **Description:** Implement Eunoia as a project companion with persistent memory\n   - **Priority:** Medium\n   - **Status:** In Progress\n\n4. **Sprint Engine Capabilities**\n   - **Description:** Add full agile artifact generation for UX research sprints\n   - **Priority:** Low\n   - **Status:** Planned\n\n5. **Add TTS and STT to Memory Companion**\n   - **Description:** Add text-to-speech and speech-to-text to the Memory Companion using ElevenLabs\n   - **Priority:** Medium\n   - **Status:** Planned\n\nLet me know if you need more details on any of these projects or if you have any specific questions!"
+    },
+    {
+      "timestamp": "2025-06-19T16:04:49.639537",
+      "type": "chat",
+      "user_id": 3,
+      "message": "What are the commands I can give you about updateing the timeline? ",
+      "response": "To update the timeline, you can provide specific commands or instructions related to adding, modifying, or removing events. Here are some examples of commands you can give me to update the timeline:\n\n1. **Add Event to Timeline:**\n   - Command: \"Add a new event to the timeline.\"\n   - Provide details such as timestamp, type, user ID, message, and response for the new event.\n\n2. **Modify Existing Event:**\n   - Command: \"Update an existing event on the timeline.\"\n   - Specify the event you want to modify and provide the updated information.\n\n3. **Remove Event from Timeline:**\n   - Command: \"Remove an event from the timeline.\"\n   - Indicate the event you want to delete from the timeline.\n\n4. **Clean Up Undefined Entries:**\n   - Command: \"Clean up undefined entries from the timeline.\"\n   - Specify if you want to remove any undefined or irrelevant entries in the timeline.\n\nFeel free to provide specific details or commands related to the action you want to take, and I'll assist you in updating the timeline accordingly."
     }
   ],
   "opportunities": [
