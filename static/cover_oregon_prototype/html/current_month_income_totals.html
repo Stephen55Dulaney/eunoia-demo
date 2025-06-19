@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Cover Oregon | Current Monthly Income Totals</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" href="styles/validationEngine.jquery.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/helpDrawer.css">
+
+  <!-- All JavaScript at the bottom, except for Modernizr. Modernizr enables HTML5 elements & feature detects -->
+  <script type="text/javascript" src="scripts/modernizr-2.5.3.min.js"></script>
+  <!--<script type="text/javascript" src="scripts/formPush.js"></script>
+  <script type="text/javascript" src="scripts/formPeel.js"></script>-->
+  <script type="text/javascript" src="scripts/jquery-1.9.0.js"></script>
+  <script type="text/javascript" src="scripts/jquery-ui-1.10.0.custom.js"></script>
+  <script type="text/javascript" src="scripts/jquery.number.min.js"></script>
+
+  <script type="text/javascript">
+      var delID = "";
+      function fieldNamePasser() {
+        var arrayFieldNames = new Array("stop");
+        postFormData(arrayFieldNames);
+      }
+      function blah(){}
+      //---------------------------------------------//
+      $(function() {
+        $('input#addbtn').click(function(ev) {
+          // Retrieve the form element so that we can grab the last row in the form
+          var $form = $(this).parents('.formHolder').find('form:first');
+          var $row = $(this).parent().prev('.ctrlHolder.row');
+
+          // This is an easy jQuery way of deep cloning a DOM element (http://api.jquery.com/clone/)
+          var $newRow = $row.clone(true, true);
+          var index = $form.find('.ctrlHolder.row').length + 1;
+
+          /*
+             Initialize the values since the deep cloning also carried forward the complete attributes from the last row.
+             An alternate method would be to create a hidden DOM template and then clone that with the initial values already set.
+          */
+          $newRow.find('select').val('');
+          $newRow.find(':text').val('');
+
+          $newRow.find(':checkbox').attr('checked',this.checked);
+
+          /*
+             Only add the Delete button if it does not already exists in the clone.  Since we chose the deep cloning, jQuery also
+             cloned the event attached to the Delete button.
+          */
+          if ($newRow.find('.delbtn').length == 0) {
+            $deleteButton = $('<img>')
+              .attr({
+                'class': 'delbtn',
+                'id': 'delbtn',
+                'name': 'delbtn',
+                'src': 'images/trash_can.png',
+                'style': 'visibility:visible',
+                'onClick': 'blah();',
+                'alt': 'remove row'
+              })
+              .click(function(ev) {
+                $form = $(this).parents('.formHolder').find('form:first');
+        				// Since the row is being deleted, we need to pass the previous row
+        				$previousRow = $(this).parent().prev('.ctrlHolder.row');
+                $(this).parents('.ctrlHolder.row').remove();
+                //runTotalDiff($form,delID);
+                calcTotalFields($previousRow, 'del');
+              });
+
+              // Add the watermarks to the input fields
+              $newRow.find(":input[data-watermark]").each(function () {
+                  $(this).val($(this).attr("data-watermark"));
+                  $(this).bind('focus', function () {
+                      if ($(this).val() == $(this).attr("data-watermark")) {
+                        $(this).val('');
+                        $(this).css('color','#034564');
+                      }
+                  });
+                  $(this).bind('blur', function () {
+                      if ($(this).val() == '') {
+                        $(this).val($(this).attr("data-watermark"));
+                        $(this).css('color','#a8a8a8');
+                      } else {
+                        $(this).css('color','#034564');
+                      }
+                  });
+              });
+
+            $newRow.append($deleteButton);
+          }
+
+          // Append the new row after the row that we cloned.
+          $row.after($newRow);
+
+          // Index the field ids and names
+          indexFields($form)
+          return;
+        })
+
+        /*
+           This function indexes the field ids and names based upon the number of field rows in the form.
+        */
+        function indexFields(form) {
+          var index = 0;
+
+          form.find('.ctrlHolder.row').each(function() {
+            index++;
+            $(this).find(':text').each(function(i) {
+              $(this).attr({
+                'id': $(this).attr('id').replace(/\d+/g, '') + index,
+                'name': $(this).attr('name').replace(/\d+/g, '') + index
+              })
+            });
+            $(this).find('img').each(function(i) {
+              $(this).attr({
+                'id': $(this).attr('id').replace(/\d+/g, '') + index,
+                'name': $(this).attr('name').replace(/\d+/g, '') + index
+              })
+            });
+            $(this).find(':checkbox').each(function(i) {
+              $(this).attr({
+                'id': $(this).attr('id').replace(/\d+/g, '') + index,
+                'name': $(this).attr('name').replace(/\d+/g, '') + index
+              })
+            });
+            $(this).find('section').each(function(i) {
+              $(this).attr({
+                'id': $(this).attr('id').replace(/\d+/g, '') + index
+              })
+            });
+            /*$(this).find(':button').each(function(i) {
+              $(this).attr({
+                'onClick': $(this).attr('onClick').replace(/\d+/g, index)
+              })
+            });*/
+          });
+        }
+      });
+
+  </script>
+</head>
+<body id="modalTemplate">
+    <header>
+      <div id="globalNavContainer" class="clearfix">
+
+      <!-- Log in Container -->
+      <div id="login" class="globalLoginContainer clearfix">
+        <div class="loginFields">
+          <a href="account_login_username.html" class="button blue">Log In</a>
+          <p>New User? <a href="account_creation.html">Create Account</a></p>
+        </div>
+      </div>
+      <!-- END .globalLoginContainer -->
+
+      <div class="globalNav">
+        <div class="logo"><a href="index.html" title="Cover Oregon"><img src="images/cover-oregon-logo-small.png" alt="Cover Oregon"></a></div> 
+        <nav>
+          <ul id="mega-menu-tut" class="menu">            <li>Explore Coverage
+              <ul>
+                <li><a href="CORP_medical_coverage.html">Medical</a></li>
+                <li><a href="CORP_dental_coverage.html">Dental</a></li>
+                <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+                <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+                <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+                <li><a href="CORP_view_providers.html">View providers</a></li>
+              </ul>
+            </li>
+
+            <li>Get Started
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_application_process.html">Application overview</a></li>
+                    <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+                    <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>           
+                    <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li><a href="individual_start.html">Individual and Families</a></li>
+                    <li><a href="SHOP_start.html">Employers</a></li>
+                    <li><a href="EMP_start.html">Employees</a></li>
+                    <li><a href="TRB_start.html">Tribes</a></li>
+                    <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+                    <li><a href="carrier_start.html">Insurance companies</a></li>
+                  </ul>
+                </li>
+              </ul>              
+            </li>
+            
+            <li>Learn More
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_faq.html">FAQs</a></li>
+                    <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+                    <li><a href="CORP_grants_and_reports.html">Reports, grants and Legislation</a></li>
+                    <li><a href="CORP_exemptions.html">Exemptions</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li style="padding: 6px 0;">Find help in your language:</li>                    
+                    <li><a href="CORP_language_help.html?id=spanish">Spanish <span>español</span></a></li>
+                    <li><a href="CORP_language_help.html?id=russian">Russian <span>русский</span></a></li>
+                    <li><a href="CORP_language_help.html?id=vietnamese">Vietnamese <span class="vm">tiếng Việt</span></a></li>
+                    <li><a href="CORP_language_help.html?id=korean">Korean <span>한국인</span></a></li>
+                    <li><a href="CORP_language_help.html?id=chinese">Chinese (Trad.) <span class="ch">中文</span></a></li>
+                  </ul>
+                </li>                
+              </ul>
+            </li> </ul>
+        </nav>
+      </div>
+      <!-- END .globalNav -->      <div class="utilities">
+        <nav>
+        <ul>
+          <li><a class="phoneLink" href="#"><img src="images/phone_green2.png" alt="Phone">Phone</a>
+          <!-- PHONE HOVER -->
+          <div id="phoneHover" class="clearfix">
+            <div class="hoverArrow"><img src="images/arrow_white.png" alt="Phone Hover"></div>                
+            <p>Phone: 1-855-268-3767</p>
+          </div>
+          <li><a href="CORP_language_help.html"><img src="images/globe.png" alt="Languages">Languages</a></li>
+          <li><a href="" id="helpModalLink"><img src="images/help_green_sm.png" alt="Help">Help</a></li>
+          <li style="padding: 0 0 0 10px; background: none;"><input type="text" value="" class="searchBox" name="search" id="search" data-watermark="Search"></li>        
+        </ul>
+        </nav>
+      </div>
+
+    </div>
+    <!-- END #globalNavContainer -->
+    </header>
+
+      <div id="pageContainer" class="clearfix">
+        <nav class="leftNav">
+          <ul>
+            <li class="visited"><a href="application_start.html">Get Started</a></li>
+            <li class="visited"><a href="build_household_overview.html">Describe Your Household</a></li>
+            <li class="active"><a href="" class="navTitle">Enter Household Income</a>
+              <ul>
+                <li class="visited"><a href="household_income_calculation_overview.html">Overview</a></li>
+                <li class="visited"><a href="current_recipients.html">Who has monthly income?</a></li>
+                <li class="active"><a href="current_month_income_totals.html">Monthly income</a></li>
+                <li><a href="current_month_adjustments.html">Monthly adjustments</a></li>
+                <li><a href="current_month_confirmation.html">Monthly income summary</a></li>
+                <li><a href="coverage_year_recipients.html">Who has annual income?</a></li>
+                <li><a href="coverage_year_income_totals.html">Annual income</a></li>
+                <li><a href="coverage_year_adjustments.html">Annual adjustments</a></li>
+                <li><a href="coverage_year_income_confirmation.html">Annual income summary</a></li>
+              </ul>
+            </li>
+            <li class="inactive"><a href="#">Additional Questions</a></li>
+            <li class="inactive"><a href="#">Review Your Application</a></li>
+            <li class="inactive"><a href="#">Confirm Your Identity</a></li>
+            <li class="inactive"><a href="#">Final Steps</a></li>
+            <li class="inactive"><a href="#">Check Qualification</a></li>
+            <li class="inactive"><a href="#">Find a Medical Plan</a></li>
+             <li class="inactive"><a href="#">Find a Dental Plan</a></li>
+             <li class="inactive"><a href="#">Review Plans</a></li>
+             <li class="inactive"><a href="#">Enroll</a></li>
+          </ul>
+        </nav><!--Left nav -->
+
+        <section id="pageContentArea">
+          <div class="formHolder">
+            <form action="#" method="post">
+            <div class="incomeTotalsHeader clearfix">
+              <h3>Monthly income</h3>
+              <div class="incomeTotals">
+                <div class="totalMonthlyIncomeTitle">Total household income</div>
+                <div class="totalMonthlyIncome">Current month <input type="text" name="tab_1_total_c1" id="tab_1_total_c1" class="totalCurrentMonthIncome" size="10" maxlength="10" disabled="disabled"/></div>
+                <div class="totalMonthlyIncome">January 2014 <input type="text" name="tab_1_total_n1" id="tab_1_total_n1" class="totalNextMonthIncome" size="10" maxlength="10" disabled="disabled"/></div>
+              </div>
+            </div>
+            <section id="tabbed_area">
+              <ul class="tabs">
+                <li><a href="#content_1" id="tab-nav-1">Jason Smith</a></li>
+                <li><a href="#content_2" id="tab-nav-2">Penelope Smith</a></li>
+              </ul>
+
+              <!-- BEGIN of #content_1 -->
+              <div class="tabContent" id="content_1">
+                <fieldset>
+                <div class="ctrlHolder clearfix">
+                  <h6 class="formTitle">Income type<!--<img src="images/headerHelpIcon.png" title="" class="tooltip" style="margin-left: 10px;">--></h6>
+                  <h6 class="formTitle">Current month</h6>
+                  <h6>January 2014</h6>
+                </div>
+
+                <div class="ctrlHolder row clearfix">
+                  <div class="formEntryContentSelect">
+                    <select id="adjustments" name="adjustments" class="dropdown">
+                      <option>Select Income Type</option>
+                      <option>Employment</option>
+                      <option>Self-Employment</option>
+                      <option>Social Security Benefits</option>                      
+                      <option>SSDI</option>
+                      <option>SSI</option>
+                      <option>Unemployment</option>
+                      <option>Retirement/Pensions</option>
+                      <option>Capital Gains</option>
+                      <option>Investment</option>
+                      <option>Rental/Royalty</option>
+                      <option>Farming/Fishing</option>
+                      <option>Prizes/Awards/Gambling</option>
+                      <option>Educational</option>   
+                      <option>Alimony Received</option>
+                      <option>VA/RRB</option>
+                      <option>Tribal</option>
+                    </select>
+                  </div>
+    			        <div class="monthlyTotals">
+                    <input type="text" id="current_month_1" name="current_month_1" size="15" class="currentMonth" data-watermark="$0 Amount" />
+                    <input type="text" id="next_month_1" name="next_month_1" size="15" class="nextMonth" data-watermark="$0 Amount" />
+    			         <a href="#">Need help?</a>
+                 </div>
+
+                  <div id="helpIcon1" class="helpIcon" style="visibility:hidden">
+                    <img id="loadingImage1" name="loadingImage1" class="helpIcon" src="images/help_icon.png" style="visibility:visible" onClick="showHelp(this);" alt="Need Help?" />
+                  </div>
+
+                  <!-- Help Modal 1-->
+                  <div class="formCalculator">
+                    <section class="widget" id="widget_1" style="display:none;">
+                      <div class="accordionHeader clearfix">
+                        <h5>Help <span class="close"><img id="calWidgetClose1" name="calWidgetClose1" src="images/close_icon_small.png"></span></h5>
+
+                      </div>
+                      <div id="incomeHelpAccordion" class="accordion clearfix">
+                      <h5>Calculate monthly income</span></h5>
+                        <div class="calContent">
+                          <fieldset>
+                            <div class="ctrlHolder clearfix">
+                              <label>Gross pay</label>
+                              <input type="text" name="grossPay_1" id="grossPay_1" class="grossPay Monthly" size="10">
+                            </div>
+                            <div class="ctrlHolder clearfix">
+                              <label>Frequency</label>
+                              <div class="calculatorEntrySelect">
+                                <select id="frequency_1" name="frequency_1" class="frequency">
+                                  <option value="1">Hourly</option>
+                                  <option value="2">Daily</option>
+                                  <option value="3">Weekly</option>
+                                  <option value="3">Bi-weekly</option>
+                                  <option value="3">Monthly</option>
+                                  <option value="3">Annually</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="ctrlHolder clearfix">
+                              <label>Monthly income</label>
+                              <input type="text" name="calculatorTotal_1" id="calculatorTotal_1" size ="10" class="calculatorTotal"/>
+                            </div>
+                            <input type="hidden" name="calculatorAnnualTotal_1" id="calculatorAnnualTotal_1" size ="10" class="calculatorAnnualTotal"/>
+                            <div class="ctrlHolder clearfix">
+                              <!--<input class="button green applyValue2Current" name="applyValue2Current_1" id="applyValue2Current_1" onClick="return applyAnnualTotal('widget_1');" type="button" value="Accept">-->
+                              <input class="button green applyValue2Current" name="applyValue2Current_1" id="applyValue2Current_1" type="button" value="Accept">
+                            </div>
+                          </fieldset>
+                        </div>
+                        <h5>Glossary of Terms <span></span></h5>
+                        <div>
+                          <p>Tempor est et exerci processus at. Commodo feugait duis delenit eu dolor.</p>
+                        </div>
+                        <!-- <h5>Chat With An Assister <span></span></h5>
+                        <div>
+                          <p>Tempor est et exerci processus at. Commodo feugait duis delenit eu dolor.</p>
+                        </div>  -->
+                        <h5>FAQ <span></span></h5>
+                        <div>
+                          <p>Tempor est et exerci processus at. Commodo feugait duis delenit eu dolor.</p>
+                        </div>
+                     </div>
+                     <!-- END #incomeHelpAccordion -->
+                    </section>
+                  </div>
+                  <!-- END Help Modal 1-->
+
+                </div>
+
+                <div class="ctrlHolder buttons clearfix">
+                  <input type="button" class="button blue" name="addbtn" id="addbtn" value="Add income type">
+                </div>
+
+                <div class="personTotalIncomeHolder clearfix">
+                  <div class="incomeTotal" id="person_1_total_income">Total income</div>
+                  <div class="monthlyIncome"><input type="text" name="total_c1" id="total_c1" class="tabCurrentMonthIncome" size="10" maxlength="10" disabled="disabled" /></div>
+                  <div class="monthlyIncome"><input type="text" name="total_n1" id="total_n1" class="tabNextMonthIncome" size="10" maxlength="10" disabled="disabled" /></div>
+                </div>
+
+                </fieldset>
+
+                <div class="sectionFooter clearfix">
+                  <a class="button secondary" href="current_recipients.html"> Go Back </a>
+                  <a class="button secondary" href="DASH_individual.html"> Save and Exit </a>
+                  <a class="button green actionLink tabLink" href="#tab-nav-2"> Next </a>
+                </div>
+
+              </div>
+              <!-- END of #content_1 -->
+
+              <!-- BEGIN of #content_2 -->
+              <div class="tabContent" id="content_2">
+                <fieldset>
+                <div class="ctrlHolder clearfix">
+                  <h6 class="formTitle">Income type<!--<img src="images/headerHelpIcon.png" title="" class="tooltip" style="margin-left: 10px;">--></h6>
+                  <h6 class="formTitle">Current month</h6>
+                  <h6>January 2014 </h6>
+                </div>
+
+                <div class="ctrlHolder row clearfix">
+                  <div class="formEntryContentSelect">
+                    <select id="adjustments" name="adjustments" class="dropdown">
+                      <option>Select Income Type</option>
+                      <option>Employment</option>
+                      <option>Self-Employment</option>
+                      <option>Social Security Benefits</option>                      
+                      <option>SSDI</option>
+                      <option>SSI</option>
+                      <option>Unemployment</option>
+                      <option>Retirement/Pensions</option>
+                      <option>Capital Gains</option>
+                      <option>Investment</option>
+                      <option>Rental/Royalty</option>
+                      <option>Farming/Fishing</option>
+                      <option>Prizes/Awards/Gambling</option>
+                      <option>Educational</option>   
+                      <option>Alimony Received</option>
+                      <option>VA/RRB</option>
+                      <option>Tribal</option>
+                    </select>
+                  </div>
+    			        <div class="monthlyTotals">
+                    <input type="text" id="current_month_1" name="current_month_1" size="15" class="currentMonth" data-watermark="$0 Amount" />
+                    <input type="text" id="next_month_1" name="next_month_1" size="15" class="nextMonth" data-watermark="$0 Amount" />
+                    <a href="">Need help?</a>
+    			        </div>
+                  <div id="helpIcon1" class="helpIcon" style="visibility:hidden">
+                    <img id="loadingImage1" name="loadingImage1" class="helpIcon" src="images/help_icon.png" style="visibility:visible" onClick="showHelp(this);" alt="Need Help?" />
+                  </div>
+
+                  <!-- Help Modal 2-->
+                  <div class="formCalculator">
+                    <section class="widget" id="widget_1" style="display:none;">
+                      <div class="accordionHeader clearfix">
+                        <h5>Help <span class="close"><img id="calWidgetClose1" name="calWidgetClose1" src="images/close_icon_small.png"></span></h5>
+                        <p>Current month's income</p>
+                      </div>
+                      <div id="incomeHelpAccordion2" class="accordion clearfix">
+                      <h5>Calculate monthly income<span></span></h5>
+                        <div class="calContent">
+                          <fieldset>
+                            <div class="ctrlHolder clearfix">
+                              <label>Gross Pay</label>
+                              <input type="text" name="grossPay_1" id="grossPay_1" class="grossPay Monthly" size="10">
+                            </div>
+                            <div class="ctrlHolder clearfix">
+                              <label>Frequency</label>
+                              <div class="calculatorEntrySelect">
+
+                              <select id="frequency_1" name="frequency_1" class="frequency">
+                                  <option value="1">Hourly</option>
+                                  <option value="2">Daily</option>
+                                  <option value="3">Weekly</option>
+                                  <option value="3">Bi-weekly</option>
+                                  <option value="3">Monthly</option>
+                                  <option value="3">Annually</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="ctrlHolder clearfix">
+                              <label>Monthly income</label>
+                              <input type="text" name="calculatorTotal_1" id="calculatorTotal_1" size ="10" class="calculatorTotal"/>
+                            </div>
+                            <input type="hidden" name="calculatorAnnualTotal_1" id="calculatorAnnualTotal_1" size ="10" class="calculatorAnnualTotal"/>
+                            <div class="ctrlHolder clearfix">
+                              <!--<input class="button green applyValue2Current" name="applyValue2Current_1" id="applyValue2Current_1" onClick="return applyAnnualTotal('widget_1');" type="button" value="Accept">-->
+                              <input class="button green applyValue2Current" name="applyValue2Current_1" id="applyValue2Current_1" type="button" value="Accept">
+                            </div>
+                          </fieldset>
+                        </div>
+                        <h5>Glossary of Terms <span></span></h5>
+                        <div>
+                          <p>Tempor est et exerci processus at. Commodo feugait duis delenit eu dolor.</p>
+                        </div>
+                        <!--<h5>Chat with customer service<span></span></h5>
+                        <div>
+                          <p>Tempor est et exerci processus at. Commodo feugait duis delenit eu dolor.</p>
+                        </div>-->
+                        <h5>FAQ  <span></span></h5>
+                        <div>
+                          <p>Tempor est et exerci processus at. Commodo feugait duis delenit eu dolor.</p>
+                        </div>
+                     </div>
+                     <!-- END #incomeHelpAccordion2 -->
+                    </section>
+                  </div>
+                  <!-- END Help Modal 2-->
+
+                </div>
+
+                <div class="ctrlHolder buttons clearfix">
+                  <input type="button" class="button blue" name="addbtn" id="addbtn" value="Add income type">
+                </div>
+
+                <div class="personTotalIncomeHolder clearfix">
+                  <div class="incomeTotal" id="person_2_total_income">Total income</div>
+                  <div class="monthlyIncome"><input type="text" name="total_c2" id="total_c2" class="tabCurrentMonthIncome" size="10" maxlength="10" disabled="disabled" /></div>
+                  <div class="monthlyIncome"><input type="text" name="total_n2" id="total_n2" class="tabNextMonthIncome" size="10" maxlength="10" disabled="disabled" /></div>
+                </div>
+
+                </fieldset>
+
+              <div class="sectionFooter clearfix">
+                <a class="button secondary tabLink" href="#tab-nav-1"> Go Back </a>
+                <a class="button secondary" href="DASH_individual.html"> Save and Exit </a>
+                <a class="button green actionLink" href="current_month_adjustments.html"> Next </a>
+              </div>
+
+              </div>
+              <!-- END of #content_2 -->
+            </section>
+            <!-- END tabbed_area-->          
+          </form>
+        </div>
+      </section>
+      <!--END pageContentArea-->
+    </div>
+    <!--END pageContainer-->    <!-- ~~~~~~~~~~~~~ HELP DRAWER MODAL ~~~~~~~~~~~~~~ -->    
+    <div class="widget" id="helpModal" title="Help">  
+      <div id="sampleAccordion" class="accordion clearfix">               
+          <a href="CORP_faq.html" class="disabledHeader disable">Frequently asked questions<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <a href="CORP_glossary.html" class="disabledHeader disable">Glossary of terms<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <h5>Contact us <span></span></h5>
+          <div>
+            <p><strong>Email:</strong> <span>info@coveroregon.com</span></p>
+            <p><strong>Phone:</strong> <span>1-855-CoverOR</span></p>            
+          </div>
+       </div>
+       <!-- END #sampleAccordion -->
+   </div>          
+  <!-- END helpModal-->
+  <footer>
+    <div id="footerHeaderContainer" class="clearfix">
+      <div id="footerHeader" class="clearfix">
+        <h1>Cover Oregon</h1> 
+        <!--<div class="language">
+          <h5>Select Language</h5>
+          <div class="selLanguage">
+            <select>
+              <option>English (US)</option>
+            </select>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <!-- END #footerHeaderContainer-->
+
+    <div id="directoryNavContainer" class="clearfix">
+      <div id="directoryNav"  class="clearfix">
+        <div class="footerColumn">
+          <h5>Discover Cover Oregon</h5>          <ul>        
+            <li><a href="CORP_about_us.html">About us</a></li>
+            <li><a href="CORP_join_us.html">Careers</a></li>
+            <li><a href="CORP_news_and_media.html">News and media</a></li>
+            <li><a href="CORP_featured_stories_mary_sean.html">Featured stories</a></li>
+            <li><a href="http://resources.coveroregon.com/" target="_blank">Resources</a></li>
+            <li><a href="CORP_creative.html">Creative</a></li>
+            <li><a href="CORP_board_and_committees.html">Board and committees</a></li>
+            <li><a href="CORP_meeting_and_events.html">Meetings and events</a></li>
+            <li><a href="CORP_contact_us.html">Contact information</a></li>
+            <li><a href="CORP_public_comments.html">Public comments</a></li>
+            <li><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o027213.pdf" target="_blank">Public records request</a></li>
+            <li><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_6.pdf" target="_blank">Business plan</a></li>
+            <li><a href="CORP_newsletter_archives.html">Newsletter archives</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Explore Coverage</h5><ul>
+            <li><a href="CORP_medical_coverage.html">Medical</a></li>
+            <li><a href="CORP_dental_coverage.html">Dental</a></li>
+            <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+            <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+            <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+            <li><a href="CORP_view_providers.html">View providers</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="CORP_application_process.html">Application overview</a></li>
+            <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+            <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>
+            <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+            <li><a href="individual_start.html">Individual and families</a></li>
+            <li><a href="SHOP_start.html">Employers</a></li>
+            <li><a href="EMP_start.html">Employees</a></li>
+            <li><a href="TRB_start.html">Tribes</a></li>
+            <li><a href="AGENT_start.html">Agents and community partners</a></li>
+            <li><a href="carrier_start.html">Insurance companies</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Learn More</h5>
+          <ul>
+            <li><a href="CORP_faq.html">Frequently asked questions</a></li>
+            <li><a href="CORP_glossary.html">Glossary of terms</a></li>        
+            <li><a href="CORP_grants_and_reports.html">Reports, grants and legislation</a></li>                       
+            <li><a href="CORP_language_help.html">Language help</a></li>
+            <li><a href="CORP_exemptions.html">Exemptions</a></li>
+          </ul>
+        </div>    
+        <div id="supportfooter" class="footerColumn">
+          <h5>Contact Us</h5>
+          <p><img src="images/email_green.png" alt="Email"><a href="mailto:info@coveroregon.com">info@coveroregon.com</a></p>
+          <p><img src="images/phone_green_sm.png" alt="Contact Cover Oregon"> 1-855-268-3767</p>          
+          <div><a href="https://www.facebook.com/coveroregon" target="_blank"><img src="images/facebook_green.png" alt="Cover Oregon Facebook"></a><a href="https://www.twitter.com/CoverOregon" target="_blank"><img src="images/twitter_green.png" alt="Cover Oregon Twitter"></a><a href="http://www.linkedin.com/company/2673889" target="_blank"><img src="images/linkedin_green.png" alt="Cover Oregon LinkedIn"></a><a href="http://www.youtube.com/user/coveroregonvideo?feature=watch" target="_blank"><img src="images/youtube_green.png" alt="Cover Oregon YouTube"></a><a href="https://plus.google.com/102909134020101999085" target="_blank"><img src="images/google_green.png" alt="Cover Oregon Google Plus"></a></div>
+        </div>
+        <!-- END supportfooter -->
+      </div>  
+    </div>
+    <!-- END directoryNavContainer -->
+
+    <div class="globalFooterCopyrightContainer">
+      <div class="globalFooterCopyright">
+        <p>&copy; 2013 Cover Oregon, All Rights Reserved | <a href="CORP_privacy_policy.html">Privacy Policy</a> | <a href="CORP_terms_and_conditions.html">Terms and conditions</a> | <a href="CORP_accessibility.html">Accessibility</a></p>  
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script type="text/javascript" src="scripts/tabs.js"></script>
+  <script type="text/javascript" src="scripts/widgets.js"></script>
+  <script type="text/javascript" src="scripts/forms.js"></script>
+  <script type="text/javascript" src="scripts/calculatorForm2.js"></script>
+  <script type="text/javascript" src="scripts/waterMark.js"></script>
+  <script src='scripts/jquery.dcmegamenu.1.2.js' type='text/javascript'></script>
+  <script src='scripts/jquery.hoverIntent.minified.js' type='text/javascript'></script>
+  <script src='scripts/jquery.mega.menu.js' type='text/javascript'></script>  
+
+  <script>$("input:disabled");</script>
+
+  <script type="text/javascript">
+      form = document.forms[0];
+      function popFields(argname,value,dataArrayPasser){
+        //alert("argname: "+argname+" | value: "+value+" | value.length: "+value.length);
+
+        if (value != null && value.length > 0) {
+          if (argname.indexOf("chkBox") !=-1) {
+              form[argname].checked = value;
+          } else if (argname.indexOf("stop") !=-1) {
+              if (value == "on")
+                value = "true";
+              else (value == "off" || value == '')
+                value = "false";
+              form[argname].checked = value;
+          } else if (argname.indexOf("stop") !=-1) {
+              form[argname].value = value;
+          } else {
+            //alert("argname: "+ argname+" | value: "+value);
+              form[argname].value = value;
+          }
+          form.dataContainer.value = dataArrayPasser;
+        }
+      }
+      function applyAnnualTotal(rowID){
+        alert("rowID: "+rowID);
+        var valMJ = rowID.indexOf('_');
+        var rowIDs = "";
+        rowIDs = rowID.substring(valMJ+1);
+        alert("rowIDs: "+rowIDs);
+        form.current_month_1.value = 45;
+        calcTotalFields($(this));
+        //var calculatorAnnualTotal = form.calculatorAnnualTotal_1.value;
+        //alert("calculatorAnnualTotal: "+calculatorAnnualTotal);
+        //alert("form.current_month_1.value: "+form.current_month_1.value);
+        //form.current_month_1.value = calculatorAnnualTotal;
+      }
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <!--  Mobile Viewport Fix -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Cover Oregon | Carriers</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" href="styles/helpDrawer.css">
+
+
+  <!-- All JavaScript at the bottom, except for Modernizr. Modernizr enables HTML5 elements & feature detects -->    
+  <script src="scripts/modernizr-2.5.3.min.js" type="text/javascript"></script>
+
+
+</head>
+<body id="modalTemplate" onLoad="carrierId();">
+
+    <header>
+      <div id="globalNavContainer" class="clearfix">
+
+      <!-- Log in Container -->
+      <div id="login" class="globalLoginContainer clearfix">
+        <div class="loginFields">
+          <a href="login_username.html" class="button blue">Log In</a>
+          <p>New User? <a href="#" id="createAccountLink">Create Account</a></p>
+        </div>
+      </div>
+      <!-- END .globalLoginContainer -->
+
+      <div class="globalNav">
+        <div class="logo"><a href="index.html" title="Cover Oregon"><img src="images/cover-oregon-logo-small.png" alt="Cover Oregon"></a></div> 
+        <nav>
+          <ul id="mega-menu-tut" class="menu">            <li>Explore Coverage
+              <ul>
+                <li><a href="CORP_medical_coverage.html">Medical</a></li>
+                <li><a href="CORP_dental_coverage.html">Dental</a></li>
+                <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+                <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+                <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+                <li><a href="CORP_view_providers.html">View providers</a></li>
+              </ul>
+            </li>
+
+            <li>Get Started
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_application_process.html">Application overview</a></li>
+                    <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+                    <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>           
+                    <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li><a href="individual_start.html">Individual and Families</a></li>
+                    <li><a href="SHOP_start.html">Employers</a></li>
+                    <li><a href="EMP_start.html">Employees</a></li>
+                    <li><a href="TRB_start.html">Tribes</a></li>
+                    <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+                    <li><a href="carrier_start.html">Insurance companies</a></li>
+                  </ul>
+                </li>
+              </ul>              
+            </li>
+            
+            <li>Learn More
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_faq.html">FAQs</a></li>
+                    <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+                    <li><a href="CORP_grants_and_reports.html">Reports, grants and Legislation</a></li>
+                    <li><a href="CORP_exemptions.html">Exemptions</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li style="padding: 6px 0;">Find help in your language:</li>                    
+                    <li><a href="CORP_language_help.html?id=spanish">Spanish <span>español</span></a></li>
+                    <li><a href="CORP_language_help.html?id=russian">Russian <span>русский</span></a></li>
+                    <li><a href="CORP_language_help.html?id=vietnamese">Vietnamese <span class="vm">tiếng Việt</span></a></li>
+                    <li><a href="CORP_language_help.html?id=korean">Korean <span>한국인</span></a></li>
+                    <li><a href="CORP_language_help.html?id=chinese">Chinese (Trad.) <span class="ch">中文</span></a></li>
+                  </ul>
+                </li>                
+              </ul>
+            </li> </ul>
+        </nav>
+      </div>
+      <!-- END .globalNav -->      <div class="utilities">
+        <nav>
+        <ul>
+          <li><a class="phoneLink" href="#"><img src="images/phone_green2.png" alt="Phone">Phone</a>
+          <!-- PHONE HOVER -->
+          <div id="phoneHover" class="clearfix">
+            <div class="hoverArrow"><img src="images/arrow_white.png" alt="Phone Hover"></div>                
+            <p>Phone: 1-855-268-3767</p>
+          </div>
+          <li><a href="CORP_language_help.html"><img src="images/globe.png" alt="Languages">Languages</a></li>
+          <li><a href="" id="helpModalLink"><img src="images/help_green_sm.png" alt="Help">Help</a></li>
+          <li style="padding: 0 0 0 10px; background: none;"><input type="text" value="" class="searchBox" name="search" id="search" data-watermark="Search"></li>        
+        </ul>
+        </nav>
+      </div>
+
+    </div>
+    <!-- END #globalNavContainer -->
+    </header>
+
+  <div id="pageContainer" class="clearfix">
+    <section class="corpContentArea">
+      <h1>Participating insurance companies</h1>
+        
+      <fieldset>
+        <div class="carriersOptions clearfix">
+          <div class="selectCarrier">
+            <select id="selectCarrier">
+              <option value="Medical">Medical</option>
+              <option value="Dental">Dental</option>
+              <option value="CCO">Coordinated Care Organizations</option>
+            </select>              
+          </div>
+          <label for="selectCarrier">Click on an insurance company logo for more information.</label>
+        </div>
+      </fieldset>
+    </section><!-- END .corpContentArea -->
+
+    <div class="carrierLogosContainer" id="Medical" style="display:block">
+      <ul class="clearfix">
+        <!-- Medical Carriers -->
+        <li><a href="#" id="atrio" title="atrio"></a></li>
+        <li><a href="#" id="bridgespan" title="bridgespan"></a></li>
+        <li><a href="#" id="healthnet" title="healthnet"></a></li>
+        <li><a href="#" id="healthrepublic" title="healthrepublic"></a></li>
+        <li><a href="#" class="kaiserpermanente" title="kaiserpermanente"></a></li>
+        <li><a href="#" id="lifewise" title="lifewise"></a></li>
+        <li><a href="#" id="modahealth" title="modahealth"></a></li>
+        <li><a href="#" id="oregonhealth" title="oregonhealth"></a></li>
+        <li><a href="#" class="pacificsource" title="pacificsource"></a></li>
+        <li><a href="#" class="providence" title="providence"></a></li>
+        <li><a href="#" class="trillium" title="trillium"></a></li>
+      </ul>
+    </div><!-- END carrierLogosContainer -->
+
+    <div class="carrierLogosContainer" id="Dental" style="display:none">
+      <ul class="clearfix">
+        <!-- Dental Carriers -->
+        <li><a href="#" id="bestlife" title="bestlife"></a></li>
+        <li><a href="#" id="dentalhealthservices" title="dentalhealthservices"></a></li>
+        <li><a href="#" id="dentegra" title="dentegra"></a></li>
+        <li><a href="#" id="guardian" title="guardian"></a></li>
+        <li><a href="#" class="kaiserpermanente" title="kaiserpermanente"></a></li>
+        <li><a href="#" id="ods" title="ods"></a></li>
+        <li><a href="#" class="pacificsource" title="pacificsource"></a></li>
+        <li><a href="#" class="trillium" title="trillium"></a></li>
+        <li><a href="#" id="williamette" title="williamette"></a></li>
+      </ul>
+    </div>
+    <!-- END carrierLogosContainer -->
+
+    <div class="carrierLogosContainer" id="CCO" style="display:none">
+      <ul class="clearfix">
+        <!-- Coordinated Care Organizations -->          
+        <li><a href="#" id="allcare" title="allcare"></a></li>
+        <li><a href="#" id="columbiapacific" title="columbiapacific"></a></li>
+        <li><a href="#" id="familycare" title="familycare"></a></li>
+        <li><a href="#" id="healthshare" title="healthshare"></a></li>
+        <li><a href="#" id="intercommunity" title="intercommunity"></a></li>
+        <li><a href="#" id="jacksoncare" title="jacksoncare"></a></li>
+        <li><a href="#" id="pacificsourcecommunity" title="pacificsourcecommunity"></a></li>
+        <li><a href="#" id="josephinePH" title="joesphinePH"></a></li>
+        <li><a href="#" id="trilliumcommunity" title="trilliumcommunity"></a></li>
+        <li><a href="#" id="umpqua" title="umpqua"></a></li>
+        <li><a href="#" id="westernoregon" title="westernoregon"></a></li>
+        <li><a href="#" id="williametteCCO" title="williametteCCO"></a></li>
+        <li><a href="#" id="wvch" title="wvch"></a></li>
+        <li><a href="#" id="yamhill" title="yamhill"></a></li>
+        <li><a href="#" id="eocco" title="eocco"></a></li>
+      </ul>
+    </div><!-- END carrierLogosContainer -->
+
+
+    <section class="corpContentArea">
+  
+<!-- =====================================================================
+  Carrier Pages
+========================================================================== -->
+
+<!-- Atrio Carrier -->
+<section class="carrierPages" id="AtrioContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/atrio_mid.png" alt="">
+    <h3>Atrio Health Plans</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>ATRIO Health Plans offers individual, group and Medicare plans to residents of Douglas, Klamath, Marion and Polk counties.  ATRIO was established by physicians as a community-based option for comprehensive, flexible and affordable plans.  Since 2004, ATRIO has been at the forefront of developing programs to provide quality care for our members.  Being local offers several advantages, including more personalized customer service for ATRIO members.  We have an extensive network of forward thinking local providers and facilities committed to transforming healthcare.  </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.atriohp.com/" target="_blank">www.atriohp.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004232.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span>Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br></td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Douglas<br>
+            Klamath*<br>
+            Marion<br>
+            Polk<br><br>
+            <em>*County is partially covered</em></td>
+        <td>Douglas<br>
+            Klamath*<br>
+            Marion<br>
+            Polk<br><br>
+            <em>*County is partially covered</em></td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>No Coverage</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Bridgespan Carrier -->
+<section class="carrierPages" id="BridgespanContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/bridgespan_mid.png" alt="">
+    <h3>BridgeSpan Health</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>We don't just insure you. We empower you. We believe you deserve a stronger voice in your health care. So we developed online tools to help you find a plan that works best for you. With BridgeSpan Health,™ you can better monitor your expenses. And you can get the treatment you need when you need it. BridgeSpan connects you to care givers who value relationships and are rewarded for positive outcomes. Because we know – that’s how you want it.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.bridgespanhealth.com/" target="_blank">www.BridgeSpanHealth.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004234.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span>Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic</td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Statewide</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>No Coverage</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Health Net Carrier -->
+<section class="carrierPages" id="HealthNetContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/healthnet_mid.png" alt="">
+    <h3>Health Net</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Health Net Health Plan of Oregon, Inc. is a top managed health care company with roots in the Pacific Northwest that span over seven decades. We’re proud to offer effective, affordable health care solutions that continue meeting the needs of our members. We were the first health plan to introduce a tailored network concept in our local market, offering Health Net CommunityCare plans in the metropolitan Portland area. Health Net CommunityCare creates quality and cost advantages, with freedom from referral restrictions. It’s a local solution for smart, sustainable health care coverage.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.healthnet.com" target="_blank">www.healthnet.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004236.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Platinum<br>
+            Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic</td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Clackamas<br>
+          Multnomah<br>
+          Washington</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>No Coverage</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Health Republic Carrier -->
+<section class="carrierPages" id="HealthRepublicContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/healthrepublic_mid.png" alt="">
+    <h3>Health Republic</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Health Republic is a non-profit consumer operated and oriented insurance company (CO-OP) serving the people of Oregon.  Our mission is to change the lives of Oregonians by providing affordable, high quality health coverage to all who need it. We have no private shareholders and we do not distribute profits to any investors. We use our profits to lower premiums, improve benefits, and improve quality, making every dollar count for your health care.  Health Republic is sponsored by Freelancers Union, an organization which has been advocating for and insuring independent workers and underrepresented Americans since 1995.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://oregon.healthrepublic.us/" target="_blank">oregon.healthrepublic.us</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004237.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic</td>
+        <td><br>Platinum<br>
+            Gold<br>
+            Silver<br>
+            Bronze</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Statewide</td>
+        <td>Statewide</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>No Coverage</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Kaiser Carrier -->
+<section class="carrierPages" id="KaiserPermanenteContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/kaiserpermanente_mid.png" alt="">    
+    <h3>Kaiser Permanente</h3>
+    <img src="images/accredited.png" alt="">
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>For individuals and families, Kaiser Permanente offers more than just health insurance. We offer care that centers around you—from refilling most prescriptions and making appointment online to emailing your doctor's office anytime. Enjoy affordable coverage and a connected group of doctors, dentists, services, and online tools. With more than 30 locations, it’s easy to find a medical office close to home or work. We care for your total health—mind, body, and spirit. Visit kp.org to learn more. </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.kp.org" target="_blank">www.kp.org</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004238.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic</td>
+        <td><br>Platinum<br>
+            Gold<br>
+            Silver<br>
+            Bronze</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Benton*<br>
+          Clackamas*<br>
+          Columbia<br>
+          Hood River*<br>
+          Linn*<br>
+          Marion*<br>
+          Multnomah<br>
+          Polk<br>
+          Washington<br>
+          Yamhill<br>  
+          *County is partially covered</td>
+        <td>Benton*<br>
+          Clackamas*<br>
+          Columbia<br>
+          Hood River*<br>
+          Linn*<br>
+          Marion*<br>
+          Multnomah<br>
+          Polk<br>
+          Washington<br>
+          Yamhill<br>  
+          *County is partially covered</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>Benton*<br>
+          Clackamas*<br>
+          Columbia<br>
+          Hood River*<br>
+          Linn*<br>
+          Marion*<br>
+          Multnomah<br>
+          Polk<br>
+          Washington<br>
+          Yamhill<br>  
+          *County is partially covered</td>
+        <td><br>Benton*<br>
+          Clackamas*<br>
+          Columbia<br>
+          Hood River*<br>
+          Linn*<br>
+          Marion*<br>
+          Multnomah<br>
+          Polk<br>
+          Washington<br>
+          Yamhill<br>  
+          *County is partially covered</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Lifewise Carrier -->
+<section class="carrierPages" id="LifewiseContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/lifewise_mid.png" alt="">
+    <h3>LifeWise</h3>
+    <img src="images/accredited.png" alt="">
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>LifeWise Health Plan of Oregon is a local health plan with a long-standing reputation for providing excellent service to individuals, families and employers. LifeWise offers a range of products and services for medical, dental, vision, life, disability, stop-loss, and wellness programs through its family of companies.  At LifeWise, we focus on helping our customers live a healthy life. We’re committed to providing products, tools and services that support healthy choices as well as access to quality, cost-effective healthcare.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.lifewiseor.com/" target="_blank">www.lifewiseor.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004239.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br></td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Statewide</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>No Coverage</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Moda Carrier -->
+<section class="carrierPages" id="ModaHealthContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/modahealth_mid.png" alt="">
+    <h3>Moda Health</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>At Moda Health, formerly ODS Health, we’re passionate about helping you on your journey to be better. We know good health is about more than plan details. That’s what we’re here for — to be your guide, fan club and partner every step of the way. We provide a diverse network of doctors, expert health coaches, online tools and caring customer service reps. We also ensure rigorous clinical quality standards, which earned our PPO plans NCQA commendable accreditation. At Moda Health, you are the MVP of your health. We invite you to join us. Together we can be more, be better. </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.modahealth.com/" target="_blank">www.modahealth.com </a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004240.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic<br></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Statewide</td>
+        <td>Statewide</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>No Coverage</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Oregon's Health CO-OP Carrier -->
+<section class="carrierPages" id="OregonHealthContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/oregonhealth_mid.png" alt="">
+    <h3>Oregon's Health CO-OP</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Has a health plan ever asked you this simple question: “If you could create your own health plan, what would it look like? And how would it treat you?” At Oregon’s Health CO-OP, your voice is the foundation of our new consumer-oriented health plan. We were created by and for Oregonians to bring greater access and needed change to health insurance. Our plan benefits, provider network and wellness programs were designed with statewide consumer input. You wanted simplicity in plan design, naturopaths as a primary care option and clear costs. As a CO-OP, we reinvest profits in members by lowering premiums and improving benefits. </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.ohcoop.org/" target="_blank">www.ohcoop.org</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004242.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic<br></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br></td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Benton<br>
+        Clackamas<br>
+        Clatsop<br>
+        Columbia  <br>
+        Crook  <br>
+        Deschutes<br>
+        Jackson<br>
+        Jefferson<br>
+        Josephine  <br>
+        Lane<br>
+        Lincoln<br>
+        Linn<br>
+        Marion<br>
+        Multnomah<br>
+        Polk<br>
+        Tillamook<br>
+        Washington<br>
+        Yamhill<br></td>
+        <td>Benton<br>
+        Clackamas<br>
+        Clatsop<br>
+        Columbia  <br>
+        Crook  <br>
+        Deschutes<br>
+        Jackson<br>
+        Jefferson<br>
+        Josephine  <br>
+        Lane<br>
+        Lincoln<br>
+        Linn<br>
+        Marion<br>
+        Multnomah<br>
+        Polk<br>
+        Tillamook<br>
+        Washington<br>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>No Coverage</td>
+      </tr>
+      <tr>
+        <td>Innovative plans:</td>
+        <td colspan="2">Oregon’s Health CO-OP built our innovative SiMPLE plans by pulling together great ideas from Oregonians.<br><br> 
+
+          We did away with mystery costs.<br>          
+          There’s no coinsurance. <br>           
+          Every covered service carries a predictable, flat copay. <br><br>         
+
+          We did away with the frustration of never-ending deductibles. Our deductible applies only to: <br>       
+          Inpatient stays   <br>      
+          Surgery in a hospital  <br>     
+          Surgery in an outpatient surgicenter<br><br>
+
+          We added choice.   <br>     
+          You can choose a network naturopath as your primary care provider.<br>        
+          We cover acupuncture.<br>       
+          We pay practitioners for phone or email consultations with you, not just office visits.<br><br>
+          Keep it SIMPLE. Join us!</td>              
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Pacific Source Carrier -->
+<section class="carrierPages" id="PaicifcsourceContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/pacificsource_mid.png" alt="">
+    <h3>PacificSource</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>For 80 years PacificSource has been Oregon’s community health plan, known for exceptional customer service. We’re an independent, not-for-profit medical and dental insurer focused on helping you get the care you need – not delivering financial benefits to shareholders. We do that by partnering with local hospitals and doctors who share our commitment to providing you with better care and a better patient experience, at a better cost. PacificSource achieved J.D. Power and Associates’ recognition as the “Highest in Member Satisfaction among Commercial Health Plans in the Northwest Region” for 2013. (For J.D. Power award information, visit jdpower.com.)</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.pacificsource.com/" target="_blank">www.PacificSource.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004243.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic<br></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br></td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Every County <br>except Umatilla </td>
+        <td>Every County <br>except Umatilla </td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>Statewide</td>
+        <td><br>Statewide</td>
+      </tr>
+      <tr>
+        <td>Innovative plans:</td>
+        <td colspan="2">The SmartHealth Innovation Silver 1500 plan gives you an active role in your well-being. Focused on prevention, early intervention, and active condition management, this plan is designed to help you live your healthiest life.</td>              
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Providence Carrier -->
+<section class="carrierPages" id="ProvidenceContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/providence_mid.png" alt="">
+    <h3>Providence Health Plan</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>When it comes to you and your health, Providence Health Plan is dedicated to doing the right thing. As the health care landscape continues to change, we provide a foundation built on trust and respect. We’re committed to your well-being and know that where and how you receive care is a personal choice, which is why you have options – choose a plan that’s exclusive to Providence facilities or one with nearly 1 million care options nationwide. We’re about more than technology and tools, numbers and claims; Providence is about ensuring the greater good and doing right by you, every day.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.ProvidenceHealthPlan.com" target="_blank">www.ProvidenceHealthPlan.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004244.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic<br></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br></td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Benton<br>
+            Clackamas <br>
+            Clatsop  <br>
+            Columbia <br>
+            Crook   <br>
+            Deschutes<br>
+            Douglas <br>
+            Gilliam <br>
+            Grant   <br>
+            Harney  <br>
+            Hood River <br>
+            Jackson   <br>
+            Jefferson <br>
+            Josephine <br>
+            Klamath*  <br>
+            Lane*    <br>
+            Linn<br>
+            Marion <br>
+            Multnomah <br>
+            Polk <br>
+            Sherman <br>
+            Tillamook <br>
+            Wasco <br>
+            Washington<br>
+            Wheeler  <br>
+            Yamhill  <br> 
+            *County is partially covered</td>
+        <td>Benton<br>
+            Clackamas <br>
+            Clatsop  <br>
+            Columbia <br>
+            Crook   <br>
+            Deschutes<br>
+            Douglas <br>
+            Gilliam <br>
+            Grant   <br>
+            Harney  <br>
+            Hood River <br>
+            Jackson   <br>
+            Jefferson <br>
+            Josephine <br>
+            Klamath*  <br>
+            Lane*    <br>
+            Linn<br>
+            Marion <br>
+            Multnomah <br>
+            Polk <br>
+            Sherman <br>
+            Tillamook <br>
+            Wasco <br>
+            Washington<br>
+            Wheeler  <br>
+            Yamhill  <br> 
+            *County is partially covered</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>No Coverage</td>
+      </tr>
+      <tr>
+        <td>Innovative plans:</td>
+        <td colspan="2">Medical Home Choice<br>
+          With Choice, you select a medical home from a network of more than 180 primary care clinics. Your health will be supported by a dedicated care team that will work collaboratively to support all aspects of your health, from wellness and prevention to active management of chronic conditions.<br><br>
+
+          Medical Neighborhood Connect<br>
+          Connect lets you choose your medical home from more than 26 primary care clinics within the Portland metro area. Interact with your dedicated team of health professionals in both traditional and innovative ways, including e-visits (by email), phone visits, or in-person visits to your medical home clinic.</td>              
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Trillium Carrier -->
+<section class="carrierPages" id="TrilliumContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/trillium_mid.png" alt="">
+    <h3>Trillium</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>With a twenty plus year history in Lane County, Oregon, Trillium Community Health Plan has a reputation for quality, innovation and excellence. With an extensive group of providers and more than 150 employees, we take pride in providing outstanding customer service. Trillium offers health plans specifically designed to meet the needs of you, your family, or your employees. Our Commercial Health Plans  Trillium Exchange offers a variety of plans for adults and children including: Individual, Small Group, Catastrophic and Dental. Plan levels (Gold, Silver, and Bronze) vary in premiums, deductibles and co-pays depending on individual healthcare needs.  Vital- For Individuals and families Active-Designed for small businesses Fit- Catastrophic for younger, healthier adults Bright and Smiles Dental Plans</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.trilliumchp.com/" target="_blank">www.trilliumchp.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004245.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze<br>
+            Catastrophic<br></td>
+        <td><br>Gold<br>
+            Silver<br>
+            Bronze</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>Benton<br>
+            Clackamas<br>
+            Deschutes <br>
+            Douglas   <br>
+            Jackson  <br>
+            Klamath <br>
+            Lane     <br>
+            Linn</td>
+        <td>Benton<br>
+            Clackamas<br>
+            Deschutes <br>
+            Douglas   <br>
+            Jackson  <br>
+            Klamath <br>
+            Lane     <br>
+            Linn</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>Benton<br>
+            Clackamas<br>
+            Deschutes <br>
+            Douglas   <br>
+            Jackson  <br>
+            Klamath <br>
+            Lane     <br>
+            Linn</td>
+        <td><br>Benton<br>
+            Clackamas<br>
+            Deschutes <br>
+            Douglas   <br>
+            Jackson  <br>
+            Klamath <br>
+            Lane     <br>
+            Linn</td>      </tr>
+
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- =====================================================================
+  Dental Carriers
+========================================================================== -->
+
+<!-- BestLife Carrier -->
+<section class="carrierPages" id="BestLifeContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/bestlife_mid.png" alt="">
+    <h3>BEST Life</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>BEST Life has been providing affordable dental benefits to individuals, families and employers for more than 42 years. We have built a legacy based on great rates, vast networks, superior service, rapid claims payment and the quality health plans that have become our trademark. We pay claims in a matter of days - not weeks. And when you call, you’ll get a live person ready to help you in any way that we can. We’re always here for you. That's the superior customer service we're known for. It's that simple. When you choose BEST Life, your smiles are safe with us.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.bestlife.com" target="_blank">www.bestlife.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004233.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span>Metal levels:</span></td>
+        <td><br>None</td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>No Coverage</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>        
+        <td><br>Statewide</td>
+        <td><br>Statewide</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+
+
+<!-- Dental Health Services Carrier -->
+<section class="carrierPages" id="DentalHealthServicesContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/dentalhealthservices_mid.png" alt="">
+    <h3>Dental Health Services</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Great oral health is essential for your overall well-being. Dental Health Services is here to help you achieve a healthy smile with high-quality, affordable dental plans - now available through Cover Oregon. Your dental plan choices include: coverage from day 1 with no waiting periods or pre-existing conditions; unlimited access to your Dental Health Services coverage with no deductibles or maximums; phone and online support from our Member Service Team; affordable care with low premiums and copayments (out-of-pocket); and comfort and satisfaction with dentists who pass our 107-point Quality Assurance program.  Protect your oral health. Enroll in Dental Health Services today!</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.dentalhealthservices.com/" target="_blank">www.dentalhealthservices.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004235.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>None</td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>No Coverage</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>Benton<br>
+            Clackamas <br>
+            Columbia <br>
+            Deschutes <br>
+            Douglas   <br>
+            Hood River <br>
+            Josephine <br>
+            Lane      <br>
+            Linn  <br>
+            Marion <br>
+            Multnomah <br>
+            Polk <br>
+            Washington <br>
+            Yamhill <br>
+            Wasco</td>
+        <td><br>Benton<br>
+            Clackamas <br>
+            Columbia <br>
+            Deschutes <br>
+            Douglas   <br>
+            Hood River <br>
+            Josephine <br>
+            Lane      <br>
+            Linn  <br>
+            Marion <br>
+            Multnomah <br>
+            Polk <br>
+            Washington <br>
+            Yamhill <br>
+            Wasco</td>
+              </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Dentegra Carrier -->
+<section class="carrierPages" id="DentegraContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/dentegra_mid.png" alt="">
+    <h3>Dentegra </h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Dentegra Insurance Company is leading the charge to redefine and innovate in the dental insurance industry. A for-profit insurance company headquartered in San Francisco, Dentegra is licensed to offer dental insurance plans in 49 states and the District of Columbia. Dentegra contracts with dentists nationwide to make quality dental care affordable and accessible to more people.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.dentegra.com/" target="_blank">www.dentegra.com</a></p>
+      <!--<p><a href="" target="_blank">Fact Sheet</a></p>-->
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>None</td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>No Coverage</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>Statewide</td>
+        <td><br>Statewide</td>
+              </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Guardian Carrier -->
+<section class="carrierPages" id="GuardianContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/guardian_mid.png" alt="">
+    <h3>Guardian</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>A mutual insurer founded in 1860, The Guardian Life Insurance Company of America and its subsidiaries are committed to protecting individuals, business owners and their employees with life insurance, disability income insurance, dental insurance products, and offer funding vehicles for 401(k) plans, annuities and other financial products. A dental market leader, Guardian meets the dental benefit needs of over 6 million members with flexible innovative products backed by one of the nation’s strongest networks.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.guardianlife.com/" target="_blank">www.GuardianLife.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_123.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>None</td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td><span>Coverage Areas:</span></td>
+        <td>No Coverage</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>No Coverage</td>
+        <td><br>Statewide</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- ODS Carrier -->
+<section class="carrierPages" id="ODSContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/ods_mid.png" alt="">
+    <h3>ODS </h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Welcome to ODS. For more than 55 years, we’ve been providing Oregonians with dental plans that protect their total health. Wherever you go, ODS goes with you—along with the nation’s largest dental network, Delta Dental. With this network, we’ve got you covered, no matter where you go in the state, country or even abroad. Our dental plans offer either a high or low option tier, so you can choose what works best for you. We also offer a few extra benefits for women in their third trimester and diabetics…just to help you stay as healthy as you can. We look forward to partnering with you for better oral health.  </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.modahealth.com/index.shtml?dn=ods" target="_blank">www.modahealth.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_124.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span> Metal levels:</span></td>
+        <td><br>None</td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td>Coverage Areas:</td>
+        <td>No Coverage</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>Statewide</td>
+        <td><br>Statewide</td>
+              </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Willamette Carrier -->
+<section class="carrierPages" id="WillametteDentalContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/williamette_mid.png" alt="">
+    <h3>Willamette Dental </h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Willamette Dental Insurance, Inc. is a dental insurance carrier headquartered in Hillsboro, Oregon, offering unique dental care plans to individuals, families, and employers with predictable out of pocket expenses.  Its provider network, Willamette Dental Group, P.C., is the largest multi-specialty group dental practice in the Pacific Northwest and operates more than 50 dental offices throughout Oregon, Washington, and Idaho.  Willamette Dental Group has been providing high quality dentistry for more than 40 years.  Enrollees receive their care through a unique model of care aimed at delivering proactive preventive dental care focused on promoting long-term health through a dentist-patient partnership.  </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.willamettedental.com/" target="_blank">www.willamettedental.com</a></p>
+      <p><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_125.pdf" target="_blank">Fact Sheet</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">    
+    <thead>
+     <tr>
+       <th></th>
+       <th>Individuals and families</th>
+       <th>Employers</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Medical plans:<br>
+        <span>Metal levels:</span></td>
+        <td><br>None</td>
+        <td><br>None</td>
+      </tr>
+      <tr>
+        <td>Coverage Areas:</td>
+        <td>No Coverage</td>
+        <td>No Coverage</td>
+      </tr>
+       <tr>
+        <td>Dental plans:<br><span>Coverage Areas:</span></td>
+        <td><br>Benton<br>
+            Clackamas*<br>
+            Columbia  <br>
+            Deschutes*<br>
+            Douglas* <br>
+            Jackson* <br>  
+            Jefferson*  <br>
+            Josephine*<br>
+            Lane*     <br>
+            Lincoln* <br>
+            Linn*   <br>
+            Marion*  <br>
+            Multnomah <br>
+            Polk   <br>
+            Tillamook <br>
+            Umatilla* <br>
+            Washington<br>
+            Yamhill<br>
+            *County is partially covered</td>
+        <td><br>Benton<br>
+            Clackamas*<br>
+            Columbia  <br>
+            Deschutes*<br>
+            Douglas* <br>
+            Jackson* <br>  
+            Jefferson*  <br>
+            Josephine*<br>
+            Lane*     <br>
+            Lincoln* <br>
+            Linn*   <br>
+            Marion*  <br>
+            Multnomah <br>
+            Polk   <br>
+            Tillamook <br>
+            Umatilla* <br>
+            Washington<br>
+            Yamhill<br>
+            *County is partially covered</td>
+              </tr>
+
+    </tbody>
+  </table>
+</section>
+
+
+<!-- =====================================================================
+  CCO Carriers
+========================================================================== -->
+
+<!-- AllCare Carrier -->
+<section class="carrierPages" id="AllCareContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/allcare_mid.png" alt="">
+    <h3>All-Care Health Plan </h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>AllCare Health Plan is a local Coordinated Care Organization, or “CCO,” providing all of your health care needs (mental, dental and physical).  We focus on keeping you healthy and improving your overall health.  Your care is provided by a team of primary care providers who coordinate your care when you need to see another doctor or have to go to the hospital.  Your care team includes doctors, nurses, dentists, counselors, health educators, care coordinators, and wellness coaches.  We have served the Medicaid population in southern Oregon since 1996 and currently provide care to more than 30,000 people.  </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.allcarehealthplan.com/" target="_blank">www.allcarehealthplan.com</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">AllCare CCO contracts with 1,235 local health care providers to meet your every health care need. Primary care providers, nurse practitioners and pediatricians are responsible for your day-to-day care.  You can also receive care from specialty providers such as cardiologists, orthopedic surgeons, oncologists and more.  Specialty providers are available with a referral from your primary care provider.  Obstetrics care is also available to pregnant women without a referral.  You also have access to dental services, rehabilitation services such as physical therapy and speech therapy, mental health counseling, addiction recovery services, and ”Partners in Health” who can help you manage any chronic health condition such as diabetes, asthma or heart problems.  You can go to any hospital or emergency department in our service area as well as any skilled nursing facility.  With AllCare your prescription medications are covered at local pharmacies.  And if you need durable medical equipment like wheelchairs or oxygen, they’re covered, too.  </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Josephine<br>
+            Jackson<br>
+            Curry<br>
+            Douglas*<br><br>
+            <em>*County is partially covered</em>
+          </td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">AllCare offers many programs beyond regular Medicaid.  Pregnant moms receive free birthing classes, breast-feeding classes and programs to help with mom/baby bonding. Other FREE programs include: 24-hour Nurse Help Line; “Living Well with Chronic Health Conditions,” “Living Well with Chronic Pain,” and “Living Well with Diabetes” workshops; Tai Chi for Better Balance; “Jog Your Memory” workshops; “Babies in the Library” teaches children to enjoy reading; “B.A.B.E. Store” (free supplies for pregnant women/babies); Quit smoking classes; Sun Safety for Kids; Diet and nutritional coaching; Weight loss classes; And more!</td>        
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>AllCare Health Plan (Grants Pass)<br>
+              740 SE 7th Street <br>
+              Grants Pass, OR 97526<br>
+              541-471-4106  <br><br>
+              AllCare Health Plan (Medford) <br>
+              1390 Biddle Road, Ste. 105 <br>
+              Medford, OR 97504 <br>
+              541-734-5520 <br>
+            </td>
+          <td>Toll Free: 1-888-460-0185 <br>
+              TTY: 1-800-735-2900 <br>
+              Fax: 541-471-1524 <br><br>
+              Website: <a href="http://www.allcarehealthplan.com/" target="_blank">www.allcarehealthplan.com</a></td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Columbia Pacific Carrier -->
+<section class="carrierPages" id="ColumbiaPacificContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/columbiapacific_mid.png" alt="">
+    <h3>Columbia Pacific CCO </h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Columbia Pacific Coordinated Care Organization’s vision is “Creating Health Together.”  Our goal is to provide high quality health services, a broad network of primary care providers and specialists, and the opportunity to have a voice in how care is offered to you and your family.  Columbia Pacific CCO provides physical and mental health services to Oregon Health Plan members in Clatsop, Columbia and Tillamook counties, and Reedsport.  While CCOs are fairly new, Columbia Pacific is partnered with strong, stable organizations with decades of experience serving Oregonians with innovative and high quality health services: CareOregon and Greater Oregon Behavioral Health, Inc.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.colpachealth.org/" target="_blank">www.colpachealth.org</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+          Dental (Coming in April 2014)<br>
+          Mental Health </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Clatsop<br>
+            Columbia <br>
+            Tillamook <br>
+            Reedsport <br>
+          </td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">At Columbia Pacific CCO, we believe family, neighborhood and community are an important part of your overall health. That’s why we have Community Advisory Councils (CACs) in every community we serve. That gives you and other members the opportunity to share your ideas, help identify the special health needs in your area, and influence how health care is delivered. That’s also why Columbia Pacific CCO has created a network of medical homes – clinics where they know you and your needs, and can provide care not only when you are sick, but also care that helps keep you well.  </td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>Columbia Pacific CCO <br>
+              315 SW Fifth Avenue, Suite 900<br> Portland, OR 97204 <br>
+            </td>
+          <td>General Customer Service: <br> 
+              Telephone:  503-488-2822 <br>
+              Toll Free: 1-855-722-8206 <br>
+              TTY: 1-800-735-2900 <br><br>
+
+              Behavioral Health Customer Service: <br>
+              Telephone:  541-298-2101 <br>
+              Toll Free: 1-800-493-0040 <br>
+              TTY: 1-800-399-7335 <br><br>
+
+              Website: <a href="http://www.colpachealth.org/" target="_blank">www.colpachealth.org</a></td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- FamilyCare Carrier -->
+<section class="carrierPages" id="FamilyCareContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/familycare_mid.png" alt="">
+    <h3>FamilyCare Incorporated</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>FamilyCare has provided our Oregon Health Plan and Medicare members with coordinated, patient-centered care for more than 27 years.  Our mission is to create healthy individuals through innovative systems. We are a fully integrated Coordinated Care Organization (CCO), offering physical, mental/behavioral and dental care in the tri-county area.  Our Service Coordinators work closely with our strong network of contracted providers to coordinate quality, integrated care resulting in greater satisfaction and the best possible health outcomes for our members. FamilyCare looks forward to serving more Oregonians in this era of healthcare transformation.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.familycareinc.org/" target="_blank">www.familycarehealthplans.org</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+          Dental<br>
+          Mental/Behavioral Health <br>
+          Addictions <br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Clackamas<br>
+            Washington<br>
+            Multnomah<br>
+            Marion*<br><br>
+            <em>*County is partially covered</em></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">Along with standard services covered by OHP, FamilyCare offers additional services and resources to our members, including our prenatal BabyCare program. With a postage-paid card signed by their provider, participating moms who complete prenatal visits through their 8-month check-up will receive a free car seat, stroller or diapers. Additional FamilyCare services include text4baby – a free text messaging service with prenatal tips and reminders for moms and moms-to-be, newborn circumcision, and personalized welcome calls to all new members that help introduce them to FamilyCare and the Oregon Health Plan, as well as help with finding a primary care doctor. </td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>FamilyCare<br>
+              825 NE Multnomah St, Suite 300<br>
+              Portland, OR 97232 <br>
+            </td>
+          <td>Toll Free: 800-458-9518 <br>
+              TTY: 711 <br>
+              Local: 503-222-2880 <br>
+              Hours: 9 a.m. – 5 p.m.<br><br>
+
+              Website: <a href="http://www.familycareinc.org/" target="_blank">www.familycarehealthplans.org</a><br> 
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- HealthShare Carrier -->
+<section class="carrierPages" id="HealthShareContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/healthshare_mid.png" alt="">
+    <h3>Health Share of Oregon</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>With over 16,000 providers in Clackamas, Multnomah and Washington Counties, Health Share of Oregon offers the largest Medicaid network of preferred providers in the state. Choosing Health Share gives you access to this comprehensive network of private practices and clinics, and to organizations you know and trust like Adventist Health, CareOregon, Kaiser Permanente, Legacy Health, Oregon Health & Science University, Providence Health and Tuality Healthcare. Your mental health care is provided through an integrated system of providers across the three counties.  Health Share also coordinates your dental care through your choice of eight dental plans. </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://healthshareoregon.org/" target="_blank">healthshareoregon.org</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+          Dental<br>
+          Mental Health <br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Clackamas<br>
+          Multnomah<br>
+          Washington<br></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">Health Share offers many programs to help you navigate the health care system and get the care you need, where and when you need it. Together, our doctors, nurses and community outreach workers connect with you at home and in the community, providing one-on-one support to make your health care experience as smooth as possible. Whether it’s getting home from the hospital, making sure your prescriptions are right or finding the counseling support you need, our programs can help.  And we help you stay healthy through free or low-cost classes for new mothers, weight management, quitting smoking and more.   </td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>Health Share of Oregon<br> 
+              208 SW 5th Avenue, Ste. 400 <br>
+              Portland, OR  97204 <br>
+            </td>
+          <td>Health Share Customer Service:<br>  
+              Telephone:  503-416-8090<br>
+              Toll Free:  1-888-519-3845<br>
+              TTY: 711 <br>
+              Health Share Administration: 503-488-2820 <br>
+              Fax: 503-459-5749 <br><br>
+
+              Website: <a href="http://healthshareoregon.org/" target="_blank">healthshareoregon.org</a><br>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- InterCommunity Carrier -->
+<section class="carrierPages" id="InterCommunityContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/intercommunity_mid.png" alt="">
+    <h3>InterCommunity Health Network CCO</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>InterCommunity Health Network CCO brings all kinds of health care under one group. This means that no matter where you get care — from a counselor, a doctor, a dentist, a hospital — we know you as our member.  Every day, we are looking for new and better ways to help you prevent and manage health problems. Our goals are to provide more support when you need it and the tools you need to help yourself. Be rewarded with better health. Join today! </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.samhealth.org/ihn-cco" target="_blank">www.samhealth.org/ihn-cco</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+          Dental<br>
+          Mental Health <br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Benton<br>
+          Lincoln<br>
+          Linn<br></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">With Cascades West Ride Line, you will never have to miss an important doctor's appointment. Call for a ride when you need it! This service is covered by your plan.</td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>InterCommunity Health Network CCO <br> 
+            815 NW Ninth Street  <br>
+            P.O. Box 1310  <br>
+            Corvallis, OR 97330<br>
+            Hours:  Monday – Friday, 8:30 a.m. to 5 p.m.<br>
+            </td>
+          <td>Customer Service: <br>
+              Telephone:  541-768-4550<br>
+              Toll Free: 1-800-832-4580 <br>
+              TTY:  1-800-735-2900<br>
+              Hours:  Monday – Friday, 8 a.m. to 8 p.m <br><br>
+
+              Website: <a href="http://www.samhealth.org/ihn-cco" target="_blank">www.samhealth.org/ihn-cco</a><br>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- Jackson Care Connect Carrier -->
+<section class="carrierPages" id="JacksonCareConnectContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/jacksoncare_mid.png" alt="">
+    <h3>Jackson Care Connect</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Jackson Care Connect is a Coordinated Care Organization serving Oregon Health Plan members in Jackson County. A non-profit organization formed by a coalition of health care and social services, Jackson Care Connect brings together local providers, hospitals, health plans, mental health organizations, agencies, and consumers to serve your health care needs. To ensure you get the best care, we'll coordinate your physical and behavioral health care with all of the providers or facilities you use. You also have access to specialists all over the state. Beginning January 2014, we'll coordinate your dental care too.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.jacksoncareconnect.org/" target="_blank">www.jacksoncareconnect.org</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+          Dental (coming in 2014)<br>
+          Mental Health <br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td>Jackson<br></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">Members are at the center of Jackson Care Connect. We're here to make it easier for you to get the services and care you need, and to help you overcome barriers to your health. JCC actively seeks out innovative and high quality methods of serving you, such as connecting community health workers with members who have the greatest needs, or using emergency room navigators to connect you to better ongoing care. You can even influence health planning for the whole community by participating in (or just sharing your ideas with) Jackson Care Connect's Community Advisory Council.</td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>Jackson Care Connect <br>
+              P.O. Box 1430 <br>
+              Medford, OR 97501 <br>
+            </td>
+          <td>Customer Service: <br>
+            Telephone: 1‐855‐722‐8208<br> 
+            TTY: 1-800-735-2900 <br><br>
+
+            Website: <a href="http://www.jacksoncareconnect.org/" target="_blank">www.jacksoncareconnect.org</a><br>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- Pacific Source Community Carrier Connect  -->
+<section class="carrierPages" id="PacificSourceCommunityContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/pacificsourcecommunity_mid.png" alt="">
+    <h3>PacificSource Community Solutions</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>At PacificSource Community Solutions, we know the importance of having health insurance for you and your loved ones. We also understand there may times where you or a family member may not be able to afford coverage. That's why we're here. We offer Oregon Health Plan (OHP) coverage to those who need extra help through our Coordinated Care Organization (CCO). You get a plan that covers medical, prescription drug, and mental health services. And, it's backed by a local company with an 80-year reputation for taking great care of people.</p>
+    </div>
+    <div class="colTwo">      
+      <p><a href="http://communitysolutions.pacificsource.com/" target="_blank">www.CommunitySolutions.PacificSource.com</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+            Dental</td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Crook<br>
+         Deschutes<br>
+         Hood River<br>
+          Jefferson<br>
+         Klamath*<br>
+         Wasco<br><br>
+         <em>*County is partially covered</em></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">At PacificSource, our extra programs are no cost to you: <em>Care</em>  If you have Diabetes, COPD, Congestive Heart Failure, or Asthma, you get personal service to improve your health and coordinate care. <em>Quality</em> We partner with your doctor to measure the quality and safety of your care to better your care and services. <em>Medication</em> Our pharmacists work with your doctor to find any safety issues, interactions, and other changes to improve your health. <em>Gym Discounts</em> Get discounts for new memberships from any GlobalFit gym. Rates are 5% lower than any network gym has for the same membership.</td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>PacificSource Community Solutions<br>
+           PO Box 5729 Bend,<br>
+            OR 97708-5729<br>
+            Central Oregon</td>
+          
+          <td>Customer Service: <br>
+            Central Oregon <br>
+            Local:  541-382-5920 <br>
+            Toll Free:  800-431-4135 <br>
+            TTY:  800-735-2900 <br>
+            Hours:  Monday – Friday; 8 a.m. – 5 p.m.<br><br>
+
+            Columbia Gorge <br>
+            Toll Free:  855-204-2965 <br>
+            TTY:  800-735-2900 <br>
+            Hours:  Monday – Friday; 8 a.m. – 5 p.m.<br><br>
+
+             Website: <a href="http://communitysolutions.pacificsource.com/" target="_blank">www.CommunitySolutions.PacificSource.com</a><br>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+<!-- PrimaryHealth of Josephine County Connect Carrier -->
+<section class="carrierPages" id="PrimaryHealthJosephineContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/josephinePH_mid.png" alt="">
+    <h3>PrimaryHealth of Josephine County</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>PrimaryHealth of Josephine County (PHJC) is a Coordinated Care Organization operating in Josephine County that serves Oregon Health Plan members. PrimaryHealth of Josephine County (PHJC) has been serving the community for 20 years to create the best coordination of services between physical health, mental health, dental health and chemical dependency treatment.  PrimaryHealth partners with Options for Southern Oregon, for mental health coordination and Choices Counseling Center for chemical dependency treatment. PrimaryHealth members may choose  their primary care provider from the following practices which include the primary care providers of Grants Pass Clinic, Siskiyou Community Health Center-Grants Pass and Cave Junction, Asante Physician Partners, Cascade West Primary Care, Clear Creek Family Practice, La Clinica, Living Waters Adult Family Practice, Pediatric TLC-Debbie Ayoli, Pediatric Offices – Barbara Sniffen, DO and Lisa Callahan, PNP.  PrimaryHealth of Josephine County (PHJC) is contracted with medical specialists throughout Josephine and Jackson County.  Contracted hospitals include Asante Health Systems – Three Rivers Community Hospital and Rogue Regional Medical Center. At PrimaryHealth, our member services staff is here to serve our members, providers and community partners. We live in your community and pledge to bring you the best customer service available.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.careoregon.org/TransformingHealthcare/CCO/Josephine.aspx" target="_blank">www.careoregon.org</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+            Dental <br>
+            Mental Health <br>
+            Chemical Dependency Treatment<br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Josephine<br>
+          Jackson*<br>
+          Douglas*<br><br>
+          <em>*County is partially covered</em></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">Patient Centered Primary Care Homes (PCPCH) – 98% of PrimaryHealth members obtain care in a PCPCH. Patient-Centered Primary Care Homes are clinics that have been recognized for their commitment to quality and coordinated care. At its heart, this model of care fosters strong relationships with patients and their families. Clinics improve care by working together with PrimaryHealth clients, focusing on prevention, wellness and management of chronic conditions. The local Women's Health Center is also a PCPCH providing exceptional care to our pregnant members.  Diabetic Support – PrimaryHealth provides an in-house nurse who meets individually with our diabetic clients to provide ongoing support, coordination, and education. We also provide a satellite clinic in Cave Junction once a month.  Primary Health is a partner to and hosts the Community Health Education Center (CHEC)–CHEC is a non-profit organization with the mission to encourage individuals to adopt healthy lifestyle choices for themselves and their families by serving as a health education resource center for our community. Regular free Healthy Cooking Classes are offered as well as many other classes and resource opportunities for the community.</td>  
+       </tr> 
+       <tr>
+        <td>Contact Information:</td>
+          <td>PrimaryHealth of Josephine County CCO<br>
+              128 SW “I” Street, Suite A<br>
+              Grants Pass, OR  97526<br>
+            </td>
+          <td>Customer Service: <br>
+            Telephone:  541-471-4208<br>  
+            Toll Free:  1-800-471-0304<br>
+            Fax:  541-471-4898<br> 
+
+            Website:  <a href="http://www.careoregon.org/TransformingHealthcare/CCO/Josephine.aspx" target="_blank">www.careoregon.org</a><br>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- Trillium Community Carrier Content -->
+<section class="carrierPages" id="TrilliumCommunityContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/trilliumcommunity_mid.png" alt="">
+    <h3>Trillium Community Health Plan</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Trillium Community Health Plan has a proud history of providing the Oregon Health Plan (OHP) to income qualifying adults and children in Lane County.  As a Coordinated Care Organization, Trillium has brought physical, behavioral and oral healthcare together so our OHP members have one point of contact for their healthcare needs. We provide access to care when our members need it and offer resources to help them live and be well.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.trilliumchp.com/" target="_blank">www.trilliumchp.com</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+          Dental<br>
+          Behavioral Health
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td>Lane</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">As a health plan, Trillium has become a leader by investing in prevention programs to help our OHP members live healthier lives. We have focused on key areas that will improve the health of our members, including tobacco and obesity prevention. We offer easy access to all tobacco cessation benefits and have a special incentive program for pregnant women who want to quit using tobacco. Visit our website to learn if you are eligible for one or more of these programs.</td>  
+       </tr> 
+       <tr>
+        <td>Contact Information:</td>
+          <td>Trillium Community Health Plan <br>
+              1800 Millrace Drive<br>
+              Eugene, OR 97403</td>
+          
+          <td>Customer Service: <br>
+            Local: 541-431-1950 <br>
+            Toll Free: 800-910-3906  <br>            
+            Toll Free TTY: 866-279-9750<br><br>
+
+            Website: <a href="http://www.trilliumchp.com/" target="_blank">www.trilliumchp.com</a><br>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Umpqua Health Alliance Carrier -->
+<section class="carrierPages" id="UmpquaContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/umpqua_mid.png" alt="">
+    <h3>Umpqua Health Alliance</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>DCIPA, LLC doing business as "Umpqua Health Alliance" (UHA) is the Coordinated Care Organization for most of Douglas County, Oregon.  UHA works closely with local providers, not only to treat you when you get sick, but also to help keep you healthy.  Those providers include community primary care providers as well as: Adapt, a provider of alcohol and drug treatment; Advantage Dental Services, a dental care provider; ATRIO Health Plans, Inc., a Provider of Medicare Advantage; Douglas County Mental Health, a department of Douglas County that provides mental health services; Greater Oregon Behavioral Health (GOBHI), a provider of mental health Services; and Mercy Medical Center, the Roseburg area's community hospital.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.umpquahealthalliance.org/" target="_blank">www.umpquahealthalliance.org</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+            Mental Health <br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Douglas*<br><br>
+          <em>*County is partially covered</em></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">Umpqua Health Alliance has an Intensive Care Coordination program that has multiple Exceptional Needs Care Coordinators as well as a focused Case Manager to help members who have complex medical needs or special needs.   Members who need assistance with medical supplies, equipment, scheduling appointments, or other health care needs can get help through this program.</td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>DCIPA, LLC dba Umpqua Health Alliance <br>
+              1813 W. Harvard, Suite 206<br>
+              Roseburg, Oregon 97471<br>
+            </td>
+          <td>Telephone:  541-229-4842 <br><br>
+              Website: <a href="http://www.umpquahealthalliance.org/" target="_blank">www.umpquahealthalliance.org</a></td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Western Oregon Advanced Health Carrier -->
+<section class="carrierPages" id="WesternOregonContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/westernoregon_mid.png" alt="">
+    <h3>Western Oregon Advanced Health</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Western Oregon Advanced Health (WOAH) is a Coordinated Care Organization which provides Oregon Health Plan benefits for Plan Members who live in Coos and Curry counties. WOAH is contracted with local health care providers, clinics, dental care providers and mental health providers to provide quality care and service to OHP members.</p>
+    </div>
+    <div class="colTwo">
+      <p>No website available</p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+            Dental<br>
+            Mental Health<br> 
+            Outpatient Addiction Services<br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Coos<br>
+            Curry</td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">WOAH offers additional programs to its OHP plan members. These include, but are not limited to: weight management program, gourmet cooking classes, tobacco cessation classes, mental health support services.</td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>Western Oregon Advanced Health, LLC <br>
+                Mailing:<br>
+                PO Box 1096<br>
+                Coos Bay, OR 97420-0232 <br><br>
+                Physical:<br>
+                186 N. 8th Street<br>
+                Coos Bay, OR 97420-1770<br>
+            </td>
+          <td>Local: 1-541-269-7400<br> 
+              Toll Free: 1-800-264-0014<br>
+              TTY:  1-877-769-7400<br>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Willamette Dental DCO -->
+<section class="carrierPages" id="WillametteDentalDCOContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/williamette_mid.png" alt="">
+    <h3>Willamette Dental Group</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Willamette Dental Group, P.C., is the largest multi-specialty group dental practice in the Pacific Northwest and operates more than 50 dental offices throughout Oregon, Washington and Idaho.  Members may access services at any of our 25 Oregon offices as well as our Washington and Idaho offices.  Willamette Dental Group has been providing high quality dentistry since 1970.  Members receive their care through a unique model aimed at delivering proactive preventive dental care focused on promoting long-term health through a dentist-patient partnership.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="https://www.willamettedental.com/" target="_blank">www.willamettedental.com</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Willamette Dental is integrating its oral health care program with Coordinated Care Organizations (CCOs) across Oregon.  The integration process formally began July 1, 2013 and will be ongoing through July 1, 2014 when all dental care organizations will be integrated into CCOs across all Oregon service areas.</td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Benton<br>
+            Clackamas<br> 
+            Clatsop<br> 
+            Columbia<br> 
+            Deschutes<br> 
+            Douglas<br> 
+            Jackson<br>  
+            Josephine<br> 
+            Lane<br>
+            Lincoln<br>
+            Linn<br>
+            Marion<br>
+            Multnomah<br> 
+            Polk<br>
+            Tillamook<br> 
+            Washington<br> 
+            Yamhill
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">Every Member of Willamette Dental is part of a special program aimed at optimal oral health.  Every Member's proactive dental care plan is customized for their risk factors and needs using modern evidence-based clinical methods. Willamette Dental works collaboratively with patients to treat current conditions and prevent the causes of cavities and gum disease.</td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>Willamette Dental Group,<br>
+              P.C. 6950 NE Campus Way<br>
+              Hillsboro, OR 97124</td>
+
+          <td>Telephone:  855-433-6825<br><br>
+              Website: <a href="https://www.willamettedental.com/" target="_blank">www.willamettedental.com</a>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+<!-- Willamette Valley Community Health  Carrier -->
+<section class="carrierPages" id="WVCHContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/wvch_mid.png" alt="">
+    <h3>Willamette Valley Community Health </h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Willamette Valley Community Health (WVCH) is the Coordinated Care Organization (CCO) serving Oregon Health Plan members in Marion and Polk Counties. The organization is composed of community healthcare providers who are dedicated to ensuring that each patient receives the highest quality care possible. The wide range of medical professionals that serve WVCH members (doctors, hospitals, counsellors, nurses, dentists and more) help make sure that services are coordinated and in the best interest of the member. Together, WVCH providers work with patients to keep them healthy and better manage existing health conditions. </p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.wvchealth.org/" target="_blank">www.WVCHealth.org</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+            Dental<br>
+            Mental Health<br> 
+            Chemical Dependency<br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td>Marion<br>Polk</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2"><p>MOMs- A unique program that providers peer mentoring and support to pregnant women at risk for drug and alcohol abuse.</p>
+          <p>Non Traditional Health Care Workers-Non-clinical personnel that assist identified members in navigating the health care world to ensure their needs are met.</p>
+          <p>Living Health with Chronic Conditions- Short term group courses to educate members on how to live a healthy life with a chronic medical condition.  These are available for Congestive Heart Failure, Diabetes, and Chronic Pain.</p> 
+          <p>Exceptional Needs Care Coordination- Members with complex medical needs are assigned to a nurse case-manager to assist them in obtaining the services or items they need, including medical services, equipment items and coordination with mental or chemical dependency services.</p></td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>WVCH<br>     
+          2995 Ryan Dr SE Suite 200<br>     
+          Salem, OR 97301 </td>
+
+          <td>Telephone:  503-584-2150<br>
+              Toll Free: 866-362-4794<br>
+              TTY: 711<br><br>
+              Email WVCH@mvipa.org  <br>     
+              Website: <a href="http://www.wvchealth.org/" target="_blank">www.WVCHealth.org</a>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+
+<!-- Yamhill County Care Organization Carrier -->
+<section class="carrierPages" id="YamhillContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/yamhill_mid.png" alt="">
+    <h3>Yamhill County Care Organization</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Yamhill County Care Organization's vision: “A unified healthy community that celebrates physical, mental, emotional, spiritual and social well-being.” Yamhill CCO is a Coordinated Care Organization serving Oregon Health Plan members in Yamhill County, and parts of Clackamas, Washington, Polk, Marion and Tillamook counties. Through Yamhill CCO, local providers, clinics, hospitals, the county Health &amp; Human Services Department, community agencies and specialists across the state partner to help you overcome barriers to health. By working within our community, Yamhill County Care Organization supports both your physical and behavioral health by putting you and your family at the center of your care.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.yamhillcco.org/" target="_blank">www.yamhillcco.org</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+          Dental (coming in July 2014)<br>
+          Mental Health <br>
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td>Clackamas<br> 
+          Washington<br>
+          Polk<br>
+          Marion<br>
+          Tillamook</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2">Yamhill County Care Organization works with our members and the local community to develop innovative and member-centric ways of improving care and eliminating physical, social, emotional and economic barriers to health. For example, we fund community health workers to work one on one with members with the greatest health needs and support projects that help all members take charge of their own health. Our Community Advisory Council takes us beyond the clinic walls, bringing members and local support groups together to determine the key issues our community faces and to recommend solutions designed to help us all stay healthier. </td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>Yamhill County Care Organization<br>
+              Mailing:<br>
+              P.O. Box 40328 <br>
+              Portland, OR  97240<br><br>
+              Physical:<br>
+              627 NE Evans Street <br>
+              McMinnville, OR  97128<br>
+            </td>
+          
+          <td>Customer Service:<br>
+              Toll Free: 1-855-722-8205 <br>
+              Local:  503-488-2800 <br>
+              TTY/TDD: 1-800-735-2900 <br><br>
+              Website: <a href="http://www.yamhillcco.org/" target="_blank">www.yamhillcco.org</a>
+          </td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+<!-- Eastern Oregon Coordinated Care Organization -->
+<section class="carrierPages" id="EOCCOContent" style="display: none">
+  <div class="carrierPageHeader clearfix">
+    <img src="images/eocco_mid.png" alt="">
+    <h3>Eastern Oregon Coordinated Care Organization</h3>
+  </div>
+
+  <h4>About Us</h4>
+
+  <div class="carrierContent clearfix">
+    <div class="colOne">
+      <p>Eastern Oregon Coordinated Care Organization (EOCCO) is a Coordinated Care Organization (CCO). We are a group of all types of health care providers who work together for people on the Oregon Health Plan (OHP) in your community.</p>
+    </div>
+    <div class="colTwo">
+      <p><a href="http://www.eocco.com/" target="_blank">www.eocco.com</a></p>
+    </div>
+  </div><!-- END carrierContent -->
+
+  <table class="carrierDetails">
+    <tbody>
+      <tr>
+        <td>Services:</td>
+        <td colspan="2">Medical<br>
+          Pharmacy,<br>
+          Chemical Addiction,<br>
+          Behavioral Health
+        </td>  
+       </tr>             
+      <tr>
+        <td>Coverage Areas:</td>
+        <td colspan="2">Harney<br>
+            Wheeler<br>
+            Baker<br>
+            Gilliam<br>
+            Grant<br>
+            Lake<br>
+            Malheur<br>
+            Morrow<br>
+            Sherman<br>
+            Umatilla<br>
+            Union<br>
+            Wallowa<br><br>
+            <em>*County is partially covered</em></td>
+      </tr>
+      <tr>
+        <td>Special Programs:</td>
+        <td colspan="2"></td>  
+       </tr> 
+       <tr>
+          <td>Contact Information:</td>
+          <td>Greater Oregon Behavioral Health, Inc*<br>
+              Telephone: 1-800-493-0040<br><br>
+              *For behavioral health services
+            </td>
+          
+          <td>Moda Health**<br>
+            Telephone: 1-8880788-9821<br><br>
+            **For medical, pharmacy and chemical addiction treatment, care and services</td>
+      </tr> 
+    </tbody>
+  </table>
+</section>
+
+
+
+
+    </section><!-- corpContentArea-->
+  </div>
+  <!--END pageContainer-->    
+
+  <!-- ~~~~~~~~~~~~~ HELP DRAWER MODAL ~~~~~~~~~~~~~~ -->    
+    <div class="widget" id="helpModal" title="Help">  
+      <div id="sampleAccordion" class="accordion clearfix">               
+          <a href="CORP_faq.html" class="disabledHeader disable">Frequently asked questions<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <a href="CORP_glossary.html" class="disabledHeader disable">Glossary of terms<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <h5>Contact us <span></span></h5>
+          <div>
+            <p><strong>Email:</strong> <span>info@coveroregon.com</span></p>
+            <p><strong>Phone:</strong> <span>1-855-CoverOR</span></p>            
+          </div>
+       </div>
+       <!-- END #sampleAccordion -->
+   </div>          
+  <!-- END helpModal-->
+  <footer>
+    <div id="footerHeaderContainer" class="clearfix">
+      <div id="footerHeader" class="clearfix">
+        <h1>Cover Oregon</h1> 
+        <!--<div class="language">
+          <h5>Select Language</h5>
+          <div class="selLanguage">
+            <select>
+              <option>English (US)</option>
+            </select>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <!-- END #footerHeaderContainer-->
+
+    <div id="directoryNavContainer" class="clearfix">
+      <div id="directoryNav"  class="clearfix">
+        <div class="footerColumn">
+          <h5>Discover Cover Oregon</h5>          <ul>        
+            <li><a href="CORP_about_us.html">About us</a></li>
+            <li><a href="CORP_join_us.html">Careers</a></li>
+            <li><a href="CORP_news_and_media.html">News and media</a></li>
+            <li><a href="CORP_featured_stories_mary_sean.html">Featured stories</a></li>
+            <li><a href="http://resources.coveroregon.com/" target="_blank">Resources</a></li>
+            <li><a href="CORP_creative.html">Creative</a></li>
+            <li><a href="CORP_board_and_committees.html">Board and committees</a></li>
+            <li><a href="CORP_meeting_and_events.html">Meetings and events</a></li>
+            <li><a href="CORP_contact_us.html">Contact information</a></li>
+            <li><a href="CORP_public_comments.html">Public comments</a></li>
+            <li><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o027213.pdf" target="_blank">Public records request</a></li>
+            <li><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_6.pdf" target="_blank">Business plan</a></li>
+            <li><a href="CORP_newsletter_archives.html">Newsletter archives</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Explore Coverage</h5><ul>
+            <li><a href="CORP_medical_coverage.html">Medical</a></li>
+            <li><a href="CORP_dental_coverage.html">Dental</a></li>
+            <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+            <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+            <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+            <li><a href="CORP_view_providers.html">View providers</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="CORP_application_process.html">Application overview</a></li>
+            <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+            <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>
+            <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+            <li><a href="individual_start.html">Individual and families</a></li>
+            <li><a href="SHOP_start.html">Employers</a></li>
+            <li><a href="EMP_start.html">Employees</a></li>
+            <li><a href="TRB_start.html">Tribes</a></li>
+            <li><a href="AGENT_start.html">Agents and community partners</a></li>
+            <li><a href="carrier_start.html">Insurance companies</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Learn More</h5>
+          <ul>
+            <li><a href="CORP_faq.html">Frequently asked questions</a></li>
+            <li><a href="CORP_glossary.html">Glossary of terms</a></li>        
+            <li><a href="CORP_grants_and_reports.html">Reports, grants and legislation</a></li>                       
+            <li><a href="CORP_language_help.html">Language help</a></li>
+            <li><a href="CORP_exemptions.html">Exemptions</a></li>
+          </ul>
+        </div>    
+        <div id="supportfooter" class="footerColumn">
+          <h5>Contact Us</h5>
+          <p><img src="images/email_green.png" alt="Email"><a href="mailto:info@coveroregon.com">info@coveroregon.com</a></p>
+          <p><img src="images/phone_green_sm.png" alt="Contact Cover Oregon"> 1-855-268-3767</p>          
+          <div><a href="https://www.facebook.com/coveroregon" target="_blank"><img src="images/facebook_green.png" alt="Cover Oregon Facebook"></a><a href="https://www.twitter.com/CoverOregon" target="_blank"><img src="images/twitter_green.png" alt="Cover Oregon Twitter"></a><a href="http://www.linkedin.com/company/2673889" target="_blank"><img src="images/linkedin_green.png" alt="Cover Oregon LinkedIn"></a><a href="http://www.youtube.com/user/coveroregonvideo?feature=watch" target="_blank"><img src="images/youtube_green.png" alt="Cover Oregon YouTube"></a><a href="https://plus.google.com/102909134020101999085" target="_blank"><img src="images/google_green.png" alt="Cover Oregon Google Plus"></a></div>
+        </div>
+        <!-- END supportfooter -->
+      </div>  
+    </div>
+    <!-- END directoryNavContainer -->
+
+    <div class="globalFooterCopyrightContainer">
+      <div class="globalFooterCopyright">
+        <p>&copy; 2013 Cover Oregon, All Rights Reserved | <a href="CORP_privacy_policy.html">Privacy Policy</a> | <a href="CORP_terms_and_conditions.html">Terms and conditions</a> | <a href="CORP_accessibility.html">Accessibility</a></p>  
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript at the bottom for fast page loading -->
+  
+  <script src="scripts/jquery-1.9.0.js" type="text/javascript"></script>
+  <script src="scripts/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>  
+  <script src="scripts/widgets.js" type="text/javascript"></script>
+  <script src="scripts/carriers.js" type="text/javascript"></script>
+  <script src="scripts/waterMark.js" type="text/javascript"></script>  
+  <script src='scripts/jquery.dcmegamenu.1.2.js' type='text/javascript'></script>
+  <script src='scripts/jquery.hoverIntent.minified.js' type='text/javascript'></script>
+  <script src='scripts/jquery.mega.menu.js' type='text/javascript'></script>
+</body>
+</html>

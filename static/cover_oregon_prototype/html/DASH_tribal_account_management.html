@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Cover Oregon | Organization Dashboard</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" href="styles/helpDrawer.css">
+
+  <!-- All JavaScript at the bottom, except for Modernizr. Modernizr enables HTML5 elements & feature detects -->
+  <script src="scripts/modernizr-2.5.3.min.js" type="text/javascript"></script>
+
+</head>
+<body id="modalTemplate">
+    <header>
+      <div id="globalNavContainer" class="clearfix">
+        <div id="logout" class="globalLoginContainer clearfix">
+          <div class="loginFields">
+            <p class="small"><a class="accountName" href="DASH_tribal.html" alt="My Account">Kateri Aiyanna</a> <span><a href="">Account Settings</a></span></p>
+            <a href="#" class="button blue">Log Out</a>
+          </div>
+        </div>
+        <!-- END .globalLoginContainer -->
+
+      <div class="globalNav">
+        <div class="logo"><a href="index.html" title="Cover Oregon"><img src="images/cover-oregon-logo-small.png" alt="Cover Oregon"></a></div> 
+        <nav>
+          <ul id="mega-menu-tut" class="menu">            <li>Explore Coverage
+              <ul>
+                <li><a href="CORP_medical_coverage.html">Medical</a></li>
+                <li><a href="CORP_dental_coverage.html">Dental</a></li>
+                <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+                <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+                <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+                <li><a href="CORP_view_providers.html">View providers</a></li>
+              </ul>
+            </li>
+
+            <li>Get Started
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_application_process.html">Application overview</a></li>
+                    <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+                    <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>           
+                    <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li><a href="individual_start.html">Individual and Families</a></li>
+                    <li><a href="SHOP_start.html">Employers</a></li>
+                    <li><a href="EMP_start.html">Employees</a></li>
+                    <li><a href="TRB_start.html">Tribes</a></li>
+                    <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+                    <li><a href="carrier_start.html">Insurance companies</a></li>
+                  </ul>
+                </li>
+              </ul>              
+            </li>
+            
+            <li>Learn More
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_faq.html">FAQs</a></li>
+                    <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+                    <li><a href="CORP_grants_and_reports.html">Reports, grants and Legislation</a></li>
+                    <li><a href="CORP_exemptions.html">Exemptions</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li style="padding: 6px 0;">Find help in your language:</li>                    
+                    <li><a href="CORP_language_help.html?id=spanish">Spanish <span>español</span></a></li>
+                    <li><a href="CORP_language_help.html?id=russian">Russian <span>русский</span></a></li>
+                    <li><a href="CORP_language_help.html?id=vietnamese">Vietnamese <span class="vm">tiếng Việt</span></a></li>
+                    <li><a href="CORP_language_help.html?id=korean">Korean <span>한국인</span></a></li>
+                    <li><a href="CORP_language_help.html?id=chinese">Chinese (Trad.) <span class="ch">中文</span></a></li>
+                  </ul>
+                </li>                
+              </ul>
+            </li> </ul>
+        </nav>
+      </div>
+      <!-- END .globalNav -->      <div class="utilities">
+        <nav>
+        <ul>
+          <li><a class="phoneLink" href="#"><img src="images/phone_green2.png" alt="Phone">Phone</a>
+          <!-- PHONE HOVER -->
+          <div id="phoneHover" class="clearfix">
+            <div class="hoverArrow"><img src="images/arrow_white.png" alt="Phone Hover"></div>                
+            <p>Phone: 1-855-268-3767</p>
+          </div>
+          <li><a href="CORP_language_help.html"><img src="images/globe.png" alt="Languages">Languages</a></li>
+          <li><a href="" id="helpModalLink"><img src="images/help_green_sm.png" alt="Help">Help</a></li>
+          <li style="padding: 0 0 0 10px; background: none;"><input type="text" value="" class="searchBox" name="search" id="search" data-watermark="Search"></li>        
+        </ul>
+        </nav>
+      </div>
+
+      </div>
+      <!-- END #globalNavContainer -->
+    </header>
+    <nav id="dashboardNav">
+        <ul class="clearfix">
+          <li ><a href="DASH_tribal.html">Home</a></li>
+		  		  		            <li ><a href="DASH_tribal_member_management.html">Tribal verfication</a></li>
+		  		  		            <li ><a href="DASH_tribal_TPSP_information.html">TPSP information</a></li>
+		  		  		            <li class="active"><a href="DASH_tribal_account_management.html">Tribal profile</a></li>
+		  		  		            <li><a href="DASH_tribal_myMessage.html">Messages</a></li>
+		  		  		            <li><a href="DASH_tribal_resources.html">Resources</a></li>
+          <li></li>
+        </ul>
+      </nav>
+
+    <div id="pageContainer" class="clearfix">
+
+     <section id="dashboardContent" class="clearfix">
+        <div class="dashboardContentArea">
+          <h3>Tribal profile <!--<span class="status"><b>Account status:</b> Active</span>--></h3>
+
+          <section>
+            <h5 class="collapsible" id="section1">Tribal information<span></span></h5>
+            <div class="sectionWrapper clearfix">
+              <div class="collapsibleActionLink clearfix"></div>
+               <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum interdum dolor a placerat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum interdum dolor a placerat.</p>--><!--Not in wireframes-->
+              <table class="dependents">
+                <tbody>
+                  <tr>
+                    <td>Tribe ID</td>
+                    <td>121231231</td>
+                    <td>Tribe name</td>
+                    <td>Klamath Tribes</td>
+                  </tr>
+                  <tr>
+                    <td>Address</td>
+                    <td>1313 Mockingbird Lane</td>
+                    <td>Suite</td>
+                    <td>100</td>
+                  </tr>
+                  <tr>
+                    <td>City</td>
+                    <td>Wilsonville</td>
+                    <td>State:</td>
+                    <td>OR</td>
+                  </tr>
+                  <tr>
+                    <td>ZIP Code</td>
+                    <td>97070</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+
+                </tbody>
+              </table>
+               <br><p>Please contact Cover Oregon at 1-855-CoverOR (1-855-268-3767) to update information about your Tribe.</p>
+            </div>
+           </section>
+
+           <section>
+            <h5 class="collapsible" id="section2">Contact information<span></span></h5>
+            <div class="sectionWrapper clearfix">
+              <div class="collapsibleActionLink clearfix"></div>
+              <h6>Primary contact</h6>
+              <table class="dependents">
+                <tbody>
+                  <tr>
+                    <td>Name</td>
+                    <td>Samantha Hermanson</td>
+                    <td>Phone</td>
+                    <td>(567) 890-1234</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>Samantha.Hermanson@mail.com</td>
+                    <td>Fax</td>
+                    <td>(567) 890-9876</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h6>Secondary contact</h6>
+              <table class="dependents">
+                <tbody>
+                  <tr>
+                    <td>Name</td>
+                    <td>Michael Hermanson</td>
+                    <td>Phone</td>
+                    <td>(567) 890-4321</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>Samantha.Hermanson@mail.com</td>
+                    <td>Fax</td>
+                    <td>(567) 890-9876</td>
+                  </tr>
+                </tbody>
+              </table>
+               <br><p>Please contact Cover Oregon at 1-855-CoverOR (1-855-268-3767) to update information about your Tribe.</p>
+            </div>
+            </section>
+
+
+
+<section>
+			            <h5 class="collapsible" id="section4">Authorized users<span></span></h5>
+			            <div class="sectionWrapper clearfix">
+			              <div class="collapsibleActionLink clearfix"><a href="" id="addAuthorizedUserModalLink"> Add authorized users</a></div>
+
+			              <div><label>The list below shows the authorized users on this account. Click the "edit" next to a user's name to see details or make changes. Only two authorized users are allowed per account.</label> <!--<img src="images/info_icon.png" style="margin-bottom: 10;" class="tooltip" title="To add an authorized user for your organization, simply click on the 'Add authorized users' link. After that, you'll be able to search for an authorized user. Don't worry, we're not searching through the entire Cover Oregon; only applicable users that might be connected to your organization.">--> <label>What's the process for adding an authorized user? </label> <img src="images/info_icon.png" style="margin-bottom: 10;" class="tooltip" title="To add an authorized user for your organization, simply click on the 'Add authorized users' link. After that, you'll be able to search for an authorized user. Don't worry, we're not searching through the entire Cover Oregon; only applicable users that might be connected to your organization."></div><br>
+
+			                  <table>
+                            <thead>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>Email Address</th>
+                              <th>Member ID</th>
+                              <th>Effective Date From</th>
+                              <th>Effective Date To</th>
+                              <th>Status</th>
+                              <th>User Type</th>
+                              <th></th>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Jonathan</td>
+                                <td>Smith</td>
+                                <td>jsmith@mail.com</td>
+                                <td>1234321</td>
+                                <td>01/03/2013</td>
+                                <td>01/03/2015</td>
+                                <td>Active</td>
+                                <td>Agent</td>
+                                <td><a href="" id="editAdminModalLink">Edit</a></td>
+                              </tr>
+                              <tr>
+                                <td>Jason</td>
+                                <td>Riley</td>
+                                <td>jasonriley@mail.com</td>
+                                <td>435621</td>
+                                <td>01/03/2012</td>
+                                <td>01/03/2015</td>
+                                <td>Active</td>
+                                <td>Admin</td>
+                                <td><a href="" id="editAdminModalLink2">Edit</a></td>
+                              </tr>
+                              <tr>
+                                <td>Ann</td>
+                                <td>Stone</td>
+                                <td>annstone@mail.com</td>
+                                <td>5432345</td>
+                                <td>01/03/2011</td>
+                                <td>01/03/2012</td>
+                                <td>Inactive</td>
+                                <td>Agent</td>
+                                <td><a href="" id="editAdminModalLink3">Edit</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                </section>
+                
+                <p><br>Please contact Cover Oregon at 1-855-CoverOR (1-855-268-3767) to update information about your Tribe.</p>
+
+			            </div>
+          </section>
+      </div>
+    <!--END pageContainer-->
+
+   <div class="clearfix" id="addAuthorizedUserModal" title="Add an authorized user:">
+
+          <form>
+           <fieldset class="memberForm">
+            <div class="ctrlHolder clearfix">
+              <label for="authuserlastname">Last name: </label>
+              <input type="text" name="authuserlastname" id="authuserlastname" data-watermark="Last Name" size="20">
+              <label for="authuserlastname">CO member ID: </label>
+              <input type="text" name="member_ID" id="member_ID" data-watermark="CO member ID" size="20">
+            </div>
+
+            <div class="ctrlHolder clearfix">
+              <a class="button secondary" href="" id="addAuthorizedUserResultsModalLink"> Search </a>
+            </div>
+
+          </fieldset>
+           <div>
+            <a class="button secondary" href="" id="cancel1"> Cancel </a>
+            <a class="button inactive" href="">Submit</a>
+          </div>
+          </form>
+        </div>
+        <!-- END #addAuthorizedUserModal -->
+
+      <!-- START #addAuthorizedUserResultsModal -->
+        <div class="clearfix" id="addAuthorizedUserResultsModal" title="Add Authorized User:">
+          <p>Please enter user information, then click next.</p>
+          <form>
+           <fieldset class="memberForm">
+            <div class="ctrlHolder clearfix">
+              <label for="authuserlastname">Last Name: </label>
+              <input type="text" name="authuserlastname" id="authuserlastname" data-watermark="Winters" size="20" style="color: rgb(3, 69, 100);">
+              <label for="authuserlastname">CO Member ID: </label>
+              <input type="text" name="member_ID" id="member_ID" data-watermark="12345" size="20" style="color: rgb(3, 69, 100);">
+            </div>
+
+            <div class="ctrlHolder clearfix">
+              <a class="button secondary" href="#"> Search </a>
+            </div>
+
+            <table>
+              <thead>
+                <th>Select</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Member ID</th>
+              </thead>
+              <tr>
+                <td><input type="radio" name="select" id="select" checked="checked"></td>
+                <td>Jonathan</td>
+                <td>Winters</td>
+                <td>winters@abc.com</td>
+                <td>12345</td>
+              </tr>
+            </table>
+
+            <div class="ctrlHolder clearfix">
+              <div><label>Access begins:</label> <input type="text" class="datepicker" data-watermark="01/01/2013"/></div>
+              <div><label>Access ends:</label> <input type="text" class="datepicker" data-watermark="01/01/2014"/></div>
+            </div>
+
+          </fieldset>
+           <div>
+            <a class="button secondary" href="" id="cancel2"> Cancel </a>
+            <a class="button green" href="DASH_tribal_account_management.html">Submit</a>
+          </div>
+          </form>
+        </div>
+        <!-- END #addAuthorizedUserResultsModal -->
+
+        <!-- START #editAdminModal -->
+          <div class="clearfix" id="editAdminModal" title="Edit an authorized user">
+            
+          <form>
+            <fieldset class="memberForm"> 
+             <table>
+                <thead>
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Email address</th>
+                  <th>Member ID</th>
+                </thead>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Winters</td>
+                  <td>winters@abc.com</td>
+                  <td>12345</td>
+                </tr>
+              </table>
+
+              <div class="ctrlHolder clearfix">
+                <div><label>Effective from</label> <input type="text" class="datepicker" data-watermark="01/01/2013"/>
+                <label>Effective to</label> <input type="text" class="datepicker" data-watermark="01/01/2014"/></div>
+              </div>
+            </fieldset>
+             <div>
+              <a class="button secondary" href="" id="cancel2"> Cancel </a>
+              <a class="button green" href="DASH_cpa_org_myAccount.html">Submit</a>
+            </div>
+            </form>
+          </div>
+          <!-- END #editAdminModal --> 
+
+          <!-- START #editAdminModal2 -->
+          <div class="clearfix" id="editAdminModal2" title="Edit an authorized user">
+            
+          <form>
+            <fieldset class="memberForm"> 
+             <table>
+                <thead>
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Email address</th>
+                  <th>Member ID</th>
+                </thead>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Winters</td>
+                  <td>winters@abc.com</td>
+                  <td>12345</td>
+                </tr>
+              </table>
+
+              <div class="ctrlHolder clearfix">
+                <div><label>Effective from</label> <input type="text" class="datepicker" data-watermark="01/01/2013"/>
+                <label>Effective to</label> <input type="text" class="datepicker" data-watermark="01/01/2014"/></div>
+              </div>
+            </fieldset>
+             <div>
+              <a class="button secondary" href="" id="cancel2"> Cancel </a>
+              <a class="button green" href="DASH_cpa_org_myAccount.html">Submit</a>
+            </div>
+            </form>
+          </div>
+          <!-- END #editAdminModal2 --> 
+
+          <!-- START #editAdminModal3 -->
+          <div class="clearfix" id="editAdminModal3" title="Edit an authorized user">
+            
+          <form>
+            <fieldset class="memberForm"> 
+             <table>
+                <thead>
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Email address</th>
+                  <th>Member ID</th>
+                </thead>
+                <tr>
+                  <td>Jonathan</td>
+                  <td>Winters</td>
+                  <td>winters@abc.com</td>
+                  <td>12345</td>
+                </tr>
+              </table>
+
+              <div class="ctrlHolder clearfix">
+                <div><label>Effective from</label> <input type="text" class="datepicker" data-watermark="01/01/2013"/>
+                <label>Effective to</label> <input type="text" class="datepicker" data-watermark="01/01/2014"/></div>
+              </div>
+            </fieldset>
+             <div>
+              <a class="button secondary" href="" id="cancel2"> Cancel </a>
+              <a class="button green" href="DASH_cpa_org_myAccount.html">Submit</a>
+            </div>
+            </form>
+          </div>
+          <!-- END #editAdminModal 3 --> 
+
+
+    <!-- ~~~~~~~~~~~~~ HELP DRAWER MODAL ~~~~~~~~~~~~~~ -->    
+    <div class="widget" id="helpModal" title="Help">  
+      <div id="sampleAccordion" class="accordion clearfix">               
+          <a href="CORP_faq.html" class="disabledHeader disable">Frequently asked questions<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <a href="CORP_glossary.html" class="disabledHeader disable">Glossary of terms<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <h5>Contact us <span></span></h5>
+          <div>
+            <p><strong>Email:</strong> <span>info@coveroregon.com</span></p>
+            <p><strong>Phone:</strong> <span>1-855-CoverOR</span></p>            
+          </div>
+       </div>
+       <!-- END #sampleAccordion -->
+   </div>          
+  <!-- END helpModal-->
+  <footer>
+    <div id="footerHeaderContainer" class="clearfix">
+      <div id="footerHeader" class="clearfix">
+        <h1>Cover Oregon</h1> 
+        <!--<div class="language">
+          <h5>Select Language</h5>
+          <div class="selLanguage">
+            <select>
+              <option>English (US)</option>
+            </select>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <!-- END #footerHeaderContainer-->
+
+    <div id="directoryNavContainer" class="clearfix">
+      <div id="directoryNav"  class="clearfix">
+        <div class="footerColumn">
+          <h5>Discover Cover Oregon</h5>          <ul>        
+            <li><a href="CORP_about_us.html">About us</a></li>
+            <li><a href="CORP_join_us.html">Careers</a></li>
+            <li><a href="CORP_news_and_media.html">News and media</a></li>
+            <li><a href="CORP_featured_stories_mary_sean.html">Featured stories</a></li>
+            <li><a href="http://resources.coveroregon.com/" target="_blank">Resources</a></li>
+            <li><a href="CORP_creative.html">Creative</a></li>
+            <li><a href="CORP_board_and_committees.html">Board and committees</a></li>
+            <li><a href="CORP_meeting_and_events.html">Meetings and events</a></li>
+            <li><a href="CORP_contact_us.html">Contact information</a></li>
+            <li><a href="CORP_public_comments.html">Public comments</a></li>
+            <li><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o027213.pdf" target="_blank">Public records request</a></li>
+            <li><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_6.pdf" target="_blank">Business plan</a></li>
+            <li><a href="CORP_newsletter_archives.html">Newsletter archives</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Explore Coverage</h5><ul>
+            <li><a href="CORP_medical_coverage.html">Medical</a></li>
+            <li><a href="CORP_dental_coverage.html">Dental</a></li>
+            <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+            <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+            <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+            <li><a href="CORP_view_providers.html">View providers</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="CORP_application_process.html">Application overview</a></li>
+            <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+            <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>
+            <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+            <li><a href="individual_start.html">Individual and families</a></li>
+            <li><a href="SHOP_start.html">Employers</a></li>
+            <li><a href="EMP_start.html">Employees</a></li>
+            <li><a href="TRB_start.html">Tribes</a></li>
+            <li><a href="AGENT_start.html">Agents and community partners</a></li>
+            <li><a href="carrier_start.html">Insurance companies</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Learn More</h5>
+          <ul>
+            <li><a href="CORP_faq.html">Frequently asked questions</a></li>
+            <li><a href="CORP_glossary.html">Glossary of terms</a></li>        
+            <li><a href="CORP_grants_and_reports.html">Reports, grants and legislation</a></li>                       
+            <li><a href="CORP_language_help.html">Language help</a></li>
+            <li><a href="CORP_exemptions.html">Exemptions</a></li>
+          </ul>
+        </div>    
+        <div id="supportfooter" class="footerColumn">
+          <h5>Contact Us</h5>
+          <p><img src="images/email_green.png" alt="Email"><a href="mailto:info@coveroregon.com">info@coveroregon.com</a></p>
+          <p><img src="images/phone_green_sm.png" alt="Contact Cover Oregon"> 1-855-268-3767</p>          
+          <div><a href="https://www.facebook.com/coveroregon" target="_blank"><img src="images/facebook_green.png" alt="Cover Oregon Facebook"></a><a href="https://www.twitter.com/CoverOregon" target="_blank"><img src="images/twitter_green.png" alt="Cover Oregon Twitter"></a><a href="http://www.linkedin.com/company/2673889" target="_blank"><img src="images/linkedin_green.png" alt="Cover Oregon LinkedIn"></a><a href="http://www.youtube.com/user/coveroregonvideo?feature=watch" target="_blank"><img src="images/youtube_green.png" alt="Cover Oregon YouTube"></a><a href="https://plus.google.com/102909134020101999085" target="_blank"><img src="images/google_green.png" alt="Cover Oregon Google Plus"></a></div>
+        </div>
+        <!-- END supportfooter -->
+      </div>  
+    </div>
+    <!-- END directoryNavContainer -->
+
+    <div class="globalFooterCopyrightContainer">
+      <div class="globalFooterCopyright">
+        <p>&copy; 2013 Cover Oregon, All Rights Reserved | <a href="CORP_privacy_policy.html">Privacy Policy</a> | <a href="CORP_terms_and_conditions.html">Terms and conditions</a> | <a href="CORP_accessibility.html">Accessibility</a></p>  
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script src="scripts/jquery-1.9.0.js" type="text/javascript"></script>
+  <script src="scripts/waterMark.js" type="text/javascript"></script>
+  <script src="scripts/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+  <script src="scripts/widgets.js" type="text/javascript"></script>
+  <script src='scripts/jquery.dcmegamenu.1.2.js' type='text/javascript'></script>
+  <script src='scripts/jquery.hoverIntent.minified.js' type='text/javascript'></script>
+  <script src='scripts/jquery.mega.menu.js' type='text/javascript'></script>  
+</body>
+</html>

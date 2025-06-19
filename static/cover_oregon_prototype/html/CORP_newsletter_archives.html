@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <!--  Mobile Viewport Fix -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Cover Oregon | News and Media</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" href="styles/helpDrawer.css">
+
+  <!-- All JavaScript at the bottom, except for Modernizr. Modernizr enables HTML5 elements & feature detects -->    
+  <script src="scripts/modernizr-2.5.3.min.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var _kmq = _kmq || [];
+    var _kmk = _kmk || '4a931b81cfdd5b346c1072cd847b7c10ae3ccb1e';
+    function _kms(u){
+      setTimeout(function(){
+        var d = document, f = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+  </script>
+
+</head>
+<body id="modalTemplate">
+
+    <header>
+      <div id="globalNavContainer" class="clearfix">
+
+      <!-- Log in Container -->
+      <div id="login" class="globalLoginContainer clearfix">
+        <div class="loginFields">
+          <a href="login_username.html" class="button blue">Log In</a>
+          <p>New User? <a href="#" id="createAccountLink">Create Account</a></p>
+        </div>
+      </div>
+      <!-- END .globalLoginContainer -->
+
+      <div class="globalNav">
+        <div class="logo"><a href="index.html" title="Cover Oregon"><img src="images/cover-oregon-logo-small.png" alt="Cover Oregon"></a></div> 
+        <nav>
+          <ul id="mega-menu-tut" class="menu">            <li>Explore Coverage
+              <ul>
+                <li><a href="CORP_medical_coverage.html">Medical</a></li>
+                <li><a href="CORP_dental_coverage.html">Dental</a></li>
+                <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+                <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+                <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+                <li><a href="CORP_view_providers.html">View providers</a></li>
+              </ul>
+            </li>
+
+            <li>Get Started
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_application_process.html">Application overview</a></li>
+                    <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+                    <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>           
+                    <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li><a href="individual_start.html">Individual and Families</a></li>
+                    <li><a href="SHOP_start.html">Employers</a></li>
+                    <li><a href="EMP_start.html">Employees</a></li>
+                    <li><a href="TRB_start.html">Tribes</a></li>
+                    <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+                    <li><a href="carrier_start.html">Insurance companies</a></li>
+                  </ul>
+                </li>
+              </ul>              
+            </li>
+            
+            <li>Learn More
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_faq.html">FAQs</a></li>
+                    <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+                    <li><a href="CORP_grants_and_reports.html">Reports, grants and Legislation</a></li>
+                    <li><a href="CORP_exemptions.html">Exemptions</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li style="padding: 6px 0;">Find help in your language:</li>                    
+                    <li><a href="CORP_language_help.html?id=spanish">Spanish <span>español</span></a></li>
+                    <li><a href="CORP_language_help.html?id=russian">Russian <span>русский</span></a></li>
+                    <li><a href="CORP_language_help.html?id=vietnamese">Vietnamese <span class="vm">tiếng Việt</span></a></li>
+                    <li><a href="CORP_language_help.html?id=korean">Korean <span>한국인</span></a></li>
+                    <li><a href="CORP_language_help.html?id=chinese">Chinese (Trad.) <span class="ch">中文</span></a></li>
+                  </ul>
+                </li>                
+              </ul>
+            </li> </ul>
+        </nav>
+      </div>
+      <!-- END .globalNav -->      <div class="utilities">
+        <nav>
+        <ul>
+          <li><a class="phoneLink" href="#"><img src="images/phone_green2.png" alt="Phone">Phone</a>
+          <!-- PHONE HOVER -->
+          <div id="phoneHover" class="clearfix">
+            <div class="hoverArrow"><img src="images/arrow_white.png" alt="Phone Hover"></div>                
+            <p>Phone: 1-855-268-3767</p>
+          </div>
+          <li><a href="CORP_language_help.html"><img src="images/globe.png" alt="Languages">Languages</a></li>
+          <li><a href="" id="helpModalLink"><img src="images/help_green_sm.png" alt="Help">Help</a></li>
+          <li style="padding: 0 0 0 10px; background: none;"><input type="text" value="" class="searchBox" name="search" id="search" data-watermark="Search"></li>        
+        </ul>
+        </nav>
+      </div>
+
+    </div>
+    <!-- END #globalNavContainer -->
+    </header>
+
+    <div id="pageContainer" class="clearfix">
+      <section class="corpContentArea clearfix">        
+        <div class="pageContent">
+          <h1>Newsletters</h1>
+          <p>Miss a newsletter or e-blast from Cover Oregon? Below are archives of past newsletters and e-blasts.</p>
+
+          <h4>Newsletters</h4>
+
+          <div class="newsArticles">
+
+            <div class="newsItem clearfix">
+              <a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&id=3a29cfe1cf" target="_blank">Aug 2012 Newsletter</a>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&id=272fd860ee" target="_blank">June 2012 Newsletter</a>
+            </div>            
+
+          </div><!-- END .newsArticles-->  
+
+
+          <h4>Eblasts</h4>
+
+          <div class="newsArticles">
+            <div class="newsItem clearfix">
+              <a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=8b3fdf9705&amp;e=74ced39588" target="_blank"> Upcoming Cover Oregon Consumer Advisory Committee Meeting, Oct 4, 2013</a>
+              <div class="newsDate">Oct 4, 2013</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=e257898a8e&amp;e=74ced39588" target="_blank"> Resources for Small Businesses</a>
+              <div class="newsDate">Sep 16, 2013</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=498ac94460&amp;e=74ced39588" target="_blank"> Community Organizations Will Help Oregonians Get Health Insurance Through Cover Oregon</a>
+              <div class="newsDate">Sep 13, 2013</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=3deda8ed1c&amp;e=ed1b884458" target="_blank"> Join us for an Online Community Meeting on Sept. 20!</a><div class="newsDate">Sep 13, 2013</div>
+            </div>
+
+            <div class="newsItem clearfix">
+            <a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=056e08b4c0&amp;e=ed1b884458" target="_blank"> Protect Yourself Against Fraud</a>
+            <div class="newsDate">Sep 12, 2013</div>
+            </div>
+
+            <div class="newsItem clearfix">
+            <a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=a0d5f8ddd4&amp;e=ed1b884458" target="_blank"> Upcoming Cover Oregon Board of Directors Meeting, Sep 12, 2013</a>
+            <div class="newsDate">Sep 10, 2013</div>
+            </div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=9aa475abad&amp;e=ed1b884458" target="_blank"> You’re invited! Join us at the Medford Community Meeting on Sep 24</a><div class="newsDate">Sep 10, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=54721b4b22&amp;e=ed1b884458" target="_blank"> Join us for the Sep 6 Consumer Advisory Committee Meeting</a><div class="newsDate">Sep 4, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=24db1fe5e6&amp;e=ed1b884458" target="_blank"> It’s not too late to sign up! Coos Bay Community Meeting tomorrow at 6 pm</a><div class="newsDate">Sep 3, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=a259888a3d&amp;e=ed1b884458" target="_blank"> You’re invited! Join us for a special meeting on Sep 12</a><div class="newsDate">Aug 28, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=6c11e3c504&amp;e=ed1b884458" target="_blank"> Would you like to join our Health Plan Quality Metrics Workgroup?</a><div class="newsDate">Aug 26, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=460f0ad46c&amp;e=ed1b884458" target="_blank"> Are you eligible for financial help? Join us for a live online chat to learn more.y</a><div class="newsDate">Aug 23, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=30968f22bc&amp;e=ed1b884458" target="_blank"> Join us on Sep 4 for our next Community Meeting in Coos Bay</a><div class="newsDate">Aug 21, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=96c58d6be3&amp;e=ed1b884458" target="_blank"> Rulemaking Updates</a><div class="newsDate">Aug 21, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=fd5cb37c3f&amp;e=ed1b884458" target="_blank"> Last change to register for Community Meetings</a><div class="newsDate">Aug 13, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=50fdb173c7&amp;e=ed1b884458" target="_blank"> Cover Oregon Hosts Webinar for Providers</a><div class="newsDate">Aug 12, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=583386b47e&amp;e=ed1b884458" target="_blank"> Cover Oregon Online Webinar, Aug. 6</a><div class="newsDate">Aug 7, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=777a1de16c&amp;e=ed1b884458" target="_blank"> Funding Opportunities Posted For Community Partner Organizations</a><div class="newsDate">Aug 7, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=0f312b0331&amp;e=ed1b884458" target="_blank"> Upcoming Cover Oregon Board of Directors Meeting, Aug 8, 2013</a><div class="newsDate">Aug 2, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=b4a6872fba&amp;e=ed1b884458" target="_blank"> Cover Oregon Community Meetings</a><div class="newsDate">Jul 31, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=c0f47ead9f&amp;e=ed1b884458" target="_blank"> Cover Oregon Extends Deadline for Committee Applications</a><div class="newsDate">Jul 26, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=e8f1833081&amp;e=ed1b884458" target="_blank"> Cover Oregon announces grant funding now available to Oregon business associations</a><div class="newsDate">Jul 24, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=361f12ca1b&amp;e=ed1b884458" target="_blank"> Cover Oregon Finance and Audit Committee meeting on Thursday, Jul 25</a><div class="newsDate">Jul 24, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=78b49d3983&amp;e=ed1b884458" target="_blank"> Rulemaking Updates</a><div class="newsDate">Jul 24, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=aebecf65ba&amp;e=ed1b884458" target="_blank"> Cover Oregon Consumer Advisory Committee Meeting Canceled for Aug 2</a><div class="newsDate">Jul 23, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=c7be1f59f6&amp;e=ed1b884458" target="_blank"> Rulemaking Updates</a><div class="newsDate">Jul 22, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=9c1a885f92&amp;e=ed1b884458" target="_blank"> Reminder: Cover Oregon Community meeting in Bend Tomorrow</a><div class="newsDate">Jul 22, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=c907d06aec&amp;e=12a6354882" target="_blank"> Cover Oregon Community Meeting in Eugene Jul 10, 2013</a><div class="newsDate">Jul 27, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=bfc507a2c3&amp;e=12a6354882" target="_blank"> Community Partner and Agent Training Now Open</a><div class="newsDate">Jul 21, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=7e49558540&amp;e=12a6354882" target="_blank"> Upcoming Cover Oregon Board Meeting, June 13, 2013</a><div class="newsDate">Jul 10, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=e39e2c6d2d&amp;e=12a6354882" target="_blank"> New Career Opportunities, June 10, 2013</a><div class="newsDate">Jul 10, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=23655c49f1&amp;e=12a6354882" target="_blank"> Upcoming Cover Oregon Consumer Advisory Committee Meeting, June 7, 2013</a><div class="newsDate">Jul 4, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=1831e5bba8&amp;e=2729dea970" target="_blank"> New Career Opportunities, June 3, 2013</a><div class="newsDate">Jul 3, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=d5a494159e&amp;e=2729dea970" target="_blank"> Cover Oregon Board Development Committee Meeting, May 31, 2013</a><div class="newsDate">May 30, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=1c2455a476&amp;e=2729dea970" target="_blank"> Rulemaking Updates</a><div class="newsDate">May 29, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=6f13295a18&amp;e=2729dea970" target="_blank"> Oregon Community Health Centers Eligible for $2.8 Million in Health Coverage </a><div class="newsDate">May 16, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=cfcee3729a&amp;e=12a6354882" target="_blank"> Seeking Applications for Evaluation Advisory Group</a><div class="newsDate">May 16, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=d41f915dfd&amp;e=12a6354882" target="_blank"> Plan Filings Show Cover Oregon will be Competitive Online Marketplace</a><div class="newsDate">May 9, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=2f346a5943" target="_blank"> Upcoming Cover Oregon Board Meeting May 9</a><div class="newsDate">May 9, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=9688df8441&amp;e=12a6354882" target="_blank"> Cover Oregon Consumer Advisory Committee Meeting Canceled for May 3</a><div class="newsDate">Apr 30, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=f347e10543&amp;e=2729dea970" target="_blank"> Cover Oregon Partners with the Oregon Health Authority to Fund Grant Opportunities for Community Partners</a><div class="newsDate">Apr 11, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=f50f9eb0e6&amp;e=2729dea970" target="_blank"> Upcoming Cover Oregon Board Meetings</a><div class="newsDate">Apr 10, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=848d667a28&amp;e=12a6354882" target="_blank"> New Career Opportunities, Apr 8, 2013</a><div class="newsDate">Apr 9, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=0ca2014bf8&amp;e=2729dea970" target="_blank"> Partners Needed for Community Outreach</a><div class="newsDate">Apr 4, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=ddf628f84a&amp;e=12a6354882" target="_blank"> Reminder: Rulemaking hearing on Thursday</a><div class="newsDate">Apr 3, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=0751f989b4&amp;e=12a6354882" target="_blank"> Cover Oregon Approves 22 Carriers to Offer Medical and Dental Plans</a><div class="newsDate">Apr 2, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=c6e7f0dd0d&amp;e=12a6354882" target="_blank"> New Career Opportunities for the Week of Apr 1, 2013</a><div class="newsDate">Apr 1, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=474cbd695a&amp;e=12a6354882" target="_blank"> Upcoming Cover Oregon Consumer Advisory Committee Meeting, Apr 5, 2013</a><div class="newsDate">Apr 1, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=abf26f28e9&amp;e=12a6354882" target="_blank"> New Career Opportunities for the Week of Mar 25, 2013</a><div class="newsDate">Mar 25, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=cb9eca8efc&amp;e=12a6354882" target="_blank"> Don’t Miss Cover Oregon’s Portland Community Meeting</a><div class="newsDate">Mar 20, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=cbc9380f4b&amp;e=2729dea970" target="_blank"> Cover Oregon Upcoming Board Meeting, Mar 14, 2013</a><div class="newsDate">Mar 11, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=3268d01425&amp;e=12a6354882" target="_blank"> Cover Oregon to Host Community Meeting in Northeast Portland</a><div class="newsDate">Mar 8, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=7ef86bce46&amp;e=2729dea970" target="_blank"> Cover Oregon Board Development Committee Meeting, Mar 8, 2013</a><div class="newsDate">Mar 7, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=747fb22bfd&amp;e=12a6354882" target="_blank"> Consumer Advisory Meeting Canceled for Mar 1</a><div class="newsDate">Feb 25, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=a5c35526aa&amp;e=12a6354882" target="_blank"> Reminder: Rule Hearing on Wednesday</a><div class="newsDate">Feb 25, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=19f0ccbc0e&amp;e=2729dea970" target="_blank"> Cover Oregon Upcoming Board Meeting, Feb. 14, 2013</a><div class="newsDate">Feb 12, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=899ca967cf&amp;e=2729dea970" target="_blank"> Upcoming Cover Oregon Consumer Advisory Committee Meeting, Feb. 1, 2013</a><div class="newsDate">Jan 29, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=b4f59a924b" target="_blank"> Come Join Us in Seaside and Astoria this Week</a><div class="newsDate">Jan 22, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=72f087ddce&amp;e=12a6354882" target="_blank"> Cover Oregon Receives $226 Million Federal Grant</a><div class="newsDate">Jan 17, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=a206e6b2bc&amp;e=12a6354882" target="_blank"> Reminder of Public Hearing, Jan. 22, 2013</a><div class="newsDate">Jan 16, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=29ea8ab843&amp;e=12a6354882" target="_blank"> Press Release –  Oregonians will have Variety of Plan Choices through Cover Oregon</a><div class="newsDate">Jan 14, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=a8b5b18a68&amp;e=12a6354882" target="_blank"> Governor, High-level Federal Officials to Speak at Jan. 10 Board Meeting</a><div class="newsDate">Jan 7, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=9d6b4fac76&amp;e=12a6354882" target="_blank"> Cover Oregon to Host Meetings on North Coast</a><div class="newsDate">Jan 4, 2013</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=1bbe7eee5a&amp;e=12a6354882" target="_blank"> Rulemaking Hearing Set for Jan. 22, 2013</a><div class="newsDate">Dec 21, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=392860f96f&amp;e=12a6354882" target="_blank"> Upcoming Cover Oregon Board of Directors Meeting, Dec. 13, 2012</a><div class="newsDate">Dec 11, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=3cb1b546b1&amp;e=12a6354882" target="_blank"> Cover Oregon Receives Conditional Federal Approval</a><div class="newsDate">Dec 10, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=7712b3486d&amp;e=12a6354882" target="_blank"> Dec CAC Meeting Rescheduled</a><div class="newsDate">Dec 4, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=42bcef4747&amp;e=12a6354882" target="_blank"> Revised Application for Carriers</a><div class="newsDate">Nov 30, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=cc6ed0453c&amp;e=12a6354882" target="_blank"> Rulemaking Hearing Next Tuesday, Nov. 27</a><div class="newsDate">Nov 21, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=daa3d778ae" target="_blank"> Looking for Volunteers</a><div class="newsDate">Nov 16, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=206a9ba53f&amp;e=12a6354882" target="_blank"> Join Cover Oregon in Bend this Week</a><div class="newsDate">Nov 5, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=f4d2d37223&amp;e=12a6354882" target="_blank"> Upcoming Cover Oregon Board of Directors Meeting, Nov. 8, 2012</a><div class="newsDate">Nov 1, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=dffaee0e11&amp;e=12a6354882" target="_blank"> Upcoming Cover Oregon Consumer Advisory Committee Meeting, Nov. 2, 2012</a><div class="newsDate">Oct 30, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=61b2400a2f" target="_blank"> Cover Oregon to Host Community Meeting in Bend</a><div class="newsDate">Oct 24, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=4b7f857c97&amp;e=12a6354882" target="_blank"> Rulemaking Hearing Set for Nov. 27, 2012</a><div class="newsDate">Oct 22, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=6bb263e2a0&amp;e=12a6354882" target="_blank"> Upcoming Cover Oregon Board of Directors Meeting, Oct 11, 2012</a><div class="newsDate">Oct 4, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive2.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=085e538483&amp;e=12a6354882" target="_blank"> Application for Carriers</a><div class="newsDate">Oct 1, 2012</div></div>
+
+            <div class="newsItem clearfix"><a href="http://us4.campaign-archive1.com/?u=7b25be8a3597cc17bd5a34a32&amp;id=d083faa89e&amp;e=12a6354882" target="_blank"> Oregon Health Insurance Exchange Unveils New Name, Website</a><div class="newsDate">Oct 1, 2012</div></div></div>            
+
+        </div><!-- END pageContent-->
+
+
+        <aside class="sidebarCopy">
+          <h4>Media toolkit</h4>
+          <section>
+            <p>Following are several materials for the media to use in reporting about Cover Oregon:</p>
+            <blockquote>
+              <ul>
+                <li><a href="https://www.dropbox.com/sh/wpd2owdfen3fvlz/PRVH8xvjO3/MEDIA%20MATERIALS" target="_blank">Press kit</a></li>
+                <li><a href="https://www.dropbox.com/sh/wpd2owdfen3fvlz/wGjvCZ1j0A/B-ROLL" target="_blank">Video footage from Oct 1 media briefing</a></li>
+                <li><a href="https://www.dropbox.com/sh/wpd2owdfen3fvlz/wGjvCZ1j0A/B-ROLL" target="_blank">B-Roll package</a></li>
+                <li><a href="https://www.dropbox.com/sh/wpd2owdfen3fvlz/ERiywBXI0m/PHOTOS" target="_blank">approved photos for editorial usage only</a></li>
+              </ul>
+            </blockquote>            
+
+            <p><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/idcplg?IdcService=GET_FILE&dID=5609&dDocName=VMOHSOREX075.O005409&allowInterrupt=1">Cover Oregon Logo Vertical (.eps)</a><br>
+            <a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004626.jpg">Cover Oregon Logo Vertical (.jpg)</a></p>
+          </section>
+
+          <h4>Media inquiries</h4>
+          <section>
+            <p>If you're a member of the media and would like to make an inquiry, please contact:</p>
+            <p>Michael Cox<br>
+            <a href="mailto:mcox@coveroregon.com">mcox@coveroregon.com</a><br>
+            503-238-8239</p>
+
+            <p>Ariane Holm<br>
+            <a href="mailto:aholm@coveroregon.com">aholm@coveroregon.com</a><br>
+            503-813-8471</p>
+          </section>
+        </aside>
+
+      </section><!-- END .corpContentArea-->
+    </div>
+    <!--END pageContainer-->     
+
+    <!-- ~~~~~~~~~~~~~ HELP DRAWER MODAL ~~~~~~~~~~~~~~ -->    
+    <div class="widget" id="helpModal" title="Help">  
+      <div id="sampleAccordion" class="accordion clearfix">               
+          <a href="CORP_faq.html" class="disabledHeader disable">Frequently asked questions<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <a href="CORP_glossary.html" class="disabledHeader disable">Glossary of terms<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <h5>Contact us <span></span></h5>
+          <div>
+            <p><strong>Email:</strong> <span>info@coveroregon.com</span></p>
+            <p><strong>Phone:</strong> <span>1-855-CoverOR</span></p>            
+          </div>
+       </div>
+       <!-- END #sampleAccordion -->
+   </div>          
+  <!-- END helpModal-->
+  <footer>
+    <div id="footerHeaderContainer" class="clearfix">
+      <div id="footerHeader" class="clearfix">
+        <h1>Cover Oregon</h1> 
+        <!--<div class="language">
+          <h5>Select Language</h5>
+          <div class="selLanguage">
+            <select>
+              <option>English (US)</option>
+            </select>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <!-- END #footerHeaderContainer-->
+
+    <div id="directoryNavContainer" class="clearfix">
+      <div id="directoryNav"  class="clearfix">
+        <div class="footerColumn">
+          <h5>Discover Cover Oregon</h5>          <ul>        
+            <li><a href="CORP_about_us.html">About us</a></li>
+            <li><a href="CORP_join_us.html">Careers</a></li>
+            <li><a href="CORP_news_and_media.html">News and media</a></li>
+            <li><a href="CORP_featured_stories_mary_sean.html">Featured stories</a></li>
+            <li><a href="http://resources.coveroregon.com/" target="_blank">Resources</a></li>
+            <li><a href="CORP_creative.html">Creative</a></li>
+            <li><a href="CORP_board_and_committees.html">Board and committees</a></li>
+            <li><a href="CORP_meeting_and_events.html">Meetings and events</a></li>
+            <li><a href="CORP_contact_us.html">Contact information</a></li>
+            <li><a href="CORP_public_comments.html">Public comments</a></li>
+            <li><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o027213.pdf" target="_blank">Public records request</a></li>
+            <li><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_6.pdf" target="_blank">Business plan</a></li>
+            <li><a href="CORP_newsletter_archives.html">Newsletter archives</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Explore Coverage</h5><ul>
+            <li><a href="CORP_medical_coverage.html">Medical</a></li>
+            <li><a href="CORP_dental_coverage.html">Dental</a></li>
+            <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+            <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+            <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+            <li><a href="CORP_view_providers.html">View providers</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="CORP_application_process.html">Application overview</a></li>
+            <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+            <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>
+            <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+            <li><a href="individual_start.html">Individual and families</a></li>
+            <li><a href="SHOP_start.html">Employers</a></li>
+            <li><a href="EMP_start.html">Employees</a></li>
+            <li><a href="TRB_start.html">Tribes</a></li>
+            <li><a href="AGENT_start.html">Agents and community partners</a></li>
+            <li><a href="carrier_start.html">Insurance companies</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Learn More</h5>
+          <ul>
+            <li><a href="CORP_faq.html">Frequently asked questions</a></li>
+            <li><a href="CORP_glossary.html">Glossary of terms</a></li>        
+            <li><a href="CORP_grants_and_reports.html">Reports, grants and legislation</a></li>                       
+            <li><a href="CORP_language_help.html">Language help</a></li>
+            <li><a href="CORP_exemptions.html">Exemptions</a></li>
+          </ul>
+        </div>    
+        <div id="supportfooter" class="footerColumn">
+          <h5>Contact Us</h5>
+          <p><img src="images/email_green.png" alt="Email"><a href="mailto:info@coveroregon.com">info@coveroregon.com</a></p>
+          <p><img src="images/phone_green_sm.png" alt="Contact Cover Oregon"> 1-855-268-3767</p>          
+          <div><a href="https://www.facebook.com/coveroregon" target="_blank"><img src="images/facebook_green.png" alt="Cover Oregon Facebook"></a><a href="https://www.twitter.com/CoverOregon" target="_blank"><img src="images/twitter_green.png" alt="Cover Oregon Twitter"></a><a href="http://www.linkedin.com/company/2673889" target="_blank"><img src="images/linkedin_green.png" alt="Cover Oregon LinkedIn"></a><a href="http://www.youtube.com/user/coveroregonvideo?feature=watch" target="_blank"><img src="images/youtube_green.png" alt="Cover Oregon YouTube"></a><a href="https://plus.google.com/102909134020101999085" target="_blank"><img src="images/google_green.png" alt="Cover Oregon Google Plus"></a></div>
+        </div>
+        <!-- END supportfooter -->
+      </div>  
+    </div>
+    <!-- END directoryNavContainer -->
+
+    <div class="globalFooterCopyrightContainer">
+      <div class="globalFooterCopyright">
+        <p>&copy; 2013 Cover Oregon, All Rights Reserved | <a href="CORP_privacy_policy.html">Privacy Policy</a> | <a href="CORP_terms_and_conditions.html">Terms and conditions</a> | <a href="CORP_accessibility.html">Accessibility</a></p>  
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script src="scripts/jquery-1.9.0.js" type="text/javascript"></script>
+  <script src="scripts/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+  <script src="scripts/waterMark.js" type="text/javascript"></script>
+  <script src="scripts/widgets.js" type="text/javascript"></script>
+  <script src='scripts/jquery.dcmegamenu.1.2.js' type='text/javascript'></script>
+  <script src='scripts/jquery.hoverIntent.minified.js' type='text/javascript'></script>
+  <script src='scripts/jquery.mega.menu.js' type='text/javascript'></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Cover Oregon | Individual Browse Plans</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" href="styles/helpDrawer.css">
+
+  <!-- All JavaScript at the bottom, except for Modernizr. Modernizr enables HTML5 elements & feature detects -->
+  <script src="scripts/modernizr-2.5.3.min.js" type="text/javascript"></script>
+
+</head>
+<body id="modalTemplate">
+
+    <header>
+      <div id="globalNavContainer" class="clearfix">
+
+      <!-- Log in Container -->
+      <div id="login" class="globalLoginContainer clearfix">
+        <div class="loginFields">
+          <a href="account_login_username.html" class="button blue">Log In</a>
+          <p>New User? <a href="account_creation.html">Create Account</a></p>
+        </div>
+      </div>
+      <!-- END .globalLoginContainer -->
+
+      <div class="globalNav">
+        <div class="logo"><a href="index.html" title="Cover Oregon"><img src="images/cover-oregon-logo-small.png" alt="Cover Oregon"></a></div> 
+        <nav>
+          <ul id="mega-menu-tut" class="menu">            <li>Explore Coverage
+              <ul>
+                <li><a href="CORP_medical_coverage.html">Medical</a></li>
+                <li><a href="CORP_dental_coverage.html">Dental</a></li>
+                <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+                <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+                <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+                <li><a href="CORP_view_providers.html">View providers</a></li>
+              </ul>
+            </li>
+
+            <li>Get Started
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_application_process.html">Application overview</a></li>
+                    <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+                    <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>           
+                    <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li><a href="individual_start.html">Individual and Families</a></li>
+                    <li><a href="SHOP_start.html">Employers</a></li>
+                    <li><a href="EMP_start.html">Employees</a></li>
+                    <li><a href="TRB_start.html">Tribes</a></li>
+                    <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+                    <li><a href="carrier_start.html">Insurance companies</a></li>
+                  </ul>
+                </li>
+              </ul>              
+            </li>
+            
+            <li>Learn More
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_faq.html">FAQs</a></li>
+                    <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+                    <li><a href="CORP_grants_and_reports.html">Reports, grants and Legislation</a></li>
+                    <li><a href="CORP_exemptions.html">Exemptions</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li style="padding: 6px 0;">Find help in your language:</li>                    
+                    <li><a href="CORP_language_help.html?id=spanish">Spanish <span>español</span></a></li>
+                    <li><a href="CORP_language_help.html?id=russian">Russian <span>русский</span></a></li>
+                    <li><a href="CORP_language_help.html?id=vietnamese">Vietnamese <span class="vm">tiếng Việt</span></a></li>
+                    <li><a href="CORP_language_help.html?id=korean">Korean <span>한국인</span></a></li>
+                    <li><a href="CORP_language_help.html?id=chinese">Chinese (Trad.) <span class="ch">中文</span></a></li>
+                  </ul>
+                </li>                
+              </ul>
+            </li> </ul>
+        </nav>
+      </div>
+      <!-- END .globalNav -->      <div class="utilities">
+        <nav>
+        <ul>
+          <li><a class="phoneLink" href="#"><img src="images/phone_green2.png" alt="Phone">Phone</a>
+          <!-- PHONE HOVER -->
+          <div id="phoneHover" class="clearfix">
+            <div class="hoverArrow"><img src="images/arrow_white.png" alt="Phone Hover"></div>                
+            <p>Phone: 1-855-268-3767</p>
+          </div>
+          <li><a href="CORP_language_help.html"><img src="images/globe.png" alt="Languages">Languages</a></li>
+          <li><a href="" id="helpModalLink"><img src="images/help_green_sm.png" alt="Help">Help</a></li>
+          <li style="padding: 0 0 0 10px; background: none;"><input type="text" value="" class="searchBox" name="search" id="search" data-watermark="Search"></li>        
+        </ul>
+        </nav>
+      </div>
+
+    </div>
+    <!-- END #globalNavContainer -->
+    </header>
+
+      <div id="pageContainer" class="clearfix">
+
+        <div id="sidebar">
+          <fieldset>
+            <div class="title">Your selections</div>
+            <div class="ctrlHolder clearfix">
+              <label>Date coverage begins</label>
+              <input id="date" name="date" size="7" data-watermark="01/01/2014" style="color: rgb(3, 69, 100); margin-right: 0;">
+             <!-- <input type="text" name="coverageDate" class="datepicker" data-watermark="MM/DD/YYYY" size="15">-->
+            </div>
+
+            <div class="ctrlHolder clearfix">
+              <label>ZIP code</label>
+              <input id="zipcode" name="zipcode" size="7" maxlength="5" data-watermark="97204" style="color: rgb(3, 69, 100); margin-right: 0;">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div class="title">Household members</div>
+            <p><span><a href="">Add members</a></span></p>
+            <table>
+              <tr>
+                <td>&nbsp;</td>
+                <td>Date of birth</td>
+                <td>Tobacco user?</td>
+              </tr>
+              <tbody>
+                <tr>
+                  <td><img src="images/close_icon_grey.png"></td>
+                  <td><input id="date" name="date" size="7" data-watermark="11/16/1977" style="color: rgb(3, 69, 100);"></td>
+                  <td><input type="checkbox" name="tobacco_use"></td>
+                </tr>
+                <tr>
+                  <td><img src="images/close_icon_grey.png"></td>
+                  <td><input id="date" name="date" size="7" data-watermark="01/16/1975" style="color: rgb(3, 69, 100);"></td>
+                  <td><input type="checkbox" name="tobacco_use"></td>
+                </tr>
+                <tr>
+                  <td><img src="images/close_icon_grey.png"></td>
+                  <td><input id="date" name="date" size="7" data-watermark="02/18/1996" style="color: rgb(3, 69, 100);"></td>
+                  <td><input type="checkbox" name="tobacco_use"></td>
+                </tr>
+              </tbody>
+              </table>
+          </fieldset>
+
+        </div>
+        <!-- END #sidebar-->
+
+        <section id="pageContentAreaNoMargin">
+          <div class="sectionHeader clearfix">
+            <a class="button green" href="application_start.html"> Start Your Application </a>
+          </div>
+          <h3>Browse plans</h3>
+          <p>Here are your estimated costs and plan options, based on the information you provided. You'll receive more exact results when you complete your application.</p>
+
+          <div class="paginationWrapper clearfix">
+            <p class="availablePlans">1 - 5 of 16 plans</p>
+              <div class="pageResultsWrapper">
+                <div class="selectContainer pageCount">
+                  <select id="product_pages">
+                    <option value="">5 per page:</option>
+                    <option value="">10 per page</option>
+                    <option value="">25 per page</option>
+                    <option value="">50 per page</option>
+                  </select>
+                </div>
+                <div class="selectContainer browsePlans">
+                  <select id="product_sort">
+                    <option value="lowest-highest">Price: Low to High</option>
+                    <option value="highest-lowest">Price: High to Low</option>
+                  </select>
+                </div>
+                <div class="paginationNavCtrl">
+                  <a href="#" class="prev">&lt; </a>
+                  <a href="#" class="current">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#"><span>...</span></a>
+                  <a href="#" class="next">  &gt; </a>
+                </div>
+            </div>
+          </div>
+          <!-- .paginationWrapper -->
+
+          <div class="viewPlansContainer">
+
+            <div class="planHorizontalBox clearfix">
+              <div class="planHorizontalBoxColumnWrapper clearfix">
+                <div class="planHorizontalBoxColumn">
+                  <div class="planCost">$277 <span>per month</span></div>
+                  <div class="planRating">
+                    <div class="readOnly-demo5"></div>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planVendorLogo"><img src="images/onemore_bkgr-01.png" alt="OneMore Co."></div>
+                  <div class="planName">Plan Name A<br> HMO</div>
+
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planDetailedCosts clearfix">
+                   <p>OOP max: <span>$5,000</span></p>
+                    <p>Deductible <span>$4,500</span></p>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn">
+                  <div class="badge" style="margin-right: 45px;"><span id="platinum"></span>Platinum</div><br>
+                  <button class="utilityButton">View Details</button>
+                </div>
+              </div>
+              <!-- END planHorizontalBoxColumnWrapper -->
+            </div>
+            <!-- END planHorizontalBox -->
+
+
+            <div class="planHorizontalBox clearfix">
+              <div class="planHorizontalBoxColumnWrapper clearfix">
+                <div class="planHorizontalBoxColumn">
+                  <div class="planCost">$277 <span>per month</span></div>
+                  <div class="planRating">
+                    <div class="readOnly-demo5"></div>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planVendorLogo"><img src="images/family_bkgr-01.png" alt="Family Insurance"></div>
+                  <div class="planName">Plan Name A<br> HMO</div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planDetailedCosts clearfix">
+
+                    <p>OOP max: <span>$4,000</span></p>
+                    <p>Deductible <span>$500</span></p>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn">
+                  <div class="badge" style="margin-right: 45px;"><span id="platinum"></span>Platinum</div><br>
+                  <button class="utilityButton">View Details</button>
+                </div>
+              </div>
+              <!-- END planHorizontalBoxColumnWrapper -->
+            </div>
+            <!-- END planHorizontalBox -->
+
+
+            <div class="planHorizontalBox clearfix">
+              <div class="planHorizontalBoxColumnWrapper clearfix">
+                <div class="planHorizontalBoxColumn">
+                  <div class="planCost">$287 <span>per month</span></div>
+                  <div class="planRating">
+                    <div class="readOnly-demo3"></div>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planVendorLogo"><img src="images/heart_bkgr-01.png" alt="ABC Corp."></div>
+                  <div class="planName">Plan Name A<br> HMO</div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planDetailedCosts clearfix">
+
+                    <p>OOP max: <span>$3,500</span></p>
+                    <p>Deductible <span>$2,500</span></p>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn">
+                  <div class="badge" style="margin-right: 45px;"><span id="bronze"></span>Bronze</div><br>
+                  <button class="utilityButton">View Details</button>
+                </div>
+              </div>
+              <!-- END planHorizontalBoxColumnWrapper -->
+            </div>
+            <!-- END planHorizontalBox -->
+
+
+
+            <div class="planHorizontalBox clearfix">
+              <div class="planHorizontalBoxColumnWrapper clearfix">
+                <div class="planHorizontalBoxColumn">
+                  <div class="planCost">$377 <span>per month</span></div>
+                  <div class="planRating">
+                    <div class="readOnly-demo4"></div>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planVendorLogo"><img src="images/exampleco_bkgr-01.png" alt="Humana"></div>
+                  <div class="planName">Plan Name A<br> HMO</div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planDetailedCosts clearfix">
+
+                    <p>OOP max: <span>$3,000</span></p>
+                    <p>Deductible <span>$1,500</span></p>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn">
+                  <div class="badge" style="margin-right: 45px;"><span id="silver"></span>Silver</div><br>
+                  <button class="utilityButton">View Details</button>
+                </div>
+              </div>
+              <!-- END planHorizontalBoxColumnWrapper -->
+            </div>
+            <!-- END planHorizontalBox -->
+
+
+            <div class="planHorizontalBox clearfix">
+              <div class="planHorizontalBoxColumnWrapper clearfix">
+                <div class="planHorizontalBoxColumn">
+                  <div class="planCost">$487 <span>per month</span></div>
+                  <div class="planRating">
+                    <div class="readOnly-demo4"></div>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planVendorLogo"><img src="images/heart_bkgr-01.png" alt="Aetna"></div>
+                  <div class="planName">Plan Name A<br> HMO</div>
+                </div>
+                <div class="planHorizontalBoxColumn medium">
+                  <div class="planDetailedCosts clearfix">
+
+                    <p>OOP max: <span>$4,000</span></p>
+                    <p>Deductible <span>$5,000</span></p>
+                  </div>
+                </div>
+                <div class="planHorizontalBoxColumn">
+                  <div class="badge" style="margin-right: 45px;"><span id="gold"></span>Gold</div><br>
+                  <button class="utilityButton">View Details</button>
+                </div>
+              </div>
+              <!-- END planHorizontalBoxColumnWrapper -->
+            </div>
+            <!-- END planHorizontalBox -->
+
+        </div>
+        <!-- viewPlansContainer -->
+
+          <div class="paginationWrapper clearfix">
+            <div class="pageResultsWrapper">
+              <div class="paginationNavCtrl">
+                <a href="#" class="prev">&lt; </a>
+                <a href="#" class="current">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#"><span>...</span></a>
+                <a href="#" class="next">  &gt; </a>
+              </div>
+          </div>
+          </div>
+          <!-- .paginationWrapper -->
+
+        <div class="sectionFooter clearfix">
+          <a class="button secondary" href="individual_estimated_rates_landing.html"> Go Back </a>
+        </div>
+
+      </section>
+      <!--END pageContentAreaNoLeftNav-->
+    </div>
+    <!--END pageContainer-->    <!-- ~~~~~~~~~~~~~ HELP DRAWER MODAL ~~~~~~~~~~~~~~ -->    
+    <div class="widget" id="helpModal" title="Help">  
+      <div id="sampleAccordion" class="accordion clearfix">               
+          <a href="CORP_faq.html" class="disabledHeader disable">Frequently asked questions<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <a href="CORP_glossary.html" class="disabledHeader disable">Glossary of terms<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <h5>Contact us <span></span></h5>
+          <div>
+            <p><strong>Email:</strong> <span>info@coveroregon.com</span></p>
+            <p><strong>Phone:</strong> <span>1-855-CoverOR</span></p>            
+          </div>
+       </div>
+       <!-- END #sampleAccordion -->
+   </div>          
+  <!-- END helpModal-->
+  <footer>
+    <div id="footerHeaderContainer" class="clearfix">
+      <div id="footerHeader" class="clearfix">
+        <h1>Cover Oregon</h1> 
+        <!--<div class="language">
+          <h5>Select Language</h5>
+          <div class="selLanguage">
+            <select>
+              <option>English (US)</option>
+            </select>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <!-- END #footerHeaderContainer-->
+
+    <div id="directoryNavContainer" class="clearfix">
+      <div id="directoryNav"  class="clearfix">
+        <div class="footerColumn">
+          <h5>Discover Cover Oregon</h5>          <ul>        
+            <li><a href="CORP_about_us.html">About us</a></li>
+            <li><a href="CORP_join_us.html">Careers</a></li>
+            <li><a href="CORP_news_and_media.html">News and media</a></li>
+            <li><a href="CORP_featured_stories_mary_sean.html">Featured stories</a></li>
+            <li><a href="http://resources.coveroregon.com/" target="_blank">Resources</a></li>
+            <li><a href="CORP_creative.html">Creative</a></li>
+            <li><a href="CORP_board_and_committees.html">Board and committees</a></li>
+            <li><a href="CORP_meeting_and_events.html">Meetings and events</a></li>
+            <li><a href="CORP_contact_us.html">Contact information</a></li>
+            <li><a href="CORP_public_comments.html">Public comments</a></li>
+            <li><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o027213.pdf" target="_blank">Public records request</a></li>
+            <li><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_6.pdf" target="_blank">Business plan</a></li>
+            <li><a href="CORP_newsletter_archives.html">Newsletter archives</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Explore Coverage</h5><ul>
+            <li><a href="CORP_medical_coverage.html">Medical</a></li>
+            <li><a href="CORP_dental_coverage.html">Dental</a></li>
+            <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+            <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+            <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+            <li><a href="CORP_view_providers.html">View providers</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="CORP_application_process.html">Application overview</a></li>
+            <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+            <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>
+            <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+            <li><a href="individual_start.html">Individual and families</a></li>
+            <li><a href="SHOP_start.html">Employers</a></li>
+            <li><a href="EMP_start.html">Employees</a></li>
+            <li><a href="TRB_start.html">Tribes</a></li>
+            <li><a href="AGENT_start.html">Agents and community partners</a></li>
+            <li><a href="carrier_start.html">Insurance companies</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Learn More</h5>
+          <ul>
+            <li><a href="CORP_faq.html">Frequently asked questions</a></li>
+            <li><a href="CORP_glossary.html">Glossary of terms</a></li>        
+            <li><a href="CORP_grants_and_reports.html">Reports, grants and legislation</a></li>                       
+            <li><a href="CORP_language_help.html">Language help</a></li>
+            <li><a href="CORP_exemptions.html">Exemptions</a></li>
+          </ul>
+        </div>    
+        <div id="supportfooter" class="footerColumn">
+          <h5>Contact Us</h5>
+          <p><img src="images/email_green.png" alt="Email"><a href="mailto:info@coveroregon.com">info@coveroregon.com</a></p>
+          <p><img src="images/phone_green_sm.png" alt="Contact Cover Oregon"> 1-855-268-3767</p>          
+          <div><a href="https://www.facebook.com/coveroregon" target="_blank"><img src="images/facebook_green.png" alt="Cover Oregon Facebook"></a><a href="https://www.twitter.com/CoverOregon" target="_blank"><img src="images/twitter_green.png" alt="Cover Oregon Twitter"></a><a href="http://www.linkedin.com/company/2673889" target="_blank"><img src="images/linkedin_green.png" alt="Cover Oregon LinkedIn"></a><a href="http://www.youtube.com/user/coveroregonvideo?feature=watch" target="_blank"><img src="images/youtube_green.png" alt="Cover Oregon YouTube"></a><a href="https://plus.google.com/102909134020101999085" target="_blank"><img src="images/google_green.png" alt="Cover Oregon Google Plus"></a></div>
+        </div>
+        <!-- END supportfooter -->
+      </div>  
+    </div>
+    <!-- END directoryNavContainer -->
+
+    <div class="globalFooterCopyrightContainer">
+      <div class="globalFooterCopyright">
+        <p>&copy; 2013 Cover Oregon, All Rights Reserved | <a href="CORP_privacy_policy.html">Privacy Policy</a> | <a href="CORP_terms_and_conditions.html">Terms and conditions</a> | <a href="CORP_accessibility.html">Accessibility</a></p>  
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script type="text/javascript" src="scripts/jquery-1.9.0.js"></script>
+  <script src="scripts/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+  <script src="scripts/widgets.js" type="text/javascript"></script>>
+  <script type="text/javascript" src="scripts/waterMark.js"></script>
+  <script type="text/javascript" src="scripts/jquery.raty.js"></script>
+  <script type="text/javascript" src="scripts/star_ratings.js"></script>
+  <script src='scripts/jquery.dcmegamenu.1.2.js' type='text/javascript'></script>
+  <script src='scripts/jquery.hoverIntent.minified.js' type='text/javascript'></script>
+  <script src='scripts/jquery.mega.menu.js' type='text/javascript'></script>  
+</body>
+</html>

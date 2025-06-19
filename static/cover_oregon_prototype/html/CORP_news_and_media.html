@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <!--  Mobile Viewport Fix -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Cover Oregon | News and Media</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" href="styles/helpDrawer.css">
+
+  <!-- All JavaScript at the bottom, except for Modernizr. Modernizr enables HTML5 elements & feature detects -->    
+  <script src="scripts/modernizr-2.5.3.min.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var _kmq = _kmq || [];
+    var _kmk = _kmk || '4a931b81cfdd5b346c1072cd847b7c10ae3ccb1e';
+    function _kms(u){
+      setTimeout(function(){
+        var d = document, f = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+  </script>
+
+</head>
+<body id="modalTemplate">
+
+    <header>
+      <div id="globalNavContainer" class="clearfix">
+
+      <!-- Log in Container -->
+      <div id="login" class="globalLoginContainer clearfix">
+        <div class="loginFields">
+          <a href="login_username.html" class="button blue">Log In</a>
+          <p>New User? <a href="#" id="createAccountLink">Create Account</a></p>
+        </div>
+      </div>
+      <!-- END .globalLoginContainer -->
+
+      <div class="globalNav">
+        <div class="logo"><a href="index.html" title="Cover Oregon"><img src="images/cover-oregon-logo-small.png" alt="Cover Oregon"></a></div> 
+        <nav>
+          <ul id="mega-menu-tut" class="menu">            <li>Explore Coverage
+              <ul>
+                <li><a href="CORP_medical_coverage.html">Medical</a></li>
+                <li><a href="CORP_dental_coverage.html">Dental</a></li>
+                <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+                <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+                <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+                <li><a href="CORP_view_providers.html">View providers</a></li>
+              </ul>
+            </li>
+
+            <li>Get Started
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_application_process.html">Application overview</a></li>
+                    <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+                    <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>           
+                    <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li><a href="individual_start.html">Individual and Families</a></li>
+                    <li><a href="SHOP_start.html">Employers</a></li>
+                    <li><a href="EMP_start.html">Employees</a></li>
+                    <li><a href="TRB_start.html">Tribes</a></li>
+                    <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+                    <li><a href="carrier_start.html">Insurance companies</a></li>
+                  </ul>
+                </li>
+              </ul>              
+            </li>
+            
+            <li>Learn More
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_faq.html">FAQs</a></li>
+                    <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+                    <li><a href="CORP_grants_and_reports.html">Reports, grants and Legislation</a></li>
+                    <li><a href="CORP_exemptions.html">Exemptions</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li style="padding: 6px 0;">Find help in your language:</li>                    
+                    <li><a href="CORP_language_help.html?id=spanish">Spanish <span>español</span></a></li>
+                    <li><a href="CORP_language_help.html?id=russian">Russian <span>русский</span></a></li>
+                    <li><a href="CORP_language_help.html?id=vietnamese">Vietnamese <span class="vm">tiếng Việt</span></a></li>
+                    <li><a href="CORP_language_help.html?id=korean">Korean <span>한국인</span></a></li>
+                    <li><a href="CORP_language_help.html?id=chinese">Chinese (Trad.) <span class="ch">中文</span></a></li>
+                  </ul>
+                </li>                
+              </ul>
+            </li> </ul>
+        </nav>
+      </div>
+      <!-- END .globalNav -->      <div class="utilities">
+        <nav>
+        <ul>
+          <li><a class="phoneLink" href="#"><img src="images/phone_green2.png" alt="Phone">Phone</a>
+          <!-- PHONE HOVER -->
+          <div id="phoneHover" class="clearfix">
+            <div class="hoverArrow"><img src="images/arrow_white.png" alt="Phone Hover"></div>                
+            <p>Phone: 1-855-268-3767</p>
+          </div>
+          <li><a href="CORP_language_help.html"><img src="images/globe.png" alt="Languages">Languages</a></li>
+          <li><a href="" id="helpModalLink"><img src="images/help_green_sm.png" alt="Help">Help</a></li>
+          <li style="padding: 0 0 0 10px; background: none;"><input type="text" value="" class="searchBox" name="search" id="search" data-watermark="Search"></li>        
+        </ul>
+        </nav>
+      </div>
+
+    </div>
+    <!-- END #globalNavContainer -->
+    </header>
+
+    <div id="pageContainer" class="clearfix">
+      <section class="corpContentArea clearfix">        
+        <div class="pageContent">
+          <h1>News and media</h1>
+
+          <p>Cover Oregon has been generating quite a bit of buzz! Check out our media coverage and learn about the health care issues that affect you.</p>
+
+
+
+
+          <h4>Press releases</h4>
+
+          <div class="newsArticles">
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=19">Cover Oregon Awawards Grants to Business Associations Throughout Oregon</a>
+              <div class="newsDate">Oct 14</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=18">Cover Oregon is Open for Business Updates from Launch</a>
+              <div class="newsDate">Oct 2</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=17">Cover Oregon Opens for Business</a>
+              <div class="newsDate">Oct 1</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=0">Cover Oregon Announces First Round of Recipients for Outreach and Enrollment Grants</a>
+              <div class="newsDate">Sep 13</div>
+            </div>
+
+           <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=1">Cover Oregon Empowers Consumers to Protect Themselves from Fraud</a>
+              <div class="newsDate">Sep 12</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=2">Cover Oregon Launches New TV Ads</a>
+              <div class="newsDate">Aug 26</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=3">Cover Oregon Announces Launch Plan for October</a>
+              <div class="newsDate">Aud 9</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=4">Oregon Public Radio: Cover Oregon Seeks To Educate Businesses About Health Exchange</a>
+              <div class="newsDate">Jul 24</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=5">Cover Oregon announces grant funding now available to Oregon business associations</a>
+              <div class="newsDate">Jul 24</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=6">Cover Oregon Launches Statewide Marketing and Outreach Campaign</a>
+              <div class="newsDate">Jul 8</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=7">Statement from Rocky King on Federal Government Delaying Employer Penalty</a>
+              <div class="newsDate">Jul 3</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=8">Cover Oregon Launches Training Program for Insurance Agents</a>
+              <div class="newsDate">Jun 13</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=9">Oregon Community Health Centers Eligible for $2.8 Million in Health Cover Outreach Enrollment Grants</a>
+              <div class="newsDate">May 16</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=10">Plan Filings Show Cover Oregon Will Be Competitive Online Marketplace</a>
+              <div class="newsDate">May 9</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=11">Cover Oregon Looking for Temporary Staffing Agencies to Fill Contracted Service Center Positions</a>
+              <div class="newsDate">Apr 10</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=12">Cover Oregon Approves 22 Carriers to Offer Medical and Dental Plans</a>
+              <div class="newsDate">Apr 2</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=13">Cover Oregon to Host Community Meeting in Portland</a>
+              <div class="newsDate">Mar 13</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=14">HHS awards $1.5 billion to support states building Health Insurance Marketplaces</a>
+              <div class="newsDate">Jan 17</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=15">Governor Kitzhaber Statement on $226 Million Federal Grant for Cover Oregon</a>
+              <div class="newsDate">Jan 17</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="CORP_press_release.html?id=16">Oregonians will have variety of plan choices through Cover Oregon</a>
+              <div class="newsDate">Jan 14</div>
+            </div>
+
+          </div><!-- END .newsArticles-->              
+          <h4>In the news</h4>
+
+          <div class="newsArticles">
+
+
+              <div class="newsItem clearfix">
+              <a href="http://www.statesmanjournal.com/article/20130829/UPDATE/130829032/Justice-department-Beware-scam-artists-health-law-rolls-out?nclick_check=1" target="_blank">Statesman Journal: Justice department: Beware of scam artists as health law rolls </a>
+              <div class="newsDate">Aug 29</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/08/cover-oregon-targets-latinos-in.html" target="_blank">Portland Business Journal: Cover Oregon targets Latinos in outreach campaign</a>
+              <div class="newsDate">Aug 29</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://directory.libsyn.com/episode/index/show/jpr/id/2440952" target="_blank">Jefferson Exchange (Jefferson Public Radio): Podcast – Interview with Amy Fauver.</a>
+              <div class="newsDate">Aug 21</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/08/portlands-lifesavas-get-in-on-the.html?ana=e_du_pub&s=article_du&ed=2013-08-08&u=11618802214e2d90cfe5f167d9b0c1&t=1376000627" target="_blank">Portland Business Journal: Portland’s Lifesavas get in on the Cover Oregon ad act</a>
+              <div class="newsDate">Aug 8</div>  
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/08/cover-oregon-ads-you-like-them-you.html" target="_blank">Portland Business Journal: Cover Oregon Ads: You like them, you kinda like them.</a>
+              <div class="newsDate">Aug 5</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.registerguard.com/rg/opinion/30253960-78/oregon-campaign-insurance-oregonians-cover.html.csp" target="_blank">The Register-Guard: Roll on, Cover Oregon</a>
+              <div class="newsDate">Aug 5</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.oregonlive.com/health/index.ssf/2013/08/oregon_officials_brace_for_sca.html" target="_blank">The Oregonian: Oregon officials brace for scammers over health enrollment push</a>
+              <div class="newsDate">Aug 3</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/07/health-human-services-touts-reform.html" target="_blank">Portland Business Journal: Health and Human Services touts reform benefits in Oregon</a>
+              <div class="newsDate">Jul 31</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.nytimes.com/2013/08/01/business/media/songs-and-sunscreen-spread-the-health-insurance-message.html?_r=1&" target="_blank">The New York Times: Songs and Sunscreen Spread the Health Insurance Message</a>
+              <div class="newsDate">Jul 31</div>
+            </div>
+
+
+
+            <div class="newsItem clearfix">
+              <a href="http://www.cbsnews.com/8301-18563_162-57595869/oregon-spends-big-to-pitch-youth-on-obamacare-benefits/" target="_blank">CBS Evening News: Campaign to get Oregon’s youth to buy health insurance.</a>
+              <div class="newsDate">Jul 28</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.oregonlive.com/health/index.ssf/2013/07/state_will_pay_groups_to_help.html" target="_blank">The Oregonian: State will pay groups to help small businesses get health coverage</a>
+              <div class="newsDate">Jul 25</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.businessweek.com/articles/2013-07-25/small-employers-take-sides-in-a-senate-obamacare-hearing?campaign_id=yhoo" target="_blank">Businessweek: Small employers take sides in a Senate Obamacare hearing</a>
+              <div class="newsDate">Jul 25</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.sacbee.com/2013/07/24/5590635/california-other-states-prepare.html" target="_blank">Sacramento Bee: California, Other States Prepare to Promote Health Insurance</a>
+              <div class="newsDate">Jul 24</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/07/cover-oregon-to-give-grants-to.html?ana=e_ptl_hc&u=up7mKTpC8kebjartCaKPcw07affcdb&t=1374700302" target="_blank">Portland Business Journal: Cover Oregon has a lot of explaining to do</a>
+              <div class="newsDate">Jul 24</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/07/is-your-business-ready-for-the.html" target="_blank">Portland Business Journal: Is your business ready for the Affordable Care Act?</a>
+              <div class="newsDate">Jul 23</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/07/cover-oregon-sort-of-like-buying-a.html?ana=e_ptl_hc&u=VMgZ2SEhUCL0Knm5UOJwPA02e56862&t=1374618101" target="_blank">Portland Business Journal: Cover Oregon: Sort of like buying a plane ticket but more complicated </a>
+              <div class="newsDate">Jul 23</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.fool.com/investing/general/2013/07/21/these-are-obamacares-top-promoters.aspx" target="_blank">TheMotleyFool.com: These Are Obamacare’s Top Promoters</a>
+              <div class="newsDate">Jul 21</div>
+            </div>
+<!--             <div class="newsItem clearfix">
+              <a href="" target="_blank">Statesman Journal: Health insurance call center announces move to new site</a>
+              <div class="newsDate">Jul 20</div>
+            </div> -->
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/07/premiums-to-drop-showing-health.html" target="_blank">Portland Business Journal: Premiums to drop, showing health reform working</a>
+              <div class="newsDate">Jul 19</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.opb.org/thinkoutloud/shows/talking-business-0717/" target="_blank">OPB: Think Out Loud</a>
+              <div class="newsDate">Jul 17</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://ec.libsyn.com/p/d/f/2/df2da60677d6e127/The_Jefferson_Exchange_07_17_2013_Hour_1A.mp3?d13a76d516d9dec20c3d276ce028ed5089ab1ce3dae902ea1d01cf8e31d0cd5edb30&c_id=5876851" target="_blank">Jefferson Public Radio: Interview with Amy Fauver on Cover Oregon</a>
+              <div class="newsDate">Jul 17</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.huffingtonpost.com/2013/07/18/obamacare-speech_n_3613041.html?ir=Business&utm_hp_ref=business" target="_blank">Huffington Post: Obamacare speech by President to highlight benefits for health insurance consumers</a>
+              <div class="newsDate">Jul 17</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.cascadebusnews.com/news-pages/features/4053-curious-about-oregons-health-insurance-marketplace" target="_blank">Cascade Business News: Curious about Oregon’s health insurance marketplace?</a>
+              <div class="newsDate">Jul 16</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/07/fierce-competition-expected-on-cover.html" target="_blank">Portland Business Journal: Fierce competition on Cover Oregon drives down premiums </a>
+              <div class="newsDate">Jul 16</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://capsules.kaiserhealthnews.org/index.php/2013/07/state-insurance-exchanges-launching-tv-ads-to-encourage-enrollment" target="_blank">Kaiser Health News: State insurance exchanges launching TV ads to encourage enrollment </a>
+              <div class="newsDate">Jul 15</div>
+            </div>
+<!--             <div class="newsItem clearfix">
+              <a href="" target="_blank">Statesman Journal: Cover Oregon health insurance exchange ads target young </a>
+              <div class="newsDate">Jul 15</div>
+            </div> -->
+<!--             <div class="newsItem clearfix">
+              <a href="" target="_blank">Statesman Journal: Health insurance premiums for 2014 approved by state </a>
+              <div class="newsDate">Jul 13</div>
+            </div> -->
+            <div class="newsItem clearfix">
+              <a href="http://www.rwjf.org/en/research-publications/find-rwjf-research/2013/07/insurer-participation-and-competition-in-health-insurance-exchan.html?cid=XEM_A7367" target="_blank">Robert Wood Johnson Foundation: Insurer participation and competition in health insurance exchanges</a>
+              <div class="newsDate">Jul 12</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.mailtribune.com/apps/pbcs.dll/article?AID=/20130711/NEWS/307110319" target="_blank">Mail Tribune: State presents look at changing health insurance costs </a>
+              <div class="newsDate">Jul 11</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.bendbulletin.com/article/20130711/NEWS0107/307110370/" target="_blank">Bend Bulletin: States trying health ads of all types</a>
+              <div class="newsDate">Jul 11</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.registerguard.com/rg/news/local/30137052-75/story.csp" target="_blank">Register-Guard: Ads use healthy dose of humor</a>
+              <div class="newsDate">Jul 9</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://healthcareforamericanow.org/2013/07/08/cover-oregons-first-ad/" target="_blank">Health Care For America Now: Cover Oregon promotes state’s Obamacare insurance marketplace in upbeat TV ads</a>
+              <div class="newsDate">Jul 8</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/2013/07/folksy-jingles-tout-health-exchange.html?page=all" target="_blank">Portland Business Journal: Matt Sheehy, Laura Gibson sing for Oregon health exchange</a>
+              <div class="newsDate">Jul 8</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.thelundreport.org/resource/cover_oregon_launches_statewide_marketing_and_outreach_campaign" target="_blank">The Lund Report: Cover Oregon launches statewide marketing and outreach campaign </a>
+              <div class="newsDate">Jul 8</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.oregonlive.com/health/index.ssf/2013/07/multi-million-dollar_oregon_ad.html" target="_blank">The Oregonian: Multimillion-dollar ad campaign to tout health insurance exchange</a>
+              <div class="newsDate">Jul 8</div>
+            </div>
+<!--             <div class="newsItem clearfix">
+              <a href="" target="_blank">Statesman Journal: Oregon OKs health premium rates for small businesses</a>
+              <div class="newsDate">Jul 3</div>
+            </div> -->
+            <div class="newsItem clearfix">
+              <a href="http://www.oregonlive.com/health/index.ssf/2013/07/oregon_health_policy_board_to.html" target="_blank">The Oregonian: Oregon Health Policy Board to meet Tuesday, consider new reforms</a>
+              <div class="newsDate">Jul 1</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.reuters.com/article/2013/06/30/us-usa-healthcare-technology-idUSBRE95T05J20130630" target="_blank">Reuters: Obamacare 1.0: States brace for web barrage when reform goes live</a>
+              <div class="newsDate">Jun 30</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.healthcareitconnect.com/aaron-karjala-reviews-cover-oregon-development-and-launch/?utm_source=Healthcare+IT+Connect+-+Update&utm_campaign=3dd5b80329-CIO+Perspective%3A+Cover+Oregon&utm_medium=email&utm_term=0_9385a45360-3dd5b80329-254222233" target="_blank">Healthcare IT Connect: Aaron Karjala reviews Cover Oregon’s development and launch</a>
+              <div class="newsDate">Jun 27</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.bizjournals.com/portland/blog/health-care-inc/2013/06/calling-all-insurance-agents-and.html?iana=ind_health" target="_blank">Portland Business Journal: Calling all insurance agents and community partners</a>
+              <div class="newsDate">Jun 24</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="http://www.registerguard.com/rg/opinion/29967704-78/oregon-health-coverage-employees-employers.html.csp" target="_blank">Register-Guard: Better options coming for small business health insurance</a>
+              <div class="newsDate">Jun 22</div>
+            </div>
+            <div class="newsItem clearfix">
+              <a href="" target="_blank">The Washington Post: Oregon may be the White House’s favorite health exchange</a>
+              <div class="newsDate">May 30</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.chicagotribune.com/news/sns-rt-us-usa-healthcare-exchangesbre94g0sb-20130517,0,6735209.story" target="_blank">Chicago Tribune: Two states say 2014 Obamacare insurance costs on low side</a>
+              <div class="newsDate">May 17</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.opb.org/news/article/oregon-health-officials-expect-vibrant-online-marketplace-for-insurance-/" target="_blank">OPB: Oregon Health Officials Expect Vibrant Online Marketplace For Insurance</a>
+              <div class="newsDate">May 12</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://capsules.kaiserhealthnews.org/index.php/2013/05/competition-spurs-oregon-insurers-to-lower-proposed-rates/" target="_blank">Kaiser Health News: Competition Spurs 2 Oregon Insurers To Lower Proposed Rates</a>
+              <div class="newsDate">May 10</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.oregonlive.com/health/index.ssf/2013/05/two_oregon_insurers_reconsider.html#incart_m-rpt-2" target="_blank"> Oregon Live: Two Oregon insurers rethink 2014 premiums as state posts...</a>
+              <div class="newsDate">May 9</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.oregonlive.com/finance/index.ssf/2013/05/live_chat_noon_tuesday_your_qu_2.html#incart_river" target="_blank">Oregon Live: Live chat recap: Your questions on health insurance reform answered</a>
+              <div class="newsDate">May 8</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.oregonlive.com/health/index.ssf/2013/04/more_than_400000_oregonians_wi.html" target="_blank">Oregon Live: More than 400,000 Oregonians will be eligible for new federal...</a>
+              <div class="newsDate">Apr 17</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.politico.com/story/2013/04/obamacare-health-care-exchanges-states-tout-employee-choice-89719.html" target="_blank">Politico: Exchanges, but not as envisioned</a>
+              <div class="newsDate">Apr 17</div>
+            </div>
+
+            <div class="newsItem clearfix">
+              <a href="http://www.oregonlive.com/health/index.ssf/2013/03/oregons_ambitious_health_insur.html" target="_blank">Oregon Live: Oregon's ambitious health insurance marketplace races to meet...</a>
+              <div class="newsDate">Mar 28</div>
+            </div>
+          </div>
+        </div><!-- END pageContent-->
+
+
+        <aside class="sidebarCopy">
+          <h4>Media toolkit</h4>
+          <section>
+            <p>Following are several materials for the media to use in reporting about Cover Oregon:</p>
+            <blockquote>
+              <ul>
+                <li><a href="https://www.dropbox.com/sh/wpd2owdfen3fvlz/PRVH8xvjO3/MEDIA%20MATERIALS" target="_blank">Press kit</a></li>
+                <li><a href="https://www.dropbox.com/sh/wpd2owdfen3fvlz/wGjvCZ1j0A/B-ROLL" target="_blank">Video footage from October 1 media briefing</a></li>
+                <li><a href="https://www.dropbox.com/sh/wpd2owdfen3fvlz/wGjvCZ1j0A/B-ROLL" target="_blank">B-Roll package</a></li>
+                <li><a href="https://www.dropbox.com/sh/wpd2owdfen3fvlz/ERiywBXI0m/PHOTOS" target="_blank">approved photos for editorial usage only</a></li>
+              </ul>
+            </blockquote>            
+
+            <p><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/idcplg?IdcService=GET_FILE&dID=5609&dDocName=VMOHSOREX075.O005409&allowInterrupt=1">Cover Oregon Logo Vertical (.eps)</a><br>
+            <a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o004626.jpg">Cover Oregon Logo Vertical (.jpg)</a></p>
+          </section>
+
+          <h4>Media inquiries</h4>
+          <section>
+            <p>If you're a member of the media and would like to make an inquiry, please contact:</p>
+            <p>Michael Cox<br>
+            <a href="mailto:mcox@coveroregon.com">mcox@coveroregon.com</a><br>
+            503-238-8239</p>
+
+            <p>Ariane Holm<br>
+            <a href="mailto:aholm@coveroregon.com">aholm@coveroregon.com</a><br>
+            503-813-8471</p>
+          </section>
+        </aside>
+
+      </section><!-- END .corpContentArea-->
+    </div>
+    <!--END pageContainer-->     <!-- ~~~~~~~~~~~~~ HELP DRAWER MODAL ~~~~~~~~~~~~~~ -->    
+    <div class="widget" id="helpModal" title="Help">  
+      <div id="sampleAccordion" class="accordion clearfix">               
+          <a href="CORP_faq.html" class="disabledHeader disable">Frequently asked questions<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <a href="CORP_glossary.html" class="disabledHeader disable">Glossary of terms<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <h5>Contact us <span></span></h5>
+          <div>
+            <p><strong>Email:</strong> <span>info@coveroregon.com</span></p>
+            <p><strong>Phone:</strong> <span>1-855-CoverOR</span></p>            
+          </div>
+       </div>
+       <!-- END #sampleAccordion -->
+   </div>          
+  <!-- END helpModal-->
+  <footer>
+    <div id="footerHeaderContainer" class="clearfix">
+      <div id="footerHeader" class="clearfix">
+        <h1>Cover Oregon</h1> 
+        <!--<div class="language">
+          <h5>Select Language</h5>
+          <div class="selLanguage">
+            <select>
+              <option>English (US)</option>
+            </select>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <!-- END #footerHeaderContainer-->
+
+    <div id="directoryNavContainer" class="clearfix">
+      <div id="directoryNav"  class="clearfix">
+        <div class="footerColumn">
+          <h5>Discover Cover Oregon</h5>          <ul>        
+            <li><a href="CORP_about_us.html">About us</a></li>
+            <li><a href="CORP_join_us.html">Careers</a></li>
+            <li><a href="CORP_news_and_media.html">News and media</a></li>
+            <li><a href="CORP_featured_stories_mary_sean.html">Featured stories</a></li>
+            <li><a href="http://resources.coveroregon.com/" target="_blank">Resources</a></li>
+            <li><a href="CORP_creative.html">Creative</a></li>
+            <li><a href="CORP_board_and_committees.html">Board and committees</a></li>
+            <li><a href="CORP_meeting_and_events.html">Meetings and events</a></li>
+            <li><a href="CORP_contact_us.html">Contact information</a></li>
+            <li><a href="CORP_public_comments.html">Public comments</a></li>
+            <li><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o027213.pdf" target="_blank">Public records request</a></li>
+            <li><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_6.pdf" target="_blank">Business plan</a></li>
+            <li><a href="CORP_newsletter_archives.html">Newsletter archives</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Explore Coverage</h5><ul>
+            <li><a href="CORP_medical_coverage.html">Medical</a></li>
+            <li><a href="CORP_dental_coverage.html">Dental</a></li>
+            <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+            <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+            <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+            <li><a href="CORP_view_providers.html">View providers</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="CORP_application_process.html">Application overview</a></li>
+            <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+            <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>
+            <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+            <li><a href="individual_start.html">Individual and families</a></li>
+            <li><a href="SHOP_start.html">Employers</a></li>
+            <li><a href="EMP_start.html">Employees</a></li>
+            <li><a href="TRB_start.html">Tribes</a></li>
+            <li><a href="AGENT_start.html">Agents and community partners</a></li>
+            <li><a href="carrier_start.html">Insurance companies</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Learn More</h5>
+          <ul>
+            <li><a href="CORP_faq.html">Frequently asked questions</a></li>
+            <li><a href="CORP_glossary.html">Glossary of terms</a></li>        
+            <li><a href="CORP_grants_and_reports.html">Reports, grants and legislation</a></li>                       
+            <li><a href="CORP_language_help.html">Language help</a></li>
+            <li><a href="CORP_exemptions.html">Exemptions</a></li>
+          </ul>
+        </div>    
+        <div id="supportfooter" class="footerColumn">
+          <h5>Contact Us</h5>
+          <p><img src="images/email_green.png" alt="Email"><a href="mailto:info@coveroregon.com">info@coveroregon.com</a></p>
+          <p><img src="images/phone_green_sm.png" alt="Contact Cover Oregon"> 1-855-268-3767</p>          
+          <div><a href="https://www.facebook.com/coveroregon" target="_blank"><img src="images/facebook_green.png" alt="Cover Oregon Facebook"></a><a href="https://www.twitter.com/CoverOregon" target="_blank"><img src="images/twitter_green.png" alt="Cover Oregon Twitter"></a><a href="http://www.linkedin.com/company/2673889" target="_blank"><img src="images/linkedin_green.png" alt="Cover Oregon LinkedIn"></a><a href="http://www.youtube.com/user/coveroregonvideo?feature=watch" target="_blank"><img src="images/youtube_green.png" alt="Cover Oregon YouTube"></a><a href="https://plus.google.com/102909134020101999085" target="_blank"><img src="images/google_green.png" alt="Cover Oregon Google Plus"></a></div>
+        </div>
+        <!-- END supportfooter -->
+      </div>  
+    </div>
+    <!-- END directoryNavContainer -->
+
+    <div class="globalFooterCopyrightContainer">
+      <div class="globalFooterCopyright">
+        <p>&copy; 2013 Cover Oregon, All Rights Reserved | <a href="CORP_privacy_policy.html">Privacy Policy</a> | <a href="CORP_terms_and_conditions.html">Terms and conditions</a> | <a href="CORP_accessibility.html">Accessibility</a></p>  
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script src="scripts/jquery-1.9.0.js" type="text/javascript"></script>
+  <script src="scripts/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+  <script src="scripts/waterMark.js" type="text/javascript"></script>
+  <script src="scripts/widgets.js" type="text/javascript"></script>
+  <script src='scripts/jquery.dcmegamenu.1.2.js' type='text/javascript'></script>
+  <script src='scripts/jquery.hoverIntent.minified.js' type='text/javascript'></script>
+  <script src='scripts/jquery.mega.menu.js' type='text/javascript'></script>
+</body>
+</html>

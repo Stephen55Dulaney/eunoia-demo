@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <!--  Mobile Viewport Fix -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Cover Oregon | Financial Assistance</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" href="styles/helpDrawer.css">
+
+  <!-- All JavaScript at the bottom, except for Modernizr. Modernizr enables HTML5 elements & feature detects -->    
+
+  <script src="scripts/modernizr-2.5.3.min.js" type="text/javascript"></script>
+ <script type="text/javascript">
+
+
+ </script>
+</head>
+<body id="modalTemplate">
+
+    <header>
+      <div id="globalNavContainer" class="clearfix">
+
+      <!-- Log in Container -->
+      <div id="login" class="globalLoginContainer clearfix">
+        <div class="loginFields">
+          <a href="login_username.html" class="button blue">Log In</a>
+          <p>New User? <a href="#" id="createAccountLink">Create Account</a></p>
+        </div>
+      </div>
+      <!-- END .globalLoginContainer -->
+
+      <div class="globalNav">
+        <div class="logo"><a href="index.html" title="Cover Oregon"><img src="images/cover-oregon-logo-small.png"></a></div> 
+        <nav>
+          <ul id="mega-menu-tut" class="menu">
+            <li>Explore Coverage
+              <ul>
+                <li><a href="CORP_medical_coverage.html">Medical</a></li>
+                <li><a href="CORP_dental_coverage.html">Dental</a></li>
+                <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+                <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+                <li><a href="CORP_carriers.html">Carriers</a></li>
+              </ul>
+            </li>
+
+            <li>Get Started
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_application_process.html">Application overview</a></li>
+                    <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+                    <li><a href="CORP_financial_assistance_individual.html">Financial assistance: Individuals</a></li>           
+                    <li><a href="CORP_financial_assistance_employer.html">Financial assistance: Employers</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li><a href="individual_start.html">Individual and Families</a></li>
+                    <li><a href="SHOP_start.html">Employers</a></li>
+                    <li><a href="EMP_start.html">Employees</a></li>
+                    <li><a href="TRB_start.html">Tribes</a></li>
+                    <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+                    <li><a href="carrier_start.html">Carriers</a></li>
+                  </ul>
+                </li>
+              </ul>              
+            </li>
+            
+            <li>Learn More
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_faq.html">FAQs</a></li>
+                    <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+                    <li><a href="CORP_information_for_carrier.html">Information for Carriers</a></li>
+                    <li><a href="CORP_privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="CORP_grants_and_reports.html">Reports, grants and Legislation</a></li>
+                    <li><a href="CORP_exemptions.html">Exemptions</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li style="padding: 6px 0;">Find help in your language:</li>                    
+                    <li><a href="CORP_language_help.html">Spanish <span>español</span></a></li>
+                    <li><a href="CORP_language_help.html">Russian <span>русский</span></a></li>
+                    <li><a href="CORP_language_help.html">Vietnamese <span class="vm">tiếng Việt</span></a></li>
+                    <li><a href="CORP_language_help.html">Korean <span>한국인</span></a></li>
+                    <li><a href="CORP_language_help.html">Chinese (Trad.) <span class="ch">中文</span></a></li>
+                  </ul>
+                </li>                
+              </ul>
+            </li>            
+          </ul>
+        </nav>
+      </div>
+      <!-- END .globalNav -->      <div class="utilities">
+        <nav>
+        <ul>
+          <li><a class="phoneLink" href="#" alt="Call"><img src="images/phone_green2.png">Phone</a>
+          <!-- PHONE HOVER -->
+          <div id="phoneHover" class="clearfix">
+            <div class="hoverArrow"><img src="images/arrow_white.png"></div>                
+            <p>Phone: 1-855-268-3767</p>
+          </div>
+          <li><a href="CORP_language_help.html" alt="Languages"><img src="images/globe.png">Languages</a></li>
+          <li><a href="" id="helpModalLink"><img src="images/help_green_sm.png">Help</a></li>
+          <li style="padding: 0 0 0 10px; background: none;"><input type="text" value="" class="searchBox" name="search" id="search" data-watermark="Search"></li>        
+        </ul>
+        </nav>
+      </div>
+
+    </div>
+    <!-- END #globalNavContainer -->
+    </header>
+
+    <div id="pageContainer" class="clearfix">
+      <section class="corpContentArea">
+        <h1>3 ways to help you pay for coverage</h1>        
+        <p>Individuals and families will find out if they are eligible for premium tax credits or public programs through a simple application process on the Cover Oregon website.. To qualify for assistance, you must be an Oregon resident and U.S. citizen or legal immigrant. The type and amount of financial assistance you receive is based on a sliding scale determined by annual before-tax income, family size, age. These types of financial assistance include:</p>
+
+        <blockquote>
+          <ul>
+              <li>Premium Tax Credits</li>
+              <li>Medicaid (Oregon Health Plan)</li>
+              <li>Healthy Kids (CHIP)</li>
+            </ul>
+        </blockquote>
+        
+        <h3>Find out if you qualify</h3>
+        <p>Use our financial assistance calculator to find out if you might qualify, and if so, an estimate of the assistance you may expect. Please keep in mind these numbers are a preliminary estimate.</p>
+        <div id="results">  test    </div>
+         
+
+               
+        <h3>Take a closer look</h3>
+        <p>We will help you find out if you and your family qualify for any of these programs during the Cover Oregon application process. </p>
+        
+        <div id="corpFinAssistance">
+           <h4>Premium Tax Credits</h4>
+            <p>Premium tax credits help offset the monthly costs of health insurance premiums. The amount you will receive is based on a sliding scale determined by household income and family size.  See the illustrations to see estimated maximum monthly payments for an individual and family of 4. Tax credits can be refundable and/or advanceable. A refundable tax credit is available to an individual even if he or she has no tax liability. An advanceable tax credit allows an individual to receive assistance at the time of purchase rather than paying their premium out of pocket and waiting to be reimbursed when filing their annual tax returns. </p>
+
+            <div id="corpFinAssistancetwoColumnPage">
+              <div id="corpFinAssistancetwoColumnPage" class="leftCol">
+                <table>
+                  <tr>
+                    <th colspan="2">Individuals</th>
+                  </tr>
+                  <tr>                    
+                    <td><b>Annual Income Before Taxes</b></td>
+                    <td><b>Max Monthly Payment</b></td>
+                  </tr>
+                  <tr>
+                    <td>$15,860 - $17,253</td>
+                    <td>$57</td>
+                  </tr>
+                  <tr>
+                    <td>$17,253 - $22,980</td>
+                    <td>$121</td>
+                  </tr>
+                  <tr>
+                    <td>$22,980 - $28,725</td>
+                    <td>$193</td>
+                  </tr>
+                  <tr>
+                    <td>$28,725 - $34,470</td>
+                    <td>$273</td>
+                  </tr>
+                  <tr>
+                    <td>$34,470 - $45,960</td>
+                    <td>$364</td>
+                  </tr>
+                </table>
+              </div>
+              <div id="corpFinAssistancetwoColumnPage" class="rightCol">
+                <table>
+                  <tr>
+                    <th colspan="2">Family of 4</th>
+                  </tr>
+                  <tr>                    
+                    <td><b>Annual Income Before Taxes</b></td>
+                    <td><b>Max Monthly Payment</b></td>
+                  </tr>
+                  <tr>
+                    <td>$32,499 - $35,325</td>
+                    <td>$118</td>
+                  </tr>
+                  <tr>
+                    <td>$35,325 - $47,100</td>
+                    <td>$247</td>
+                  </tr>
+                  <tr>
+                    <td>$47,100 - $58,875</td>
+                    <td>$395</td>
+                  </tr>
+                  <tr>
+                    <td>$58,875 - $70,650</td>
+                    <td>$559</td>
+                  </tr>
+                  <tr>
+                    <td>$70,650 - $92,400</td>
+                    <td>$746</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <h4>Medicaid (Oregon Health Plan)</h4>
+            <p>Healthy Kids is a public program for uninsured Oregon children and teens under 19 years old. Healthy Kids includes medical, dental, vision, prescription drugs, mental health coverage, and substance abuse treatment. Even middle-income families can qualify for no-cost or low-cost coverage. Once you are enrolled, a child will usually receive coverage for an entire year – and can potentially renew this coverage every year.  </p>
+
+            <h4>CHIP (Healthy Kids) </h4>
+            <p>Medicaid provides coverage for people who may not be able to cover the high costs of health care. The Oregon Health Plan (OHP) is a state health care coverage program for uninsured adults with low incomes. Once a person is enrolled, he or she will receive coverage for one full year. In most cases, adults must have been without medical insurance for 6 months to qualify for OHP. There are exceptions. For example, pregnant women may have other medical insurance and still qualify. </p><br>
+        </div>
+
+        <p>Still have questions? See our list of FAQs about financial assistance for individuals.</p>
+     
+        <div class="highlightsContainer clearfix">
+          <div class="highlightsContent">
+            <h4>Ready to get started?</h4>
+            <p>Go ahead and start your application now.  Your tax credits will be<br> determined after you finish.</p>
+          </div>
+          <a href="find_assistance.html" class="button green">Find Help</a>          
+        </div>
+
+      </section>
+    </div>
+    <!--END pageContainer--><!-- ~~~~~~~~~~~~~ HELP DRAWER MODAL ~~~~~~~~~~~~~~ -->
+          
+    <div class="widget" id="helpModal" title="Help">  
+      <div id="sampleAccordion" class="accordion clearfix">               
+          <a href="CORP_faq.html" class="disabledHeader disable">Frequently asked questions<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <a href="CORP_glossary.html" class="disabledHeader disable">Glossary of terms<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <h5>Contact us <span></span></h5>
+          <div>
+            <p><b>Email:</b> <span>info@coveroregon.com</span></p>
+            <p><b>Phone:</b> <span>1-855-CoverOR</span></p>
+            <p><b>Address:</b> <span>16760 SW Upper Boones Ferry Road<br> Suite 200<br>Durham, OR 97224</span></p>
+          </div>
+       </div>
+       <!-- END #sampleAccordion -->
+   </div>          
+  <!-- END helpModal-->
+
+    <footer>
+    <div id="footerHeaderContainer" class="clearfix">
+      <div id="footerHeader" class="clearfix">
+        <h1>Cover Oregon</h1> 
+        <!--<div class="language">
+          <h5>Select Language</h5>
+          <div class="selLanguage">
+            <select>
+              <option>English (US)</option>
+            </select>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <!-- END #footerHeaderContainer-->
+
+    <div id="directoryNavContainer" class="clearfix">
+      <div id="directoryNav"  class="clearfix">
+        <div class="footerColumn">
+          <h5>Discover Cover Oregon</h5>
+          <ul>        
+            <li><a href="CORP_about_us.html">About us</a></li>
+            <li><a href="CORP_join_us.html">Careers</a></li>
+            <li><a href="CORP_news_and_media.html">News and media</a></li>
+            <li><a href="CORP_featured_stories_mary_sean.html">Featured stories</a></li>
+            <li><a href="CORP_board_and_committees.html">Board and committees</a></li>
+            <li><a href="CORP_meeting_and_events.html">Meetings and events</a></li>
+            <li><a href="CORP_contact_us.html">Contact information</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Explore Coverage</h5>
+          <ul>
+            <li><a href="CORP_medical_coverage.html">Medical</a></li>
+            <li><a href="CORP_dental_coverage.html">Dental</a></li>
+            <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+            <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+            <li><a href="CORP_carriers.html">Coverage by carrier</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="CORP_application_process.html">Application overview</a></li>
+            <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+            <li><a href="individual_start.html">Individual and Families</a></li>
+            <li><a href="SHOP_start.html">Employers</a></li>
+            <li><a href="EMP_start.html">Employees</a></li>
+            <li><a href="TRB_start.html">Tribes</a></li>
+            <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Learn More</h5>
+          <ul>
+            <li><a href="CORP_faq.html">Frequently asked questions</a></li>
+            <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+            <li><a href="CORP_information_for_carrier.html">Information for carriers</a></li>            
+            <li><a href="CORP_grants_and_reports.html">Reports, grants and legislation</a></li>                       
+            <li><a href="CORP_language_help.html">Language help</a></li>
+            <li><a href="CORP_privacy_policy.html">Privacy Policy</a></li>
+            <li><a href="CORP_terms_and_conditions.html">Terms and conditions</a></li>
+            <li><a href="CORP_exemptions.html">Exemptions</a></li>
+          </ul>
+        </div>    
+        <div id="supportfooter" class="footerColumn">
+          <h5>Contact Us</h5>
+          <p><img src="images/email_green.png"><a href="mailto: info@coveroregon.com">info@coveroregon.com</a></p>
+          <p><img src="images/phone_green_sm.png"> 1-855-CoverOR</p>
+          <p>Cover Oregon</p>
+          <p>16760 SW Upper Boones Ferry Rd.</p>
+          <p>Suite 200</p>
+          <p>Durham, OR 97224</p>
+          <div><a href="https://www.facebook.com/coveroregon"><img src="images/facebook_green.png"></a><a href="https://www.twitter.com/CoverOregon"><img src="images/twitter_green.png"></a><a href="http://www.linkedin.com/company/2673889"><img src="images/linkedin_green.png"></a><a href="http://www.youtube.com/user/coveroregonvideo?feature=watch"><img src="images/youtube_green.png"></a><a href="https://plus.google.com/102909134020101999085"><img src="images/google_green.png"></a></div>
+          </ul>
+        </div>
+        <!-- END supportfooter -->
+      </div>  
+    </div>
+    <!-- END directoryNavContainer -->
+
+    <div class="globalFooterCopyrightContainer">
+      <div class="globalFooterCopyright">
+        <p>&copy; 2013 Cover Oregon | All Rights Reserved | <a href="CORP_accessibility.html">Accessibility</a></p>  
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script src="scripts/jquery-1.9.0.js" type="text/javascript"></script>
+  <script src="scripts/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+  <script src="scripts/waterMark.js" type="text/javascript"></script>
+  <script src="scripts/widgets.js" type="text/javascript"></script>
+  <script src="scripts/premiumAgeFactorArray.js" type="text/javascript"></script>
+  <script src="scripts/individualFinancialCalculator.js" type="text/javascript"></script>
+  <script src='scripts/jquery.dcmegamenu.1.2.js' type='text/javascript'></script>
+  <script src='scripts/jquery.hoverIntent.minified.js' type='text/javascript'></script>
+  <script src='scripts/jquery.mega.menu.js' type='text/javascript'></script>
+</body>
+</html>

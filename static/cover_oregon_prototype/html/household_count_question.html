@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Cover Oregon | Number of Household Members</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" href="styles/helpDrawer.css">
+
+  <!-- All JavaScript at the bottom, except for Modernizr. Modernizr enables HTML5 elements & feature detects -->
+  <script src="scripts/modernizr-2.5.3.min.js" type="text/javascript"></script>
+  <script src="scripts/jquery-1.9.0.js" type="text/javascript"></script>
+  <script src="scripts/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+  <!--<script src="scripts/formPush.js" type="text/javascript"></script>
+  <script src="scripts/formPeel.js" type="text/javascript"></script>-->
+    <script src="scripts/waterMark.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+      function fieldNamePasser() {
+        var arrayFieldNames = new Array("firstname","middlename","lastname","DOB","firstname_2","middlename_2","lastname_2","DOB_2","firstname_3","middlename_3","lastname_3","DOB_3");
+
+
+        if(typeof(Storage)!=="undefined")
+  {
+
+  $('#firstname').val(localStorage["firstname"]);
+  $('#middlename').val(localStorage["middlename"]);
+  $('#lastname').val(localStorage["lastname"]);
+  }
+else
+  {
+  document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+  }
+      }
+
+
+      //---------------------------------------------//
+      $(function() {
+		// Add the datepicker to the input fields.
+		$('.dob_datepicker').not($('#memberTemplate .dob_datepicker')).datepicker();
+
+        $('input#addbtn').click(function(ev) {
+          // Retrieve the form element so that we can grab the last row in the form
+          var $form = $(this).parents('.formHolder').find('form:first');
+          var $row = $form.find('#memberTemplate');
+
+          // This is an easy jQuery way of deep cloning a DOM element (http://api.jquery.com/clone/)
+          var $newRow = $row.clone();
+		  // Initialize the new row attributes
+		  $newRow.attr({
+			'id' : 'member'
+		  })
+          var index = $form.find('.ctrlHolder.row').length + 1;
+
+
+          //$newRow.find(':checkbox').attr('checked',this.checked);
+
+		  // Add the click event for the delete button
+		  $newRow.find('.delbtn').click(function(ev) {
+            $form = $(this).parents('.formHolder').find('form:first');
+            $(this).parents('.ctrlHolder.row').remove();
+            indexFields($form);
+          });
+
+
+		  // Add the watermarks to the input fields
+		  $newRow.find(":input[data-watermark]").each(function () {
+		      $(this).val($(this).attr("data-watermark"));
+		      $(this).bind('focus', function () {
+		          if ($(this).val() == $(this).attr("data-watermark")) {
+		          	$(this).val('');
+		          	$(this).css('color','#034564');
+		          }
+		      });
+		      $(this).bind('blur', function () {
+		          if ($(this).val() == '') {
+		          	$(this).val($(this).attr("data-watermark"));
+		          	$(this).css('color','#a8a8a8');
+		          } else {
+		          	$(this).css('color','#034564');
+		          }
+		      });
+		  });
+
+		  // Attach the datepicker to the defined fields.  You have to remove the hasDatePicker class that it inherited from template
+		  $newRow.find('.dob_datepicker').datepicker();
+
+          // Append and show the new row after the row that we cloned.
+          $row.before($newRow);
+		  $newRow.show();
+
+          // Index the field ids and names
+          indexFields($form)
+          return;
+        })
+
+        /*
+           This function indexes the field ids and names based upon the number of field rows in the form.
+        */
+        //<input type="text" id="current_month_1" name="current_month_1" size="15" data-watermark="$0 Amount" onChange="runTotal(this.form,'current','1');" />
+        function indexFields(form) {
+          var index = 0;
+
+          form.find('.ctrlHolder.row').not($('#memberTemplate')).each(function() {
+           index++;
+			     $(this).attr('id', $(this).attr('id').replace(/\d+/g, '') + index);
+            $(this).find(':text').each(function(i) {
+              $(this).attr({
+                'id': $(this).attr('id').replace(/\d+/g, '') + index,
+                'name': $(this).attr('name').replace(/\d+/g, '') + index
+              })
+            });
+          });
+        }
+
+      });
+  </script>
+
+</head>
+<body onLoad="fieldNamePasser();"  id="modalTemplate">
+    <header>
+      <div id="globalNavContainer" class="clearfix">
+
+      <!-- Log in Container -->
+      <div id="login" class="globalLoginContainer clearfix">
+        <div class="loginFields">
+          <a href="account_login_username.html" class="button blue">Log In</a>
+          <p>New User? <a href="account_creation.html">Create Account</a></p>
+        </div>
+      </div>
+      <!-- END .globalLoginContainer -->
+
+      <div class="globalNav">
+        <div class="logo"><a href="index.html" title="Cover Oregon"><img src="images/cover-oregon-logo-small.png" alt="Cover Oregon"></a></div> 
+        <nav>
+          <ul id="mega-menu-tut" class="menu">            <li>Explore Coverage
+              <ul>
+                <li><a href="CORP_medical_coverage.html">Medical</a></li>
+                <li><a href="CORP_dental_coverage.html">Dental</a></li>
+                <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+                <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+                <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+                <li><a href="CORP_view_providers.html">View providers</a></li>
+              </ul>
+            </li>
+
+            <li>Get Started
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_application_process.html">Application overview</a></li>
+                    <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+                    <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>           
+                    <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li><a href="individual_start.html">Individual and Families</a></li>
+                    <li><a href="SHOP_start.html">Employers</a></li>
+                    <li><a href="EMP_start.html">Employees</a></li>
+                    <li><a href="TRB_start.html">Tribes</a></li>
+                    <li><a href="AGENT_start.html">Agents and Community Partners</a></li>
+                    <li><a href="carrier_start.html">Insurance companies</a></li>
+                  </ul>
+                </li>
+              </ul>              
+            </li>
+            
+            <li>Learn More
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="CORP_faq.html">FAQs</a></li>
+                    <li><a href="CORP_glossary.html">Glossary of terms</a></li>
+                    <li><a href="CORP_grants_and_reports.html">Reports, grants and Legislation</a></li>
+                    <li><a href="CORP_exemptions.html">Exemptions</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul>
+                    <li style="padding: 6px 0;">Find help in your language:</li>                    
+                    <li><a href="CORP_language_help.html?id=spanish">Spanish <span>español</span></a></li>
+                    <li><a href="CORP_language_help.html?id=russian">Russian <span>русский</span></a></li>
+                    <li><a href="CORP_language_help.html?id=vietnamese">Vietnamese <span class="vm">tiếng Việt</span></a></li>
+                    <li><a href="CORP_language_help.html?id=korean">Korean <span>한국인</span></a></li>
+                    <li><a href="CORP_language_help.html?id=chinese">Chinese (Trad.) <span class="ch">中文</span></a></li>
+                  </ul>
+                </li>                
+              </ul>
+            </li> </ul>
+        </nav>
+      </div>
+      <!-- END .globalNav -->      <div class="utilities">
+        <nav>
+        <ul>
+          <li><a class="phoneLink" href="#"><img src="images/phone_green2.png" alt="Phone">Phone</a>
+          <!-- PHONE HOVER -->
+          <div id="phoneHover" class="clearfix">
+            <div class="hoverArrow"><img src="images/arrow_white.png" alt="Phone Hover"></div>                
+            <p>Phone: 1-855-268-3767</p>
+          </div>
+          <li><a href="CORP_language_help.html"><img src="images/globe.png" alt="Languages">Languages</a></li>
+          <li><a href="" id="helpModalLink"><img src="images/help_green_sm.png" alt="Help">Help</a></li>
+          <li style="padding: 0 0 0 10px; background: none;"><input type="text" value="" class="searchBox" name="search" id="search" data-watermark="Search"></li>        
+        </ul>
+        </nav>
+      </div>
+
+    </div>
+    <!-- END #globalNavContainer -->
+    </header>
+
+      <div id="pageContainer" class="clearfix">
+        <nav class="leftNav">
+          <ul>
+            <li class="visited"><a href="application_start.html">Get Started</a></li>
+            <li class="active"><a href="" class="navTitle">Describe Your Household</a>
+              <ul>
+                <li class="visited"><a href="build_household_overview.html">Overview</a></li>
+                <li class="active"><a href="household_count_question.html">Number of people</a></li>
+                <li><a href="member_relationship.html">Household relationships</a></li>
+                <li><a href="financial_assistance_question.html">Financial assistance</a></li>
+                <li><a href="household_member_info_1.html">Household information</a></li>
+                <li><a href="TRB_entity_affiliation.html">Tribal information</a></li>
+                <li><a href="full_time_student_question.html">Full-time student status</a></li>
+                <li><a href="pregnancy_question.html">Pregnancy</a></li>
+                <li><a href="address_question.html">Home addresses</a></li>
+                <li><a href="stay_in_oregon_question.html">Oregon residency</a></li>
+                <li><a href="tobacco_usage_question.html">Tobacco use</a></li>
+                <li><a href="tax_filing_structure.html">Tax filing information</a></li>
+                <li><a href="parent_caretaker_question.html">Primary caretaker</a></li>
+              </ul>
+            </li>
+            <li class="inactive"><a href="#">Enter Household Income</a></li>
+            <li class="inactive"><a href="#">Additional Questions</a></li>
+            <li class="inactive"><a href="#">Review Your Application</a></li>
+            <li class="inactive"><a href="#">Confirm Your Identity</a></li>
+            <li class="inactive"><a href="#">Final Steps</a></li>
+            <li class="inactive"><a href="#">Check Qualification</a></li>
+            <li class="inactive"><a href="#">Find a Medical Plan</a></li>
+            <li class="inactive"><a href="#">Find a Dental Plan</a></li>
+            <li class="inactive"><a href="#">Review Plans</a></li>
+            <li class="inactive"><a href="#">Enroll</a></li>
+          </ul>
+        </nav><!--Left nav -->
+
+        <section id="pageContentArea">
+          <h3>Who lives in your household?</h3>
+
+          <fieldset class="memberForm">
+            <div class="formHolder">
+              <form action="#" method="post">
+                <div class="ctrlHolder clearfix">
+                  <label for="Number_in_house">Your <a href="">household</a> includes you, your spouse or domestic partner, any of your children who live with you and anyone you include on your federal income tax return.</label>
+                </div>
+                <div id="result"></div>
+                  <!-- ***** OLD Counter *****
+                  <div>
+                    <input type="button" onclick="decrementValue()" value="-" />
+                    <input type="text" value="3" id="number" /><input type="button" onclick="incrementValue()" value="+" />
+                  </div>
+                </div>-->
+
+                <div class="ctrlHolder buttons clearfix">
+                  <input type="button" class="button blue" id="addbtn" name="addbtn" value="Add a person">
+                </div>
+
+                <!--Household Member One  removed style="display:none;" to debug show hide ssd -->
+                <div class="ctrlHolder row clearfix" id="member" >
+                  <div class="formColumn">
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" name="firstname" size="20" data-watermark="Jason" style="color:#034564;"/>
+                  </div>
+
+                  <div class="formColumn">
+                    <label for="middlename">Middle name</label>
+                    <input type="text" id="middlename" name="middlename" size="20" data-watermark="Michael" style="color:#034564;"/>
+                  </div>
+
+                  <div class="formColumn">
+                    <label for="firstname">Last name</label>
+                    <input type="text" id="lastname" name="lastname" size="20" data-watermark="Smith" style="color:#034564;"/>
+                  </div>
+
+                  <div class="formColumn DOB">
+                    <label for="DOB">Date of birth</label>
+                    <div>
+                      <input name="DOB_3a" onKeyUp="return autoTab(this, 2, event);" size="2" maxlength="2" data-watermark="MM">
+                      <input name="DOB_3b" onKeyUp="return autoTab(this, 2, event);" size="2" maxlength="2" data-watermark="DD">
+                      <input name="DOB_3c" onKeyUp="return autoTab(this, 4, event);" size="4" maxlength="4" data-watermark="YYYY">
+                    </div>
+                  </div>
+                </div>
+
+                <!--Household Member Template -->
+                <div class="ctrlHolder row clearfix" id="memberTemplate" style="display:none;">
+                  <div class="formColumn">
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" name="firstname" size="20" data-watermark="First" style="color:#034564;"/>
+                  </div>
+
+                  <div class="formColumn">
+                    <label for="middlename">Middle name</label>
+                    <input type="text" id="middlename" name="middlename" size="20" data-watermark="Middle" style="color:#034564;"/>
+                  </div>
+
+                  <div class="formColumn">
+                    <label for="firstname">Last name</label>
+                    <input type="text" id="lastname" name="lastname" size="20" data-watermark="Last" style="color:#034564;"/>
+                  </div>
+
+                  <div class="formColumn DOB">
+                    <label for="DOB">Date of birth</label>
+                    <div>
+                      <input name="DOB_3a" onKeyUp="return autoTab(this, 2, event);" size="2" maxlength="2" data-watermark="MM">
+                      <input name="DOB_3b" onKeyUp="return autoTab(this, 2, event);" size="2" maxlength="2" data-watermark="DD">
+                      <input name="DOB_3c" onKeyUp="return autoTab(this, 4, event);" size="4" maxlength="4" data-watermark="YYYY">
+                    </div>
+                  </div>
+
+                  <div class="formColumn delButton" style="width:25px; margin-top: 20px;">
+  				          <!-- <img class="delbtn" id="delbtn" name="delbtn" src="images/trash_can.png" style="visibility:visible" onclick="" alt="remove row"> -->
+                    <a class="delbtn" id="delbtn" name="delbtn" href="#" style="visibility:visible" onclick="" alt="remove row"> Delete </a>
+                  </div>
+                </div>
+
+            </fieldset>
+            <!-- END fieldset .memberForm -->
+
+
+          <div class="sectionFooter clearfix">
+            <a class="button secondary" href="build_household_overview.html"> GO Back </a>
+            <a class="button secondary" href="DASH_individual.html"> Save and Exit </a>
+            <a class="button green actionLink" href="member_relationship.html"> Next </a>
+            <!-- <input class="button green actionLink" type="button" name="button1" value="Next" onclick="processFormData(this.form,'member_relationship');"/>
+            <input type="hidden" name="dataContainer" value=""/> -->
+          </div>
+        </form>
+      </section>
+      <!--END pageContentArea-->
+    </div>
+    <!--END pageContainer-->    <!-- ~~~~~~~~~~~~~ HELP DRAWER MODAL ~~~~~~~~~~~~~~ -->    
+    <div class="widget" id="helpModal" title="Help">  
+      <div id="sampleAccordion" class="accordion clearfix">               
+          <a href="CORP_faq.html" class="disabledHeader disable">Frequently asked questions<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <a href="CORP_glossary.html" class="disabledHeader disable">Glossary of terms<span></span></a>
+          <div><!-- Do not remove this div --></div>
+          <h5>Contact us <span></span></h5>
+          <div>
+            <p><strong>Email:</strong> <span>info@coveroregon.com</span></p>
+            <p><strong>Phone:</strong> <span>1-855-CoverOR</span></p>            
+          </div>
+       </div>
+       <!-- END #sampleAccordion -->
+   </div>          
+  <!-- END helpModal-->
+  <footer>
+    <div id="footerHeaderContainer" class="clearfix">
+      <div id="footerHeader" class="clearfix">
+        <h1>Cover Oregon</h1> 
+        <!--<div class="language">
+          <h5>Select Language</h5>
+          <div class="selLanguage">
+            <select>
+              <option>English (US)</option>
+            </select>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <!-- END #footerHeaderContainer-->
+
+    <div id="directoryNavContainer" class="clearfix">
+      <div id="directoryNav"  class="clearfix">
+        <div class="footerColumn">
+          <h5>Discover Cover Oregon</h5>          <ul>        
+            <li><a href="CORP_about_us.html">About us</a></li>
+            <li><a href="CORP_join_us.html">Careers</a></li>
+            <li><a href="CORP_news_and_media.html">News and media</a></li>
+            <li><a href="CORP_featured_stories_mary_sean.html">Featured stories</a></li>
+            <li><a href="http://resources.coveroregon.com/" target="_blank">Resources</a></li>
+            <li><a href="CORP_creative.html">Creative</a></li>
+            <li><a href="CORP_board_and_committees.html">Board and committees</a></li>
+            <li><a href="CORP_meeting_and_events.html">Meetings and events</a></li>
+            <li><a href="CORP_contact_us.html">Contact information</a></li>
+            <li><a href="CORP_public_comments.html">Public comments</a></li>
+            <li><a href="https://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/vmohsorex075.o027213.pdf" target="_blank">Public records request</a></li>
+            <li><a href="http://ipmorexsndbx.oracleoutsourcing.com/cs/groups/webui/documents/webasset/corporate_static_content_6.pdf" target="_blank">Business plan</a></li>
+            <li><a href="CORP_newsletter_archives.html">Newsletter archives</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Explore Coverage</h5><ul>
+            <li><a href="CORP_medical_coverage.html">Medical</a></li>
+            <li><a href="CORP_dental_coverage.html">Dental</a></li>
+            <li><a href="CORP_medicaidCHIP_coverage.html">OHP and Healthy Kids</a></li>
+            <li><a href="TRB_start.html">Tribal Premium Sponsorship Program</a></li>
+            <li><a href="CORP_carriers.html">Participating insurance companies</a></li>
+            <li><a href="CORP_view_providers.html">View providers</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="CORP_application_process.html">Application overview</a></li>
+            <li><a href="CORP_using_the_exchange.html">Enrollment 101</a></li>
+            <li><a href="CORP_financial_assistance_individual.html">Financial help: Individuals</a></li>
+            <li><a href="CORP_financial_assistance_employer.html">Financial help: Employers</a></li>
+            <li><a href="individual_start.html">Individual and families</a></li>
+            <li><a href="SHOP_start.html">Employers</a></li>
+            <li><a href="EMP_start.html">Employees</a></li>
+            <li><a href="TRB_start.html">Tribes</a></li>
+            <li><a href="AGENT_start.html">Agents and community partners</a></li>
+            <li><a href="carrier_start.html">Insurance companies</a></li>
+          </ul>
+        </div>
+        <div class="footerColumn">
+          <h5>Learn More</h5>
+          <ul>
+            <li><a href="CORP_faq.html">Frequently asked questions</a></li>
+            <li><a href="CORP_glossary.html">Glossary of terms</a></li>        
+            <li><a href="CORP_grants_and_reports.html">Reports, grants and legislation</a></li>                       
+            <li><a href="CORP_language_help.html">Language help</a></li>
+            <li><a href="CORP_exemptions.html">Exemptions</a></li>
+          </ul>
+        </div>    
+        <div id="supportfooter" class="footerColumn">
+          <h5>Contact Us</h5>
+          <p><img src="images/email_green.png" alt="Email"><a href="mailto:info@coveroregon.com">info@coveroregon.com</a></p>
+          <p><img src="images/phone_green_sm.png" alt="Contact Cover Oregon"> 1-855-268-3767</p>          
+          <div><a href="https://www.facebook.com/coveroregon" target="_blank"><img src="images/facebook_green.png" alt="Cover Oregon Facebook"></a><a href="https://www.twitter.com/CoverOregon" target="_blank"><img src="images/twitter_green.png" alt="Cover Oregon Twitter"></a><a href="http://www.linkedin.com/company/2673889" target="_blank"><img src="images/linkedin_green.png" alt="Cover Oregon LinkedIn"></a><a href="http://www.youtube.com/user/coveroregonvideo?feature=watch" target="_blank"><img src="images/youtube_green.png" alt="Cover Oregon YouTube"></a><a href="https://plus.google.com/102909134020101999085" target="_blank"><img src="images/google_green.png" alt="Cover Oregon Google Plus"></a></div>
+        </div>
+        <!-- END supportfooter -->
+      </div>  
+    </div>
+    <!-- END directoryNavContainer -->
+
+    <div class="globalFooterCopyrightContainer">
+      <div class="globalFooterCopyright">
+        <p>&copy; 2013 Cover Oregon, All Rights Reserved | <a href="CORP_privacy_policy.html">Privacy Policy</a> | <a href="CORP_terms_and_conditions.html">Terms and conditions</a> | <a href="CORP_accessibility.html">Accessibility</a></p>  
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script src="scripts/widgets.js" type="text/javascript"></script>
+  <script src="scripts/common.js" type="text/javascript"></script>
+  <script src="scripts/autoTabbing.js" type="text/javascript"></script>
+  <script src='scripts/jquery.dcmegamenu.1.2.js' type='text/javascript'></script>
+  <script src='scripts/jquery.hoverIntent.minified.js' type='text/javascript'></script>
+  <script src='scripts/jquery.mega.menu.js' type='text/javascript'></script>  
+
+</body>
+</html>
