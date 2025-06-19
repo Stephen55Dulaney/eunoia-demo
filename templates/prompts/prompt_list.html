@@ -26,7 +26,6 @@
         <td>{{ agent.version }}</td>
         <td>
           <a href="{{ url_for('prompts.view_prompt', agent=agent.name) }}" class="eo-action eo-view" title="View">View</a>
-          <a href="{{ url_for('prompts.edit_prompt', agent=agent.name) }}" class="eo-action eo-edit" title="Edit">Edit</a>
         </td>
       </tr>
       {% endfor %}

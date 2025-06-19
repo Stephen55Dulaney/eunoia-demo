@@ -8,7 +8,6 @@
       <h1 class="eo-hero-title text-3xl font-extrabold">{{ agent|capitalize }} <span class="eo-badge">v{{ config.version }}</span></h1>
     </div>
     <div class="flex gap-2 flex-wrap">
-      <a href="{{ url_for('prompts.edit_prompt', agent=agent) }}" class="eo-btn eo-btn-primary">Edit</a>
       <a href="{{ url_for('prompts.prompt_list') }}" class="eo-btn eo-btn-secondary">Back to List</a>
       <a href="#" class="eo-btn eo-btn-secondary">Fork</a>
       <a href="#" class="eo-btn eo-btn-secondary">Self-Improve</a>
