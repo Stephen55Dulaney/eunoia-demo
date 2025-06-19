@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Health Plans - Cover Oregon</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .plan-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: border-color 0.3s ease;
+        }
+        .plan-card:hover {
+            border-color: #0066cc;
+        }
+        .plan-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .plan-name {
+            font-size: 1.5em;
+            color: #0066cc;
+            margin: 0;
+        }
+        .plan-price {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+        .plan-features {
+            list-style: none;
+            padding: 0;
+        }
+        .plan-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .plan-features li:before {
+            content: "✓ ";
+            color: #0066cc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Compare Health Plans</h1>
+            <p>Find the right coverage for you and your family</p>
+        </div>
+        
+        <div class="content">
+            <h2>Available Health Plans</h2>
+            <p>Compare plans based on your needs, budget, and preferred providers.</p>
+            
+            <div class="plan-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Bronze Plan</h3>
+                        <div class="plan-price">$245/mo</div>
+                        <p>Basic coverage with lower premiums</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Preventive care covered 100%</li>
+                        <li>Generic prescription drugs</li>
+                        <li>Urgent care visits</li>
+                        <li>Emergency room coverage</li>
+                        <li>Annual deductible: $6,000</li>
+                    </ul>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Silver Plan</h3>
+                        <div class="plan-price">$325/mo</div>
+                        <p>Balanced coverage and costs</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Preventive care covered 100%</li>
+                        <li>Generic & brand prescription drugs</li>
+                        <li>Urgent care visits</li>
+                        <li>Emergency room coverage</li>
+                        <li>Annual deductible: $3,500</li>
+                    </ul>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Gold Plan</h3>
+                        <div class="plan-price">$445/mo</div>
+                        <p>Comprehensive coverage</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Preventive care covered 100%</li>
+                        <li>All prescription drugs covered</li>
+                        <li>Urgent care visits</li>
+                        <li>Emergency room coverage</li>
+                        <li>Annual deductible: $1,500</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="index.html" style="background: #0066cc; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Back to Overview</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
