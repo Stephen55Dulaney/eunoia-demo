@@ -1,0 +1,1073 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  faqArray.js
+ * ===== VERSION: v0.1
+ * ===== UPDATED: 9/25/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Stephen Dulaney)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+var FAQs = [
+    
+
+{
+  ID:1,
+  Category:"General",
+  Question:"What is Cover Oregon?",
+  Answer:"Cover Oregon is a new online marketplace where Oregonians can find and purchase health insurance. If you are uninsured, buy insurance on your own or own a small business with 50 or fewer eligible employees, you’ll be able to find health insurance through Cover Oregon. Cover Oregon will let you search for and compare health insurance plans and will offer help—online, in person and over the phone—to find the plan that’s right for you. Some people will also get help paying for their plan."
+  },
+{
+  ID:2,
+  Category:"General",
+  Question:"Who can use Cover Oregon?",
+  Answer:"Cover Oregon will serve Oregon individuals and families.</p><p>Individuals who do not have access to affordable coverage at work will be able to use Cover Oregon to make “apples-to-apples” comparisons of health insurance plans and costs. The plans offered through Cover Oregon will meet specific requirements and will be graded in areas such as quality and customer service. Through one seamless application process, individuals will be able to enroll in commercial insurance plans or programs such as the Oregon Health Plan or Healthy Kids. They also will be able to find out whether they are eligible for financial assistance to help them pay for coverage.</p><p>Small employers with 50 or fewer employees can use Cover Oregon to provide several health plans for their employees to choose from. Under a defined contribution model, employers could contribute a set amount to premiums and allow their employees the choice of all plans offered through Cover Oregon. Cover Oregon will also provide employers with administrative efficiencies by coordinating premium payments.</p><p>Licensed insurance agents and approved community partners will also have access to Cover Oregon on behalf of Oregonians seeking their assistance."
+  },
+{
+  ID:3,
+  Category:"General",
+  Question:"Is Cover Oregon only for health insurance?",
+  Answer:"Yes. Cover Oregon will offer only health insurance plans—both medical and dental. We do not offer any other kind of insurance, such as auto or home insurance."
+  },
+{
+  ID:4,
+  Category:"General",
+  Question:"What is the difference between buying an insurance plan through Cover Oregon and buying a plan directly from an insurance company?",
+  Answer:"Individuals and small employers who shop through Cover Oregon will enjoy unique benefits. Through Cover Oregon, individuals will be able to check their eligibility and apply for public health care programs, such as Medicaid. They will also be able to apply for financial assistance, such as cost sharing, to help make private health coverage more affordable. Small employers that offer coverage through Cover Oregon will be able to provide their employees with more plan choices. Only small employers that purchase coverage through Cover Oregon may be eligible for the Small Business Health Care Tax Credit. Cover Oregon will make it easy to purchase quality health insurance at the most affordable price. Plans will be rated based on customer service and quality, and consumers can compare the features and prices of plans offered by competing health insurance companies."
+  },
+{
+  ID:5,
+  Category:"General",
+  Question:"Does everyone have to buy insurance through Cover Oregon?",
+  Answer:"No. Oregonians can buy health insurance directly from a carrier or through a licensed agent without using Cover Oregon. Most carriers likely will offer plans both inside and outside of Cover Oregon. However, federal tax credits and other forms of financial assistance to help you pay for coverage are available only through Cover Oregon."
+  },
+{
+  ID:6,
+  Category:"General",
+  Question:"Is Healthy Kids ending?",
+  Answer:"Healthy Kids coverage is not ending. Kids and teens currently covered by Healthy Kids will maintain coverage. When coverage becomes available through Cover Oregon in the fall of 2013, Healthy Kids will be one type of coverage available. However, the certified application assister program, Healthy Kids grants and targeted outreach will be ending."
+  },
+{
+  ID:7,
+  Category:"General",
+  Question:"Is Cover Oregon associated with the Affordable Care Act? If so, how?",
+  Answer:"The Affordable Care Act requires each state to establish a health insurance exchange, which is an online marketplace where individuals and small employers can compare plans and access financial assistance to help pay for coverage. States can implement their own exchanges or they can opt for a federally facilitated exchange. In Oregon, we are developing our own exchange to meet the unique needs of each individual and the insurance market."
+  },
+{
+  ID:8,
+  Category:"General",
+  Question:"Who oversees Cover Oregon? Is it a government agency?",
+  Answer:"Cover Oregon is a public corporation, which means it is guided by its mission and state law, cannot make a profit and serves in the public interest for the benefit of the consumers and employers that access insurance through Cover Oregon. Cover Oregon is governed by a nine-member board of directors, each of whom is appointed by the Governor and confirmed by the Oregon Senate. The board appoints Cover Oregon’s executive director, and is supported by a Consumer Advisory Committee. Cover Oregon also is guided by a bipartisan Legislative Oversight and Advisory Committee, composed of two representatives and two senators. Cover Oregon is required to make quarterly and annual reports to the Legislature."},
+{
+  ID:9,
+  Category:"General",
+  Question:"Is Cover Oregon a 501(c)(26)? If not, what U.S. IRS code do you use?",
+  Answer:"Cover Oregon is not a 501(c)(26) organization. Cover Oregon was established as a public corporation under Oregon law. We are exempt from federal income tax."
+  },
+{
+  ID:10,
+  Category:"General",
+  Question:"How many people does Cover Oregon employ?",
+  Answer:"Cover Oregon is growing quickly as we prepare for open enrollment this fall. As of August 1, 2013, we employ 90 people at our corporate headquarters office in Durham, and 57 additional staff at our customer service center in Salem. Also, we will be supplementing the customer service center with up to 100 temporary customer service representatives."
+  },
+{
+  ID:11,
+  Category:"General",
+  Question:"How is Cover Oregon funded?",
+  Answer:"Cover Oregon operates at no cost to the state. It is funded by federal grant dollars through 2014; after that, it will be self-sustaining through an administrative fee charged to insurance carriers. Cover Oregon worked closely with national and state experts to develop enrollment and financial projections; these show Cover Oregon becoming financially self-sustaining by 2015."
+  },
+{
+  ID:12,
+  Category:"General",
+  Question:"How much did Oregon receive in federal grant funding?",
+  Answer:"Oregon has received several grants to support the start up and implementation of the health insurance exchange. Details on each of Oregon’s grants are listed here: http://www.coveroregon.com/grants.php."
+  },
+{
+  ID:13,
+  Category:"General",
+  Question:"How will Cover Oregon keep health coverage costs down?",
+  Answer:"Cover Oregon will help make coverage more affordable by providing access to financial assistance that is available through the Affordable Care Act. However, health insurance premiums are driven by the cost of medical care. So, the key to decreasing health insurance premiums is lowering medical costs. Cover Oregon is engaged in statewide efforts to reduce health care costs, such as the coordinated care model being piloted in the Medicaid market, with the idea that once Cover Oregon is up and running, it can move toward incorporating these concepts – improving care and lowering costs – in the commercial insurance market."
+  },
+{
+  ID:14,
+  Category:"General",
+  Question:"Is Cover Oregon going to regulate the cost of insurance?",
+  Answer:"The Oregon Department of Consumer and Business Services Insurance Division will continue to regulate insurance rates. The Insurance Division has a strong public process for reviewing and approving rates. You can learn more at: http://www.oregonhealthrates.org."
+  },
+{
+  ID:15,
+  Category:"General",
+  Question:"Is Cover Oregon subject to the public records law?",
+  Answer:"Yes. For details on how to make a public records request, click here."
+  },
+  {
+  ID:16,
+  Category:"General",
+  Question:"What is the deadline for applying for health coverage, and what will happen if I miss it?",
+  Answer:"Individuals and families can apply for health coverage at any time throughout the year. However, they can only enroll in a qualified health plan during the open enrollment period, unless they experience a qualifying event. For 2014, the open enrollment period is October 2013 through March 2014. In future years, the open enrollment period will occur between October 15 and December 7. Those applying for coverage offered by their workplace will need to do so within the time frame set by their employer."
+  },
+{
+  ID:17,
+  Category:"General",
+  Question:"I need assistance enrolling for coverage. What are my options? ",
+  Answer:"Cover Oregon affiliated health insurance agents and community partners are available to assist you with the application process at no cost. You will be able to search and choose an assister in your area from the online directory."
+  },
+{
+  ID:18,
+  Category:"General",
+  Question:"What kind of information will I have to provide when I enroll for individual coverage or set up a plan for my business or Tribe? ",
+  Answer:"When you apply for individual coverage, you will be asked to provide information about yourself and the dependents you'll be enrolling. We recommend having the following information on hand: personal information, including Social Security or legal resident identification numbers, dates of birth and annual income; list of current doctors and other medical professionals, and current coverage status, including whether you or your dependents are on COBRA or State Continuation. Businesses and Tribes setting up coverage plans for their employees and members will be asked to provide additional information for each eligible individual and for their organization, such as SIC and NAICS numbers or information to help verify their members' tribal status."
+  },
+{
+  ID:19,
+  Category:"General",
+  Question:"What if I do not have a Social Security number (SSN)?",
+  Answer:"If you do not have an SSN, you can still submit an application to find out if you qualify for health coverage and financial assistance through Cover Oregon. We can also assist you with obtaining an SSN if you qualify for one."
+  },
+{
+  ID:20,
+  Category:"General",
+  Question:"How long does it take to apply for coverage through the Cover Oregon website? ",
+  Answer:"The length of time it takes to apply for coverage varies depending on different factors, such as how many people you are enrolling for coverage."
+  },
+{
+  ID:21,
+  Category:"General",
+  Question:"Do I have to apply for coverage online, or can I fill out a paper application? ",
+  Answer:"You may apply for coverage online, or you may also fill out a paper application, which you can download from the website or request by contacting Cover Oregon at 1-855-CoverOR (1-855-268-3767)."
+  },
+{
+  ID:22,
+  Category:"General",
+  Question:"How long will it take to process my application?",
+  Answer:"In general, your eligibility for coverage, financial assistance and premium contributions will be determined as soon as you complete the eligibility information section on the Cover Oregon website. Once this is determined, you will be able to enroll in a plan."
+  },
+{
+  ID:23,
+  Category:"General",
+  Question:"How long after completing my application will it take for my health coverage to be effective?",
+  Answer:"Coverage for the Oregon Health Plan and Healthy Kids generally begins on the date you complete an application. Coverage for private qualified health plans will become effective once you have submitted your application and the first payment for your monthly premium(s). If you have cost sharing set up with your employer, the portion you owe toward your premium(s) will be deducted from your monthly paycheck."
+  },
+{
+  ID:24,
+  Category:"General",
+  Question:"If I make an error on my application or need to update information, do I need to start the whole process over?",
+  Answer:"The Cover Oregon application allows you to make changes throughout the process. Once you have finished answering all the questions on the application, you will be asked to review your answers and can make changes if necessary. Once your application has been submitted, you may also go to your dashboard to update your personal information or information for your enrolled dependents or employees."
+  },
+{
+  ID:25,
+  Category:"General",
+  Question:"I have questions about coverage and plan benefits. Who should I contact for more information?",
+  Answer:"Cover Oregon offers no-cost assistance from our network of affiliated health insurance agents and community partners. You will be able to search and choose an assister in your area from the online directory."
+  },
+{
+  ID:26,
+  Category:"General",
+  Question:"Where can I find a summary of benefits?",
+  Answer:"Before you sign and submit your application for coverage, you will have the opportunity to review the plan(s) you have selected and their benefits. You can also view this information from your dashboard once you have enrolled."},
+{
+  ID:27,
+  Category:"General",
+  Question:"How do I know what my monthly premiums and out-of-pocket costs will be? ",
+  Answer:"When you begin to browse coverage options, the dollar amount of your proposed monthly premium will be listed as well as other out-of-pocket costs."
+  },
+{
+  ID:28,
+  Category:"General",
+  Question:"If an individual on my plan has a qualifying event, can he or she change his or her plan selection, such as metal level choice or carrier? ",
+  Answer:"If you or someone on your plan has a qualifying event, that individual will be able to adjust his or her coverage options (including metal level choice, carrier, etc.) to meet his or her individual needs."
+  },
+{
+  ID:29,
+  Category:"General",
+  Question:"If I have already applied for health coverage through Cover Oregon, do I need to do anything special to renew my plan next year? ",
+  Answer:"If you have coverage offered through your employer, you will have the opportunity to renew, cancel or make changes to your plan(s) during the next open enrollment period. If you are enrolled for individual coverage, you may cancel or make changes to your plan or enrolled dependents' plans at any time. You will be contacted when it is time to renew your plan."
+  },
+{
+  ID:30,
+  Category:"General",
+  Question:"I just lost my job. Since I cannot apply for coverage through my employer, what are my options for health care? ",
+  Answer:"If you have lost your job and would like to keep your current health plan, we recommend talking to your former employer about continuation coverage such as COBRA or State Continuation, which will allow you to temporarily keep your benefits. You can also apply for individual coverage through Cover Oregon to find out what health coverage options and financial assistance are available to you based on your new situation."
+  },
+{
+  ID:31,
+  Category:"General",
+  Question:"How and where do I go to file a claim on the Cover Oregon website?",
+  Answer:"You may find carrier information, including the phone number you should call to file a claim, in the Resource Center on your dashboard or on your membership ID card."
+  },
+{
+  ID:32,
+  Category:"General",
+  Question:"How often are provider directories and carrier information updated on the Cover Oregon website? ",
+  Answer:"Provider directories are updated on the Cover Oregon website every two weeks. Carrier information is updated as changes take place."
+  },
+{
+  ID:33,
+  Category:"General",
+  Question:"Can individual members of a household choose different plan options? ",
+  Answer:"Individual members of your household may choose to enroll in different coverage plans, based on their specific needs. However, all individuals who apply together must choose the same coordinated care organization if they are found eligible for the Oregon Health Plan and/or Healthy Kids."
+  },
+{
+  ID:34,
+  Category:"General",
+  Question:"If I have a qualifying event, how long do I have to report and make that change? ",
+  Answer:"You must report a qualifying event and then either select a plan or make any necessary changes to your coverage plan within 60 days of the date the event took place."
+  },
+{
+  ID:35,
+  Category:"General",
+  Question:"What kind of documentation do I need to prove a qualifying event for enrollment in a qualified health plan (QHP)? ",
+  nswer:"Appropriate supporting documentation must be provided at the time you report a qualifying event. Depending on the event, this could include documents such as copies of a birth or marriage certificate, Social Security numbers and dates of birth/death/marriage."
+  },
+{
+  ID:36,
+  Category:"General",
+  Question:"What is the rating system used by Cover Oregon for qualifying health plans and carriers, and what does it tell me? ",
+  Answer:"Cover Oregon's quality ratings are consumer ratings, and they are scores used to rate the performance of qualified health plans (QHPs) in their delivery of health care. These ratings are based on a four-star system (one star being the lowest score, four being the highest). The ratings are designed to help people make better-informed decisions about their health coverage."
+  },
+{
+  ID:37,
+  Category:"General",
+  Question:"How will Cover Oregon use and share my personal information?",
+  Answer:"You can learn how Cover Oregon will use and share your personal information by reading the Cover Oregon privacy policy."
+  },
+{
+  ID:38,
+  Category:"General",
+  Question:"Does Cover Oregon represent all health insurance carriers, or are there other options I could find on my own somewhere else?",
+  Answer:"While Cover Oregon represents a number of health insurance carriers, some may not be included. You may search for other options outside of Cover Oregon at any time."
+  },
+{
+  ID:39,
+  Category:"General",
+  Question:"How do I contact Cover Oregon when I have questions or need help?",
+  Answer:"You can contact customer assistance by phone at 1-855-CoverOR (1-855-268-3767)."
+  },
+{
+  ID:40,
+  Category:"General",
+  Question:"Where do I go to check my messages from Cover Oregon?",
+  Answer:"You may access and exchange messages with Cover Oregon in your dashboard's Message Center."
+  },
+
+
+{
+ID: 41,
+Category: "Individuals and Families",
+Question: "As a retired public employee who has insurance through the Public Employees Retirement System (PERS), will I be able to purchase health insurance through Cover Oregon? Or, will I have to purchase through PERS?",
+Answer: "Yes, you will be able to purchase health coverage through Cover Oregon even if you have access to health insurance through the PERS upon retirement. Depending on factors such as your age and income at the time of retirement, you may also qualify for premium tax credits and cost-sharing assistance. However, Medicare-eligible retirees do not qualify for premium assistance."
+},
+
+{
+ID: 42,
+Category: "Individuals and Families",
+Question: "How will an “insurable group” be defined? Could a group of friends, relatives or neighbors count as an insurable group?",
+Answer: "In health insurance, “group” refers to a health plan that an employer provides to its employees and their immediate family. A group of friends, relatives or neighbors would not be considered a group for health insurance."
+},
+
+{
+ID: 43,
+Category: "Individuals and Families",
+Question: "Will individuals and families be able to receive financial assistance through Cover Oregon?",
+Answer: "Yes, by enrolling in a health plan through Cover Oregon, you may qualify to receive help paying for coverage. Depending on your income, you may be eligible for tax credits to help pay for monthly premiums. For example, an individual earning up to $45,900 a year or a family of four earning up to $94,200 a year may get a tax credit to help cover the cost of their premiums. You may also be eligible for cost-sharing assistance to help pay for copays, deductibles and other out-of-pocket costs. You will be able to find out if you are eligible for financial assistance by answering a series of questions on the Cover Oregon website beginning in October 2013. Eligibility will be based on the modified adjusted gross income for the people in your application group."
+},
+
+{
+ID: 44,
+Category: "Individuals and Families",
+Question: "What is modified adjusted gross income (MAGI)?",
+Answer: "MAGI is adjusted gross income as determined under the federal income tax laws, plus any foreign income or tax-exempt interest that a taxpayer receives. In other words, MAGI is the amount of income a household reports on its annual federal tax form (with a few exclusions that will not affect the majority of households applying for coverage in 2014)."
+},
+
+{
+ID: 45,
+Category: "Individuals and Families",
+Question: "How do I determine the number of people in my household? If unrelated people live in my house, do I count them when figuring out the number of people in my household?",
+Answer: "In general, the household consists of the applicant and the applicant’s spouse, children and qualifying relatives. Unrelated individuals living in the house are not included in the household unless they are claimed as dependents on a tax return by a member of the household."
+},
+
+{
+ID: 46,
+Category: "Individuals and Families",
+Question: "Do I use family size to determine my household, and, if so, what constitutes a family?",
+Answer: "Household size and family size are not necessarily the same number. One or more family members living in the house may not be considered part of the household. For example, a cousin who lives with you but is claimed as a tax dependent by his or her parents would not be considered part of your household."
+},
+
+{
+ID: 47,
+Category: "Individuals and Families",
+Question: "I have a child who no longer lives at home. Do I count him as a household member? Does it depend on his age?",
+Answer: "If you claim the child as a dependent on your taxes, count him or her as a household member. If you claim the individual as a dependent, age is not a factor."
+},
+
+{
+ID: 48,
+Category: "Individuals and Families",
+Question: "Does household size include individuals who are under 26 years of age?",
+Answer: "Your household may include individuals of any age."
+},
+
+{
+ID: 49,
+Category: "Individuals and Families",
+Question: "If my children file their own taxes, are they still considered part of my household?",
+Answer: "Children are considered part of your application group if you claim them as dependents, even if they are required to file their own tax return."
+},
+
+{
+ID: 50,
+Category: "Individuals and Families",
+Question: "Can I include a child not living in my home as part of my household if he stays with me part time? What would be counted as part time?",
+Answer: "If you claim the child as a tax dependent, you should include him or her as part of your household. If you do not file taxes, include the child only if you have primary custody (if the child lives with you more than 50 percent of the time)."
+},
+
+{
+ID: 51,
+Category: "Individuals and Families",
+Question: "What happens to me when the Oregon Medical Insurance Pool (OMIP) closes?",
+Answer: "OMIP members will be able to select a plan from Cover Oregon starting in October 2013. Coverage for plans purchased through Cover Oregon will take effect on January 1, 2014, so there will be no break in your health coverage. There are no waiting periods, and no one can be turned down for coverage because of health conditions. You also may be eligible for financial assistance to help you pay your monthly premiums and out-of-pocket costs. Cover Oregon will have a customer service center, insurance agents and community partners throughout the state to help you through this process."
+},
+
+{
+ID: 52,
+Category: "Individuals and Families",
+Question: "What coverage will be available to those who are currently enrolled in the Oregon Medical Insurance Pool (OMIP)?",
+Answer: "OMIP members will be able to choose from all the plans available through Cover Oregon (and the outside market). No one can be turned down for coverage because of health conditions, so OMIP members will have significantly more choice than they have today. Although plan details are not yet available, all plans starting in 2014 will have to cover a basic package of benefits that includes things such as prescription drugs, maternity and newborn care and mental health. There also will be limits on out-of-pocket costs such as copays and deductibles."
+},
+
+{
+ID: 53,
+Category: "Individuals and Families",
+Question: "Who will notify Oregon Medical Insurance Pool (OMIP) members that they can move to other guaranteed issue plans?",
+Answer: "OMIP sent notices to its members in January informing them that the OMIP program will end December 31, 2013, and that coverage will be available to them through Cover Oregon. This was the first of many communications that OMIP members will receive over the next year to advise them of the next steps as information is available. Cover Oregon will partner with the Oregon Health Authority to ensure that OMIP members are aware of the resources available and timelines for applying for health coverage."
+},
+
+{
+ID: 54,
+Category: "Individuals and Families",
+Question: "Why does Cover Oregon need to know who I live with?",
+Answer: "The number of people in your household can determine the health plans available to you and whether you qualify for financial assistance."
+},
+
+{
+ID: 55,
+Category: "Individuals and Families",
+Question: "Will my citizenship status affect my ability to get health coverage?",
+Answer: "Possibly. If you are not a U.S. citizen you can still submit an application to find out if you qualify for health coverage and financial assistance through Cover Oregon."
+},
+
+{
+ID: 56,
+Category: "Individuals and Families",
+Question: "Will a pregnancy in my household affect my ability to get health coverage?",
+Answer: "No. A pregnancy in your household will not affect your ability to get health coverage."
+},
+
+{
+ID: 57,
+Category: "Individuals and Families",
+Question: "Will my health coverage cost more just because I make a certain amount of money?",
+Answer: "No. The amount of income you make annually may determine how much financial assistance you qualify for, but not the cost of specific plans."
+},
+
+{
+ID: 58,
+Category: "Individuals and Families",
+Question: "Where can I learn more about my options for financial assistance?",
+Answer: "You can learn more about your options for financial assistance by completing the eligibility section of the individual application."
+},
+
+{
+ID: 59,
+Category: "Individuals and Families",
+Question: "Why does Cover Oregon ask if anyone in my household has a disability that will last longer than 12 months, is blind or needs long-term care services?",
+Answer: "If someone in your household has a disability that will last longer than 12 months, is blind or needs long-term care services, you may qualify for additional services and possibly financial assistance."
+},
+
+{
+ID: 60,
+Category: "Individuals and Families",
+Question: "What is an authorized representative?",
+Answer: "An authorized representative is a person, such as a guardian or an individual who has power of attorney, who is authorized to help make decisions for others. These decisions include enrolling in a health coverage plan or handling claims and payments. An authorized representative may sign the application on behalf of the enrollee."
+},
+
+{
+ID: 61,
+Category: "Individuals and Families",
+Question: "How can I find out if my current doctor or health provider is covered under Cover Oregon plans?",
+Answer: "You have the option to search for a provider in the system during the application process. If your provider is not in the system, we recommend contacting him or her directly for more information."
+},
+
+{
+ID: 62,
+Category: "Individuals and Families",
+Question: "What do I need to do to verify that I will get a tax credit for my health coverage and how will it be applied?",
+Answer: "You will need to submit information about your current job(s) and income level, in addition to those of any household members that will be enrolling in the plan. If you are eligible, the tax credit can either be applied right away (directly to an insurance company to reduce a monthly premium), or when you file a federal income tax return."
+},
+
+{
+ID: 63,
+Category: "Individuals and Families",
+Question: "Where can I find further information about my plan choices?",
+Answer: "When you are browsing for plans during the application process, click 'View details' next to any plan option for more information."
+},
+
+{
+ID: 64,
+Category: "Individuals and Families",
+Question: "What is the difference between bronze, silver, gold and platinum metal levels?",
+Answer: "Bronze plans cover approximately 60 percent of costs, silver plans cover approximately 70 percent of costs, gold plans cover approximately 80 percent of costs and platinum plans cover approximately 90 percent of costs."
+},
+
+{
+ID: 65,
+Category: "Individuals and Families",
+Question: "Does Cover Oregon provide application assistance for non-native English speakers?",
+Answer: "Non-native English speakers can find application assistance through one of Cover Oregon's many community partners, or by contacting Customer Service."
+},
+
+{
+ID: 66,
+Category: "Individuals and Families",
+Question: "I'm a full-time student. Do I qualify for financial assistance for my health coverage?",
+Answer: "You might. You can learn about the financial assistance options available to you by applying through Cover Oregon."
+},
+
+{
+ID: 67,
+Category: "Individuals and Families",
+Question: "What is a primary caretaker?",
+Answer: "A primary caretaker is a parent or person who has the greatest responsibility for the daily care and rearing of a child."
+},
+
+{
+ID: 68,
+Category: "Individuals and Families",
+Question: "Why does Cover Oregon ask if someone in my household has medical bills that have not been paid in the last three months?",
+Answer: "You could be eligible for financial assistance or help paying your outstanding medical bills."
+},
+
+{
+ID: 69,
+Category: "Individuals and Families",
+Question: "What does final qualification decision mean?",
+Answer: "By electing for a final qualification decision, you may learn about your eligibility for other forms of financial assistance and programs that could benefit you."
+},
+
+{
+ID: 70,
+Category: "Individuals and Families",
+Question: "Do I have to apply for both medical and dental coverage? Or can I just choose one or the other?",
+Answer: "Through Cover Oregon, you can purchase only medical insurance or you can purchase both medical and dental insurance. You may not purchase dental-only coverage."
+},
+
+{
+ID:71,
+Category:"Employers",
+Question: "As an employer, what are the penalties for not participating in Cover Oregon?",
+Answer:"Employers are not required to participate in Cover Oregon. In 2015, only large employers—with 50 or more full-time equivalents (FTEs)—are required to provide insurance to their employees. The penalty for large employers is based on the number of FTEs (30 hours or more per week) that were not offered affordable health insurance. Small employers are not required to offer insurance."
+},
+{
+ID:72,
+Category:"Employers",
+Question: "What is the minimum participation rate for small employers? What happens if a small employer does not achieve the participation rate?",
+Answer:"The minimum participation requirement for medical plans is enrolling 75 percent of eligible employees. The minimum participation requirement for dental plans is enrolling 50 percent of eligible employees. All full-time active employees who work the weekly eligible hours specified in the group contract are eligible to enroll. Valid waivers, such as employees with other employer group coverage, do not count toward participation. If a group does not meet the minimum participation requirement, it will not be able to proceed with purchasing a group plan through Cover Oregon."
+},
+{
+ID:73,
+Category:"Employers",
+Question: "Will a small employer with 15 employees be required to provide insurance to all 15 employees?\n",
+Answer:"Small employers with fewer than 50 employees are not required to provide insurance to their employees. However, if a small employer does choose to provide coverage, the employer must offer coverage to all of its eligible employees."
+},
+{
+ID:74,
+Category:"Employers",
+Question: "Do all employer plans have to include coverage for dependent children?",
+Answer:"No. When a small employer sets up its plan offering, it will choose either employee-only coverage or employee and dependent coverage."
+},
+{
+ID:75,
+Category:"Employers",
+Question: "What is the penalty for not issuing the Notice of the Existence of Cover Oregon to my employees?",
+Answer:"The U.S. Department of Labor has extended the requirement for employers to provide notice to employees about health insurance exchanges like Cover Oregon to October 1, 2013. The notice requirement under Section 18B of the Fair Labor Standards Act did not take effect on March 1, 2013, as previously planned. There is currently no penalty for not issuing a notice."
+},
+{
+ID:76,
+Category:"Employers",
+Question: "How many employees must a small employer have to be eligible to use Cover Oregon? How will the number of employees be counted—based on full-time equivalent or another method?",
+Answer:"Oregon defines a small employer as an employer that employed at least one but not more than 50 eligible employees on business days during the preceding calendar year. The majority of those employees must be employed in Oregon, and the employer must have at least one employee on the date on which coverage starts."
+},
+{
+ID:77,
+Category:"Employers",
+Question: "If employees choose not to enroll in a plan through their employer, does the employer still have to count those employees in the full-time equivalent (FTE) and average wage count?",
+Answer:"For the purposes of determining the Small Business Health Care Tax Credit, an employer must still include employees who choose not to enroll in its plan when calculating its FTE and average wage count. If the employees are related to an owner or a seasonal employee, however, the employer does not have to include them."
+},
+{
+ID:78,
+Category:"Employers",
+Question: "How does a business qualify to receive financial assistance to help cover the cost of premiums?",
+Answer:"The Small Business Health Care Tax Credit is available through the IRS to help cover the cost of premiums. For more information on how to qualify, contact a CPA or a tax professional or visit www.irs.gov/uac/Small-Business-Health-Care-Tax-Credit-for-Small-Employers."
+},
+{
+ID:79,
+Category:"Employers",
+Question: "What data is required on the employer application for coverage?",
+Answer:"The Cover Oregon employer application will require many of the same pieces of data that are currently required on employer group applications. Be prepared to provide information such as (but not limited to) primary company contact information, eligibility provisions, employee census, plan selections and employer contributions."
+},
+{
+ID:80,
+Category:"Employers",
+Question: "If I provide insurance to my employees now, will the plans automatically roll over to Cover Oregon in 2014?",
+Answer:"No. In order to offer coverage through Cover Oregon, small employers will need to complete the Cover Oregon application and enrollment process."
+},
+{
+ID:81,
+Category:"Employers",
+Question: "Will small employers be able to offer coverage for domestic partners outside of the required domestic partner coverage for registered, certified, same-sex domestic partners?",
+Answer:"Yes, during the application process small employers will have the option of offering full domestic partner coverage, which would include coverage of non-certified, same-sex domestic partners and opposite-sex domestic partners."
+},
+{
+ID:82,
+Category:"Employers",
+Question: "Will a small employer based in Vancouver, Washington, be able to purchase plans through Cover Oregon for employees who live in Oregon?",
+Answer:"No. Only small employers located in Oregon will be allowed to purchase group coverage for their employees through Cover Oregon. Employers based in Washington may use the Washington exchange."
+},
+{
+ID:83,
+Category:"Employers",
+Question: "How long will my employees have to complete their enrollment?",
+Answer:"As a business owner, you can decide how long your employees will have to choose their plan and enroll. Employees must be enrolled by the 20th of the month prior to the month coverage takes effect. Employers can begin the shopping period at any time."
+},
+{
+ID:84,
+Category:"Employers",
+Question: "If a small employer adds new employees after the initial quote, can it request a requote, or will it be locked in to the initial quoted rate?\n",
+Answer:"A small employer cannot request to be re-rated once it has a policy in place. When an employer sets up a policy, the rates are valid for 12 months. If an employer adds employees before purchasing a plan, however, it can request a requote."
+},
+{
+ID:85,
+Category:"Employers",
+Question: "Currently, carriers serving small employers in Oregon offer 20 to 75 benefit plans in the small group market. Is it true that as of January 2014, each carrier will offer only four health plans?",
+Answer:"No, each carrier serving small employers will be able to offer up to 20 medical plans through Cover Oregon."
+},
+{
+ID:86,
+Category:"Employers",
+Question: "What is a reference plan?",
+Answer:"A reference plan is chosen by an employer and serves as the baseline for its employee coverage and monthly premium costs."
+},
+{
+ID:87,
+Category:"Employers",
+Question: "What is meant by setting your employee choice level? ",
+Answer:"When you set your employee choice level, you are giving your employees the ability to choose from a wide range of carriers and plan options."
+},
+{
+ID:88,
+Category:"Employers",
+Question: "What’s an employee census? ",
+Answer:"An employee census refers to the data for each employee on a company’s payroll. This data includes demographics, geographic information, company eligibility information and employment information."
+},
+{
+ID:89,
+Category:"Employers",
+Question: "Why am I being asked about my new hire probationary period?",
+Answer:"Your new hire probationary period affects when an employee will be eligible for benefits. The probationary period is the time period that an employee must wait before being eligible for benefits after his or her date of hire."
+},
+{
+ID:90,
+Category:"Employers",
+Question: "Why am I being asked about the probationary period for employees who change from part-time to full-time status?  ",
+Answer:"When employees move from part-time status to full-time status, your new hire probationary period will be applied to them, and they must wait until that time period before being eligible for benefits."
+},
+{
+ID:91,
+Category:"Employers",
+Question: "Why does Cover Oregon ask about tobacco use? ",
+Answer:"Tobacco use can impact the cost of health coverage, and insurance carriers may use this as a rating factor."
+},
+{
+ID:92,
+Category:"Employers",
+Question: "Why do I have to provide a reason why my employees and their spouse/domestic partner are waiving medical (and) dental coverage? ",
+Answer:"Cover Oregon asks that you provide this information about your employees because we use it to calculate an employer's participation rate. This information does not need to be provided for an employee's dependents."
+},
+{
+ID:93,
+Category:"Employers",
+Question: "I have a company with five or fewer employees. Why am I being asked to provide a Form 132 or two weeks of payroll information? ",
+Answer:"To validate group status, Cover Oregon requires Form 132 Oregon Quarterly Wage and Detail Report or two weeks of payroll information for employers with five or fewer employees."
+},
+{
+ID:94,
+Category:"Employers",
+Question: "My payment might be late, what should I do? ",
+Answer:"Contact us by calling 1-855-CoverOR (1-855-268-3767)."
+},
+{
+ID:95,
+Category:"Employers",
+Question: "How do I know if I qualify for the Small Business Health Care Tax Credit and how do I apply? ",
+Answer:"Tax credit forms and additional information can be found on the IRS website."
+},
+{
+ID:96,
+Category:"Employers",
+Question: "If my headquarters are located outside of Oregon, can I still qualify for Cover Oregon? ",
+Answer:"Yes, if you offer coverage to all eligible employees whose primary worksite is located in Oregon."
+},
+{
+ID:97,
+Category:"Employers",
+Question: "Who is an eligible dependent? ",
+Answer:"These are individuals—spouse, eligible domestic partner or children up to age 26 (or through age 25)—who qualify for enrollment under the same plan as the employee."
+},
+{
+ID:98,
+Category:"Employers",
+Question: "What should I do if an employee has a qualifying event? ",
+Answer:"You should report the qualifying event to Cover Oregon. You can do this on the employer dashboard under the employee census tab where you will see the option to report a qualifying event."
+},
+{
+ID:99,
+Category:"Employers",
+Question: "Do all employer plans have to include coverage for dependent children?",
+Answer:"Coverage for dependent children is currently not required for employers with less than 50 employees. In 2015, a large employer with 50 or more FTEs will be required to offer dependent coverage."
+},
+{
+ID:100,
+Category:"Employers",
+Question: "How do I count part-time employees when determining small employer eligibility?",
+Answer:"Any employee who works a regular schedule of 17.5 hours or more per week on the date coverage is to take effect counts toward small employer eligibility."
+},
+{
+ID:101,
+Category:"Employers",
+Question: "If I enroll for coverage through Cover Oregon, will my plan automatically roll over when my coverage period ends? ",
+Answer:"Your coverage will not automatically roll over, but you will have the option to renew your coverage through the employer dashboard."
+},
+{
+ID:102,
+Category:"Employers",
+Question: "What will happen if I do not meet the 75 percent minimum participation rate for medical coverage?",
+Answer:"Your application through Cover Oregon will not be accepted, and you will be asked to reestablish a reference plan and employee choice levels that better fit the needs of your employees."
+},
+{
+ID: 103,
+Category: "Employees",
+Question: "What kind of information will I have to provide when I enroll for coverage? ",
+Answer: "You will be asked to provide information about yourself and any dependents you'll be enrolling. We recommend having the following information on hand: personal information, including Social Security numbers and dates of birth; a list of current doctors and other medical professionals and current coverage status."
+},
+{
+ID: 104,
+Category: "Employees",
+Question: "My employer isn't offering health coverage. What are my options?  ",
+Answer: "If your employer does not offer health insurance benefits, you will be able to shop for health coverage for yourself and your family through Cover Oregon. You also can apply for financial assistance or other programs that make health coverage more affordable. The number of plans available through Cover Oregon will depend on where you live. You will be able to narrow your search by using a number of filters to find a plan that best fits your budget and meets your health coverage needs."
+},
+{
+ID: 105,
+Category: "Employees",
+Question: "What will happen if I don’t apply for coverage during my employer’s open enrollment period?",
+Answer: "You can apply for benefits or make a change to an existing plan during your employer's next open enrollment period, or mid-year if you experience a qualifying event. You may remove a dependent from your plan at any time."
+},
+{
+ID: 106,
+Category: "Employees",
+Question: "Can I add or subtract a dependent after the deadline my employer has set for enrollment?",
+Answer: "You can add or subtract a dependent outside of your employer's open enrollment period at any time. However, you may add a dependent outside of your employer's open enrollment period only if you experience a qualifying event, such as marriage, separation or the birth or adoption of a child."
+},
+{
+ID: 107,
+Category: "Employees",
+Question: "What if I lost the temporary username and password my employer gave me?",
+Answer: "If you've lost or forgotten your temporary username and password, employer (they can retrieve it from their dashboard) or contact Cover Oregon customer assistance at 1-855-CoverOR (1-855-268-3767)."
+},
+{
+ID: 108,
+Category: "Employees",
+Question: "Who do I contact if I have questions about my new plan after I’ve enrolled?",
+Answer: "Once you've submitted your application, your main point of contact for questions, concerns and claims will be your new health insurance carrier, but you can always come back to the Cover Oregon website to view your plan details."
+},
+{
+ID: 109,
+Category: "Employees",
+Question: "Who will bill me for my monthly premiums? ",
+Answer: "Once you've submitted your application, your employer will make its contribution, and then begin deducting your monthly premium balance from your paycheck."
+},
+{
+ID: 110,
+Category: "Employees",
+Question: "When do I get a new membership ID card if I’ve switched carriers?",
+Answer: "After your enrollment is processed, your new health insurance carrier will send you a membership ID card in the mail within 7 to 10 business days. If you're switching carriers, we recommend refilling your prescriptions ahead of time, while you’re waiting for your new card to arrive."
+},
+{
+ID: 111,
+Category: "Employees",
+Question: "What if I can’t find my doctor or medical professional in the Cover Oregon system?",
+Answer: "If you cannot find your health care provider in Cover Oregon's system, he or she may be out of network. Please contact your health care provider's office for more information."
+},
+{
+ID: 112,
+Category: "Employees",
+Question: "Where do I go to find doctors or medical professionals in my area?",
+Answer: "You will be able to search for medical professionals in your area during the application process. You may also search for providers from your dashboard, once your account has been set up."
+},
+{
+ID: 113,
+Category: "Employees",
+Question: "If my employer doesn’t offer dental coverage, can I apply for coverage as an individual? ",
+Answer: "If your employer does not offer dental coverage as part of its plan, you will need to purchase it outside of Cover Oregon, or apply for both medical and dental coverage as an individual."
+},
+{
+ID: 114,
+Category: "Employees",
+Question: "How will I know how much my employer's plan costs? ",
+Answer: "When you begin to browse plans, your employer's plan will be listed at the top of the screen and labeled"
+},
+{
+ID: 115,
+Category: "Employees",
+Question: "Can I waive my employer’s medical or dental coverage if it’s not affordable? ",
+Answer: "Yes. You can waive coverage only if your monthly portion of the employee-only premium for your employer's reference plan is greater than 9.5 percent of your monthly household income."
+},
+{
+ID: 116,
+Category: "Employees",
+Question: "If my dependents choose not to enroll in my employer's plan, or if my employer does not offer a plan that covers dependents, can they still apply for an individual plan and also receive financial assistance?",
+Answer: "If your employer offers dependent coverage, your dependents will not be eligible for a tax credit if they choose to enroll as individuals. If your employer's plan does not cover dependents, your dependents will be able to apply for individual coverage through Cover Oregon, and they may also qualify for tax credits. Certain individuals may qualify for additional financial assistance through state programs, regardless of employer-provided coverage."
+},
+{
+ID: 117,
+Category: "Employees",
+Question: "How do I update my personal information or information for my dependents?",
+Answer: "You may review and update your personal information and information for all enrolled dependents from the home page on your dashboard."
+},
+{
+ID: 118,
+Category: "Employees",
+Question: "What if my child has a disability?",
+Answer: "To qualify as a disabled dependent, your child must be determined disabled because of a physical or developmental disability prior to turning age 26. Your insurance carrier will require additional information to determine eligibility as a qualified disabled dependent."
+},
+{
+ID: 119,
+Category: "Employees",
+Question: "What is a medical or dental reference plan?",
+Answer: "A medical or dental reference plan is a baseline plan chosen by an employer, which influences the employer's defined contribution toward its employees' coverage options."
+},
+{
+ID: 120,
+Category: "Employees",
+Question: "Why am I being asked to shop for another medical or dental plan?",
+Answer: "Based on final enrollment, your employer may have to select a different plan. If this happens, you have several options. You can keep your original plan (note that premiums or other costs may have changed), select your employer's new medical reference plan or shop for another plan that better meets your needs. Even if you choose to shop for a different medical plan, your employer will still make the same contribution toward your monthly premium costs."
+},
+{
+ID: 121,
+Category: "Employees",
+Question: "Will Cover Oregon tell me if my premium rates increase?",
+Answer: "The final monthly premium for your plan could increase during the open enrollment period, due to factors such as enrollment changes in your employer’s health coverage. During the enrollment process, you will be asked to choose an amount between $5 and $300. If your premium increases by more than the dollar amount you set, we’ll let you know. You may be able to shop for another plan that better meets your needs."
+},
+{
+ID: 122,
+Category: "Employees",
+Question: "How do I update contact information in my dashboard?",
+Answer: "You may update your personal information from your dashboard, by clicking"
+},
+{
+ID: 123,
+Category: "Employees",
+Question: "What will happen to my coverage if I leave my job?",
+Answer: "If you have lost or left your job, or are no longer eligible for benefits, we recommend talking to your former employer about continuation coverage such as COBRA or State Continuation, which will allow you to temporarily keep your benefits. You can also apply for individual coverage through Cover Oregon at any time, as this is considered a qualifying event, and you may even be eligible to receive financial assistance."
+},
+{
+ID: 124,
+Category: "Employees",
+Question: "I need to contact my insurance carrier. Where do I find that information?",
+Answer: "You may access your health insurance carrier's contact information at any time from the Resource Center on your dashboard, or the back of your membership ID card."
+},
+{
+ID: 125,
+Category: "Employees",
+Question: "Where do I upload the documents my employer asked me to fill out?",
+Answer: "You may upload and download important documents from the Resource Center on your dashboard."
+},
+{
+ID: 126,
+Category: "Agents",
+Question: "How do I (as an agent) participate in Cover Oregon?",
+Answer: "Agents must have a valid Oregon health license, carry adequate errors and omissions (E&O) coverage, have no regulatory administrative actions taken against them, complete all Cover Oregon mandatory training and sign a certification agreement with Cover Oregon if they wish to help Cover Oregon consumers in both the individual and small employer markets."
+},
+{
+ID: 127,
+Category: "Agents",
+Question: "What happens when individuals change their agent?\n",
+Answer: "Individuals who want to change their agent may do so by logging in to their Cover Oregon account online and indicating the change on their dashboard. After making the change, an email confirmation will automatically be sent to the individual (unless the individual indicated alternate preferred communication), the old agent and the new agent to notify them of the change. All changes will be effective on the first day of the next month after initiating the change for purposes of commission payment."
+},
+{
+ID: 128,
+Category: "Agents",
+Question: "I am an agent. If I leave my brokerage, will I still be able to work with my consumers who have purchased plans through Cover Oregon?",
+Answer: "Depending on your business agreement with your agency, you might be able to continue to work with your consumers who purchased plans through Cover Oregon. When you leave your agency, you will be required to update your profile with Cover Oregon. For the consumers you wrote as a member of an agency, you will be required to notify them of the change and advise them of their right to select another agent in the agency to retain that relationship, or retain you as their agent. This decision is up to the consumer, and he or she can make the change on his or her Cover Oregon account online."
+},
+{
+ID: 129,
+Category: "Agents",
+Question: "Will all agents with a valid Oregon license be eligible to sell the plans offered through Cover Oregon, including agents who reside in other states?\n",
+Answer: "Agents who meet the minimum requirements for affiliation and certification can sell Cover Oregon plans, including those who reside in other states if they have a valid Oregon health license, carry adequate errors and omissions (E&O) coverage, have no regulatory administrative actions taken against them, complete all Cover Oregon mandatory training and sign a certification agreement with Cover Oregon."
+},
+{
+ID: 130,
+Category: "Agents",
+Question: "When there is a change in the agent of record, will Cover Oregon notify the former agent?",
+Answer: "Yes. Cover Oregon will inform both the outgoing and incoming agents that the consumer has elected to change agents. Cover Oregon will confirm the change with the consumer with the date the change is effective, then transmit the change in agents to carriers through the monthly eligibility interface transaction."
+},
+{
+ID: 131,
+Category: "Agents",
+Question: "How will Cover Oregon inform carriers of a change in the agent of record?",
+Answer: "Cover Oregon will inform carriers of a change in the agent of record through the monthly eligibility interface transaction. Each time consumers choose a plan or make a change in their eligibility, Cover Oregon will transfer that information to the carrier they choose."
+},
+{
+ID: 132,
+Category: "Agents",
+Question: "For consumers who receive a premium subsidy, will commissions be paid on the total premium (including the subsidy) or just the consumer’s portion?",
+Answer: "Commissions paid to agents will be based on the total premium rate for the plan."
+},
+{
+ID: 133,
+Category: "Agents",
+Question: "Will agents be allowed to move consumers in and out of Cover Oregon?\n",
+Answer: "Agents are expected to assist their consumers in finding the health benefit plan solution that is right for them, in both the small employer and individual markets. If the right plan for a consumer is in the Cover Oregon marketplace one year, but out of the marketplace the next year, the agent may help the consumer move—subject to eligibility, open and special enrollment provisions and all other requirements of the health benefit plans, whether in or out of Cover Oregon."
+},
+{
+ID: 134,
+Category: "Agents",
+Question: "If a small employer is located in Oregon and has employees who live in Vancouver, Washington, do those employees have to buy coverage through the Washington state exchange?",
+Answer: "If a small employer is enrolling in health coverage for employees through a small group plan, then the location of the business is the location of the health plan. Employees who live in Washington and work for an Oregon employer would have benefits through Cover Oregon, subject to Oregon laws and regulations. Individual plans are determined based on the permanent residence address of the person enrolled."
+},
+{
+ID: 135,
+Category: "Agents",
+Question: "Will agents need to meet specific requirements to work with Cover Oregon?",
+Answer: "Agents must have a valid Oregon health license, carry adequate errors and omissions (E&O) coverage, have no regulatory administrative actions taken against them, complete all Cover Oregon mandatory training and sign a certification agreement with Cover Oregon if they wish to help Cover Oregon consumers in both the individual and small employer markets."
+},
+{
+ID: 136,
+Category: "Agents",
+Question: "How do applicants know if a community partner or agent is certified to work with Cover Oregon?",
+Answer: "Cover Oregon will provide a searchable database of certified agents and community partners for individuals, families, employers and employees to find assistance."
+},
+{
+ID: 137,
+Category: "Agents",
+Question: "Where can I access information about training programs offered by Cover Oregon for agents and community partners? ",
+Answer: "You can access the up-to-date schedule for Cover Oregon's year-round training programs, supplemental modules and curriculum, and additional resources from your dashboard."
+},
+{
+ID: 138,
+Category: "Agents",
+Question: "How do I start a new consumer account in the dashboard?",
+Answer: "From your dashboard's landing page, you can click the "
+},
+{
+ID: 139,
+Category: "Agents",
+Question: "I can't find one of my consumer accounts. Where do I go to search for it?",
+Answer: "Under your dashboard's Consumer Accounts menu, you have the option to browse all of your accounts and consumers as a list, or enter the name of an account or consumer you're looking for if you cannot find it in the system."
+},
+{
+ID: 140,
+Category: "Agents",
+Question: "I'd like to view a statement for one of my commissions. How do I find that, and can I export it as a different file format?",
+Answer: "From your dashboard's Commissions menu, you may browse a list of recent commissions (by date) or search for a commission using the filter option at the top of the page. Once you locate the commission you would like a statement for, click "
+},
+{
+ID: 141,
+Category: "Agents",
+Question: "Where do I go to update account information, my affiliations, TIN, bank account or authorized users? ",
+Answer: "From your dashboard's My Account menu, you will have the option to review or update this information."
+},
+{
+ID: 142,
+Category: "Community Partners",
+Question: "Will Cover Oregon have partners and assisters like Healthy Kids?",
+Answer: "Yes, Cover Oregon will have assisters within our community partner organizations."
+},
+{
+ID: 143,
+Category: "Community Partners",
+Question: "How will Cover Oregon select and certify assisters?",
+Answer: "Cover Oregon is expanding the Oregon Health Authority’s existing outreach and application assistance program. Rather than using the term “navigator,” Cover Oregon uses the term “assister” to encompass navigators, in-person assisters, and application counselors. Assisters will lead individuals and families through the entire process of eligibility and enrollment for public and private health coverage through Cover Oregon. Community partner organizations that choose to have staff or volunteers serve as assisters will need to sign agreements with the Oregon Health Authority, whether or not the organization receives a grant to do this work. To be certified as an assister, staff or volunteers at community partner organizations must pass a criminal background check, complete an online overview about Cover Oregon, attend in-person enrollment assistance training, pass a certification exam and have liability and automobile insurance. Training and the certification exam must be renewed annually. All certified community partners will receive the same access to the Cover Oregon website, technical support, training and outreach materials."
+},
+{
+ID: 144,
+Category: "Community Partners",
+Question: "Will training received from Healthy Kids transfer over to Cover Oregon for current Healthy Kids partners?",
+Answer: "Assisters who currently help families access health coverage will be able to continue working with those families through Cover Oregon. However, existing assisters will need to be retrained on new eligibility and enrollment processes, as well as on how to use the Cover Oregon website."
+},
+{
+ID: 145,
+Category: "Community Partners",
+Question: "How do applicants know if a community partner or agent is certified to work with Cover Oregon?",
+Answer: "Cover Oregon will provide a searchable database of certified agents and community partners for individuals, families, employers and employees to find assistance."
+},
+{
+ID: 146,
+Category: "Community Partners",
+Question: "Can a community partner give people advice about which insurance company they should enroll with?",
+Answer: "No, if the individual or family needs advice about plan benefits beyond the information provided to all Oregonians through Cover Oregon, the assister will be trained to refer the individual or family to an agent."
+},
+{
+ID: 147,
+Category: "Community Partners",
+Question: "As an assister, can I call the customer service center and advocate for the consumer?",
+Answer: "Yes."
+},
+{
+ID: 148,
+Category: "Community Partners",
+Question: "Will assisters be able to see if consumers are pended, denied or approved?",
+Answer: "Yes."
+},
+{
+ID: 149,
+Category: "Community Partners",
+Question: "Will assisters be able to see when consumers are up for renewal?",
+Answer: "Yes."
+},
+{
+ID: 150,
+Category: "Community Partners",
+Question: "Why can’t community partners and assisters receive a commission?",
+Answer: "Community partners assist individuals and families with enrollment and disenrollment processes related to health coverage. These activities do not typically earn a commission. In general, activities that earn a commission—like assisting with carrier claims—are done by an agent rather than a community partner. To help support outreach and enrollment assistance by community partners, the Oregon Health Authority (OHA) will provide grant funding to some community partner organizations on behalf of Cover Oregon. OHA hopes to provide grants to a large pool of diverse community organizations, but not all organizations will qualify for a grant. All community partner organizations will, however, be able to sign an agreement with OHA to provide application assistance. All certified community partners will receive the same access to the Cover Oregon website, technical support, training and outreach materials."
+},
+{
+ID: 151,
+Category: "Community Partners",
+Question: "Will Cover Oregon have grants?",
+Answer: "On behalf of Cover Oregon, the Oregon Health Authority (OHA) will provide grant funding to selected community partner organizations to help support outreach and enrollment assistance. OHA hopes to provide grants to a large pool of diverse community organizations, but not all organizations will qualify for a grant. All community partner organizations will, however, be able to sign an agreement with OHA to provide application assistance. Cover Oregon will provide a link to apply for these grant opportunities on the Cover Oregon website. Interested parties can also e-mail communitypartner@coveroregon.com to request more information."
+},
+{
+ID: 152,
+Category: "Community Partners",
+Question: "Where can I access information about training programs offered by Cover Oregon for agents and community partners? ",
+Answer: "You can access the link to register for training on the Cover Oregon website. After completing the prerequisite, you will be able to register for in-person training. Additional trainings and modules will be offered in the future."
+},
+{
+ID: 153,
+Category: "Community Partners",
+Question: "How do I start a new consumer account in the dashboard?",
+Answer: "From your community partner dashboard, you can click the"
+},
+{
+ID: 154,
+Category: "Community Partners",
+Question: "I can't find one of my clients or consumer accounts. Where do I go to search for it?",
+Answer: "Under your dashboard's Consumer Accounts menu, you have the option to browse all of your accounts and clients as a list, or enter the name of an account or client you're looking for if you cannot find it in the system."
+},
+{
+ID:155,
+Category: "Tribes",
+Question: "What is the Tribal Premium Sponsorship Program (TPSP)?",
+Answer: "TPSP is a program created under the Affordable Care Act that allows Tribes and Tribal organizations to pay private insurance premiums on behalf of individuals. Tribes can choose who they wish to sponsor premiums for, regardless of whether the person is an American Indian or Alaska Native."
+},
+{
+ID:156,
+Category: "Tribes",
+Question: "Why do I need to provide coverage dates for the individuals our Tribe is sponsoring through TPSP?",
+Answer: "You need to provide coverage dates to identify the coverage period for the individuals your Tribe will be sponsoring. Coverage for your sponsored individual(s) begins on the date of enrollment and continues through the end of that calendar year."
+},
+{
+ID:157,
+Category: "Tribes",
+Question: "Do we choose the same insurance plan for all of the individuals we are sponsoring under TPSP, or can we offer more than one plan?",
+Answer: "You can offer more than one plan. Tribes can sponsor premiums for any insurance carrier they choose, and they have the added flexibility to sponsor metal levels or specific plans. "
+},
+{
+ID:158,
+Category: "Tribes",
+Question: "What if I want to change the plans available for the individuals we're sponsoring under TPSP?",
+Answer: "Once a sponsored individual has enrolled in a specific plan, only that individual can change his or her plan. However, you can add, remove or change the type of plans you make available to future TPSP-sponsored individuals at any time."
+},
+{
+ID:159,
+Category: "Tribes",
+Question: "We aren’t ready to enroll in TPSP today, but we plan to in the future. Is there a time limit for signing up?",
+Answer: "You may enroll in TPSP at any time. Coverage for the individuals you have chosen to sponsor will begin on the date you enroll them and continue through the end of that calendar year."
+},
+{
+ID:160,
+Category: "Tribes",
+Question: "If we enroll in TPSP now, can we opt out later? ",
+Answer: "Once you enroll in TPSP, you are committed to sponsoring the individuals you’ve selected through the remainder of the calendar year. At the end of the year, you can opt not to renew coverage for some or all of the individuals on your list."
+},
+{
+ID:161,
+Category: "Tribes",
+Question: "Will our TPSP-sponsored individuals have to change providers, or will they be able to use their health insurance at Tribal clinics?",
+Answer: "The individuals you sponsor under TPSP will have access to any of the providers listed in their insurance plan. They can also continue to receive services through IHS and Tribal clinics without paying any out-of-pocket costs."
+},
+{
+ID:162,
+Category: "Tribes",
+Question: "Will TPSP sponsorship automatically renew, or will we need to renew manually for each individual we’re sponsoring?",
+Answer: "No, your TPSP sponsorship will not automatically renew, but you can renew coverage through the Tribal dashboard."
+},
+{
+ID:163,
+Category: "Tribes",
+Question: "We already have a list with Tribal member information. Can I just send that to Cover Oregon, or do I need to use the membership form on Cover Oregon’s website? ",
+Answer: "To make sure our information is as complete and accurate as possible, we need Tribes to use the Tribal Community Information Form provided. If you are not participating in TPSP, you can also choose to verify your Tribal members manually. You can select your preferred method of verification when you register your Tribe with Cover Oregon."
+},
+{
+ID:164,
+Category: "Tribes",
+Question: "If I am sponsored under TPSP, will my Tribe help with out-of-pocket expenses too?",
+Answer: "With TPSP, your Tribe pays for the monthly insurance premium and you are responsible for out-of-pocket costs. Depending on your income, American Indians or Alaska Natives may not have to pay for any cost sharing. When you receive services through Indian Health Services or a Tribal Clinic, there are never any out-of-pocket costs."
+},
+{
+ID:165,
+Category: "Tribes",
+Question: "Why can’t I find my Tribe in the list of federally recognized Tribes?",
+Answer: "Cover Oregon has loaded each one of the 566 federally recognized Tribes into our system. State-recognized Tribes and Tribes outside of the United States don’t qualify for benefits through Cover Oregon. If you’re certain your Tribe is federally recognized, check to see if you might be spelling your Tribe’s name in a different way than we have it listed."
+},
+{
+ID:166,
+Category: "Tribes",
+Question: "Will my Tribe verify my enrollment status, or do I need to do that?",
+Answer: "In some cases, your Tribe will assist with verifying your enrollment status. However, it’s your responsibility to provide documentation of your status to Cover Oregon within 90 days of signing up for coverage."
+},
+{
+ID:167,
+Category: "Tribes",
+Question: "How do I document my American Indian or Alaska Native heritage?",
+Answer: "If you are an enrolled member of a federally recognized Tribe, you will have 90 days to provide documentation that confirms your enrollment. Without proof, Cover Oregon will remove these additional benefits. Cover Oregon will accept the following documents as confirmation of your Tribal membership: a Tribal enrollment card, a Tribal passport or a letter from your Tribe confirming that you are a member. The Oregon Health Plan and Healthy Kids may not require documentation."
+},
+{
+ID:168,
+Category: "Tribes",
+Question: "I don’t file taxes. Do I still need to accept the tax credit to be sponsored under TPSP?",
+Answer: "Yes. In order to be sponsored under TPSP, you will need to accept the tax credit. This means that if you haven’t filed taxes before, you will need to file them for the year you are receiving coverage. Most communities have programs that offer no-cost assistance with filing your taxes."
+},
+{
+ID:169,
+Category: "Tribes",
+Question: "I’m a Tribal member, but I’m not currently enrolled. Can I still access benefits through Cover Oregon?",
+Answer: "Only enrolled members of a federally recognized Tribe may access the special benefits available through Cover Oregon. If you are a descendant of an enrolled member of a federally recognized Tribe, you may be eligible for Medicaid benefits."
+},
+{
+ID:170,
+Category: "Tribes",
+Question: "I have already submitted proof of my American Indian or Alaska Native status for Medicaid (or other federal program). Why do I need to give proof of my status again?",
+Answer: "Different programs define American Indian or Alaska Native status in different ways. In order to access the special benefits available through Cover Oregon, you must be able to document your status according to specific guidelines."
+},
+{
+ID:171,
+Category: "Tribes",
+Question: "Now that I have a private health insurance plan, how do I find out which medical providers I can visit? Can I still go to my Tribal clinic? ",
+Answer: "Your insurance carrier will provide you with a list of participating doctors and other health providers in your plan. You can also continue to get services through your Tribal health clinic."
+},
+    
+
+
+    ];
