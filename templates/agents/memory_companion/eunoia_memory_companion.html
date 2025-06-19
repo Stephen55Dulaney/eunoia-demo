@@ -253,7 +253,7 @@
         async function getApiResponse(message) {
             const [provider, model] = modelSelector.value.split(':');
             
-            const response = await fetch('http://localhost:5050/api/memory_companion/chat', {
+            const response = await fetch('/api/memory_companion/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -282,7 +282,7 @@
         // Initialize memory journal content
         async function initializeMemoryJournal() {
             try {
-                const response = await fetch('http://localhost:5050/api/memory_companion/project_data', {
+                const response = await fetch('/api/memory_companion/project_data', {
                     credentials: 'same-origin',
                     headers: {
                         'X-Requested-With': 'XMLHttpRequest'
@@ -539,7 +539,7 @@
         // Test API connection
         testConnectionBtn.addEventListener('click', async () => {
             try {
-                const response = await fetch('http://localhost:5050/api/memory_companion/test');
+                const response = await fetch('/api/memory_companion/test');
                 const data = await response.json();
                 
                 if (response.ok) {
@@ -558,31 +558,35 @@
             runBootSequence();
         });
 
-        document.getElementById('timelineForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const eventText = document.getElementById('eventText').value;
-            
-            fetch('/api/timeline', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ content: eventText })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    showMessage(`Error: ${data.error}`, true);
-                } else {
-                    showMessage('Timeline event added successfully!');
-                    clearForm('timelineForm');
-                    setTimeout(() => location.reload(), 1000);
-                }
-            })
-            .catch(error => {
-                showMessage(`Error: ${error.message}`, true);
+        // Add event listener for timeline form if it exists
+        const timelineForm = document.getElementById('timelineForm');
+        if (timelineForm) {
+            timelineForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const eventText = document.getElementById('eventText').value;
+                
+                fetch('/api/timeline', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ content: eventText })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        showMessage(`Error: ${data.error}`, true);
+                    } else {
+                        showMessage('Timeline event added successfully!');
+                        clearForm('timelineForm');
+                        setTimeout(() => location.reload(), 1000);
+                    }
+                })
+                .catch(error => {
+                    showMessage(`Error: ${error.message}`, true);
+                });
             });
-        });
+        }
 
         // Helper function to show messages
         function showMessage(message, isError = false) {
