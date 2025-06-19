@@ -21,7 +21,16 @@ app = Flask(__name__,
 
 # Configuration
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-key-please-change')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///eunoia.db'
+
+# Database configuration - use DATABASE_URL for production (Render), SQLite for local development
+database_url = os.getenv('DATABASE_URL')
+if database_url:
+    # Render provides DATABASE_URL, use it for production
+    app.config['SQLALCHEMY_DATABASE_URI'] = database_url
+else:
+    # Local development - use SQLite
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///eunoia.db'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize extensions
