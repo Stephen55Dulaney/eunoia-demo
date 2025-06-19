@@ -10,10 +10,23 @@ from agents.orchestrator import orchestrator
 from flask_migrate import Migrate
 from research_council.prompt_manager.prompt_routes import prompt_bp
 from agents.messaging import send_message, get_messages
-from backend.agents.memory_companion import memory_companion_bp
+from agents.memory_companion import memory_companion_bp
+from functools import wraps
 
 # Load environment variables
 load_dotenv()
+
+# Demo mode configuration
+DEMO_MODE = os.getenv('DEMO_MODE', 'false').lower() == 'true'
+
+def demo_or_login_required(f):
+    """Decorator that allows access in demo mode or requires login in production"""
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if DEMO_MODE:
+            return f(*args, **kwargs)
+        return login_required(f)(*args, **kwargs)
+    return decorated_function
 
 app = Flask(__name__, 
             static_folder='../static',
@@ -303,7 +316,7 @@ init_db()
 
 # Routes
 @app.route('/')
-@login_required
+@demo_or_login_required
 def home():
     return render_template('home.html')
 
@@ -382,32 +395,32 @@ def logout():
 
 # Protected case study routes
 @app.route('/case-studies/ai-interview-assistant')
-@login_required
+@demo_or_login_required
 def ai_interview_assistant():
     return render_template('case_studies/ai_interview_assistant.html')
 
 @app.route('/case-studies/user-authentication')
-@login_required
+@demo_or_login_required
 def user_authentication():
     return render_template('case_studies/user_authentication.html')
 
 @app.route('/case-studies/amazon-leave-portal')
-@login_required
+@demo_or_login_required
 def amazon_leave_portal():
     return render_template('case_studies/amazon_leave_portal.html')
 
 @app.route('/case-studies/cover-oregon')
-@login_required
+@demo_or_login_required
 def cover_oregon():
     return render_template('case_studies/cover_oregon.html')
 
 @app.route('/case-studies/eunoia-research-council')
-@login_required
+@demo_or_login_required
 def eunoia_research_council():
     return render_template('case_studies/eunoia_research_council.html')
 
 @app.route('/case-studies/eunoia-memory-companion')
-@login_required
+@demo_or_login_required
 def eunoia_memory_companion():
     return render_template('case_studies/eunoia_memory_companion.html')
 
@@ -1254,7 +1267,7 @@ def demo_view_inbox():
 app.register_blueprint(memory_companion_bp)
 
 @app.route('/memory-companion-demo')
-@login_required
+@demo_or_login_required
 def memory_companion_demo():
     return render_template('agents/memory_companion/eunoia_memory_companion.html')
 

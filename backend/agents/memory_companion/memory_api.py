@@ -15,6 +15,9 @@ except ImportError:
 # Load environment variables
 load_dotenv()
 
+# Demo mode configuration
+DEMO_MODE = os.getenv('DEMO_MODE', 'false').lower() == 'true'
+
 # Configure OpenAI
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
@@ -49,6 +52,21 @@ def require_permission(permission):
         return decorated_function
     return decorator
 
+def demo_or_require_permission(permission):
+    """Decorator that allows access in demo mode or requires permission in production"""
+    def decorator(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            if DEMO_MODE:
+                return f(*args, **kwargs)
+            if not current_user.is_authenticated:
+                return jsonify({'error': 'Authentication required'}), 401
+            if not current_user.has_permission(permission):
+                return jsonify({'error': 'Permission denied'}), 403
+            return f(*args, **kwargs)
+        return decorated_function
+    return decorator
+
 @memory_companion_bp.after_request
 def after_request(response):
     response.headers.add('Access-Control-Allow-Origin', '*')
@@ -57,29 +75,28 @@ def after_request(response):
     return response
 
 @memory_companion_bp.route('/api/memory_companion/test')
-@login_required
+@demo_or_require_permission('view_projects')
 def test():
     return jsonify({
         'status': 'ok',
         'message': 'Memory Companion API is working',
         'version': '1.0.0',
+        'demo_mode': DEMO_MODE,
         'user': {
-            'id': current_user.id,
-            'email': current_user.email,
-            'name': current_user.get_full_name()
+            'id': current_user.id if current_user.is_authenticated else 'demo_user',
+            'email': current_user.email if current_user.is_authenticated else 'demo@example.com',
+            'name': current_user.get_full_name() if current_user.is_authenticated else 'Demo User'
         }
     })
 
 @memory_companion_bp.route('/api/memory_companion/project_data')
-@login_required
-@require_permission('view_projects')
+@demo_or_require_permission('view_projects')
 def get_project_data():
     memory = load_memory()
     return jsonify(memory)
 
 @memory_companion_bp.route('/api/memory_companion/chat', methods=['POST', 'OPTIONS'])
-@login_required
-@require_permission('view_projects')
+@demo_or_require_permission('view_projects')
 def chat():
     if request.method == 'OPTIONS':
         return jsonify({}), 200
@@ -151,8 +168,8 @@ def chat():
         return jsonify({'error': str(e)}), 500
 
 @memory_companion_bp.route('/api/memory_companion/timeline', methods=['POST'])
-@login_required
-@require_permission('edit_projects')
+@demo_or_require_permission("view_projects")
+@demo_or_require_permission('edit_projects')
 def add_timeline_event():
     data = request.get_json()
     memory = load_memory()
@@ -175,8 +192,8 @@ def add_timeline_event():
     return jsonify({'status': 'success', 'event': event})
 
 @memory_companion_bp.route('/api/memory_companion/opportunity', methods=['POST'])
-@login_required
-@require_permission('edit_projects')
+@demo_or_require_permission("view_projects")
+@demo_or_require_permission('edit_projects')
 def add_opportunity():
     data = request.get_json()
     memory = load_memory()
@@ -197,8 +214,8 @@ def add_opportunity():
     return jsonify({'status': 'success', 'opportunity': opportunity})
 
 @memory_companion_bp.route('/api/memory_companion/sprint', methods=['PUT'])
-@login_required
-@require_permission('edit_projects')
+@demo_or_require_permission("view_projects")
+@demo_or_require_permission('edit_projects')
 def update_sprint():
     data = request.get_json()
     memory = load_memory()
@@ -209,8 +226,8 @@ def update_sprint():
     return jsonify({'status': 'success', 'sprint': memory['current_sprint']})
 
 @memory_companion_bp.route('/api/memory_companion/timeline/<int:event_id>', methods=['PUT'])
-@login_required
-@require_permission('edit_projects')
+@demo_or_require_permission("view_projects")
+@demo_or_require_permission('edit_projects')
 def update_timeline_event(event_id):
     data = request.get_json()
     memory = load_memory()
@@ -242,8 +259,8 @@ def update_timeline_event(event_id):
     return jsonify({'status': 'success', 'event': event})
 
 @memory_companion_bp.route('/api/memory_companion/timeline/<int:event_id>', methods=['DELETE'])
-@login_required
-@require_permission('edit_projects')
+@demo_or_require_permission("view_projects")
+@demo_or_require_permission('edit_projects')
 def delete_timeline_event(event_id):
     memory = load_memory()
     
@@ -266,8 +283,8 @@ def delete_timeline_event(event_id):
     return jsonify({'status': 'success', 'message': f'Timeline event {event_id} deleted'})
 
 @memory_companion_bp.route('/api/memory_companion/timeline/cleanup', methods=['POST'])
-@login_required
-@require_permission('edit_projects')
+@demo_or_require_permission("view_projects")
+@demo_or_require_permission('edit_projects')
 def cleanup_timeline():
     memory = load_memory()
     
@@ -292,8 +309,8 @@ def cleanup_timeline():
     })
 
 @memory_companion_bp.route('/api/memory_companion/opportunity/<int:opportunity_id>', methods=['PUT'])
-@login_required
-@require_permission('edit_projects')
+@demo_or_require_permission("view_projects")
+@demo_or_require_permission('edit_projects')
 def update_opportunity(opportunity_id):
     data = request.get_json()
     memory = load_memory()
