@@ -1,0 +1,16 @@
+README.md
+setup.py
+agents/__init__.py
+agents/messaging.py
+agents/orchestrator.py
+eunoia_demo.egg-info/PKG-INFO
+eunoia_demo.egg-info/SOURCES.txt
+eunoia_demo.egg-info/dependency_links.txt
+eunoia_demo.egg-info/requires.txt
+eunoia_demo.egg-info/top_level.txt
+research_council/__init__.py
+research_council/prompt_manager.py
+research_council/run_langchain_prompt_manager.py
+research_council/prompt_manager/__init__.py
+research_council/prompt_manager/prompt_manager.py
+research_council/prompt_manager/prompt_routes.py

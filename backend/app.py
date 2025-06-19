@@ -6,11 +6,39 @@ from datetime import datetime, timedelta
 import os
 from dotenv import load_dotenv
 import uuid
-from agents.orchestrator import orchestrator
+import sys
+
+# Add the project root to Python path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from flask_migrate import Migrate
-from research_council.prompt_manager.prompt_routes import prompt_bp
-from agents.messaging import send_message, get_messages
-from agents.memory_companion import memory_companion_bp
+
+# Try to import optional modules, but don't fail if they're not available
+try:
+    from research_council.prompt_manager.prompt_routes import prompt_bp
+except ImportError:
+    print("Warning: research_council module not found. Some features may be disabled.")
+    prompt_bp = None
+
+try:
+    from backend.agents.orchestrator import orchestrator
+except ImportError:
+    print("Warning: orchestrator module not found. Some features may be disabled.")
+    orchestrator = None
+
+try:
+    from backend.agents.messaging import send_message, get_messages
+except ImportError:
+    print("Warning: messaging module not found. Some features may be disabled.")
+    send_message = None
+    get_messages = None
+
+try:
+    from backend.agents.memory_companion import memory_companion_bp
+except ImportError:
+    print("Warning: memory_companion module not found. Some features may be disabled.")
+    memory_companion_bp = None
+
 from functools import wraps
 
 # Load environment variables
@@ -1196,13 +1224,18 @@ def process_message(session_id):
         return jsonify({'error': 'No message provided'}), 400
     
     # Process the message through the orchestrator
-    response = orchestrator.process_message(message, session.session_history)
-    
-    # Update session history
-    session.session_history = response['session_history']
-    db.session.commit()
-    
-    return jsonify(response)
+    if orchestrator:
+        response = orchestrator.process_message(message, session.session_history)
+        # Update session history
+        session.session_history = response['session_history']
+        db.session.commit()
+        return jsonify(response)
+    else:
+        # Fallback response when orchestrator is not available
+        return jsonify({
+            'response': 'Interview system is currently unavailable. Please try again later.',
+            'session_history': session.session_history or ''
+        })
 
 @app.route('/interview/<int:session_id>/end', methods=['POST'])
 @login_required
@@ -1240,7 +1273,8 @@ class Activity(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
 # Register the prompt blueprint
-app.register_blueprint(prompt_bp)
+if prompt_bp:
+    app.register_blueprint(prompt_bp)
 
 @app.route('/demo-messaging/send', methods=['POST'])
 def demo_send_message():
@@ -1254,17 +1288,22 @@ def demo_send_message():
         'content': content,
         'timestamp': datetime.utcnow().isoformat()
     }
-    send_message('synthia_inbox', message)
+    if send_message:
+        send_message('synthia_inbox', message)
     return jsonify({'status': 'sent', 'message': message})
 
 @app.route('/demo-messaging/inbox', methods=['GET'])
 def demo_view_inbox():
     """View Synthia's inbox (last 10 messages)"""
-    messages = get_messages('synthia_inbox', max_messages=10)
+    if get_messages:
+        messages = get_messages('synthia_inbox', max_messages=10)
+    else:
+        messages = []
     return jsonify({'inbox': messages})
 
 # Register the memory_companion_bp blueprint
-app.register_blueprint(memory_companion_bp)
+if memory_companion_bp:
+    app.register_blueprint(memory_companion_bp)
 
 @app.route('/memory-companion-demo')
 @demo_or_login_required
@@ -1274,7 +1313,7 @@ def memory_companion_demo():
 @app.route('/cover-oregon-prototype/')
 @app.route('/cover-oregon-prototype/<path:filename>')
 def cover_oregon_prototype(filename='index.html'):
-    return send_from_directory('static/cover_oregon_prototype/html', filename)
+    return redirect(url_for('static', filename=f'cover_oregon_prototype/html/{filename}'))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5050) 

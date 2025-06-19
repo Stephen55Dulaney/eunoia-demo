@@ -2,165 +2,659 @@
 
 {% block title %}Eunoia Research Council: Modular Research Assistant Prompt Manager{% endblock %}
 
+{% block extra_css %}
+<style>
+  /* Enhanced case study styles */
+  .hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('/static/cover_oregon_prototype/html/styles/img/CO_Cannon Beach-edited copy.png') center center/cover no-repeat;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    margin-bottom: 3rem;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    border-radius: 1rem;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 3rem 2rem;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #6db33f, #4a90e2);
+    border-radius: 2px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 2rem;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0.5rem;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 3px solid #6db33f;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .persona-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+  }
+  
+  .persona-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  
+  .persona-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, #6db33f, #4a90e2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .ambition-section {
+    background: linear-gradient(135deg, #e6f2ff, #f0f8ff);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .ambition-quote {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2c5282;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    background: rgba(255,255,255,0.8);
+    border-radius: 12px;
+    border-left: 6px solid #6db33f;
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .metric-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-top: 4px solid #6db33f;
+  }
+  
+  .metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #6db33f;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial {
+    background: #f8f9fa;
+    border-left: 4px solid #6db33f;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+  }
+  
+  .architecture-diagram {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin: 2rem 0;
+  }
+  
+  .ui-screens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .ui-screen-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+  }
+  
+  .ui-screen-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .ui-screen-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a90e2;
+    font-weight: 500;
+  }
+  
+  .cta-section {
+    background: linear-gradient(135deg, #6db33f, #5ca32e);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    margin: 3rem 0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-family: 'Avenir_Black', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 7px;
+    transition: all 0.2s;
+    margin: 0.5rem;
+    text-shadow: 1px 1px 1px #000;
+  }
+  
+  .cta-button.primary {
+    background: #7BC93D;
+    background: linear-gradient(#7BC93D, #559b1e);
+    border: 1px solid #559b1e;
+    color: #FFF !important;
+  }
+  
+  .cta-button.primary:hover {
+    background: #559b1e;
+    background: linear-gradient(#559b1e, #7BC93D);
+    color: #FFF !important;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  
+  .cta-button.secondary {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    color: white !important;
+  }
+  
+  .cta-button.secondary:hover {
+    background: rgba(255,255,255,0.3);
+    color: white !important;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      min-height: 400px;
+      padding: 2rem 1rem;
+    }
+    
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+      padding-left: 1rem;
+    }
+    
+    .timeline::before {
+      left: 0.5rem;
+    }
+    
+    .timeline-item {
+      padding-left: 1.5rem;
+    }
+  }
+</style>
+{% endblock %}
+
 {% block content %}
 
-<section class="eo-hero-section" style="background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('/static/cover_oregon_prototype/html/styles/img/CO_Cannon Beach-edited copy.png') center center/cover no-repeat; color: #fff; min-height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 2.5rem; padding: 3rem 1rem;">
-  <h1 class="eo-hero-title text-5xl font-extrabold mb-4">Eunoia Research Council</h1>
-  <div style="background: rgba(0,0,0,0.7); color: #fff; border-radius: 0.5rem; padding: 0.75rem 1.5rem; max-width: 700px; margin: 0 auto 0.5rem auto;">
-    <p class="text-xl font-medium mb-2" style="color: #fff;">Modular Research Assistant Prompt Manager</p>
-    <p class="text-lg opacity-90 mb-0" style="color: #fff;">Enabling scalable, auditable, and collaborative AI research workflows</p>
-  </div>
-  <div class="mt-6 flex justify-center">
-    <a href="{{ url_for('prompts.prompt_list') }}"
-       class="inline-block px-6 py-3 rounded-lg font-bold text-lg shadow transition eo-demo-btn"
-       style="background-color: #6db33f; font-weight: bold; letter-spacing: 1px; color: #fff;"
-    >
-      Try the Prompt Manager Demo
-    </a>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="text-6xl font-extrabold mb-6 text-white">Turning Tangled Prompts into Seamless AI Workflows</h1>
+    <p class="text-xl opacity-90 mb-8 text-white max-w-2xl mx-auto">
+      How we empowered research teams with modular prompt management, agent chaining, and auditability
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="{{ url_for('prompts.prompt_list') }}"
+         class="cta-button primary">
+        Try the Prompt Manager Demo
+      </a>
+      <a href="#demo" 
+         class="cta-button secondary">
+        View Live Demo
+      </a>
+    </div>
   </div>
 </section>
-<article class="eo-container">
+
+<article class="eo-container max-w-6xl mx-auto">
+  
   <!-- Context & Business Problem -->
-  <section id="context" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Context & Business Problem</h2>
-    <p><strong>Background:</strong> Modern research teams increasingly rely on AI agents for interviewing, synthesis, and insight generation. However, managing the lifecycle of prompts and chaining specialized agents remains a challenge.</p>
-    <p><strong>Business Problem:</strong> Existing tools lack structured prompt management, version control, and reproducibility. Manual coordination across tools leads to errors, lost context, and inconsistent research outcomes.</p>
-    <p><strong>Success Metrics:</strong> Number of reusable prompt modules, reduction in agent onboarding time, auditability of research sessions.</p>
-    <p><strong>Role & Team:</strong> Lead AI Research Engineer; 4-person cross-functional team.</p>
-    <p><strong>Timeline:</strong> Discovery (6w), Sprints (10w).</p>
+  <section id="context" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Context & Challenge</h2>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="text-lg mb-4"><strong>Imagine Alex:</strong> a researcher who spends hours reconstructing a lost prompt version before every session. Modern teams rely on AI agents for interviews, synthesis, and insights—but prompt drift, missing version control, and manual handoffs cause frustration and inconsistent outcomes.</p>
+        <p class="text-lg mb-4"><strong>Business Problem:</strong> No structured prompt repository, versioning, or reproducibility. Manual coordination across tools leads to errors, lost context, and wasted time.</p>
+        <p class="text-lg"><strong>Success Metrics:</strong> Reusable prompt modules; agent onboarding time reduction; auditability of research sessions.</p>
+      </div>
+      <div class="text-center">
+        <div class="ui-screen-placeholder">
+          <div class="text-center">
+            <div class="text-4xl mb-2">📊</div>
+            <p>Current Workflow: Tangled prompts, manual handoffs</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Discovery Phase -->
-  <section id="discovery" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Discovery Phase</h2>
-    <section id="week0" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Week 0: Kickoff & Discovery Planning</h3>
-      <p>Goals: Map current research workflows, identify pain points in prompt management, and define requirements for modularity and chaining.</p>
-    </section>
-    <section id="stakeholder-interviews" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Stakeholder Interviews & Ambition Statement</h3>
-      <p>Interviewed UX researchers, data scientists, and product managers. Main themes: need for prompt versioning, agent chaining, and audit trails.</p>
-      <blockquote class="ambition-statement bg-gray-100 p-4 rounded mt-2">
-        "Ambition Statement: Enable research teams to orchestrate modular AI agents with traceable, versioned prompts for every research session."
-      </blockquote>
-    </section>
+  <!-- Ambition Statement -->
+  <section class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-gray-800">Our Ambition</h2>
+    <blockquote class="ambition-quote">
+      Enable research teams to orchestrate modular AI agents with traceable, versioned prompts for every research session.
+    </blockquote>
+    <div class="ui-screen-placeholder max-w-4xl mx-auto">
+      <div class="text-center">
+        <div class="text-4xl mb-2">🚀</div>
+        <p>Future Workflow: Modular prompt repository feeding agent chaining with audit logs</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Personas & Recruitment -->
-  <section id="personas" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Defining Target Personas & Recruitment</h2>
-    <p>Segments: Research Ops, Lead Researchers, AI Engineers. Key attributes: value reproducibility, need for collaboration, frequent prompt iteration.</p>
+  <!-- Role & Team -->
+  <section id="team" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Role & Team</h2>
+    <div class="cards-grid">
+      <div class="persona-card">
+        <div class="persona-avatar">👨‍💻</div>
+        <h3 class="text-xl font-semibold mb-2">Lead AI Research Engineer</h3>
+        <p>Guided discovery, design, and delivery of modular AI research workflows.</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-avatar">👩‍🔬</div>
+        <h3 class="text-xl font-semibold mb-2">UX Researcher</h3>
+        <p>Conducted contextual inquiries and usability tests for AI interactions.</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-avatar">⚙️</div>
+        <h3 class="text-xl font-semibold mb-2">AI Engineer</h3>
+        <p>Built orchestration pipelines and prototype integrations.</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-avatar">📋</div>
+        <h3 class="text-xl font-semibold mb-2">Product Manager</h3>
+        <p>Prioritized features, aligned business goals, and measured impact.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Field Research -->
-  <section id="field-research" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Field Research</h2>
-    <section id="contextual-inquiry" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Contextual Inquiries</h3>
-      <p>Shadowed research teams using legacy tools. Documented workflow breakdowns and prompt handoff failures.</p>
-    </section>
-    <section id="interviews" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Individual & Group Interviews</h3>
-      <p>Key findings: prompt drift, lack of audit trails, and difficulty onboarding new agents.</p>
-    </section>
+  <!-- Discovery Timeline -->
+  <section id="discovery" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Discovery Phase (6 weeks)</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3 class="text-xl font-semibold mb-2">Week 0: Kickoff & Planning</h3>
+        <p>Workshoped current workflows: prompt drafting → agent runs → manual handoffs. Identified pain points and success criteria.</p>
+        <div class="ui-screen-placeholder mt-4">
+          <div class="text-center">
+            <div class="text-2xl mb-1">👥</div>
+            <p>Team workshop illustration</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <h3 class="text-xl font-semibold mb-2">Stakeholder Interviews & Ambition</h3>
+        <p>Interviewed UX researchers, data scientists, product managers. Themes: versioning, chaining, audit trails.</p>
+      </div>
+      <div class="timeline-item">
+        <h3 class="text-xl font-semibold mb-2">Personas & Recruitment</h3>
+        <p>Defined personas: Prompt Authors, Agent Orchestrators, Research Ops Managers. Recruited pilot users across skill levels.</p>
+      </div>
+      <div class="timeline-item">
+        <h3 class="text-xl font-semibold mb-2">Field Research</h3>
+        <p>Shadowed teams using legacy tools; uncovered prompt drift, lost context, onboarding friction.</p>
+        <div class="ui-screen-placeholder mt-4">
+          <div class="text-center">
+            <div class="text-2xl mb-1">🔍</div>
+            <p>Illustration of prompt drift pain</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Synthesis -->
-  <section id="synthesis" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Synthesis: Modular Prompts & Agent Chaining</h2>
-    <section id="persona-cards" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Persona Creation</h3>
-      <p>Developed archetypes for prompt authors, agent orchestrators, and research ops.</p>
-    </section>
-    <section id="journey-maps" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Journey Mapping</h3>
-      <p>Mapped the end-to-end workflow from prompt creation to agent chaining and research output.</p>
-    </section>
+  <!-- Personas & Journey -->
+  <section id="personas" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Personas & Journey Mapping</h2>
+    <div class="cards-grid">
+      <div class="persona-card">
+        <div class="persona-avatar">👨‍💼</div>
+        <h3 class="text-xl font-semibold mb-2">Alex, Prompt Author</h3>
+        <p class="text-gray-600 italic">"I lost the prompt version I tested last month—now I have to recreate it from memory."</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-avatar">👩‍💻</div>
+        <h3 class="text-xl font-semibold mb-2">Jordan, Agent Orchestrator</h3>
+        <p class="text-gray-600 italic">"Chaining agents is manual and error-prone; JSON mismatches break flows unexpectedly."</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-avatar">👨‍🔧</div>
+        <h3 class="text-xl font-semibold mb-2">Morgan, Research Ops Manager</h3>
+        <p class="text-gray-600 italic">"Auditing past sessions is a nightmare without clear logs; compliance feels risky."</p>
+      </div>
+    </div>
+    <div class="architecture-diagram mt-8">
+      <h3 class="text-xl font-semibold mb-4">Journey Map</h3>
+      <div class="ui-screen-placeholder">
+        <div class="text-center">
+          <div class="text-4xl mb-2">🗺️</div>
+          <p>Journey map from prompt drafting to reuse with pain and opportunity annotations</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Opportunity Identification -->
-  <section id="opportunities" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Opportunity Identification & Prioritization</h2>
-    <section id="debrief-workshop" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Discovery Debrief Workshop</h3>
-      <p>Ran workshops to prioritize features: prompt forking, lifecycle management, chaining validation, and feedback scoring.</p>
-    </section>
-    <section id="ideation" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Ideation: Modular Prompt System</h3>
-      <p>Sketched system architecture for prompt repository, agent orchestration, chaining, and feedback modules.</p>
-    </section>
-    <section id="prioritization" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Prioritization Matrix (Effort vs Impact)</h3>
-      <p>Quick wins: prompt versioning and audit logs. Strategic bets: chaining and feedback engine.</p>
-    </section>
+  <!-- Opportunities & Prioritization -->
+  <section id="opportunities" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Opportunities & Prioritization</h2>
+    <div class="cards-grid">
+      <div class="card bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+        <strong>HMW version and diff prompts?</strong>
+      </div>
+      <div class="card bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+        <strong>HMW chain agents with schema validation?</strong>
+      </div>
+      <div class="card bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+        <strong>HMW log and replay sessions for audit?</strong>
+      </div>
+      <div class="card bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+        <strong>HMW capture feedback loops to refine prompts?</strong>
+      </div>
+    </div>
+    <div class="architecture-diagram mt-8">
+      <h3 class="text-xl font-semibold mb-4">Prioritization Matrix</h3>
+      <div class="ui-screen-placeholder">
+        <div class="text-center">
+          <div class="text-4xl mb-2">📊</div>
+          <p>Effort vs Impact matrix showing quick wins and strategic bets</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Implementation Planning -->
-  <section id="implementation" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">From Opportunities to Implementation</h2>
-    <section id="epics-stories" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Epics & User Stories</h3>
-      <p>Backlog included: prompt CRUD, versioning, agent chaining, feedback capture, and audit trail UI.</p>
-    </section>
-    <section id="design-sprints" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Design & Prototyping Sprints</h3>
-      <p>Iterative sprints delivered working prompt manager, chaining UI, and feedback dashboard.</p>
-    </section>
+  <!-- Solution & Prototyping -->
+  <section id="solution" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Solution & Prototyping</h2>
+    <h3 class="text-2xl font-semibold mb-4">Architecture Overview</h3>
+    <div class="architecture-diagram">
+      <div class="ui-screen-placeholder">
+        <div class="text-center">
+          <div class="text-4xl mb-2">🏗️</div>
+          <p>Architecture: Prompt Store, Agent Registry, Orchestration Engine, Audit Log, Feedback, Analytics</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold mb-6 mt-8">Key UI Screens</h3>
+    <div class="ui-screens-grid">
+      <div class="ui-screen-card">
+        <div class="ui-screen-placeholder">
+          <div class="text-center">
+            <div class="text-3xl mb-2">📚</div>
+            <p>Prompt Repository</p>
+          </div>
+        </div>
+        <div class="p-4">
+          <p><strong>Prompt Repository</strong>: Browse, version, tag, fork modules.</p>
+        </div>
+      </div>
+      <div class="ui-screen-card">
+        <div class="ui-screen-placeholder">
+          <div class="text-center">
+            <div class="text-3xl mb-2">🔗</div>
+            <p>Chaining Editor</p>
+          </div>
+        </div>
+        <div class="p-4">
+          <p><strong>Chaining Editor</strong>: Visual flow, schema validation, sandbox run.</p>
+        </div>
+      </div>
+      <div class="ui-screen-card">
+        <div class="ui-screen-placeholder">
+          <div class="text-center">
+            <div class="text-3xl mb-2">📋</div>
+            <p>Session Audit</p>
+          </div>
+        </div>
+        <div class="p-4">
+          <p><strong>Session Audit</strong>: View prompt/agent versions, parameters, replay.</p>
+        </div>
+      </div>
+      <div class="ui-screen-card">
+        <div class="ui-screen-placeholder">
+          <div class="text-center">
+            <div class="text-3xl mb-2">📊</div>
+            <p>Feedback Dashboard</p>
+          </div>
+        </div>
+        <div class="p-4">
+          <p><strong>Feedback Dashboard</strong>: Rate outputs, aggregate insights.</p>
+        </div>
+      </div>
+      <div class="ui-screen-card">
+        <div class="ui-screen-placeholder">
+          <div class="text-center">
+            <div class="text-3xl mb-2">📈</div>
+            <p>Analytics</p>
+          </div>
+        </div>
+        <div class="p-4">
+          <p><strong>Analytics</strong>: Prompt reuse, onboarding time, reproducibility metrics.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Outcome & Impact -->
-  <section id="outcome" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Outcome & Impact</h2>
-    <section id="final-solution" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Final Solution Overview</h3>
-      <p>Launched Eunoia Research Council with modular prompt management, agent chaining, and auditability. Enabled scalable, reproducible research workflows.</p>
-    </section>
-    <section id="metrics" class="subsection mb-4">
-      <h3 class="text-xl font-semibold mb-2">Quantitative Results</h3>
-      <ul class="list-disc ml-6">
-        <li>Prompt versioning ↑ 100%</li>
-        <li>Agent onboarding time ↓ 60%</li>
-        <li>Research reproducibility ↑ 80%</li>
-      </ul>
-    </section>
-    <section id="qualitative-feedback" class="subsection">
-      <h3 class="text-xl font-semibold mb-2">Qualitative Feedback</h3>
-      <blockquote class="bg-gray-100 p-4 rounded">"The modular prompt manager made it easy to experiment, iterate, and scale our research agents."</blockquote>
-    </section>
+  <!-- Outcomes & Impact -->
+  <section id="outcomes" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Outcomes & Impact</h2>
+    <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Before & After</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center">
+            <span class="text-red-500 mr-2">❌</span>
+            <span class="line-through mr-2">~50% manual tracking</span>
+            <span class="text-green-500 mr-2">→</span>
+            <span class="font-semibold text-green-600">100% tracked & diffed</span>
+          </li>
+          <li class="flex items-center">
+            <span class="text-red-500 mr-2">❌</span>
+            <span class="line-through mr-2">~5 days</span>
+            <span class="text-green-500 mr-2">→</span>
+            <span class="font-semibold text-green-600">~2 days</span>
+          </li>
+          <li class="flex items-center">
+            <span class="text-red-500 mr-2">❌</span>
+            <span class="line-through mr-2">20% reproducible</span>
+            <span class="text-green-500 mr-2">→</span>
+            <span class="font-semibold text-green-600">100% reproducible in saved sessions</span>
+          </li>
+        </ul>
+      </div>
+      <div class="text-center">
+        <div class="ui-screen-placeholder">
+          <div class="text-center">
+            <div class="text-4xl mb-2">📈</div>
+            <p>Chart showing onboarding time reduction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h3 class="text-2xl font-semibold mb-4">Testimonials</h3>
+    <div class="space-y-4">
+      <div class="testimonial">
+        "The modular prompt manager made it easy to experiment, iterate, and scale our research agents." — UX Researcher
+      </div>
+      <div class="testimonial">
+        "Agent chaining UI eliminated endless scripting; I can visually validate data flows." — AI Engineer
+      </div>
+      <div class="testimonial">
+        "Audit logs and replay feature give me confidence for compliance." — Research Ops Manager
+      </div>
+    </div>
   </section>
 
   <!-- Reflections & Next Steps -->
-  <section id="reflections" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
-    <h2 class="text-2xl font-semibold mb-4">Reflections & Learnings</h2>
-    <h3 class="text-xl font-semibold mb-2">What Went Well</h3>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Prompt versioning and audit logs enabled safe experimentation.</li>
-      <li>Agent chaining improved research throughput and insight quality.</li>
-    </ul>
-    <h3 class="text-xl font-semibold mb-2">Challenges & Mitigations</h3>
-    <ul class="list-disc ml-6 mb-4">
-      <li>Initial complexity in chaining logic—solved with clear JSON handoff formats.</li>
-      <li>Feedback engine required iterative tuning for actionable insights.</li>
-    </ul>
-    <h3 class="text-xl font-semibold mb-2">Next Steps</h3>
-    <ul class="list-disc ml-6">
-      <li>Integrate authentication and user roles.</li>
-      <li>Expand chaining to support more agent types.</li>
-      <li>Monitor prompt performance and iterate on feedback engine.</li>
-    </ul>
+  <section id="learnings" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Reflections & Learnings</h2>
+    <div class="cards-grid">
+      <div class="card bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+        <h3 class="text-xl font-semibold mb-3 text-green-800">What Went Well</h3>
+        <ul class="space-y-2 text-green-700">
+          <li>• Modular versioning prevented prompt drift and encouraged reuse.</li>
+          <li>• Visual and code-based chaining modes satisfied diverse users.</li>
+          <li>• Auditability by design built trust and simplified compliance.</li>
+          <li>• Iterative testing caught usability issues early.</li>
+          <li>• Feedback engine drove continuous prompt improvement.</li>
+        </ul>
+      </div>
+      <div class="card bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+        <h3 class="text-xl font-semibold mb-3 text-orange-800">Challenges & Mitigations</h3>
+        <ul class="space-y-2 text-orange-700">
+          <li>• Chaining complexity: started with common schemas, then advanced options.</li>
+          <li>• UI vs code: offered dual modes (visual editor + JSON editor).</li>
+          <li>• Log scale: retention policies and indexing for performance.</li>
+          <li>• Permissions: role-based defaults simplified sharing/forking.</li>
+          <li>• Feedback consistency: structured rating + comment forms.</li>
+        </ul>
+      </div>
+      <div class="card bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+        <h3 class="text-xl font-semibold mb-3 text-blue-800">Next Steps</h3>
+        <ul class="space-y-2 text-blue-700">
+          <li>• Integrate authentication & fine-grained roles.</li>
+          <li>• Expand agent ecosystem with plugin architecture.</li>
+          <li>• Advanced analytics & recommendations for prompt modules.</li>
+          <li>• Collaborative workspaces (real-time editing, notifications).</li>
+          <li>• Automated prompt testing pipelines for CI workflows.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="architecture-diagram mt-8">
+      <h3 class="text-xl font-semibold mb-4">Roadmap</h3>
+      <div class="ui-screen-placeholder">
+        <div class="text-center">
+          <div class="text-4xl mb-2">🗓️</div>
+          <p>Next steps roadmap timeline graphic</p>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <h2 class="text-3xl font-bold mb-4">Ready to Transform Your AI Research Workflows?</h2>
+    <p class="text-xl mb-6 opacity-90">Explore Eunoia Memory Companion or request a demo to see how modular prompt management and agent chaining can accelerate your insights.</p>
+    <a href="#demo" class="cta-button primary">Request a Demo</a>
+  </section>
+
 </article>
-<section id="agent-messaging-demo" class="eo-card bg-blue-50 p-6 rounded-xl shadow mb-8">
-  <h2 class="text-2xl font-semibold mb-4">Live Agent Messaging Demo</h2>
-  <form id="send-message-form" class="mb-4 flex gap-2">
-    <input type="text" id="message-content" class="border rounded px-2 py-1 flex-1" placeholder="Type a message as Eunoia..." required>
-    <button type="submit" class="eo-btn eo-btn-primary">Send to Synthia</button>
+
+<!-- Live Demo Section -->
+<section id="demo" class="eo-card bg-blue-50 p-8 rounded-xl shadow-xl mb-8 max-w-4xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6 text-gray-800">Live Agent Messaging Demo</h2>
+  <form id="send-message-form" class="mb-6 flex gap-4">
+    <input type="text" id="message-content" class="flex-1 border rounded-lg px-4 py-3 text-lg" placeholder="Type a message as Eunoia..." required>
+    <button type="submit" class="cta-button primary">Send to Synthia</button>
   </form>
   <div>
-    <h3 class="text-lg font-semibold mb-2">Synthia's Inbox</h3>
-    <ul id="inbox-list" class="bg-white rounded p-3 shadow max-h-64 overflow-y-auto"></ul>
+    <h3 class="text-xl font-semibold mb-4">Synthia's Inbox</h3>
+    <ul id="inbox-list" class="bg-white rounded-lg p-4 shadow max-h-64 overflow-y-auto space-y-2"></ul>
   </div>
 </section>
+
 <script>
   async function fetchInbox() {
     const res = await fetch('/demo-messaging/inbox');
@@ -170,8 +664,14 @@
     list.innerHTML = '';
     inbox.forEach(msg => {
       const li = document.createElement('li');
-      li.className = 'mb-2 p-2 border-b';
-      li.textContent = `[${msg.timestamp}] ${msg.sender}: ${msg.content}`;
+      li.className = 'p-3 border-b border-gray-100 last:border-b-0 bg-gray-50 rounded';
+      li.innerHTML = `
+        <div class="flex items-center justify-between">
+          <span class="font-medium text-gray-700">${msg.sender}</span>
+          <span class="text-sm text-gray-500">${msg.timestamp}</span>
+        </div>
+        <p class="text-gray-600 mt-1">${msg.content}</p>
+      `;
       list.appendChild(li);
     });
   }
@@ -192,15 +692,5 @@
   fetchInbox();
   setInterval(fetchInbox, 3000);
 </script>
-<style>
-.eo-demo-btn {
-  color: #fff !important;
-  background-color: #6db33f;
-  transition: background 0.2s, color 0.2s;
-}
-.eo-demo-btn:hover, .eo-demo-btn:focus {
-  background-color: #5ca32e !important;
-  color: #111 !important;
-}
-</style>
+
 {% endblock %} 
