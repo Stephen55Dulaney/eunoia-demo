@@ -1,55 +1,280 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cover Oregon Case Study - Eunoia Demo</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; }
-        .header { background: #0066cc; color: white; padding: 30px; text-align: center; }
-        .content { padding: 30px; }
-        .prototype-link { background: #f0f8ff; padding: 20px; border-radius: 8px; margin: 20px 0; }
-        .prototype-link a { background: #0066cc; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; }
-        .prototype-link a:hover { background: #0052a3; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Cover Oregon Healthcare Exchange</h1>
-            <p>UX/UI Design Case Study</p>
-        </div>
-        
-        <div class="content">
-            <h2>Project Overview</h2>
-            <p>The Cover Oregon project involved designing a user-friendly interface for Oregon's healthcare exchange platform, helping residents find and enroll in affordable health insurance plans.</p>
-            
-            <div class="prototype-link">
-                <h3>🎯 Interactive Prototype</h3>
-                <p>Explore the working prototype to see the user interface design in action:</p>
-                <a href="/cover-oregon-prototype/" target="_blank">View Cover Oregon Prototype</a>
-            </div>
-            
-            <h2>Key Design Challenges</h2>
-            <ul>
-                <li><strong>Complex Information Architecture:</strong> Organizing vast amounts of healthcare plan data in an intuitive way</li>
-                <li><strong>Accessibility:</strong> Ensuring the platform works for users with diverse abilities and technical skills</li>
-                <li><strong>Multi-language Support:</strong> Serving Oregon's diverse population with multiple languages</li>
-                <li><strong>Financial Assistance Integration:</strong> Seamlessly incorporating subsidy calculations</li>
-            </ul>
-            
-            <h2>Design Solutions</h2>
-            <ul>
-                <li><strong>Progressive Disclosure:</strong> Breaking complex processes into manageable steps</li>
-                <li><strong>Visual Hierarchy:</strong> Using clear typography and spacing to guide users</li>
-                <li><strong>Interactive Elements:</strong> Real-time plan comparison and cost calculators</li>
-                <li><strong>Responsive Design:</strong> Ensuring usability across all devices</li>
-            </ul>
-            
-            <h2>Impact</h2>
-            <p>This design approach helped thousands of Oregon residents successfully navigate the complex healthcare enrollment process, making healthcare more accessible to the community.</p>
-        </div>
+{% extends "base.html" %}
+
+{% block title %}Cover Oregon UX Case Study – Experience Architecture & Usability Lead: Stephen Dulaney{% endblock %}
+
+{% block content %}
+{% set hero_bg = url_for('static', filename='cover_oregon_prototype/html/styles/img/Homepage1.png') %}
+<style>
+  .cover-oregon-hero-bg {
+    background-image: url('{{ hero_bg }}');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+  .eo-demo-btn {
+    color: #fff !important;
+    background-color: #6db33f;
+    transition: background 0.2s, color 0.2s;
+  }
+  .eo-demo-btn:hover, .eo-demo-btn:focus {
+    background-color: #5ca32e !important;
+    color: #111 !important;
+  }
+</style>
+<header class="hero relative cover-oregon-hero-bg" role="banner">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="hero-content relative z-10 flex flex-col items-center justify-center" style="position: relative; padding: 4rem 1rem; text-align: center;">
+    <h1 class="text-4xl font-extrabold mb-2 text-white drop-shadow-lg">Cover Oregon UX Case Study</h1>
+    <p class="font-semibold text-lg text-white drop-shadow">Experience Architecture &amp; Usability Lead: Stephen Dulaney</p>
+    <ul class="key-metrics flex flex-wrap justify-center gap-2 mt-4">
+      <li class="px-3 py-1 rounded font-bold text-white">Role: UX Lead, Experience Architecture &amp; Usability</li>
+      <li class="px-3 py-1 rounded font-bold text-white">Engagement Period: July 2012 – May 2013</li>
+      <li class="px-3 py-1 rounded font-bold text-white">Focus: Enrollment workflow design &amp; extensive usability testing</li>
+    </ul>
+  </div>
+</header>
+
+<!-- Context & Background -->
+<section class="bg-white my-4 p-6 rounded shadow" id="context" aria-labelledby="context-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="context-heading">Context & Project Background</h2>
+  <p>
+    Cover Oregon (Oct 1, 2012 – Mar 6, 2015) was Oregon's ACA health insurance exchange. Stephen Dulaney served as UX Lead for Experience Architecture & Usability from July 2012 to May 2013, directing a team of ~5 UX practitioners to establish foundational UX artifacts and prototypes.
+  </p>
+  <p class="mt-2">
+    <strong>Stephen's Responsibilities:</strong>
+    <ul class="list-disc ml-6">
+      <li>Led discovery workshops and JAD sessions with state stakeholders, Deloitte leadership, and vendor teams.</li>
+      <li>Developed a high-fidelity HTML5/CSS/jQuery prototype simulating core enrollment processes.</li>
+      <li>Conducted 60+ in-person usability testing sessions with diverse participants, including multilingual support.</li>
+      <li>Integrated multi-language considerations (e.g., Spanish) in prototype and design.</li>
+      <li>Defined and oversaw accessibility requirements and audit remediation guidance.</li>
+      <li>Collaborated with development/QA to integrate interaction specs, test scripts, and analytics instrumentation.</li>
+    </ul>
+  </p>
+  <p class="mt-2">
+    <strong>Business Problem:</strong> Enable reliable online enrollment for Oregonians; early prototypes revealed key usability and technical challenges (identity verification, connectivity, complexity).
+  </p>
+  <p class="mt-2">
+    <strong>Success Metrics:</strong>
+    <ul class="list-disc ml-6">
+      <li>Online enrollment completion target (baseline low due to early failures).</li>
+      <li>Time-to-complete &lt;30 minutes.</li>
+      <li>Error/fallback rate minimized with clear recovery guidance.</li>
+      <li>User satisfaction ≥4/5 in testing.</li>
+      <li>Manual processing reduction via improved online success.</li>
+      <li>WCAG compliance and multilingual support.</li>
+    </ul>
+  </p>
+</section>
+
+<!-- Research & User Testing -->
+<section class="bg-white my-4 p-6 rounded shadow" id="research" aria-labelledby="research-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="research-heading">Research & User Testing</h2>
+  <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/research-methods-graphic.png') }}" alt="UX research team collaborating with sticky notes and journey maps on the wall" class="responsive mb-4 rounded">
+  <p><strong>Stephen's Approach:</strong></p>
+  <ul class="list-disc ml-6">
+    <li><strong>Stakeholder Workshops:</strong> Requirements and alignment sessions with Oregon Health Authority IT, vendor teams, and call-center managers.</li>
+    <li><strong>Persona & Journey Mapping:</strong> Created and refined personas (low-income applicants, rural users, small business owners, assisters) and mapped enrollment journeys.</li>
+    <li><strong>Usability Testing:</strong> 60+ in-person sessions covering identity verification, plan selection, submission, error/fallback, accessibility, and low-bandwidth scenarios.</li>
+    <li><strong>Heuristic & Accessibility Audit:</strong> Applied Nielsen heuristics and WCAG 2.1 AA checklists to prototypes and existing screens; provided remediation guidance.</li>
+    <li><strong>Support Log & Analytics Collaboration:</strong> Reviewed enrollment error logs and call-center data to prioritize fixes and test scenarios.</li>
+    <li><strong>Comparative Benchmarking:</strong> Studied HealthCare.gov and peer exchanges for best practices in progress indicators, inline validation, and feedback.</li>
+  </ul>
+</section>
+
+<!-- Personas -->
+<section class="bg-white my-4 p-6 rounded shadow" id="personas" aria-labelledby="personas-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="personas-heading">Key Personas</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 persona-gallery">
+    <div class="persona-card border rounded p-4 bg-gray-50 flex flex-col items-center">
+      <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/persona-maria.png') }}" alt="Persona: Maria, The Budget-Conscious Seeker" class="w-24 h-24 rounded-full mb-2 object-cover">
+      <h4 class="font-bold mb-1">Maria, The Budget-Conscious Seeker</h4>
+      <p><strong>Background:</strong> Low-income applicant; limited digital literacy; anxious about deadlines.</p>
+      <p><strong>Goals:</strong> Complete enrollment with clear guidance and save/resume ability.</p>
+      <p><strong>Pain Points:</strong> Verification failures; confusing instructions; language barriers.</p>
+      <p class="italic">"I tried online but kept hitting errors; I worried I missed the deadline."</p>
     </div>
-</body>
-</html>
+    <div class="persona-card border rounded p-4 bg-gray-50 flex flex-col items-center">
+      <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/persona-david.png') }}" alt="Persona: David, The Employee-Focused Entrepreneur" class="w-24 h-24 rounded-full mb-2 object-cover">
+      <h4 class="font-bold mb-1">David, The Employee-Focused Entrepreneur</h4>
+      <p><strong>Background:</strong> Small business owner; moderate tech comfort; limited time.</p>
+      <p><strong>Goals:</strong> Efficient plan comparison; bulk employee enrollment support.</p>
+      <p><strong>Pain Points:</strong> Overwhelming comparison tables; no multi-client interface.</p>
+      <p class="italic">"I want a quick overview of options and to know if my employees are enrolled."</p>
+    </div>
+    <div class="persona-card border rounded p-4 bg-gray-50 flex flex-col items-center">
+      <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/persona-eleanor.png') }}" alt="Persona: Eleanor, The Remote Navigator" class="w-24 h-24 rounded-full mb-2 object-cover">
+      <h4 class="font-bold mb-1">Eleanor, The Remote Navigator</h4>
+      <p><strong>Background:</strong> Rural resident; intermittent connectivity; mobile or public access.</p>
+      <p><strong>Goals:</strong> Continue enrollment despite network issues.</p>
+      <p><strong>Pain Points:</strong> Lost progress, heavy pages, unclear save options.</p>
+      <p class="italic">"I lost progress when my connection dropped; then I gave up."</p>
+    </div>
+    <div class="persona-card border rounded p-4 bg-gray-50 flex flex-col items-center">
+      <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/persona-robert.png') }}" alt="Persona: Robert, The Community Advocate" class="w-24 h-24 rounded-full mb-2 object-cover">
+      <h4 class="font-bold mb-1">Robert, The Community Advocate</h4>
+      <p><strong>Background:</strong> Healthcare assister/broker; high digital proficiency; supports many clients.</p>
+      <p><strong>Goals:</strong> Dashboard for monitoring client statuses; quick error resolution.</p>
+      <p><strong>Pain Points:</strong> Manual spreadsheets; inconsistent error reporting.</p>
+      <p class="italic">"I need a dashboard to see which clients are stuck and why."</p>
+    </div>
+  </div>
+</section>
+
+<!-- Insights & Pain Points -->
+<section class="bg-white my-4 p-6 rounded shadow" id="insights" aria-labelledby="insights-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="insights-heading">Insights & Pain Points</h2>
+  <ul class="list-disc ml-6">
+    <li><strong>Identity Verification Complexity:</strong> Cryptic failures; need inline guidance.</li>
+    <li><strong>Multi-Step Form Usability:</strong> Loss of context; lack of save/resume; timeouts.</li>
+    <li><strong>Error Messaging & Recovery:</strong> No actionable next steps; users unsure how to retry or get help.</li>
+    <li><strong>Plan Comparison Overload:</strong> Dense tables; lack of visual summaries and calculators.</li>
+    <li><strong>Low-Bandwidth & Offline Risks:</strong> Slow load times; absence of offline guidance/autosave.</li>
+    <li><strong>No Assister Dashboard:</strong> Brokers used spreadsheets; inefficiency and errors.</li>
+    <li><strong>Accessibility Barriers:</strong> Missing labels, low contrast, keyboard traps; multilingual support needed.</li>
+    <li><strong>Trust & Feedback Gaps:</strong> Users needed clear status updates to reduce anxiety.</li>
+  </ul>
+</section>
+
+<!-- Opportunities -->
+<section class="bg-white my-4 p-6 rounded shadow" id="opportunities" aria-labelledby="opportunities-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="opportunities-heading">Opportunities (How Might We)</h2>
+  <ul class="list-disc ml-6">
+    <li>HMW simplify identity verification with inline guidance and real-time validation?</li>
+    <li>HMW provide clear, actionable error messages with recovery options?</li>
+    <li>HMW design save & resume for low-bandwidth/offline users?</li>
+    <li>HMW build Assister Dashboard for multi-client tracking?</li>
+    <li>HMW integrate real-time status updates via notifications?</li>
+    <li>HMW improve plan comparison with visual aids and calculators?</li>
+    <li>HMW ensure WCAG-compliant, multilingual interfaces?</li>
+    <li>HMW incorporate seamless fallback workflows preserving data?</li>
+  </ul>
+</section>
+
+<!-- Design & Prototype -->
+<section class="bg-white my-4 p-6 rounded shadow" id="design" aria-labelledby="design-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="design-heading">Design & Prototype</h2>
+  <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/design-process-graphic.png') }}" alt="Design process flowchart for Cover Oregon project" class="responsive mb-4 rounded">
+
+  <h3 class="text-xl font-bold mt-4">Ideation & Key Concepts</h3>
+  <ul class="list-disc ml-6">
+    <li><strong>Visual Plan Comparison Dashboard:</strong> Filters, visual cards, subsidy calculator.</li>
+    <li><strong>Contextual Help & Agent Connect:</strong> Persistent help icons linking to tips or live assistance.</li>
+    <li><strong>Multi-Step Save-&-Resume Form:</strong> Progress bar, inline tooltips, autosave triggers.</li>
+    <li><strong>Assister Dashboard:</strong> Client table with statuses and quick actions.</li>
+    <li><strong>Error Card Component:</strong> Clear messaging, unique codes, actionable buttons.</li>
+    <li><strong>Notification Center:</strong> Opt-in notifications at key milestones.</li>
+    <li><strong>Accessibility Mode & Multilingual Support:</strong> High contrast, scalable text, ARIA attributes, language selector.</li>
+    <li><strong>Offline Guidance Overlay:</strong> Autosave prompts and printable summary on network drop.</li>
+  </ul>
+
+  <h3 class="text-xl font-bold mt-4">Prioritization</h3>
+  <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/effort-impact-matrix.png') }}" alt="Effort vs. Impact matrix for project prioritization" class="responsive mb-4 rounded">
+  <ul class="list-disc ml-6">
+    <li><strong>Quick Wins:</strong> Error handling, contextual help, accessibility fixes, notifications.</li>
+    <li><strong>Strategic:</strong> Identity verification overhaul, offline save/resume.</li>
+    <li><strong>Medium:</strong> Assister Dashboard, plan comparison enhancements.</li>
+    <li><strong>Low Effort/Medium Impact:</strong> UI refinements, inline guidance.</li>
+  </ul>
+
+  <h3 class="text-xl font-bold mt-4">Prototype Development</h3>
+  <p><strong>Tech Stack:</strong> HTML5, semantic markup; CSS responsive layouts; jQuery interactivity.</p>
+  <div class="prototype-screenshots grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+    <figure>
+      <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/prototype-form.png') }}" alt="Prototype: Multi-Step Enrollment Form" class="responsive rounded">
+      <figcaption class="text-sm text-gray-600">Multi-Step Enrollment Form with inline guidance and autosave prompts.</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/prototype-dashboard.png') }}" alt="Prototype: Assister Dashboard" class="responsive rounded">
+      <figcaption class="text-sm text-gray-600">Assister Dashboard showing client statuses and quick actions.</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/prototype-error-card.png') }}" alt="Prototype: Error Handling Component" class="responsive rounded">
+      <figcaption class="text-sm text-gray-600">Friendly Error Card with actionable options.</figcaption>
+    </figure>
+  </div>
+  <p class="mt-4">
+    <strong>Testing & Iteration:</strong> 60+ usability sessions covering identity verification, submission, offline scenarios, accessibility. Iterated labels, feedback timing, and performance optimizations based on metrics (task success >80%, time-on-task <25 min, confidence ratings).
+  </p>
+  <p>
+    <strong>Accessibility & Multilingual:</strong> WCAG 2.1 AA compliance: semantic HTML, ARIA attributes, keyboard navigation, high contrast, scalable text, language selector (e.g., Spanish).
+  </p>
+</section>
+
+<!-- Outcomes -->
+<section class="bg-white my-4 p-6 rounded shadow" id="outcomes" aria-labelledby="outcomes-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="outcomes-heading">Outcomes & Impact</h2>
+  <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/impact-metrics-chart.png') }}" alt="Projected impact metrics for Cover Oregon project" class="responsive mb-4 rounded">
+
+  <h3 class="text-xl font-bold mt-4">Business Impact</h3>
+  <ul class="list-disc ml-6">
+    <li>Increased online enrollment completion toward target ≥70%.</li>
+    <li>~50% reduction in call-center inquiries due to clearer guidance and error messaging.</li>
+    <li>Improved operational efficiency via autosave and triage features.</li>
+    <li>Reduced manual processing costs by enabling more users to complete online flows.</li>
+    <li>Enhanced stakeholder confidence through validated prototypes and early testing.</li>
+  </ul>
+
+  <h3 class="text-xl font-bold mt-4">User Experience Impact</h3>
+  <ul class="list-disc ml-6">
+    <li>Task success rates >80% in identity verification and submission flows.</li>
+    <li>Average completion times <25 minutes in testing scenarios.</li>
+    <li>Higher user confidence and satisfaction due to transparent feedback and notifications.</li>
+    <li>Inclusive access: offline resume capability confirmed; accessibility tests passed WCAG benchmarks.</li>
+    <li>Assister efficiency: ~30% time savings in tracking multiple client enrollments.</li>
+  </ul>
+</section>
+
+<!-- Learnings & Future Directions -->
+<section class="bg-white my-4 p-6 rounded shadow" id="learnings" aria-labelledby="learnings-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="learnings-heading">Learnings & Future Directions</h2>
+  <ul class="list-disc ml-6">
+    <li>Embed UX Lead early in project lifecycle for high-stakes government platforms.</li>
+    <li>Pilot incremental releases to validate assumptions before full launch.</li>
+    <li>Collaborate closely with vendor teams (Oracle integrators) on UX requirements and performance benchmarks.</li>
+    <li>Prioritize autosave/offline support for low-bandwidth users to reduce abandonment.</li>
+    <li>Integrate accessibility and multilingual support from the start; include testing in all sessions.</li>
+    <li>Define standardized error codes/messages early; integrate with support workflows.</li>
+    <li>Incorporate contextual help and transparent status updates to build trust.</li>
+    <li>Continuously monitor analytics to detect drop-offs and run rapid UX iterations.</li>
+    <li>Apply cross-sector best practices (enterprise self-service, CMS redesigns) to public-sector platforms.</li>
+    <li>Use lightweight prototypes (HTML/CSS/jQuery) for fast validation and iteration.</li>
+  </ul>
+</section>
+
+<!-- References -->
+<section class="bg-white my-4 p-6 rounded shadow" id="references" aria-labelledby="references-heading">
+  <h2 class="text-2xl font-semibold mb-2" id="references-heading">References</h2>
+  <ul class="list-disc ml-6">
+    <li><a href="https://en.wikipedia.org/wiki/Cover_Oregon" target="_blank" rel="noopener">Wikipedia: Cover Oregon</a></li>
+    <li><a href="https://www.oregonlive.com/health/2014/04/cover_oregon_state_exchange_abandomed.html" target="_blank" rel="noopener">Jeff Manning, The Oregonian: "Cover Oregon: $248 million state exchange to be jettisoned..."</a></li>
+    <li><a href="https://www.katu.com/news/local/federal-government-announces-cover-oregon-investigation" target="_blank" rel="noopener">KATU: FBI Investigation Announcement</a></li>
+    <li><a href="https://www.thelundreport.org/content/technology-delays-plague-cover-oregon/" target="_blank" rel="noopener">Lund Report: Technology Delays Plague Cover Oregon</a></li>
+    <li><a href="https://www.heraldnet.com/news/as-cover-oregon-dissolves-it-leaves-behind-costly-legacy/" target="_blank" rel="noopener">HeraldNet: As Cover Oregon dissolves, it leaves behind costly legacy</a></li>
+    <li>Stephen Dulaney CV: Engagement details for Cover Oregon (Jul 2012 – May 2013)</li>
+    <li>HealthCare.gov UX benchmarks & ACA guidelines (internal/public).</li>
+    <li>AT&T eRepair case study (internal Deloitte archives).</li>
+    <li>kynect Shopping UX goals documentation.</li>
+    <li>Kaiser Permanente CMS redesign impact reports.</li>
+    <li><a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener">WCAG 2.1 AA Guidelines</a></li>
+  </ul>
+</section>
+
+<section class="bg-white my-8 p-6 rounded shadow text-center" id="prototype-demo">
+  <h2 class="text-2xl font-semibold mb-4">Explore the Interactive Prototype</h2>
+  <p class="mb-4">Click below to launch the full high-fidelity Cover Oregon prototype. You can explore the multi-step enrollment form, agent dashboard, and more as they appeared in the original clickable demo.</p>
+  <a href="/static/cover_oregon_prototype/html/index_individual.html"
+     target="_blank"
+     rel="noopener"
+     class="inline-block px-6 py-3 rounded-lg font-bold text-lg shadow transition eo-demo-btn"
+     style="background-color: #6db33f; color: #fff;"
+  >
+     View Interactive Prototype
+  </a>
+</section>
+
+<footer class="text-center text-gray-500 my-8">
+  <p>&copy; 2025 Stephen Dulaney – UX Lead for Experience Architecture & Usability, Cover Oregon. All rights reserved.</p>
+</footer>
+{% endblock %} 

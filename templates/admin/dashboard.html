@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Admin Dashboard</h1>
+    
+    <div class="row mt-4">
+        <!-- User Management Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">User Management</h5>
+                    <p class="card-text">Manage users, roles, and permissions</p>
+                    <div class="list-group">
+                        <a href="{{ url_for('admin_user_list') }}" class="list-group-item list-group-item-action">
+                            <i class="fas fa-users"></i> Users
+                            <span class="badge badge-primary float-right">{{ user_count }}</span>
+                        </a>
+                        <a href="{{ url_for('admin_role_list') }}" class="list-group-item list-group-item-action">
+                            <i class="fas fa-user-tag"></i> Roles
+                            <span class="badge badge-primary float-right">{{ role_count }}</span>
+                        </a>
+                        <a href="{{ url_for('admin_permission_list') }}" class="list-group-item list-group-item-action">
+                            <i class="fas fa-key"></i> Permissions
+                            <span class="badge badge-primary float-right">{{ permission_count }}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Stats Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">System Statistics</h5>
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Active Users</span>
+                                <span class="badge badge-success">{{ active_users }}</span>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Total Projects</span>
+                                <span class="badge badge-info">{{ project_count }}</span>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Recent Logins (24h)</span>
+                                <span class="badge badge-warning">{{ recent_logins }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Quick Actions</h5>
+                    <div class="list-group">
+                        <a href="{{ url_for('admin_new_user') }}" class="list-group-item list-group-item-action">
+                            <i class="fas fa-user-plus"></i> Add New User
+                        </a>
+                        <a href="{{ url_for('admin_new_role') }}" class="list-group-item list-group-item-action">
+                            <i class="fas fa-plus-circle"></i> Create New Role
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Recent Activity</h5>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>User</th>
+                                    <th>Action</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for activity in recent_activities %}
+                                <tr>
+                                    <td>{{ activity.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+                                    <td>{{ activity.user.get_full_name() }}</td>
+                                    <td>{{ activity.action }}</td>
+                                    <td>{{ activity.details }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

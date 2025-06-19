@@ -1,0 +1,2370 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  content.css
+ * ===== VERSION: v0.5
+ * ===== UPDATED: 2/8/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio, Michael Jackson)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+/* Table of Contents
+    1. Page Content
+    2  Hero Image / Carousel
+    3  Home Page Resources Tiles
+    4. Tables
+    5. Plan Comparison Boxes
+    6. View Plans Horizontal Layout
+    7. Right Side Utility Bar
+    8. Help Icon & Help Screen
+    9. Preferences
+    10. Column Layouts
+    11. Overview Page Template
+    12. SHOP Coverage Offering Content
+    13. SHOP Employee Census Summary Content
+    14. Employee Universe Content
+    15. Contributions
+    16. Misc.
+    14. Plan Details Page 
+    15. Tax Credit Allocation
+    16. Sidebar Content
+    17. Tax Filing Structure Form
+    18. Find Assistance Results
+    19. Collapsible Content
+    20. View Plans Page
+    21. Provider Search Additional Options
+    22. Provider Search Table in Individual App
+    23. How to SHOP Tables
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+ 
+*/
+
+
+/* =============================================================================
+   Page Content
+   ========================================================================== */
+
+  #homeContainer {
+    margin: 0 auto;
+    width: 960px;
+  }
+
+  #pageContentArea textarea.eula {
+    border: 1px solid #a7a7a7;
+    width: 639px;
+    height: 197px;
+    font-family: 'Avenir_Light';
+    margin-top: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 15px;
+  }
+
+  #pageContentArea h3,
+  #pageContentAreaNoLeftNav h3{
+    border-bottom: 1px solid #A7A7A7;
+    padding: 10px 0 15px 0;
+    margin-bottom: 10px;
+  }
+
+  #pageContentArea section,
+  #pageContentAreaNoLeftNav section {    
+    border-bottom: 1px solid #A7A7A7;
+    margin: 15px 0;
+  }
+
+  #pageContentArea section.completedSection {
+   margin: 10px 0; 
+  }
+
+    #pageContentArea section.completedSection h4 {
+     margin: 0 0 10px 20px; 
+    }
+
+    #pageContentArea section.currentSection h4 {
+      margin-left: 40px;
+    }
+
+    #pageContentArea section.completedSection .completedSectionIcon {
+      float: left;
+      margin-top: 5px;
+    }
+
+  #pageContentArea section #preDefinedGroups {
+    margin: 0 0 0 60px;
+  }
+
+  #pageContentArea section.planSelector p.option {
+    margin-left: 32px;
+  }
+
+    #pageContentArea section.planSelector p.option.refPlan {
+      width: 555px;
+      float: left;
+    }
+
+  #pageContentArea section.planSelector p.numberOfPlans {
+    border: 1px solid #9a9a9a;
+    box-shadow: 1px 1px 4px #d4d4d4;
+    color: #063c5b;
+    float: right;
+    font-family: 'Avenir_Black';
+    font-size: 36px;
+    height: 30px;
+    padding: 19px 12px;
+    text-align: center;
+    width: 45px;
+  }
+
+  #pageContentArea section p.numberOfPlans {
+    border: 1px solid #9a9a9a;
+    box-shadow: 1px 1px 4px #d4d4d4;
+    color: #063c5b;
+    float: left;
+    font-family: 'Avenir_Black';
+    font-size: 36px;
+    height: 30px;
+    padding: 19px 12px;
+    text-align: center;
+    width: 45px;
+  }
+
+    #pageContentArea section.planSelector p.numberOfPlans span,
+    #pageContentArea section p.numberOfPlans span {
+      font-size: 12px;
+    }
+
+  #pageContentAreaNoMargin section {
+   border-bottom: 1px solid #A7A7A7;
+   margin: 15px; 
+  }
+
+  #pageContentArea h4 {
+      color: #063C5B;
+      float: left;
+    }  
+  
+#pageContentAreaNoLeftNav .sectionHeader,
+#pageContentAreaNoMargin .sectionHeader {
+  background: url(img/bkgrd_selected_plans.png);
+  margin: 0 0 20px 0;
+  padding: 8px;
+}
+
+  #pageContentAreaNoLeftNav .sectionHeader .button,
+  #pageContentAreaNoMargin .sectionHeader .button{
+    float: right;
+  }
+
+#pageContentArea .imagePageContainer {
+  float: left;
+  margin: 5px 50px 5px 0;
+  min-height: 190px;
+  text-align: center;
+  width: 180px;
+}
+
+#pageContainer section .timeRemaining {
+  color: #063c5b;
+  font-size: 18px;
+  float: right;
+}
+
+  #pageContainer section .timeRemaining img {
+    margin-left: 10px;
+  }
+
+.sectionFooter {
+  /*margin: 20px 0 40px 0;*/
+  margin: 0;
+}
+
+#pageContentAreaNoMargin .sectionFooter {
+  margin: 20px 20px 40px 10px;
+}
+
+  .sectionFooter .actionLink,
+  #pageContentAreaNoMargin .sectionFooter .actionLink {
+    float: right;
+  }
+
+    /* IE7 fix for actionLink/green button on review template.*/
+    .ie7 .sectionFooter .actionLink {
+      margin-top: -42px;
+    }
+
+#pageContentArea .downloadPrintIcons {
+  background: #eeeff0;
+  border-bottom: 1px solid #A7A7A7;
+  padding: 5px 0;
+  margin-top: -10px;
+}
+
+  #pageContentArea .downloadPrintIcons button {
+    float: right;
+  }
+
+#pageContentArea .remove,
+#pageContentArea .add {
+  float: right;
+  text-transform: uppercase;
+}
+
+/* =============================================================================
+   Hero Image / Home Page Carousel
+   ========================================================================== */
+
+ .heroImage,
+ .heroImage#individual,
+ .heroImage#employer,
+ .heroImage#tribal,
+ .heroImage#employee,
+ .heroImage#agent {
+    background: url(img/homepage1.png) no-repeat;
+    /*background: url(img/cannon_beach_homepage.jpg) no-repeat;*/
+    /*width: 1348px;*/
+     width: 100%;
+    height: 377px;
+    overflow: hidden;
+    /*border-bottom: 10px solid rgba(33, 165, 237, .4);*/
+ }
+
+
+/* Individual Landing ====================================================== */
+  .heroImage#individual {
+    background: url(img/Individuallanding.png) no-repeat;
+  }
+
+    .heroImage#individual .heroContent h1 {
+      color: #FFF;
+      margin-bottom: 30px;
+    }
+
+    .heroImage#individual .heroContent p {
+      color: #FFF;
+    }
+
+    .heroImage#individual .heroBottomBar {
+      margin-top: 200px;
+    }
+
+/* Employer Landing ====================================================== */
+  .heroImage#employer {
+    background: url(img/Employerlanding.png) no-repeat;
+  }
+
+    .heroImage#employer .heroContent h1,
+    .heroImage#employer .heroContent p,
+    .heroImage#employer .heroContent p a {
+      color: #001f2f;
+    }
+
+/* Tribal Landing ====================================================== */
+  .heroImage#tribal {    
+    background: url(img/Triballanding.png) no-repeat;
+  }
+
+    .heroImage#tribal .heroContent h1,
+    .heroImage#tribal .heroContent p {
+      color: #FFF;
+    }
+
+  .heroImage#tribal .heroBottomBar {
+     margin-top: 185px;
+  }
+
+  .heroImage#tribal .heroContent {
+    /*background: #000;
+    background: rgba(0,0,0,0.5);*/
+  }
+
+/* Agent Landing ====================================================== */
+  .heroImage#agent {
+    background: url(img/CPAlanding.png) no-repeat;
+  }
+
+    .heroImage#agent .heroContent h1,
+    .heroImage#agent .heroContent p {
+      color: #FFF;
+    }
+
+  .heroImage#agent .heroBottomBar {
+    margin-top: 185px;
+  }
+
+
+/* Employee Landing ====================================================== */
+  .heroImage#employee {
+    background: url(img/Employeelanding.png) no-repeat;
+  }
+
+    .heroImage#employee .heroContent h1,
+    .heroImage#employee .heroContent p {
+      color: #FFF;
+    }
+
+  .heroImage#employee .heroBottomBar {
+    margin-top: 160px;
+  }
+
+
+/* Carrier Landing ====================================================== */
+  .heroImage#carrier {
+    background: url(img/Carrierlanding.png) no-repeat;
+  }
+
+    .heroImage#carrier .heroContent h1,
+    .heroImage#carrier .heroContent p {
+      color: #00324d;
+    }
+
+  .heroImage#carrier .heroBottomBar {
+    margin-top: 160px;
+  }  
+
+
+
+.heroContent {  
+  float: left;  
+  margin: 2% 0 0 15%;
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 50%;
+
+}
+
+  .heroContent p {
+    color: #001f2f;    
+    font-size: 1.3em;
+    line-height: 1.2em;
+    font-family: 'Avenir_Medium';
+  }
+
+  .heroContent p a {
+    color: #FFF; 
+    font-size: 1em;
+    text-decoration: underline;
+  }
+
+.heroBottomBar {
+  background: #21a5ed;
+  opacity: .4;
+  height: 10px;
+  margin-top: -10px;
+}
+
+
+/* Home Feature Containers =================================================== */
+
+.homeFeatureContainerWrapper {
+  margin: 20px 0;
+}
+
+.homeFeatureContainer {
+  float: left;
+  padding: 6px;
+  width: 32%;
+}
+
+.homeFeatureSection {
+  background: #F6F5F3;
+  border-radius: 4px;
+  padding: 20px;
+  height: 210px;
+}
+
+.homeFeatureSection h6 {
+  font-size: 18px;
+  color: #203B58;
+}
+
+.homeFeatureSection p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* =============================================================================
+   Home Page Resources Tiles
+   ========================================================================== */
+
+.resourcesContainer {
+  text-align: center;
+  border-top: 1px solid #a39d9d;  
+  background: #e1e1e1;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e1e1e1), to(#efefef));
+  background: -webkit-linear-gradient(#e1e1e1, #efefef);
+  background: -moz-linear-gradient(#e1e1e1, #efefef);
+  background: -ms-linear-gradient(#e1e1e1, #efefef);
+  background: -o-linear-gradient(#e1e1e1, #efefef);
+  background: linear-gradient(#e1e1e1, #efefef);
+  -pie-background: linear-gradient(#e1e1e1, #efefef);
+  behavior: url(scripts/PIE.htc);
+  margin: 0 auto;
+  padding: 20px 0 30px 0;
+}
+
+  .resourcesContainer .resourcesWrapper {
+    margin: 0 auto;
+    width: 1075px;
+  }
+
+    .ie7 .resourcesContainer .resourcesWrapper {
+      width: 1100px;
+    }
+
+    .resourcesWrapper .resource {
+      float: left;
+      margin: 0 1% 1% 1%;
+      width: 18%;
+    }
+
+      .resourcesWrapper .resource h5 a {
+        color: #1a4a7a;
+        font-size: 0.857em;
+        text-decoration: none;
+      }
+
+      .resourcesWrapper .resource h5 a:hover {        
+        text-decoration: underline;
+      }
+
+      .ie7 .resourcesWrapper .resource {
+        width: 200px;
+      }
+
+    .resource .resourceImageContainer {  
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px; 
+      height: 66px;
+      overflow: hidden;
+      width: 100%;  
+    }
+
+    .resource .resourceImageContainer a img {  
+      border: 0;
+    }
+
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table {  
+  margin: 10px;
+  width: 100%;
+}
+
+table th {
+  color: #063c5b;
+  font-family: 'Avenir_Black';
+  margin: 0;
+  padding: 5px 8px;
+  text-align: left;  
+  text-transform: uppercase;
+}
+
+table td {
+  color: #3c3a37;
+  border-top: 1px dashed #DEDEDE;
+  margin: 0;
+  padding: 10px;
+}
+
+/* =============================================================================
+   Plan Comparison Boxes
+   ========================================================================== */
+
+#pageContentAreaNoMargin .availablePlansContainer { 
+  margin: 5px 0;
+}
+
+  .availablePlansContainer .planBox {
+    border: 1px solid #C4C4C4;
+    color: #1A4A7A;
+    box-shadow: inset 1px 1px 4px #d4d4d4;
+    float: left;
+    font-family: 'Avenir_Medium';
+    min-height: 195px;
+    padding: 10px;
+    width: 220px;
+  }
+
+  .availablePlansContainer .planBox .planLineWrapper {
+    margin: 0 0 20px 0;
+  }
+
+    .availablePlansContainer .planBox .planLineWrapper .planVendorLogo {
+      float: left;
+    }
+
+    .availablePlansContainer .planBox .planLineWrapper .planType {
+      color: #1a4a7a;
+       float: right;
+       font-family: 'Avenir_Black';     
+    }
+
+    .availablePlansContainer .planBox .planLineWrapper .planName,
+    .planName {
+      color: #999999;      
+      float: left;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: 'Avenir_Black';
+      margin:5px 0px;
+    }
+
+    .planRating {
+      float: right;
+    }
+
+      .planRating .starOn {
+        background: url(img/star_on.gif) no-repeat;
+        background-position: center center;
+        float: left;
+      }
+
+    .availablePlansContainer .planBox .planLineWrapper .planCost,
+    .planCost {
+      color: #1a4a7a;
+      float: left;
+      font-size: 38px;
+      font-family: 'Avenir_Black';
+      line-height: 20px;
+      width: 90px;      
+    }
+
+    .ie7 .availablePlansContainer .planBox .planLineWrapper .planCost,
+    .ie7 .planCost  { 
+      line-height: 28px;
+    }
+
+        .availablePlansContainer .planBox .planLineWrapper .planCost span,
+        .planCost span {
+          font-size: 18px;
+        }
+
+      .availablePlansContainer .planBox .planLineWrapper .planDeductible,
+      .planDeductible {
+        color: #999;
+        float: right;
+        font-size: 12px;
+        width: 80px;
+      }
+
+#pageContentAreaNoMargin .selectedPlans,
+#pageContentArea .selectedPlans,
+#pageContentAreaNoLeftNav .selectedPlans {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #dadada;
+  background: #FFF;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFF), to(#f0f0f0));
+  background: -webkit-linear-gradient(#FFF, #f0f0f0);
+  background: -moz-linear-gradient(#FFF, #f0f0f0);
+  background: -ms-linear-gradient(#FFF, #f0f0f0);
+  background: -o-linear-gradient(#FFF, #f0f0f0);
+  background: linear-gradient(#FFF, #f0f0f0);
+  -pie-background: linear-gradient(#FFF, #f0f0f0);
+  behavior: url(scripts/PIE.htc);
+  padding: 8px 25px;
+}
+
+.selectedPlans .selectedPlanBox {
+  background: #FFF;
+  border: 1px solid #d5d7d8;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  float: left;
+  margin: 0 10px 0 0;
+  min-height: 114px;
+  padding: 5px 5px 5px 10px;
+  width: 140px;
+}
+
+h4.comparePlans {  
+  float: left;  
+  margin: 0 10px 10px 25px;
+}
+
+.selectedPlans .selectedPlanBox.securityImage {
+  width: 147px;
+}
+
+  .selectedPlanBox .selectedPlanName {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Avenir_Black';
+    margin: 0 0 10px 0;
+  }
+
+    .closeIcon {
+      background: url(img/close_icon.png) no-repeat;  
+      float: right;
+      height: 16px;
+      width: 16px;
+    }
+
+      .ie7 .closeIcon {        
+        top: -18px;
+        right: 0;
+      }
+
+  .selectedPlanBox .smallVendorLogo {
+    margin: 0 0 10px 0;
+  } 
+
+  .selectedPlanBox .selectedPlanCost,
+  .selectedPlanCost {
+    color: #1a4a7a;
+    font-size: 30px;
+    font-family: 'Avenir_Black';
+    line-height: 16px;
+    width: 60px;      
+  }
+
+    .selectedPlanBox .selectedPlanCost span,
+    .selectedPlanCost span {
+        font-size: 12px;
+        font-family: 'Avenir_Medium';
+        text-transform: lowercase;
+      }
+
+.selectedPlans .button {
+  margin: 35px 0;
+  float: right;
+}
+
+/* =============================================================================
+   View Plans Horizontal Layout
+   ========================================================================== */
+
+#pageContentAreaNoMargin .groupTitle,
+#pageContentArea .groupTitle {
+    background: #eaeaea;
+    padding: 15px;
+  }
+
+  #pageContentAreaNoMargin .groupMembers,
+  #pageContentArea .groupMembers {
+    padding: 15px;
+  }
+
+  .groupMembers .member {
+    color: #063c5b;
+    float: left;   
+    margin-right: 60px;    
+  }
+
+    .groupMembers .member p {
+      font-family: 'Avenir_Medium';
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    } 
+
+    .groupMembers .member span {
+      background: url(img/members.png);       
+      display: block;
+      float: left;
+      height: 33px;
+      margin: -10px 5px 0 0;
+      width: 32px;       
+    }
+
+    .groupMembers .member #maleAdultIcon {
+      background-position: 0 0;
+    }
+
+    .groupMembers .member #femaleAdultIcon {
+      background-position: 0 68px;
+    }
+
+    .groupMembers .member #maleChildIcon {
+      background-position: 0 35px;
+    }
+
+.viewPlansContainer {
+  margin: 0 5px;
+}
+
+
+  .viewPlansContainer .planHorizontalBox {
+    border-top: 1px solid #CFD0D2;    
+    color: #1A4A7A;
+    padding: 20px 15px 10px 15px;    
+  }
+
+  /*.viewPlansContainer .planHorizontalBox:last-child {
+    border-bottom: 1px solid #CFD0D2;
+  }*/
+
+  .planHorizontalBox .planHorizontalBoxColumnWrapper {
+    
+  }
+
+  .planHorizontalBoxColumnWrapper .planHorizontalBoxColumn {
+    float: left;
+    /*margin-right: 45px;*/
+    margin-right: 30px;
+  }
+    .planHorizontalBoxColumnWrapper .planHorizontalBoxColumn:last-child {
+      float: right;
+      margin-right: 0px;
+    }
+    .planHorizontalBoxColumnWrapper .planHorizontalBoxColumn.Small {
+      margin-right: 25px;
+    }
+
+    .planHorizontalBoxColumnWrapper .planHorizontalBoxColumn.long {
+      width: 220px;
+    }
+
+    .planHorizontalBoxColumnWrapper .planHorizontalBoxColumn.medium {
+      width: 180px;
+    }
+
+    .planHorizontalBoxColumn .planCost {
+      font-family: 'Avenir_Black';
+      font-size: 38px;
+      line-height: 20px;
+      /*width: 90px;*/
+    } 
+
+      .planHorizontalBoxColumn .planCost span {
+        font-size: 17px;
+      }
+
+    .planHorizontalBoxColumn .selectPlanBtn {
+      width: 100px;
+    }
+
+      .planHorizontalBoxColumn .selectPlanBtn .button {        
+        margin: 5px 0;
+        padding: 7px 8px;
+        min-width: 110px;
+      }     
+
+    .planHorizontalBoxColumn .planName {
+      color: #999;
+      float: left;
+      font-size: 12px;
+      font-family: 'Avenir_Black';      
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .planHorizontalBoxColumn .planVendorLogo {
+      margin: 0 0 10px 0;
+    }
+
+    .planHorizontalBoxColumn .planDetailedCosts,
+    .referencePlanBox .referencePlanBoxColumn .planDetailedCosts { }
+
+      .planHorizontalBoxColumn .planDetailedCosts p,
+      .referencePlanBox .referencePlanBoxColumn .planDetailedCosts p {      
+        color: #999;
+        font-size: 12px;
+        font-family: 'Avenir_Medium';
+        margin: 0 5px 0 0;
+        padding-bottom: 7px;
+        text-transform: uppercase;
+        text-align: left;
+        /*width: 110px;*/
+      }
+
+        .planHorizontalBoxColumn .planDetailedCosts p span,
+        .referencePlanBox .referencePlanBoxColumn .planDetailedCosts p span {
+          color: #1A4A7A;
+          font-size: 14px;
+          text-transform: none;
+        }
+
+    .planHorizontalBoxColumn .planRating {
+      float: none;
+      margin-bottom: 20px;
+    }
+
+      .planHorizontalBoxColumn .planRating .starOn {
+        background: url(img/star_on.gif) no-repeat;
+        background-position: center center;
+        float: left;
+        margin: 0 0 10px 0;
+      }
+
+    .planHorizontalBoxColumn .badge { 
+      float: right;
+      margin-bottom: 10px;
+    }
+
+    .referencePlanBox .referencePlanBoxColumn .badge { 
+      float: none;
+      padding: 0 25px;
+    }
+
+      .planHorizontalBoxColumn .badge span,
+      .referencePlanBox .referencePlanBoxColumn .badge span {
+        background: url(img/badges.png);        
+        display: block;
+        height: 44px;
+        width: 25px;        
+      }
+
+        .planHorizontalBoxColumn .badge span#bronze,
+        .referencePlanBox .referencePlanBoxColumn .badge span#bronze {
+          background-position: 84px 0;
+        }
+
+        .planHorizontalBoxColumn .badge span#silver,
+        .referencePlanBox .referencePlanBoxColumn .badge span#silver {
+          background-position: 0 0;
+        }
+
+        .planHorizontalBoxColumn .badge span#gold,
+        .referencePlanBox .referencePlanBoxColumn .badge span#gold {
+          background-position: 54px 0;
+        }
+
+        .planHorizontalBoxColumn .badge span#platinum,
+        .referencePlanBox .referencePlanBoxColumn .badge span#platinum {
+          background-position: 30px 0;
+        }
+
+/*    .planHorizontalBoxColumn a.button {
+      margin: 0;
+      padding: 7px 8px;
+    }*/
+
+  .planHorizontalBox .planHorizontalBoxFooter,
+  .referencePlanBox .referencePlanBoxColumn p {
+    color: #1A4A7A;    
+    font-family: 'Avenir_Medium';
+  }
+
+    .planHorizontalBox .planHorizontalBoxFooter p a,
+    .referencePlanBox .referencePlanBoxColumn p a,
+    .planHorizontalBox .planHorizontalBoxFooter a {
+      color: #1A4A7A;
+      font-size: 14px;
+      float: right;
+      /*padding-bottom: 0;*/
+      text-decoration: none;
+    }
+
+    .planHorizontalBox .planHorizontalBoxFooter p a:hover,
+    .referencePlanBox .referencePlanBoxColumn p a:hover {
+      text-decoration: underline;
+    }
+
+
+/** Shop View & Compare Plans Overwride Styles ***/ 
+
+.viewPlansContainer.shop,
+.comparePlansContainer.shop { }
+
+
+.viewPlansContainer.shop .planHorizontalBoxColumn .selectPlanBtn {
+  width: 130px;
+}
+ 
+  .comparePlansContainer .planDetailsColumn .button,
+  .planHorizontalBoxColumn .button {
+    float: center;
+  }
+
+/* =============================================================================
+   Right Side Utility Bar
+   ========================================================================== */
+
+aside.utilityBar {
+  background: #EDEDED;
+  float: left;
+  margin-left: 2%;
+  min-height: 287px;
+  opacity: .96;
+  padding: 60px 40px 19px 40px;
+  width: 230px; 
+  text-align: center;
+  z-index: 1000;
+}
+
+  aside.utilityBar section {
+    margin-bottom: 204px;
+  }
+
+    .ie7 aside.utilityBar section {
+      margin-bottom: 80px;
+    }
+
+  aside.utilityBar h4 {
+    font-family: 'Brandon_Grotesque_Light';
+  }
+
+  aside.utilityBar a.button.green {
+    margin-bottom: 15px;
+    font-size: 14px;
+    float: none;
+  }
+
+  aside.utilityBar fieldset .loginFormTitle {
+    color: #69737b;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  aside.utilityBar fieldset input {
+    background: #FFF;
+    color: #999;
+    font-size: 12px;
+    height: 15px;
+    margin: 7px 3px;
+    padding: 7px 10px 3px 7x;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 70%;
+  }
+
+  aside.utilityBar fieldset a.button {    
+    margin-bottom: 10%;
+    width: 62%;
+    margin-left: 12%;
+  }
+
+/* =============================================================================
+   Help Icon & Help Screen
+   ========================================================================== */
+  #pageContentArea section .helpIcon {
+    color: #009edb;
+    float: left;
+    /*width: 60px;*/
+  }
+
+  #pageContentArea section .helpIcon img {
+    margin-right: 5px;
+    float: left;
+    height: 25px;
+    width: 25px;
+  }
+
+
+/* =============================================================================
+   Preferences
+   ========================================================================== */
+  #pageContentArea .matchesBox {
+    float: right;
+    border: solid 1px #a7a7a7;
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Avenir_Black';
+    box-shadow: 1px 1px 4px #d4d4d4;
+    margin: -10px 0 5px 0;
+  }
+
+  #pageContentArea h4.preferencesQuestion {
+    font-family: 'Brandon_Grotesque_Medium';
+    font-size: 20px;
+    float: none;
+  }
+
+  #pageContentArea .preferenceCounter {
+    float: left;
+    padding: 0 5px 0 0;
+  }
+
+  #pageContentArea .preferenceSpacer {
+    padding-left: 5px;
+  }
+
+  #pageContentArea .preferenceBoxesContainer {
+    color: #063c5b;
+    font-family: 'Avenir_Medium';
+    margin-bottom: 40px;
+  }
+
+  #pageContentArea .preferenceBoxesContainer img {
+    margin-bottom: 20px;
+  }
+
+    #pageContentArea .preferenceBoxesContainer .preferenceBoxTitle {
+      font-size: 22px;   
+      font-family: 'Avenir_Black';
+      margin-bottom: 10px;
+    }
+
+    #pageContentArea .preferenceBoxesContainer .preferenceBoxTopicLarge a {
+      border: 1px solid #C4C4C4; 
+      color: #1A4A7A;
+      font-size: 22px;              
+      float: left;      
+      padding: 40px 10px;
+      width: 310px;
+      margin-right: 10px;
+      text-align: center;
+      text-decoration: none;  
+    }
+
+    #pageContentArea .preferenceBoxesContainer .preferenceBoxTopicLarge.SmallFont a {
+      font-family: 'Avenir_Light';
+      font-size: 18px;
+      text-align: justify;
+      padding: 6px 10px 15px 10px;
+    }
+
+    #pageContentArea .preferenceBoxesContainer .preferenceBoxTopicMedium a {
+      border: 1px solid #C4C4C4;
+      color: #1A4A7A;     
+      float: left;
+      font-size: 18px;
+      min-height: 40px;
+      padding: 15px 8px 15px 8px;
+      margin-right: 10px;
+      text-align: center;
+      width: 197px;
+      text-decoration: none;
+    }
+
+    #pageContentArea .preferenceBoxesContainer .preferenceBoxTopicSmall {
+      float: left;
+      margin-bottom: 10px;
+    }
+
+    #pageContentArea .preferenceBoxesContainer .preferenceBoxTopicSmall a {
+      border: 1px solid #C4C4C4;
+      color: #1A4A7A;
+      float: left;      
+      font-weight: bold;
+      font-family: 'Avenir_Light';
+      font-size: 14px;
+      margin-right: 10px;
+      min-height: 40px;
+      padding: 15px 8px 15px 8px;
+      text-align: center;
+      width: 107px;
+      text-decoration: none;
+    }
+
+      #pageContentArea .preferenceBoxesContainer .preferenceBoxTopicLarge a:hover,
+      #pageContentArea .preferenceBoxesContainer .preferenceBoxTopicMedium a:hover,
+      #pageContentArea .preferenceBoxesContainer .preferenceBoxTopicSmall a:hover {
+        -webkit-box-shadow: #d4d4d4 0px 2px 3px;
+        -moz-box-shadow: #d4d4d4 0px 2px 3px;
+        box-shadow: #d4d4d4 0px 2px 3px;
+        background: #063C5B;
+        color: #FFF;
+        text-decoration: underline;
+      }
+
+  #pageContentArea .imageQuestionContainer {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+
+
+  #pageContentArea .sliderContainer {
+    border-bottom: 1px solid #A7A7A7;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  #pageContentArea .sliderContainer .question {
+    border: 2px solid #74cef3;
+    color: #FFF;
+    font-size: 30px;
+    float: left;
+    margin-right: 5px;
+    padding: 17px 10px;
+    width: 80px;
+    text-align: center;
+  }
+
+  #pageContentArea .sliderContainer .question.inactive {
+    background: #d7e9f0;
+    border: 2px solid #d7e9f0;
+  }
+
+  #pageContentArea .sliderContainer .question.first {
+    border: 2px solid #74cef3;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  #pageContentArea .sliderContainer .question.last {
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  #pageContentArea .sliderContainer .question.answered {
+    background: #3ab4e5;
+    padding: 8px 5px;
+  }
+
+/* =============================================================================
+   Column Layouts
+   ========================================================================== */
+
+#pageContentArea .openEnrollment {
+  border: 1px solid #b9b9b9;
+  background: #fdfdfd;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fdfdfd), to(#e8e8e8));
+  background: -webkit-linear-gradient(#fdfdfd, #e8e8e8);
+  background: -moz-linear-gradient(#fdfdfd, #e8e8e8);
+  background: -ms-linear-gradient(#fdfdfd, #e8e8e8);
+  background: -o-linear-gradient(#fdfdfd, #e8e8e8);
+  background: linear-gradient(#fdfdfd, #e8e8e8);
+  -pie-background: linear-gradient(#fdfdfd, #e8e8e8);
+  behavior: url(scripts/PIE.htc);
+  margin: 30px 0;
+  min-height: 100px;
+  padding: 25px 20px 0 15px;
+}
+
+  #pageContentArea .openEnrollment .formEntryContentSelect {
+    float: left;
+    margin: 0 15px 0 0;
+  }
+
+  #pageContentArea .openEnrollment label {
+    color: #00324d;
+    font-size: 15px;
+    font-family: 'Avenir_Medium';
+    float: left;
+  }
+
+  .pageContent .leftColumn {
+    border-right: 1px solid #bfbfbf;
+    float: left;
+    padding: 0 15px 0 0;
+    width: 315px;
+  }
+
+  .pageContent .leftColumn.short {
+    border-right: 0;
+    width: 180px;
+  }
+
+  .pageContent .rightColumn {
+    float: left;    
+    padding: 0 0 0 15px;
+    width: 315px;
+  }
+
+  .pageContent .rightColumn.long {
+    border-left: 1px solid #bfbfbf;
+    width: 480px;
+  }
+
+  .pageContent .rightColumn.long .uploadButton {
+    width: 240px;
+    min-height: 95px;
+    float: left;
+  }
+
+  .pageContent .twoColumn {
+    float: left;
+    padding: 0 0 0 15px;
+    width: 630px;
+  }
+
+    .pageContent .leftColumn p,
+    .pageContent .rightColumn p {
+      margin: 5px 5px 5px 25px;
+    }
+
+    .pageContent .leftColumn label,
+    .pageContent .rightColumn label {
+      color: #063c5b;
+      font-size: 18px;
+      font-family: 'Avenir_Medium';
+    }
+
+    .pageContent .illustration,
+    .pageContent .leftColumn .illustration,
+    .pageContent .rightColumn .illustration {
+      margin: 0 0 30px 0;
+      text-align: center;
+    }
+
+    .pageContent .twoColumn .illustration {
+      margin: 0 0 30px 0;
+      text-align: center;
+      float: left;
+    }
+
+    .pageContent .leftColumn .instructions,
+    .pageContent .rightColumn .instructions {
+      text-align: center;
+    }
+
+    .pageContent .twoColumn .instructions {
+      text-align: center;
+      float: left;
+    }
+
+    /*.pageContent .instructions {
+       margin-left: 140px;
+    }*/
+
+      /*.pageContent .instructions a.button {
+        width: 318px;
+      }*/
+
+      .pageContent .leftColumn .instructions p,
+      .pageContent .rightColumn .instructions p {
+        margin: 0;
+        text-align: left;
+      }
+
+      .pageContent .twoColumn .instructions p {
+        margin: 0
+        text-align: left;
+      }
+
+    .pageContent .leftColumn .stepsContainer,
+    .pageContent .rightColumn .stepsContainer  {
+      margin-bottom: 20px;
+      padding: 0;
+      text-align: left;
+    }
+
+    .pageContent .stepsContainer2 {
+      margin: 0 180px 20px 180px;
+    }
+
+
+    .pageContent .twoColumn .stepsContainer {
+      margin-bottom: 20px;
+      padding: 0;
+      text-align: left;
+      float: right;
+    }
+      
+    .pageContent .stepsContainer2 ul li,
+    .pageContent .leftColumn .stepsContainer ul li,
+    .pageContent .rightColumn .stepsContainer ul li,
+    .pageContent .twoColumn .stepsContainer ul li {
+      background: url(img/steps_divider.png) no-repeat right center;
+      float: left;
+      list-style: none;
+    }
+
+      .pageContent .stepsContainer2 ul li:last-child,
+      .pageContent .leftColumn .stepsContainer ul li:last-child,
+      .pageContent .rightColumn .stepsContainer ul li:last-child,
+      .pageContent .twoColumn .stepsContainer ul li:last-child {
+        background: none;
+        margin-right: 0;
+      }
+
+      .pageContent .stepsContainer2 ul li span,
+      .pageContent .leftColumn .stepsContainer ul li span,
+      .pageContent .rightColumn .stepsContainer ul li span,
+      .pageContent .twoColumn .stepsContainer ul li span {
+        background: url(img/step_bkgr.png) no-repeat;        
+        color: #fff;
+        display: block;        
+        font-family: 'Avenir_Black';
+        font-size: 24px;        
+        height: 50px;
+        margin: 15px 55px 0 0;
+        padding-top: 12px;
+        text-indent: 15px;
+        width: 50px;
+      }
+     
+      .pageContent .stepsContainer2 .step,
+      .pageContent .leftColumn .stepsContainer .step,
+      .pageContent .rightColumn .stepsContainer .step,
+      .pageContent .twoColumn .stepsContainer .step {
+        color: #063C5B;
+        font-family: 'Avenir_Book';
+        font-size: 12px;
+        float: left;
+        margin: 0 50px 0 -10px;
+        text-align: center;
+        width: 65px;
+      }
+
+        .pageContent .leftColumn .stepsContainer .step.last,
+        .pageContent .rightColumn .stepsContainer .step.last,
+        .pageContent .twoColumn .stepsContainer .step.last {
+          margin-right: 0;
+        }
+
+/* =============================================================================
+   Overview Page Template
+   ========================================================================== */
+
+#pageContentArea .overviewImageContainer {
+  width: 690px;
+  height: 300px;
+  overflow: hidden;
+}
+
+#pageContentArea .overviewHeader {
+  background: #0f3b52;
+  /*background: rgba(15,59,82,0.7);*/
+  margin-top: -58px;
+  opacity: 0.7;
+  padding: 10px 0 10px 25px;
+  z-index: 9999;
+}
+
+  #pageContentArea .overviewHeader h1 {
+    font-family: 'Brandon_Grotesque_Bold';
+    font-size: 30px;
+    line-height: 18px;
+    margin: 0;
+    padding: 10px 0;
+    text-shadow: none;
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+#pageContentArea .overviewContentContainer {
+  margin: 20px 25px;
+}
+
+  #pageContentArea .overviewContentContainer section {
+    border-bottom: none;
+    margin-top: 0;
+  }
+
+  #pageContentArea .overviewContentContainer section ul {
+    margin-left: 20px;
+  }
+
+  #pageContentArea .overviewContentContainer .sectionHeader {
+    border-bottom: 1px solid #A7A7A7;
+  }
+
+    #pageContentArea .overviewContentContainer .sectionHeader h3 {
+      float: left;
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    #pageContainer .overviewContentContainer .sectionHeader .timeRemaining {
+      padding: 0;
+    }
+
+
+/* =============================================================================
+   SHOP Coverage Offering Content
+   ========================================================================== */
+
+#pageContentArea .coverageOptionContainer { }
+
+  .coverageOptionContainer .coverageOption {
+    border-bottom: 1px solid #A7A7A7;
+    margin: 0 35px;
+    padding: 10px 0;    
+  }
+
+    .coverageOption .selectCoverage {
+      float: left;
+      width: 195px;
+    }
+
+      .coverageOption .selectCoverage label {    
+        font-size: 14px;
+        font-family: 'Avenir_Medium';
+      }
+
+    .coverageOption table {
+      
+      float: left;
+      width: 360px;
+    }
+
+      .coverageOption table th {
+        font-size: 12px;
+        font-family: 'Avenir_Book';
+        font-weight: bold;
+        text-transform: none;
+      }
+
+      .coverageOption table td {
+        border-top: 1px solid #DEDEDE;
+        font-size: 17px;
+        font-family: 'Avenir_Medium';
+        vertical-align: middle;
+        text-align: center;
+      }
+
+
+/* =============================================================================
+   SHOP Employee Census Summary Content
+   ========================================================================== */
+
+#pageContentArea .summaryContainer {
+
+}
+
+  .summaryContainer .summaryItem {
+    float: left;
+    margin-right: 22px;
+    width: 150px;
+    text-align: center;
+  }
+
+    .summaryItem img {
+      margin-bottom: 10px;
+    }
+
+    .summaryItem p {
+      font-weight: bold;
+    }
+
+/* =============================================================================
+   Employee Universe Content
+   ========================================================================== */
+.refPlanContainer .availablePlansContainer {
+  float: left;
+  margin-bottom: 25px;
+}
+
+.refPlanContainer h4 {  
+  margin: 60px 15px 0 0;
+}
+
+.refPlanContainer .availablePlansContainer .planBox {
+  box-shadow: 1px 1px 4px #d4d4d4;
+  min-height: 176px;
+  width: 370px;
+}
+
+  .refPlanContainer .availablePlansContainer .planBox .planLineWrapper .planVendorLogo {
+    width: 100px;
+  }
+
+  .refPlanContainer .availablePlansContainer .planBox .planLineWrapper .planType {
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+  }
+
+  .refPlanContainer .planRating  {
+    float: left;
+  }
+
+  .refPlanContainer .availablePlansContainer .planBox .planLineWrapper .refPlanDetails {
+    float: left;
+    width: 135px;
+  }
+
+  .refPlanContainer .availablePlansContainer .planBox .planLineWrapper .planName {
+    margin-bottom: 10px;
+  }
+
+  .refPlanContainer .availablePlansContainer .planBox .planLineWrapper .planDeductible,
+  .referencePlanBox .referencePlanBoxColumn .planDeductible {
+    float: left;
+    width: 222px;
+  }
+
+     .refPlanContainer .availablePlansContainer .planBox .planLineWrapper .planDeductible p,
+     .referencePlanBox .referencePlanBoxColumn .planDeductible p {
+        color: #999;
+        padding-bottom: 0;
+      }
+
+      .refPlanContainer .availablePlansContainer .planBox .planLineWrapper .planDeductible p span,
+      .referencePlanBox .referencePlanBoxColumn .planDeductible p span {
+        float: right;
+      }
+
+
+/* =============================================================================
+   Contributions
+   ========================================================================== */
+
+#pageContentArea .referencePlanBox {
+  border: 1px solid #C4C4C4;
+  box-shadow: 1px 1px 4px #d4d4d4;
+  min-height: 70px;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+  .referencePlanBox .referencePlanBoxColumn {
+    float: left;
+    margin-right: 8px;
+    width: 170px;
+  }
+
+    .referencePlanBox .referencePlanBoxColumn:last-child {
+      width: 100px;
+    }
+
+    .referencePlanBox .referencePlanBoxColumn .planCost{
+      line-height: 38px;
+    }
+
+    .referencePlanBox .referencePlanBoxColumn p {
+      color: #1a4a7a;
+    }
+
+    .referencePlanBoxColumn .referencePlanTitle {
+      font-size: 15px;
+      font-family: 'Avenir_Medium';
+    }
+
+    .referencePlanBoxColumn .referencePlanValue {
+      font-size: 22px;
+      font-family: 'Avenir_Black';
+      text-transform: uppercase;
+    }
+
+#pageContentArea .contributionsContainer {
+  margin:  0 0 40px 0;
+}
+
+  .contributionsContainer p {
+    float: left;
+    margin-right: 10px;
+    width: 140px;
+  }
+
+  .contributionsContainer .multiply {
+    color: #1a4a7a;
+    float: left;
+    font-size: 15px;
+    font-family: 'Avenir_Medium';
+    margin-right: 10px;
+    width: 140px;
+  }
+
+  .contributionsContainer .planCost {
+    font-size: 22px;
+  }
+
+  .contributionsContainer input {
+    background-color:#d7dbdd;
+    border:1 px solid #fbfbfb;
+    color:#00324d;
+    font-family: 'Avenir_Black'; 
+    font-size: 15px;
+    margin: 0 0 10px 35px;
+    text-align: center;
+    width: 55px;
+  }
+  
+  .contributionsContainer .contributionSlider {
+    float: left;
+    margin-right: 15px;
+    width: 170px;
+  }  
+
+    .contributionsContainer .contributionSlider .ui-slider-horizontal {
+      background: #d7dbdd;
+      width: 150px;
+    }
+
+    .contributionsContainer .contributionSlider .ui-slider-horizontal .ui-state-default {
+      background: url(img/slider_arrow.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/;
+    }
+
+    .contributionsContainer .contributionSlider .ui-slider-horizontal .ui-state-hover {
+      background: url(img/slider_arrow.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/;
+    }
+
+    .contributionsContainer .contributionSlider label {
+       width: 150px;
+    }
+
+      .contributionsContainer .contributionSlider label span {
+        float: right;
+      }
+
+#pageContentArea .total {
+  color: #1a4a7a;
+  float: right;
+  font-size: 20px;
+  font-family: 'Avenir_Black';
+  margin-bottom: 20px;
+  margin-right: 24px;
+}
+
+  .total input {
+    border: 0;
+    color: #1a4a7a;
+    font-size: 20px;
+    font-family: 'Avenir_Black';
+    width: 80px;
+    /*background-color:#d7dbdd;    
+    margin: 0 0 10px 35px;
+    text-align: center;*/    
+  }
+
+
+/* =============================================================================
+   Misc.
+   ========================================================================== */
+#pageContentArea .summary { }
+
+#pageContentArea .summary li {
+  margin: 10px 10px;
+}
+
+#pageContentArea .carrier {
+  margin-left: 90px;
+}
+
+#pageContentArea .carrier #or {
+  float: left;
+  margin: 20px 20px 40px 20px;
+}
+
+#pageContentArea .howToShopGuide {
+  border-bottom: 1px solid #A7A7A7;
+  margin: 30px 0 20px 0;
+}
+
+#pageContentArea .howToShopGuide .title {
+  color: #1a4a7a;
+  font-family: 'Avenir_Medium';
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#pageContentArea .howToShopGuide p {
+  float: left;
+  width: 535px;
+}
+
+#pageContentArea .howToShopGuide .shopIcon {
+  float: right;
+}
+
+#pageContentArea .howToShopGuide .shopCount {
+  background: #3ab4e5;
+  color: #fff;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  border: 2px solid #74cef3;
+  font-family: 'Avenir_Medium';
+  font-size: 20px;
+  float: left;
+  margin-right: 20px;
+  padding: 5px 10px;
+}
+
+.backToPlans {
+  font-size: 16px;
+  /*float: right;*/
+  margin: 10px 15px;
+}
+
+.backToPlans span {
+  text-decoration: none;
+
+}
+
+.appStartColumn {
+  float: left;
+  margin-right: 40px;
+  width: 200px;
+}
+
+.appStartColumn:last-child {
+   margin-right: 10px;
+}
+
+.appStartColumn .appStartImage {
+  height: 120px;
+}
+  
+.eula {
+  padding: 10px;
+  border: #b7b8ba 1px solid;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.plansAvailableBar {
+  color: #034564;
+  font-size: 1.8em;
+  font-family: 'Avenir_Black';
+  margin: 7px 0;
+}
+
+ul.planSelectionList { }
+
+  ul.planSelectionList li {
+    list-style: none;
+    float: left;
+    text-align: center;
+    width: 25%;
+  }
+
+/*.required {
+  color: #F00;
+}*/
+
+/* Review Plan Table */
+
+table.reviewPlan {
+  margin: 0;
+}
+
+  table.reviewPlan thead th {
+    background: #eeeeef;
+    font-size: 12px;
+    padding: 5px;
+    /*width: 80px;*/
+  }
+
+  table.reviewPlan tr td {
+    font-size: 12px;
+    padding: 5px;
+    width: 20px;
+  }
+
+  table.reviewPlan tr td:first-child,
+  table.reviewPlan tr td:nth-child(3){
+    width: 120px;
+  }
+
+  table.reviewPlan tr td:last-child {
+    width: 168px;
+  }
+
+  table.reviewPlan .planCost {
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+    table.reviewPlan .planCost span {
+      font-size: 10px;
+    }
+
+  table.reviewPlan a.button {
+    padding: 5px 12px;
+    /*width: 80px;*/
+  }
+
+
+
+  /* Enrollment Confirmation Table */
+
+table.enrollConfirmation {
+  margin: 0;
+  width: 100%;
+}
+
+  table.enrollConfirmation thead th {
+    background: #eeeeef;
+    padding: 5px;
+  }
+
+  table.enrollConfirmation tr td {
+    padding: 5px;    
+  }
+
+    table.enrollConfirmation tr td:first-child {
+      width: 90px;
+    }
+
+    table.enrollConfirmation tr td:nth-child(2) {
+      width: 180px;
+    }
+
+    table.enrollConfirmation thead th:last-child,
+    table.enrollConfirmation tr td:last-child {
+      text-align: center;
+    }
+
+  table.enrollConfirmation .planCost {
+    font-size: 24px;
+    line-height: 14px;
+    width: 100%;
+  }
+
+    table.enrollConfirmation .planCost span {
+      font-size: 14px;
+    }
+
+fieldset.memberForm.companyInfo .ctrlHolder label {
+  float: left;
+  width: 176px;
+}
+
+fieldset.memberForm.companyInfo .ctrlHolder p {
+  float: left;
+  padding: 0
+}
+
+fieldset.memberForm.companyInfo .ctrlHolder .col {
+  float:left; 
+  margin-right: 25px;
+  width: 290px;
+}
+
+/* Eligibility Determination*/
+fieldset.eligibility .ctrlHolder {
+  padding: 10px 15px 5px 15px;
+}
+
+fieldset.eligibility .ctrlHolder label {
+  float: left;
+  margin-right: 15px;
+  width: 165px;
+}
+
+fieldset.eligibility .ctrlHolder label.long {
+  width: 360px;
+}
+
+fieldset.eligibility .ctrlHolder p {
+  float: left;
+  margin-right: 15px;
+  padding-bottom: 0;
+}
+
+fieldset.eligibility .ctrlHolder ul {
+  float: left;
+  margin: 0;
+}
+
+/* Pay Now Form*/
+fieldset.payNow .ctrlHolder {
+  padding: 10px;
+}
+
+fieldset.payNow .ctrlHolder label {
+  float: left;
+  width: 205px;
+}
+
+/* Pay Now Confirmation */
+fieldset.payNowConfirmation .ctrlHolder .leftCol,
+fieldset.payNowConfirmation .ctrlHolder .rightCol {
+  float: left;
+  width: 326px;
+}
+
+fieldset.payNowConfirmation .ctrlHolder label {
+  float: left;
+  width: 185px;
+}
+
+
+table.documents .formEntryContentSelect {
+  margin: 0;
+}
+
+table.documents td a {
+  font-size: 14px;
+}
+
+
+/* Change Account */
+
+.account {
+  border-bottom: 1px solid #a3a1a2;
+  padding: 8px 15px;
+}
+
+.account .accountName {
+  float: left;  
+}
+
+  .accountName h4 {
+    font-size: 1.2em;
+    font-family: 'Avenir_Medium';
+  }
+
+.account a.button {
+  float: right;
+}
+
+.changeAccountFooter a.button {
+  float: right;
+}
+
+/* =============================================================================
+   Plan Details Page
+   ========================================================================== */
+/*#pageContentArea .collapsibleContent {
+  padding: 0 15px;
+}*/
+
+#pageContentArea .noBorder {
+  border: 0;
+}
+
+#pageContentArea .topLink,
+.corpContentArea .topLink {
+  float: right;
+  margin: 10px 0;
+}
+
+#pageContentArea p.networkDetails {
+  color: #034564;
+  padding-bottom: 5px;
+  text-align: right;
+  margin: 5px 10px;
+}
+
+#pageContentArea table.planDetailsTable {
+  margin: 10px 10px 10px 30px;
+  width: 95%;
+}
+
+  #pageContentArea table.planDetailsTable tr td {
+    border-bottom: 1px solid #DEDEDE;
+    border-top: 0;
+  }
+
+
+  #pageContentArea table.planDetailsTable tr td:first-child {
+    color: #034564;
+    font-weight: bold;
+    width: 60%;
+  }
+
+    #pageContentArea table.planDetailsTable tr td:first-child span {
+      color: #3c3a37;
+      font-weight: normal;
+    }
+
+  #pageContentArea table.planDetailsTable tr td:nth-child(2) {
+    width: 18%;
+  }
+
+  #pageContentArea table.planDetailsTable tr td:last-child {
+    width: 17%;
+  }
+
+  #pageContentArea table.planDetailsTable tr:last-child td {
+    border: 0;
+  }
+
+
+
+/* =============================================================================
+   Tax Credit Allocation Page
+   ========================================================================== */
+
+   .taxCreditContainer {
+      margin: 20px 0;
+   }
+
+   .taxCreditContainer label {
+      color: #35353c;
+      font-family: 'Avenir_Black';
+      text-transform: uppercase;
+   }
+
+   .taxCreditContainer .premium {
+      float: left;
+      padding: 5px 10px;
+      text-align: center;
+      width: 185px;
+   }
+
+   .taxCreditContainer .premium.bkgr {
+    background: url("img/contributionBkgr.png") no-repeat;
+    height: 115px;
+    width: 107px;
+    margin-right: 20px;
+   }
+
+   .taxCreditContainer .premium.contributionBkgr {
+      background: url("img/contributionBkgr.png") no-repeat;
+      height: 108px;
+      width: 107px;
+   }
+
+      .taxCreditContainer .premium .planCost {
+        margin-top: 10px;
+        line-height: 0;
+        width: 100%;
+      }
+
+      .taxCreditContainer .premium .planCost input {
+        box-shadow: none;
+        color: #1a4a7a;
+        font-size: 38px;
+        font-weight: bold;        
+        padding: 0;
+        margin: 0;      
+      }
+
+      .taxCreditContainer .premium .planCost span {
+        font-family: 'Avenir_Book';
+        font-size: 12px;
+      }
+
+   .taxCreditContainer .divider {
+      font-size: 40px;
+      float: left;
+      padding: 40px 5px;
+      width: 40px;
+   }
+
+.taxCreditContainerSlider {
+  padding: 0 0 0 20px;
+}
+
+  .taxCreditContainerSlider #slider-range-min {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    float: left;
+    margin: 10px;
+    width: 420px;
+  }
+
+    .taxCreditContainerSlider #slider-range-min.ui-widget-content {
+      background: none;
+      border: 1px solid #c2d3bd;
+    }
+
+    .taxCreditContainerSlider #slider-range-min .ui-widget-header {
+      background: #72b743;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+    }
+
+.taxCreditContainerSlider .planCost {
+    float: left;
+    font-size: 30px;
+    line-height: 20px; 
+    text-align: center;
+  }
+
+  .taxCreditContainerSlider .planCost span {
+      font-family: 'Avenir_Book';
+      font-size: 12px;
+      line-height: 8px;
+    }
+
+.taxCreditContainerSlider .ui-widget-content .ui-state-default,
+.taxCreditContainerSlider .ui-widget-header .ui-state-default {
+   background: url(img/green_slider_arrow.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/;
+}
+
+/* =============================================================================
+   Sidebar Content
+   ========================================================================== */
+
+#sidebar {
+  float: left;
+  margin: 70px 5px 0 0;
+  width: 200px;
+}
+
+  #sidebar fieldset {
+    padding: 4px;
+    margin-bottom: 8px;
+  }
+
+  #sidebar fieldset .title {
+    background: url(img/bkgrd_selected_plans.png);
+    color: #1a4a7a;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+  }
+
+  #sidebar fieldset span {
+    float: right;
+    margin: 5px 0;
+  }
+
+  #sidebar fieldset .ctrlHolder {
+    padding: 8px 3px;
+  }
+
+    #sidebar fieldset .ctrlHolder label {
+      font-size: 12px;
+      font-weight: normal;
+      float: left;
+      width: 108px;
+    }
+
+#sidebar fieldset table {
+  font-size: 12px;
+  margin: 0;
+  width: 100%;
+}
+
+  #sidebar fieldset table th {
+    font-family: 'Avenir_Medium';
+    text-transform: none;
+  }
+
+  #sidebar fieldset table tr td {
+    padding: 5px 6px;
+    border-bottom: 1px solid #ccc;
+    border-top: 0;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+
+
+/* =============================================================================
+   Tax Filing Structure Form
+   ========================================================================== */
+
+.accordion.taxFilingForm .ctrlHolder label {
+  float: left;
+}
+
+.accordion.taxFilingForm .ctrlHolder .formEntryContentSelect {
+  background: url(img/selectorArrow.png) no-repeat scroll 130px 8px #e2e3e3;
+  float: right;
+  width: 155px;
+}
+
+  .accordion.taxFilingForm .ctrlHolder .formEntryContentSelect select {
+    width: 155px;
+  }
+
+/* =============================================================================
+   Find Assistance Results
+   ========================================================================== */
+
+.resultsContainer {
+  border: 1px solid #dddbdb;
+  height: 400px;
+  overflow: auto;
+  padding: 10px 5px 10px 15px;
+}
+
+.resultItem {
+  border-bottom: 1px solid #dddbdb;
+  margin: 0 0 10px 0;
+}
+
+.resultItem:last-child {
+  border-bottom: 0;
+}
+
+.resultCol {
+  float: left;
+  text-align: center;
+  width: 125px;
+}
+
+.resultCol:first-child {
+  text-align: left;
+  width: 170px;
+}
+
+.resultCol:last-child {
+  text-align: right;
+  width: 70px;
+}
+
+.resultCol p {
+  padding-bottom: 5px;
+}
+
+/* =============================================================================
+   Collapsible Content
+ ========================================================================== */
+
+.collapsibleContent {
+  padding: 10px;
+}
+
+/*    .collapsibleContent input {
+      background: none;
+      font-weight: bold;
+    }*/
+
+h5.collapsible  {
+  font-size: 18px;
+  padding: 15px 25px;
+}
+
+
+/* =============================================================================
+   View Plans Page
+ ========================================================================== */
+ #product_show img{
+        cursor: pointer;
+    }
+     
+    .product_button{
+        background: none;
+        border: 0;
+        color:#1a4a7a;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0;      
+        min-width: 5px;
+    }
+
+    .product_button_selected {      
+      background: none;
+      border: 0;
+      color:#1a4a7a;
+      font-weight: bold;
+      text-decoration: underline;
+      padding: 0;        
+      min-width: 5px;
+    }
+
+    
+    .product_results{
+        font-weight: bold;
+    }
+
+    #product_premium_slider,
+     #slider-range,
+     #slider-range2,
+     #slider-range3,
+     #slider-range4,
+     #slider5 {
+        width: 200px;
+    }
+
+
+    .planHorizontalBoxColumn .planCost {
+      margin-bottom: 10px;
+    }
+
+/* =============================================================================
+   Provider Search Additional Options
+  ========================================================================== */
+
+.addOptions {
+  background: #edeeef;
+  padding: 12px;
+}
+
+  .addOptions .ColOne {
+    float: left;
+    margin-right: 20px;
+    width: 235px;
+  }
+
+  .addOptions .ColTwo {
+    float: left;
+    margin-right: 20px;
+    width: 310px;
+  }
+
+  .addOptions .ColThree {
+    float: left;
+    width: 270px;
+  }
+
+.addOptions label {
+  float: left;
+  width: 140px;
+}
+
+.addOptions .formEntryContentSelect {
+  float: left;
+  margin-right: 5px;
+}
+
+.addOptions  input {
+  background: #FFF;
+  float: left;
+}
+
+.addOptions ul {
+  float: left;
+  margin: 0;
+}
+
+.addOptions ul li {
+  list-style: none;
+}
+
+.addOptions .ctrlHolder {
+  padding: 5px 0 5px 0;
+}
+
+
+/* =============================================================================
+   Provider Search Table in Individual App
+  ========================================================================== */
+
+table.providers td:first-child input {
+  float: left;
+  margin-right: 10px;
+}
+
+table.providers td:first-child span {
+  float: left;
+}
+
+
+/* =============================================================================
+   How to SHOP Section
+  ========================================================================== */
+
+/* Tables */
+
+table.shoping {
+  width: 97%;
+}
+
+table.shoping .hover { 
+  background-color: #eee;
+  cursor: default; 
+}
+
+  table.shoping tr td {
+    border-top: 1px solid #DEDEDE;
+    padding: 20px 10px;
+  }
+
+  table.shoping tr td:nth-child(2) {
+    text-align: center;
+  }
+
+  table.shoping thead th {    
+    font-size: 18px;
+    text-transform: none;
+  }
+
+  table.shoping thead th .help {
+    font-family: 'Avenir_Medium';
+    font-size: 10px;
+  }
+
+
+/* Modals */
+
+.determinedGroups {
+  font-size: 12px;
+}
+
+.determinedGroups span {
+  float: left;
+  margin: 0 5px 10px 0;
+}
+
+ul.bulletedList {
+  list-style-type: circle;
+}

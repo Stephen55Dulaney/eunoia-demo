@@ -1,0 +1,167 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  typography.css
+ * ===== VERSION: v0.3
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio, Michael Jackson)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+/* Table of Contents
+    1. Typography
+
+ */
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+/*Base  pixel size 14px = 1em */
+
+h1 {
+  font-family: 'Avenir_Book';
+  /*font-size: 3em;*/
+  font-size: 36px;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #323232;
+  font-family: 'Brandon_Grotesque_Regular';
+  font-size: 2.6em;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+  
+    .homeContentContainer h2 span {
+      margin-right: 160px;
+    }
+  
+h3 {
+  color: #00324d;
+  font-family: 'Brandon_Grotesque_Regular';
+  font-size: 2em;
+  line-height: 1em;
+}
+
+h4 {
+  color: #00324d;
+  font-family: 'Brandon_Grotesque_Regular';
+  font-size: 1.714em;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+
+h5 {
+  color: #00324d;
+  font-family: 'Brandon_Grotesque_Bold';
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-weight: bold;  
+}
+
+p {
+  color: #3c3a37;
+  font-size: 1em;
+  padding-bottom: 18px;
+}
+
+ul {
+  color: #3c3a37;
+  font-size: 1em;
+}
+
+a { 
+  color: #009bd8;
+  font-size: 1em;
+  text-decoration: underline; 
+}
+
+  a:visited { 
+    color: #009bd8; 
+  }
+
+  a:hover { 
+    color: #009bd8;
+    text-decoration: underline; 
+  }
+
+  a:focus { 
+    outline: thin dotted; 
+  }
+
+  a:hover,
+  a:active { 
+    outline: 0; 
+  }
+
+.b1, .b2, .b3, .b4, .b5 {  
+  font-family: 'Avenir_Light';
+}
+
+.b1 {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.b2 {
+  color: #3c3a37;
+  font-size: 18px;
+}
+
+.b3 {
+  color: #666666;
+  font-size: 16px;
+}
+
+.b4 {
+  color: #1a4a7a;
+  font-size: 14px;
+}
+
+.b5 {
+  color: #1a4a7a;
+  font-size: 18px;
+}
+
+.l1 {
+  color: #009bd8;
+  font-family: 'Avenir_Light';
+  font-size: 12px;
+}
+
+.t1, .t2 {
+  font-family: 'Avenir_Book';
+  text-transform: uppercase;
+}
+
+.t1 {
+  color: #1a4a7a;
+  font-size: 12px;
+}
+
+.t2 {
+  color: #999999;
+  font-size: 12px;
+}
+
+.n1, .n2 { 
+  color: #1a4a7a; 
+  font-family: 'Avenir_Light';
+  text-transform: uppercase; 
+}
+
+.n1 {
+  font-size: 24px; 
+}
+
+.n2 {
+  font-size: 38px; 
+}

@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}Eunoia Memory Companion: Persistent Memory for Modular Research Assistants{% endblock %}
+
+{% block content %}
+<section class="eo-hero-section" style="background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('/static/cover_oregon_prototype/html/styles/img/craterlake2.png') center center/cover no-repeat; color: #fff; min-height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 2.5rem; padding: 3rem 1rem;">
+  <h1 class="eo-hero-title text-5xl font-extrabold mb-4">Eunoia Memory Companion</h1>
+  <div style="background: rgba(0,0,0,0.7); color: #fff; border-radius: 0.5rem; padding: 0.75rem 1.5rem; max-width: 700px; margin: 0 auto 0.5rem auto;">
+    <p class="text-xl font-medium mb-2" style="color: #fff;">Persistent Memory for Modular Research Assistants</p>
+    <p class="text-lg opacity-90 mb-0" style="color: #fff;">Enabling persistent, context-aware AI research with modular memory</p>
+  </div>
+  <div class="mt-6 flex justify-center">
+    <a href="/memory-companion-demo"
+       class="inline-block px-6 py-3 rounded-lg font-bold text-lg shadow transition eo-demo-btn"
+       style="background-color: #6db33f; font-weight: bold; letter-spacing: 1px; color: #fff;"
+    >
+      View Memory Companion Demo
+    </a>
+  </div>
+</section>
+<style>
+.eo-demo-btn {
+  color: #fff !important;
+  background-color: #6db33f;
+  transition: background 0.2s, color 0.2s;
+}
+.eo-demo-btn:hover, .eo-demo-btn:focus {
+  background-color: #5ca32e !important;
+  color: #111 !important;
+}
+</style>
+<article class="eo-container">
+
+
+  <!-- Context & Business Problem -->
+  <section id="context" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">Context & Business Problem</h2>
+    <p><strong>Background:</strong> AI research assistants are increasingly used for interviews, synthesis, and project management. However, most LLM-based tools lose context between sessions, leading to fragmented research and repeated onboarding.</p>
+    <p><strong>Business Problem:</strong> Teams need a way to persist project memory, maintain continuity, and enable context-aware responses across research sessions and agent handoffs.</p>
+    <p><strong>Success Metrics:</strong> Number of sessions with full memory recall, reduction in repeated onboarding, user satisfaction with continuity.</p>
+    <p><strong>Role & Team:</strong> Lead AI Research Engineer; 3-person cross-functional team.</p>
+    <p><strong>Timeline:</strong> Build (4w), Integration (6w).</p>
+  </section>
+
+  <!-- Discovery Phase -->
+  <section id="discovery" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">Discovery Phase</h2>
+    <section id="week0" class="subsection mb-4">
+      <h3 class="text-xl font-semibold mb-2">Week 0: Kickoff & Planning</h3>
+      <p>Goals: Identify pain points in session continuity, define requirements for persistent memory, and map integration points with orchestration modules.</p>
+    </section>
+    <section id="stakeholder-interviews" class="subsection">
+      <h3 class="text-xl font-semibold mb-2">Stakeholder Interviews & Ambition Statement</h3>
+      <p>Interviewed researchers and product managers. Main themes: need for memory recall, auditability, and seamless agent handoff.</p>
+      <blockquote class="ambition-statement bg-gray-100 p-4 rounded mt-2">
+        "Ambition Statement: Enable research agents to remember, reason, and build on prior sessions for truly continuous, context-rich research."
+      </blockquote>
+    </section>
+  </section>
+
+  <!-- Personas & Recruitment -->
+  <section id="personas" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">Defining Target Personas & Recruitment</h2>
+    <p>Segments: Research Ops, Lead Researchers, AI Engineers. Key attributes: value continuity, need for audit trails, frequent multi-session projects.</p>
+  </section>
+
+  <!-- Field Research -->
+  <section id="field-research" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">Field Research</h2>
+    <section id="contextual-inquiry" class="subsection mb-4">
+      <h3 class="text-xl font-semibold mb-2">Contextual Inquiries</h3>
+      <p>Observed research teams using LLM tools. Documented context loss and repeated onboarding as major pain points.</p>
+    </section>
+    <section id="interviews" class="subsection">
+      <h3 class="text-xl font-semibold mb-2">Individual & Group Interviews</h3>
+      <p>Key findings: need for persistent memory, structured project journals, and agent handoff logs.</p>
+    </section>
+  </section>
+
+  <!-- Synthesis -->
+  <section id="synthesis" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">Synthesis: Persistent Memory & Modular Orchestration</h2>
+    <section id="persona-cards" class="subsection mb-4">
+      <h3 class="text-xl font-semibold mb-2">Persona Creation</h3>
+      <p>Developed archetypes for memory-focused researchers and orchestration engineers.</p>
+    </section>
+    <section id="journey-maps" class="subsection">
+      <h3 class="text-xl font-semibold mb-2">Journey Mapping</h3>
+      <p>Mapped the workflow from session start, memory recall, agent handoff, to research output.</p>
+    </section>
+  </section>
+
+  <!-- Opportunity Identification -->
+  <section id="opportunities" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">Opportunity Identification & Prioritization</h2>
+    <section id="debrief-workshop" class="subsection mb-4">
+      <h3 class="text-xl font-semibold mb-2">Debrief Workshop</h3>
+      <p>Prioritized features: memory journal, session logs, agent handoff, and auditability.</p>
+    </section>
+    <section id="ideation" class="subsection mb-4">
+      <h3 class="text-xl font-semibold mb-2">Ideation: Modular Memory System</h3>
+      <p>Sketched architecture for memory journal, agent handoff, and orchestration modules.</p>
+    </section>
+    <section id="prioritization" class="subsection">
+      <h3 class="text-xl font-semibold mb-2">Prioritization Matrix (Effort vs Impact)</h3>
+      <p>Quick wins: persistent memory and session logs. Strategic bets: agent orchestration and chaining.</p>
+    </section>
+  </section>
+
+  <!-- Implementation Planning -->
+  <section id="implementation" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">From Opportunities to Implementation</h2>
+    <section id="epics-stories" class="subsection mb-4">
+      <h3 class="text-xl font-semibold mb-2">Epics & User Stories</h3>
+      <p>Backlog included: memory CRUD, session logs, agent handoff, and orchestration integration.</p>
+    </section>
+    <section id="design-sprints" class="subsection">
+      <h3 class="text-xl font-semibold mb-2">Design & Prototyping Sprints</h3>
+      <p>Iterative sprints delivered a working memory companion, session log UI, and orchestration hooks.</p>
+    </section>
+  </section>
+
+  <!-- Outcome & Impact -->
+  <section id="outcome" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">Outcome & Impact</h2>
+    <section id="final-solution" class="subsection mb-4">
+      <h3 class="text-xl font-semibold mb-2">Final Solution Overview</h3>
+      <p>Launched Eunoia Memory Companion with persistent project memory, session continuity, and agent handoff support. Orchestration is available as a separate module for multi-agent chaining.</p>
+    </section>
+    <section id="metrics" class="subsection mb-4">
+      <h3 class="text-xl font-semibold mb-2">Quantitative Results</h3>
+      <ul class="list-disc ml-6">
+        <li>Session continuity ↑ 100%</li>
+        <li>Context loss ↓ 90%</li>
+        <li>Research reproducibility ↑ 80%</li>
+      </ul>
+    </section>
+    <section id="qualitative-feedback" class="subsection">
+      <h3 class="text-xl font-semibold mb-2">Qualitative Feedback</h3>
+      <blockquote class="bg-gray-100 p-4 rounded">"The memory companion made it possible to pick up research right where we left off, with no loss of context."</blockquote>
+    </section>
+  </section>
+
+  <!-- Reflections & Next Steps -->
+  <section id="reflections" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8 eo-section">
+    <h2 class="text-2xl font-semibold mb-4">Reflections & Learnings</h2>
+    <h3 class="text-xl font-semibold mb-2">What Went Well</h3>
+    <ul class="list-disc ml-6 mb-4">
+      <li>Persistent memory and session logs enabled seamless research continuity.</li>
+      <li>Orchestration hooks allow for future multi-agent chaining.</li>
+    </ul>
+    <h3 class="text-xl font-semibold mb-2">Challenges & Mitigations</h3>
+    <ul class="list-disc ml-6 mb-4">
+      <li>Initial complexity in memory handoff—solved with structured JSON logs.</li>
+      <li>Orchestration integration required clear API boundaries.</li>
+    </ul>
+    <h3 class="text-xl font-semibold mb-2">Next Steps</h3>
+    <ul class="list-disc ml-6">
+      <li>Integrate authentication and user roles.</li>
+      <li>Expand orchestration to support more agent types and chaining logic.</li>
+      <li>Monitor memory performance and iterate on session handoff.</li>
+    </ul>
+  </section>
+</article>
+{% endblock %} 

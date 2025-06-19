@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% from "components/breadcrumbs.html" import render_breadcrumbs %}
+
+{% block content %}
+<div class="container">
+    {{ render_breadcrumbs([
+        {'text': 'Admin', 'url': url_for('admin_dashboard')},
+        {'text': 'Roles', 'url': url_for('admin_role_list')},
+        {'text': 'New Role', 'url': '#'}
+    ]) }}
+
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Create New Role</h1>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="name">Role Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Permissions</label>
+                    <div class="row">
+                        {% for permission in permissions %}
+                        <div class="col-md-4">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="permission_{{ permission.id }}" name="permissions" value="{{ permission.id }}">
+                                <label class="custom-control-label" for="permission_{{ permission.id }}">
+                                    {{ permission.name }}
+                                    <small class="text-muted d-block">{{ permission.description }}</small>
+                                </label>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Create Role</button>
+                    <a href="{{ url_for('admin_role_list') }}" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %} 
