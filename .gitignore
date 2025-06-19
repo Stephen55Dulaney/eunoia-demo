@@ -25,5 +25,3 @@ instance/
 # VSCode settings
 .vscode/
 
-# Cover Oregon Prototype
-static/cover_oregon_prototype/ 
