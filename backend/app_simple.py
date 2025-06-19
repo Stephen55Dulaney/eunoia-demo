@@ -27,7 +27,7 @@ def research():
 @app.route('/cover-oregon-prototype/')
 @app.route('/cover-oregon-prototype/<path:filename>')
 def cover_oregon_prototype(filename='index.html'):
-    return send_from_directory('static/cover_oregon_prototype/html', filename)
+    return send_from_directory('../static/cover_oregon_prototype/html', filename)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000) 
