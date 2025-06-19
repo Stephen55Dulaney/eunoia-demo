@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, abort
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, abort, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -1248,6 +1248,11 @@ app.register_blueprint(memory_companion_bp)
 @login_required
 def memory_companion_demo():
     return render_template('agents/memory_companion/eunoia_memory_companion.html')
+
+@app.route('/cover-oregon-prototype/')
+@app.route('/cover-oregon-prototype/<path:filename>')
+def cover_oregon_prototype(filename='index.html'):
+    return send_from_directory('static/cover_oregon_prototype/html', filename)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5050) 
