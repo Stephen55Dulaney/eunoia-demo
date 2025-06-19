@@ -106,6 +106,10 @@ def chat():
     Current opportunities:
     {json.dumps(memory['opportunities'], indent=2) if memory['opportunities'] else 'No current opportunities'}
     
+    IMPORTANT: Timeline entries should only be created for significant milestones, not for every conversation. 
+    Regular conversations are stored in the chat transcript. Only add timeline entries when the user explicitly 
+    requests it or when there's a major project milestone, decision, or achievement.
+    
     Use this context to provide relevant and informed responses."""
     
     try:
@@ -137,22 +141,8 @@ def chat():
         else:
             return jsonify({'error': 'Unsupported provider'}), 400
         
-        # Add the conversation as a single timeline entry with unique ID
-        timeline_id = len(memory['timeline']) + 1
-        memory['timeline'].append({
-            'id': timeline_id,
-            'timestamp': datetime.utcnow().isoformat(),
-            'type': 'conversation',
-            'user_id': current_user.id,
-            'content': f"User: {message}\nEunoia: {response_text}",
-            'details': {
-                'user_message': message,
-                'eunoia_response': response_text,
-                'provider': provider,
-                'model': model
-            }
-        })
-        save_memory(memory)
+        # Don't automatically create timeline entries for every conversation
+        # Timeline entries should only be created for significant milestones
         
         return jsonify({'response': response_text})
         
@@ -250,6 +240,56 @@ def update_timeline_event(event_id):
     save_memory(memory)
     
     return jsonify({'status': 'success', 'event': event})
+
+@memory_companion_bp.route('/api/memory_companion/timeline/<int:event_id>', methods=['DELETE'])
+@login_required
+@require_permission('edit_projects')
+def delete_timeline_event(event_id):
+    memory = load_memory()
+    
+    # Find the event by ID
+    event = None
+    event_index = None
+    for i, timeline_event in enumerate(memory['timeline']):
+        if timeline_event.get('id') == event_id:
+            event = timeline_event
+            event_index = i
+            break
+    
+    if not event:
+        return jsonify({'error': 'Timeline event not found'}), 404
+    
+    # Remove the event
+    memory['timeline'].pop(event_index)
+    save_memory(memory)
+    
+    return jsonify({'status': 'success', 'message': f'Timeline event {event_id} deleted'})
+
+@memory_companion_bp.route('/api/memory_companion/timeline/cleanup', methods=['POST'])
+@login_required
+@require_permission('edit_projects')
+def cleanup_timeline():
+    memory = load_memory()
+    
+    # Remove entries with undefined content or missing IDs
+    original_count = len(memory['timeline'])
+    memory['timeline'] = [
+        event for event in memory['timeline'] 
+        if event.get('content') and event.get('content') != 'undefined' and event.get('id')
+    ]
+    
+    # Reassign IDs to ensure they're sequential
+    for i, event in enumerate(memory['timeline']):
+        event['id'] = i + 1
+    
+    removed_count = original_count - len(memory['timeline'])
+    save_memory(memory)
+    
+    return jsonify({
+        'status': 'success', 
+        'message': f'Cleaned up {removed_count} undefined timeline entries',
+        'remaining_entries': len(memory['timeline'])
+    })
 
 @memory_companion_bp.route('/api/memory_companion/opportunity/<int:opportunity_id>', methods=['PUT'])
 @login_required

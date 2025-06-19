@@ -455,6 +455,9 @@
 - "add event: [event description]" - Same as above
 - "update timeline [ID]: [new content]" - Updates a specific timeline event by ID
 - "update event [ID]: [new content]" - Same as above
+- "delete timeline [ID]" - Removes a specific timeline event by ID
+- "delete event [ID]" - Same as above
+- "cleanup timeline" - Removes undefined and invalid timeline entries
 
 **Opportunity Commands:**
 - "add opportunity: [title] | [description] | [priority]" - Adds a new opportunity
@@ -507,6 +510,26 @@ You can also just chat normally with me about your project!`, 'eunoia');
                     hideThinking();
                     return;
                 }
+            }
+            
+            // Delete timeline event commands
+            if (lowerMessage.startsWith('delete timeline') || lowerMessage.startsWith('delete event')) {
+                const match = message.match(/(\d+)/);
+                if (match) {
+                    const eventId = parseInt(match[1]);
+                    showThinking();
+                    await deleteTimelineEvent(eventId);
+                    hideThinking();
+                    return;
+                }
+            }
+            
+            // Cleanup timeline command
+            if (lowerMessage === 'cleanup timeline') {
+                showThinking();
+                await cleanupTimeline();
+                hideThinking();
+                return;
             }
             
             // Add opportunity commands
@@ -765,6 +788,54 @@ You can also just chat normally with me about your project!`, 'eunoia');
                 
                 if (response.ok) {
                     showMessage('Opportunity added successfully!');
+                    // Refresh the memory journal
+                    await initializeMemoryJournal();
+                } else {
+                    showMessage(`Error: ${data.error}`, true);
+                }
+            } catch (error) {
+                showMessage(`Error: ${error.message}`, true);
+            }
+        }
+
+        // Function to delete timeline event
+        async function deleteTimelineEvent(eventId) {
+            try {
+                const response = await fetch(`/api/memory_companion/timeline/${eventId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showMessage(`Timeline event ${eventId} deleted successfully!`);
+                    // Refresh the memory journal
+                    await initializeMemoryJournal();
+                } else {
+                    showMessage(`Error: ${data.error}`, true);
+                }
+            } catch (error) {
+                showMessage(`Error: ${error.message}`, true);
+            }
+        }
+
+        // Function to cleanup timeline
+        async function cleanupTimeline() {
+            try {
+                const response = await fetch('/api/memory_companion/timeline/cleanup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showMessage(data.message);
                     // Refresh the memory journal
                     await initializeMemoryJournal();
                 } else {
