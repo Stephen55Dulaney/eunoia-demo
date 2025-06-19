@@ -1,0 +1,1659 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  dashboard.css
+ * ===== VERSION: v0.2
+ * ===== UPDATED: 2/25/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+ /* Table of Contents
+    1. Dashboard Left Sidebar Content
+    2. Dashboard Navigation
+    3. Dashboard Page Level Navigation
+    3. Dashboard Alerts
+    4. Dashboard Titles
+    5. Dashboard Primary Content Area
+    6. Dashboard Primary Content Area Collapsible Styles
+    7. Dashboard Message Center styles
+    8. Dashboard Content Area
+    9. Misc.
+    10. Dashboard Application Incomplete Nav
+    11. Dashboard Resources: Carrier Information
+*/
+
+
+/* =============================================================================
+   Dashboard Left Sidebar Content
+   ========================================================================== */
+#dashboardContent .dashboardContentWrapper {
+	float: left;
+	padding: 20px 0;
+	width: 690px;
+}
+
+#dashboardContent .dashboardContentWrapperNoAside {
+	float: right;
+	padding:  15px 30px 40px 30px;
+	width: 890px;
+}
+
+#dashboardContent aside {
+	float: left;
+	min-height: 700px;
+	padding: 15px 17px 40px 17px;
+	width: 236px;
+}
+
+#dashboardContent aside .divider {
+	padding: 10px 0px 0px 10px;
+	width:260px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #666666;
+	height: 30px;
+	margin-left: -30px;
+}
+
+#dashboardContent aside .divider.box {
+	height: 153px;
+}
+
+#dashboardContent aside .boxcopy {
+	padding: 10px 10px 10px 10px;
+	font-weight: normal;
+
+	}
+
+#dashboardContent aside .buttonbox {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 187px;
+	width: 260px;
+	margin-left: -20px;
+}
+
+#dashboardContent aside nav {
+	margin-bottom: 30px;
+}
+
+#dashboardContent aside nav h4 {
+	color: #073c5b;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+#dashboardContent aside nav ul li a.navTitle {
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+#dashboardContent nav ul li {
+	font-family: 'Avenir_Medium';
+	padding: 5px 0;
+}
+
+#dashboardContent nav ul.actionlinks li {
+	background: url(img/right_arrow_blue.png) no-repeat left center;
+	padding: 5px 0 5px 20px;
+}
+
+#dashboardContent nav ul li.visited a{
+	font-family: 'Avenir_Medium';
+	padding: 5px 0;
+	margin-left:10px;
+
+}
+#dashboardContent aside nav h6 {
+	color: #FFFFFF;
+cursor: none;
+text-decoration: none;
+text-transform: uppercase;
+line-height: 18px;
+padding: 15px 15px;
+display: block;
+	background: #0987b7;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#0987b7), to(#07354d));
+    background: -webkit-linear-gradient(#0987b7, #07354d);
+    background: -moz-linear-gradient(#0987b7, #07354d);
+    background: -ms-linear-gradient(#0987b7, #07354d);
+    background: -o-linear-gradient(#0987b7, #07354d);
+    background: linear-gradient(#0987b7, #07354d);
+    -pie-background: linear-gradient(#0987b7, #07354d);
+    behavior: url(scripts/PIE.htc);
+    border: 1px solid #141846;
+    color: #FFF;
+    float: left;
+	margin: 0 10px 10px 0;
+	padding: 10px 10px;
+	text-align: center;
+	width: 177px;
+	margin-left:0px;
+	
+}
+#dashboardContent nav ul li a.navTitle:hover {
+	text-decoration: none;
+}
+#dashboardContent nav ul.actionlinks li {
+	background: url(img/right_arrow_blue.png) no-repeat left center;
+	padding: 5px 0 5px 20px;
+}
+
+#dashboardContent nav ul li a {
+	font-size: 14px;	
+}
+
+
+#dashboardContent nav ul li a:hover {
+	text-decoration: underline;
+}
+
+#dashboardContent nav p {
+	text-align: center;
+}
+
+.columnOne {	
+	float: left;	
+	margin: 0 20px 10px 0;
+	width:420px;
+}
+
+.columnTwo {
+	width:440px;
+	float: left;
+	margin: 0 0 10px 0;
+}	
+
+
+/* ===========================================================================
+	Dashboard Navigation
+========================================================================== */
+
+#dashboardNav {
+	background: #5daad4;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#5daad4), to(#1f9ccc));
+    background: -webkit-linear-gradient(#5daad4, #1f9ccc);
+    background: -moz-linear-gradient(#5daad4, #1f9ccc);
+    background: -ms-linear-gradient(#5daad4, #1f9ccc);
+    background: -o-linear-gradient(#5daad4, #1f9ccc);
+    background: linear-gradient(#5daad4, #1f9ccc);
+    -pie-background: linear-gradient(#5daad4, #1f9ccc);
+    behavior: url(scripts/PIE.htc);
+    height: 50px;
+}
+
+	#dashboardNav ul {
+		margin: 0 auto;
+		width: 960px;
+	}
+
+		#dashboardNav ul li {
+			background: url(img/dashboard_nav_divider.png) no-repeat right bottom;
+			float: left;
+			padding: 18px 15px 4px 15px;
+			margin-right: 2px;
+			position: relative;
+		}
+
+		/* Help Link on Dash nav*/
+		/*#dashboardNav ul li:last-child {
+			float: right;
+			background: none;
+			padding: 13px 15px 4px 15px;
+		}*/
+
+			#dashboardNav ul span {
+				background: none;				
+				float: right;
+				margin-top: 12px;
+				padding-right: 0;
+			}
+
+				#dashboardNav ul span img,
+				#dashboardNav ul li img  {
+					margin: 0 0 0 10px;
+				}
+
+				#dashboardNav ul span a,
+				#dashboardNav ul li img a {
+					color: #FFF;
+					font-size: 14px;
+					font-family: 'Avenir_Medium';
+					text-decoration: none;
+				}
+
+					#dashboardNav ul span a:hover,
+					#dashboardNav ul li a:hover  {
+						text-decoration: underline;
+					}
+
+			#dashboardNav ul li a {
+				color: #FFF;
+				font-family: 'Avenir_Medium';
+				font-size: 14px;
+				text-decoration: none;
+			}
+
+			#dashboardNav ul li.active, 
+			#dashboardNav ul li.active:hover  {
+				color: #FFFFFF;
+				text-decoration: none;
+				display: block;
+				background: #0987b7;
+    			background: -webkit-gradient(linear, 0 0, 0 bottom, from(#0987b7), to(#07354d));
+    			background: -webkit-linear-gradient(#0987b7, #07354d);
+    			background: -moz-linear-gradient(#0987b7, #07354d);
+    			background: -ms-linear-gradient(#0987b7, #07354d);
+    			background: -o-linear-gradient(#0987b7, #07354d);
+    			background: linear-gradient(#0987b7, #07354d);
+    			-pie-background: linear-gradient(#0987b7, #07354d);
+    			behavior: url(scripts/PIE.htc);
+    			/*border: 1px solid #141846;*/
+    			border: 0;
+    			color: #FFF;
+    			-webkit-border-top-left-radius: 4px;
+				-webkit-border-top-right-radius: 4px;
+				-moz-border-radius-topleft: 4px;
+				-moz-border-radius-topright: 4px;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				margin-top: -9px;
+				padding: 22px 16px 0px 16px;
+				height: 37px;
+			}
+
+				#dashboardNav ul li:last-child:hover {
+					padding: 18px 15px 4px 15px;
+				} 
+
+
+				#dashboardNav ul li:hover {
+					background: #0987b7;
+	    			background: -webkit-gradient(linear, 0 0, 0 bottom, from(#0987b7), to(#07354d));
+	    			background: -webkit-linear-gradient(#0987b7, #07354d);
+	    			background: -moz-linear-gradient(#0987b7, #07354d);
+	    			background: -ms-linear-gradient(#0987b7, #07354d);
+	    			background: -o-linear-gradient(#0987b7, #07354d);
+	    			background: linear-gradient(#0987b7, #07354d);
+	    			-pie-background: linear-gradient(#0987b7, #07354d);
+	    			behavior: url(scripts/PIE.htc);
+				    -webkit-border-top-left-radius: 4px;
+					-webkit-border-top-right-radius: 4px;
+					-moz-border-radius-topleft: 4px;
+					-moz-border-radius-topright: 4px;
+					border-top-left-radius: 4px;
+					border-top-right-radius: 4px;
+					border: 0;
+					margin-top: -7px;
+					height: 35px;					
+				}
+
+
+			#dashboardNav ul li ul {
+				background: #176080;
+    			background: -webkit-gradient(linear, 0 0, 0 bottom, from(#176080), to(#063851));
+    			background: -webkit-linear-gradient(#176080, #063851);
+    			background: -moz-linear-gradient(#176080, #063851);
+    			background: -ms-linear-gradient(#176080, #063851);
+    			background: -o-linear-gradient(#176080, #063851);
+    			background: linear-gradient(#176080, #063851);
+    			-pie-background: linear-gradient(#176080, #063851);
+    			behavior: url(scripts/PIE.htc);
+    			color: #FFF;
+				margin-top: 19px;
+				margin-left: -16px;
+				position: absolute;			
+			    width: 180px;			    
+			}
+
+			#dashboardNav ul ul li,
+			#dashboardNav ul ul li:last-child {				 			 
+				 background: none;
+				 float: left;
+			}
+
+			#dashboardNav ul ul li {
+				padding: 18px 15px 0px 15px;
+			}
+
+				#dashboardNav ul ul li:hover {
+					background: none;
+					/*padding: 22px 16px -5px 15px;*/
+					padding: 18px 15px 0px 15px;
+					margin-top: -4px;
+				}
+
+				#dashboardNav ul ul li a:hover {					
+					text-decoration: underline;								
+				}
+
+/* Hide the Sub Menu*/
+#dashboardNav ul ul {
+	display: none;
+	z-index: 10;
+}
+
+/* Show the Sub Menu*/
+#dashboardNav ul li:hover > ul {
+	display: block;
+}
+
+
+/* ===========================================================================
+	Dashboard Page Level Navigation
+========================================================================== */
+nav#dashboardPageLevelNav {
+	background: #f1f0ef;
+	background: linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -o-linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -moz-linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -webkit-linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -ms-linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #D9D6D3),
+		color-stop(0.5, #EAE8E6),
+		color-stop(1, #F1F0EF)
+	);
+	-pie-background: linear-gradient(#f1f0ef, #d9d6d3);
+    behavior: url(scripts/PIE.htc);
+    margin: 0 -30px 40px -30px;
+}
+
+	nav#dashboardPageLevelNav ul {
+		margin-left: 10px;
+	}
+
+		nav#dashboardPageLevelNav ul li {
+			background: url(img/3rd_level_nav_divider.png) no-repeat right center;
+			float: left;
+			padding: 12px 20px 12px 20px;
+		}
+
+			nav#dashboardPageLevelNav ul li a {
+				color: #063c5b;
+				font-family: 'Avenir_Black';
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+
+				nav#dashboardPageLevelNav ul li a:hover,
+				nav#dashboardPageLevelNav ul li a:active,
+				nav#dashboardPageLevelNav ul li a.active {
+					color: #059bd7;
+				}
+
+
+
+/* ===========================================================================
+	Dashboard Alerts
+========================================================================== */
+
+.dashboardContentWrapper .dashboardAlertsSection {
+	background: #f8f6ab;
+	border: 1px solid #ffe802;
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0 12px 0 0;
+	padding: 0 10px;
+}
+
+.dashboardContentWrapper .dashboardAlertsSection ul li {
+	font-family: 'Avenir_Medium';
+	list-style: none;
+}
+
+.dashboardContentWrapper .dashboardAlertsSection ul li p {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 525px;
+}
+
+.dashboardContentWrapper .dashboardAlertsSection ul li a.viewAllAlerts {
+	color: #3c3a37;
+	float: right;
+	font-family: 'Avenir_Medium';
+	margin-right: 40px;
+	/*text-transform: uppercase;*/
+}
+
+	.dashboardContentWrapper .dashboardAlertsSection ul li a.viewAllAlerts .alertsCount {
+		background: #ea3d44;
+		-webkit-border-radius: 10px;
+	    -moz-border-radius: 10px;
+	    border-radius: 10px;
+		border: 0;
+		color: #FFF;
+		font-family: 'Avenir_Medium';
+		padding: 2px 6px;
+		position: relative;
+		top: -20px;
+		right: 0px;		
+	}
+
+.dashboardContentWrapper .dashboardAlertsSection ul li a.deleteAlert {
+	position: relative;
+	top: 0px;
+	right: -120px;
+}
+
+
+/* ==========================================================================
+	Dashboard Tiles
+========================================================================== */
+
+.dashboardContentWrapper .widgetsWrapper {
+	margin: 20px 0;
+}
+
+.dashboardContentWrapper .widgetsWrapper .widget {
+	background: #0987b7;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#0987b7), to(#07354d));
+    background: -webkit-linear-gradient(#0987b7, #07354d);
+    background: -moz-linear-gradient(#0987b7, #07354d);
+    background: -ms-linear-gradient(#0987b7, #07354d);
+    background: -o-linear-gradient(#0987b7, #07354d);
+    background: linear-gradient(#0987b7, #07354d);
+    -pie-background: linear-gradient(#0987b7, #07354d);
+    behavior: url(scripts/PIE.htc);
+    border: 1px solid #141846;
+    color: #FFF;
+    float: left;
+	height: 195px;
+	margin: 0 10px 10px 0;
+	padding: 20px 20px;
+	text-align: center;
+	width: 177px;
+}
+
+	.ie7 .dashboardContentWrapper .widgetsWrapper .widget,
+	.ie8 .dashboardContentWrapper .widgetsWrapper .widget {
+		behavior: none;
+	}
+
+.dashboardContentWrapper .widgetsWrapper .widget h5 {
+	background: none;
+	border: 0;
+	color: #FFF;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.dashboardContentWrapper .widgetsWrapper .widget p {
+	color: #FFF;
+}
+
+.dashboardContentWrapper .widgetsWrapper .widget .messageCount {
+	background: #60b4dc;
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	border: 1px solid #23759a;
+	font-family: 'Avenir_Medium';
+	padding: 0 5px;
+	position: relative;
+	top: -7px;
+	right: -92px;
+}
+
+/* ==========================================================================
+	Dashboard Primary Content Area
+========================================================================== */
+.dashboardContentWrapper .primaryContent {	
+	height:700px;
+	width:660px;
+}
+
+.dashboardContentWrapper .primaryContent .messageHeader {
+	float: left;	
+	color: ##323232;
+	font-size: 14px;
+	margin-bottom: 0px;
+	padding-top: 40px;
+	height: 80px;
+	width: 660px;
+	display: inline;
+}
+
+.dashboardContentWrapper .primaryContent .bold {
+	font-weight: bold;
+	display: inline;
+}
+
+.dashboardContentWrapper .primaryContent .normal {
+	font-weight: normal;
+	display: inline;
+}
+.dashboardContentWrapper .primaryContent .buttons {
+	float: right;
+}
+
+.dashboardContentWrapper .primaryContent .footer {
+	float: left;
+	padding-left: 380px;
+	padding-top: 14px;
+}
+.dashboardContentWrapper .primaryContent .normal span {
+	display:block;
+	float:right;
+	background:url(../images/print.png) center center no-repeat;
+	padding:20px;
+}
+
+.dashboardContentWrapper .primaryContent .underline {
+	font-weight: normal;
+	display: inline;
+	text-decoration: underline;
+}
+
+.dashboardContentWrapper .primaryContent .messageArea {
+	border: green 1px dashed;
+	height:350px;
+	width:660px;
+	border:1px solid #ccc;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	background-color:#f5f5f5;
+}
+
+.dashboardContentWrapper .primaryContent .replyArea {
+	border: green 1px dashed;
+	height:200px;
+	width:660px;
+	border:1px solid #ccc;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	background-color:#f5f5f5;
+}
+
+.dashboardContentWrapperNoAside .primaryContent  {
+	padding:  15px 0px 10px 00px;
+	width: 890px;
+}
+
+.dashboardContentWrapperNoAside .primaryContent.top {
+	padding:  15px 30px 30px 00px;
+	width: 850px;
+	height: 44px;
+}
+
+.dashboardContentWrapperNoAside .primaryContent.title {
+	float: left;	
+	color: ##323232;
+	font-size: 38px;
+	line-height: 36px;
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+	height: 34px;
+	width: 620px;
+}
+
+.status {
+	float:right;
+}
+
+.dashboardContentWrapperNoAside .memberform {
+	width: 860px;
+	font-size: 12px;
+}
+
+.dashboardContentWrapperNoAside .memberform.left {
+	display: inline-block;
+  	width: 180px;
+  	height: 100px;
+  	margin: 1em;
+  	font-weight: bold;
+}
+
+.dashboardContentWrapperNoAside .memberform.right {
+	display: inline-block;
+  	width: 180px;
+  	height: 100px;
+  	margin: 1em;	
+}
+
+.memberform.two {
+	display: inline-block;
+  	width: 390px;
+  	height: 100px;
+  	margin: 1em;	
+}
+
+.memberform.twolarge {
+	display: inline-block;
+  	width: 390px;
+  	/*height: 200px;*/
+  	margin: 1em;	
+}
+.dashboardContentWrapperNoAside .memberform.single {
+	display: inline-block;
+	text-align:center;
+  	width: 860px;
+  	height: 100px;
+  	margin: 1em;
+}
+
+
+/* ==========================================================================
+	Dashboard Primary Content Area Collapsible styles
+========================================================================== */
+.collapsible {
+  	-webkit-box-shadow: 0px 2px 3px #ccc;
+    -moz-box-shadow: 0px 2px 3px #ccc;
+    box-shadow: 0px 2px 3px #ccc;
+    background: #fefefe;    
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fefefe), to(#f1f1f1));
+    background: -webkit-linear-gradient(#fefefe, #f1f1f1);
+    background: -moz-linear-gradient(#fefefe, #f1f1f1);
+    background: -ms-linear-gradient(#fefefe, #f1f1f1);
+    background: -o-linear-gradient(#fefefe, #f1f1f1);
+    background: linear-gradient(#fefefe, #f1f1f1);
+    -pie-background: linear-gradient(#fefefe, #f1f1f1);
+    behavior: url(scripts/PIE.htc);
+    border-radius: 0;
+    border-top: 1px solid #e3e2e1;
+    border-bottom: 1px solid #bebdbd;
+    color: #1a4a7a;
+    font-size: 14px;
+    margin: 0;
+    padding: 8px 18px;
+    text-transform: none;
+}
+
+.collapsible.collapse-open span {
+    background: url(img/selectorArrow.png) no-repeat;
+    display:block;
+    float: right;
+    height: 13px;
+    width: 13px;        
+}
+
+
+.collapsible.collapse-close span {
+	background:url(img/selectorArrow_left_facing.png) no-repeat;
+	display:block;
+	float: right;
+	height: 13px;
+	width: 10px;
+}		
+
+.collapsible.parent {
+	background: #1d9ccc;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1d9ccc), to(#75c3e0));
+	background: -webkit-linear-gradient(#1d9ccc, #75c3e0);
+	background: -moz-linear-gradient(#1d9ccc, #75c3e0);
+	background: -ms-linear-gradient(#1d9ccc, #75c3e0);
+	background: -o-linear-gradient(#1d9ccc, #75c3e0);
+	background: linear-gradient(#1d9ccc, #75c3e0);
+	-pie-background: linear-gradient(#1d9ccc, #75c3e0);
+	behavior: url(scripts/PIE.htc);
+	border-bottom: 0;
+	color: #FFF;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 15px 18px;
+}
+
+	.collapsible.collapse-open.parent span {
+		background:url(img/selectorArrow_white.png) no-repeat;
+	}
+
+	.collapsible.collapse-close.parent span {
+		background:url(img/selectorArrow_left_facing_white.png) no-repeat;
+	}
+	
+/* ==========================================================================
+	Dashboard Message Center styles
+========================================================================== */
+
+#dashboardContent aside div.mailbox {
+	display: inline-block;
+  	width: 180px;
+  	height: 100px;
+  	padding:  4px 04px 0px 04px;
+	border: #B8B8B8 1px solid; 
+	
+
+}
+#dashboardContent aside div.mailbox.odd {
+	display: inline-block;
+  	width: 180px;
+  	height: 100px;
+  	padding:  4px 04px 0px 04px;
+  	background-color:#E8E8E8;
+	border: #B8B8B8 1px solid; 
+}
+
+  #dashboardContent aside div.scrollable {            
+	height:620px;
+	width:204px;
+	border:1px solid #ccc;
+	overflow:auto;
+	overflow-x:hidden;
+	background-color:#f5f5f5;
+}
+
+#dashboardContent aside div.mailbox ul  {
+	display:inline;
+}
+
+#dashboardContent aside div.mailbox ul li.from {
+	font-size: 14px;
+	display:inline;
+	font-weight: bold;
+	}
+
+ aside div.mailbox ul li.date {
+    display: inline;
+	font-size:10px;
+	float: right;
+}
+
+ aside div.mailbox ul li.subject {
+	font-size: 14px;
+	display: list-item;
+	}
+
+aside div.mailbox ul li.subject span {
+	display:block;
+	float:right;
+	background:url(../images/email_green.png) center center no-repeat;
+	padding:10px;
+	}
+#dashboardContent-search{overflow:auto;}
+
+#dashboardContent-search input.searchbox {
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     border-radius: 5px;
+     border:1px solid #8e8e8e;
+     background-color:#f5f5f5;
+     height:16px;
+     padding:4px;
+     padding-right:28px;
+     color:#4a4a4a;
+     float:left;
+ }
+
+#dashboardContent-search input.button{
+    border:0;
+    padding:0;
+    margin:0 0 0 -24px;
+    width:24px;
+    height:24px;
+    background:transparent url(../images/search_grey_icon.png) center center  no-repeat;
+    float:left;
+}
+
+/* =============================================================================
+   Dashboard Content Area
+   ========================================================================== */
+
+#dashboardContent .dashboardContentArea {
+	margin: 40px 30px;
+}
+
+	#dashboardContent section {
+		/*border-bottom: 1px solid #A7A7A7;*/
+		margin: 15px 0;
+	}
+
+	.dashboardContentArea h3 {
+		font-family: 'Brandon_Grotesque_Medium';
+		line-height: 30px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+
+		.dashboardContentArea h3 a.ViewOutbox {
+			color: #009bd8;
+			font-family: 'Avenir_Book';
+			font-size: 0.5em;
+			line-height: 1em;
+			margin-left: 30px;
+			text-transform: none;
+
+		}
+
+		.dashboardContentArea h3 span {
+			color: #323232;
+			font-size: 18px;
+			font-family: 'Avenir_Book';
+			text-transform: none;
+		}
+
+		.dashboardContentArea a.editLink {
+			float: right;
+			font-size: 14px;
+		}
+
+		.dashboardContentArea a.editLink:hover {
+			text-decoration: underline;
+		}
+
+	.dashboardContentArea h5 {	    
+	    background: #fefefe;    
+	    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fefefe), to(#f1f1f1));
+	    background: -webkit-linear-gradient(#fefefe, #f1f1f1);
+	    background: -moz-linear-gradient(#fefefe, #f1f1f1);
+	    background: -ms-linear-gradient(#fefefe, #f1f1f1);
+	    background: -o-linear-gradient(#fefefe, #f1f1f1);
+	    background: linear-gradient(#fefefe, #f1f1f1);
+	    -pie-background: linear-gradient(#fefefe, #f1f1f1);
+	    behavior: url(scripts/PIE.htc);
+	    border-radius: 0;
+	    border-top: 1px solid #e5e5e5;
+	    border-bottom: 1px solid #dadada;
+	    color: #1a4a7a;
+		font-size: 18px;
+	    margin: 0;
+	    padding: 10px 25px;
+	    text-transform: none;
+	}
+
+		.dashboardContentArea h5 span {
+			background: url(img/selectorArrow.png) no-repeat;
+		    display:block;
+		    float: right;
+		    margin-top: 5px;    
+	        height: 10px;
+	        width: 13px;  
+		}
+
+	.dashboardContentArea hr {
+		margin: 3px 0;
+	}
+
+	.dashboardContentArea .paginationWrapper .pageResultsWrapper {
+		margin-top: 0;
+	}
+
+	.dashboardContentArea .sectionWrapper {
+		color: #323232;
+		padding: 10px 10px 0 10px;		
+	}		
+
+		.sectionWrapper h6 {
+			background: #eeeeef;
+			color: #323232;
+			font-family: 'Avenir_Medium';
+			font-size: 14px;
+			margin: 10px 0px;
+			padding: 10px;
+		}
+
+		.sectionWrapper p {
+			padding-bottom: 5px;
+		}
+
+		.sectionWrapper .name {
+			font-size: 18px;
+			font-family: 'Avenir_Medium';
+		}
+
+		.sectionWrapper .leftCol,
+		.sectionWrapper .middleCol,
+		.sectionWrapper .rightCol {
+			float: left;
+			width: 293px;
+		}
+
+		.sectionWrapper .planHighlightsContainer {
+			margin-top: 20px;
+		}
+
+			.sectionWrapper .planHighlightsContainer p {
+				color: #194b7a;
+				text-align: center;
+			}
+
+				.planHighlightsContainer p.planHighlight {
+					font-size: 14px;				
+				}
+
+				.planHighlightsContainer p.cost {
+					font-size: 36px;
+				}
+
+			.sectionWrapper .planHighlightsContainer.premium {					
+				font-family: 'Avenir_Black';
+			}
+
+		.sectionWrapper .summaryDetails {
+			text-align: center;
+		}
+
+			.sectionWrapper .summaryDetails p {
+				color: #999;
+				padding-bottom: 5px;
+				text-transform: uppercase;
+			}
+
+				.sectionWrapper .summaryDetails span {
+					color: #03324d;
+					font-family: 'Avenir_Medium';
+				}
+
+		.sectionWrapper .readOnly-demo3 {
+			float: right;
+			position: relative;
+			top: -72px;
+			right: -7px;
+		}
+
+		.collapsibleActionLink {
+			margin-bottom: 10px;
+		}
+
+		.collapsibleActionLink a {
+			float: right;
+			font-size: 14px;
+		}
+
+	.dashboardContentArea .sectionWrapper .searchContainer {
+		width: 565px;
+	}
+
+
+/** Tables  **/
+.dashboardContentArea  table th {
+	background: #eeeeef;
+	font-size: 12px;
+	text-align: left;
+}
+
+.dashboardContentArea tr td {
+	border-top: 1px solid #DEDEDE;
+	font-size: 14px;
+	font-family: 'Avenir_Book';
+	text-align: left;
+}
+
+.dashboardContentArea tr td a {
+	font-size: 13px;
+}
+
+.dashboardContentArea tr td .button,
+.dashboardContentArea tr td button {
+	margin: 0;
+}
+
+.dashboardContentArea .paginationWrapper .availablePlans {
+	padding-left: 15px; 
+}
+
+.dashboardContentArea .paginationWrapper .pageResultsWrapper .paginationNavCtrl {
+	margin-right: 0;
+}
+
+.sectionWrapper table {			
+	font-size: 12px;
+	margin: 0;
+}
+
+	.sectionWrapper table td {
+		border: 0;
+	}
+
+/* Dependents Section Table */ 
+.sectionWrapper table.dependents td:first-child,
+.sectionWrapper table.dependents td:nth-child(3) {
+	font-weight: bold;
+	width: 250px;
+}
+
+.sectionWrapper table.dependents td:nth-child(2),
+.sectionWrapper table.dependents td:last-child {
+	width: 120px;
+}
+
+/* companyAddresses Section Table */ 
+.sectionWrapper table.companyAddressess td {
+	text-align: left;
+}
+
+.sectionWrapper table.companyAddressess tr:first-child {
+	font-weight: bold;
+	width: 250px;
+}
+
+
+/* TribalMembers Table */
+
+.dashboardContentArea table.tribalMembers {
+	width: 90%
+}
+
+.dashboardContentArea table.tribalMembers td {
+	border: 0;
+	font-size: 14px;
+}
+
+.dashboardContentArea table.tribalMembers tr:first-child {
+	border-bottom: 1px solid #DEDEDE;
+}
+
+.dashboardContentArea table.tribalMembers td:first-child {
+	color: #1a4a7a;
+	font-size: 18px;
+	width: 5%
+}
+
+.dashboardContentArea table.tribalMembers td:nth-child(2) {
+	width: 20%
+}
+
+.dashboardContentArea table.tribalMembers td:last-child {
+	width: 5%
+}
+
+
+/* Dashboard Left Aligned Table */
+
+.sectionWrapper table.regular td:first-child,
+.sectionWrapper table.regular td:nth-child(3) {
+	font-weight: bold;
+	width: 250px;
+}
+
+.sectionWrapper table.regular td:nth-child(2),
+.sectionWrapper table.regular td:last-child {
+	width: 120px;
+}
+
+
+/* Carrier Table */
+.sectionWrapper table.verification {
+	float: left;
+	width: 410px;
+	margin-right: 40px;
+}
+
+	.sectionWrapper table.verification:last-child {
+		margin-right: 0;
+	}
+
+
+.sectionWrapper table.verification td.infoCorrect label,
+.sectionWrapper table.verification td.infoCorrect ul li {
+	float: left;
+	list-style: none;
+	margin-right: 10px;
+}
+
+	.sectionWrapper table.verification td.infoCorrect ul {
+		float: left;
+		margin: 0;
+	}
+
+.sectionWrapper table.verifyPlans td:first-child,
+.sectionWrapper table.verifyPlans td:nth-child(4),
+.sectionWrapper table.verifyPlans td:nth-child(5),
+.sectionWrapper table.verifyPlans td:nth-child(6) {
+	width: 10%;
+}
+
+	.sectionWrapper table.verifyPlans td:nth-child(2),
+	.sectionWrapper table.verifyPlans td:nth-child(3) {
+		width: 18%;
+	}
+
+
+.sectionWrapper table.costSharing td {
+	width: 14%
+}
+
+.sectionWrapper table.costSharing td:first-child {
+	width: 15%;
+}
+
+
+
+/* Life Events table */
+.sectionWrapper table.lifeEvent td:first-child {
+	width: 15%
+}
+
+.sectionWrapper table.lifeEvent td:nth-child(2) {
+	width: 65%
+}
+
+.sectionWrapper table.lifeEvent td:last-child {
+	width: 20%
+}
+
+
+
+/* Search Container */ 
+.dashboardContentArea .searchContainer {
+	float: left;
+	margin-right: 20px;
+	width: 580px;
+}
+
+/* Search Container full width*/ 
+.dashboardContentArea .searchContainer .fullWidth {
+	float: left;
+	margin-right: 20px;
+	width: 878px;
+}
+
+.searchContainer h6 {
+	margin-left: 14px;
+}
+
+	.searchContainer .ctrlHolder {
+		font-size: 12px;
+	}
+
+	.searchContainer .ctrlHolder label {
+		font-size: 12px;
+		float: left;
+		width: 150px;
+	}
+
+	.searchContainer .ctrlHolder .left {
+		float: left;
+		width: 340px;
+	}
+
+	.searchContainer .ctrlHolder .right {
+		float: left;
+		width: 210px;
+	}
+
+	.searchContainer .ctrlHolder .right label {
+		width: 100px;
+	}
+
+
+	.searchContainer fieldset.memberForm {
+		margin:  10px 0;
+		border-bottom: 0;
+	}
+
+	.searchContainer fieldset.memberForm .ctrlHolder {
+		padding: 10px 15px 10px 15px;
+	}
+
+		.searchContainer fieldset.memberForm .ctrlHolder label {
+			float: left;
+			width: 100px;
+		}
+
+		.searchContainer fieldset.memberForm .ctrlHolder input {
+			float: left;
+			margin-right: 10px;
+		}
+
+		.searchContainer fieldset.memberForm .ctrlHolder  div.chBox {
+			float: left;
+			width: 115px;
+		}
+
+		.searchContainer fieldset.memberForm .ctrlHolder .formEntryContentSelect {
+			background: url(img/selectorArrow.png) no-repeat scroll 140px 8px #e2e3e3;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			color: #034564;
+			overflow: hidden;
+			width: 160px;
+		}
+
+			.searchContainer fieldset.memberForm .ctrlHolder .formEntryContentSelect select {
+				border: 0;
+				color: #034564;
+				background: transparent;
+				font-size: 12px;
+				font-weight: bold;
+				height: 28px;
+				padding: 2px 5px;
+				width: 160px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+
+
+/* Actions Container */ 
+
+.dashboardContentArea .actionsContainer {
+	float: left;
+	width: 280px;
+}
+
+.actionsContainer fieldset {
+	margin:  20px 0;
+}
+
+.actionsContainer fieldset a.button {
+	width: 135px;
+}
+
+
+.dashboardContentArea .searchContainer p,
+.dashboardContentArea .actionsContainer p {
+	padding: 10px 5px;
+}
+
+.dashboardContentArea .actionsContainer nav {
+	padding: 10px 15px;
+}
+
+/* =============================================================================
+	Misc.
+========================================================================== */
+
+#dashboardContent aside.agentAside {
+	padding: 15px 10px;
+	width: 240px;
+}
+
+.agentAside nav a.button {
+	/*font-size: 11px;
+	margin: 0 0 10px 0;
+	padding: 7px 8px;
+	width: 215px;*/
+}
+
+
+.ui-dialog .ui-dialog-content fieldset .formEntryContentSelect {
+	background: url(img/selectorArrow.png) no-repeat scroll 147px 8px #e2e3e3;
+	float: left;
+	width: 167px;
+}
+
+.ui-dialog .ui-dialog-content fieldset .formEntryContentSelect select {
+	width: 167px;
+}
+
+
+.ui-dialog .ui-dialog-content fieldset .formEntryContentSelect.small {
+	background: url(img/selectorArrow.png) no-repeat scroll 140px 8px #e2e3e3;
+	float: left;
+	margin-top: 0;
+	width: 168px;
+}
+
+	.ui-dialog .ui-dialog-content fieldset .formEntryContentSelect.small select {
+		width: 168px;
+	}
+
+
+.ui-dialog .ui-dialog-content fieldset .ctrlHolder ul {
+	margin: 10px 0 0 0;
+}
+
+#modalTemplate .ui-dialog-content fieldset.memberForm .ctrlHolder {
+	padding: 10px 0;
+}
+
+#createAccount nav.createAcctHome {
+	background: none;
+	border: 0;
+	margin: 0 auto;
+}
+
+#createAccount nav.createAcctHome ul li {
+	font-family: 'Avenir_Medium';
+	float: left;
+	list-style: none;
+	margin: 0 20px 0 0;
+	padding: 0 15px;
+	position: relative;
+	text-align: center;
+}
+
+	#createAccount nav.createAcctHome ul li:first-child {
+		margin-left: 70px;
+	}
+
+#createAccount nav.createAcctHome ul li a {
+	color: #063C5B;
+	display: block;
+	height: 126px;
+	width: 84px;
+}
+
+#createAccount nav.createAcctHome ul li a#families {
+	background: url(img/families.png);
+	width: 166px;
+}
+
+#createAccount nav.createAcctHome ul li a#families:hover {
+	background-position: -166px 0px;
+}
+
+#createAccount nav.createAcctHome ul li a#employers {
+	background: url(img/employers.png);
+}
+
+#createAccount nav.createAcctHome ul li a#employers:hover {
+	background-position: -84px 0px;
+}
+
+#createAccount nav.createAcctHome ul li a#employees {
+	background: url(img/employees.png);
+}
+
+#createAccount nav.createAcctHome ul li a#employees:hover {
+	background-position: -85px 0px;
+}
+
+#createAccount nav.createAcctHome ul li a#tribal {
+	background: url(img/tribal.png);
+}
+
+#createAccount nav.createAcctHome ul li a#tribal:hover {
+	background-position: -84px 0px;
+}
+
+#createAccount nav.createAcctHome ul li a#agent {
+	background: url(img/agent.png);
+}
+
+#createAccount nav.createAcctHome ul li a#agent:hover {
+	background-position: -84px 0px;
+}
+
+#createAccount nav.createAcctHome ul li a#community {
+	background: url(img/community.png);
+}
+
+#createAccount nav.createAcctHome ul li a#community:hover {
+	background-position: -84px 0px;
+}
+
+
+/* Plan Box Containers */ 
+
+.dashboardContentArea .availablePlansContainer  {
+	float: left;
+	margin: 20px 0;
+}
+
+	.dashboardContentArea .availablePlansContainer .planBox {
+		box-shadow: 1px 1px 4px #d4d4d4;
+		margin-right: 20px;
+		min-height: 176px;
+		width: 400px;
+	}
+
+	.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper {
+		margin: 0 0 20px 0;
+	}
+
+		.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .refPlanDetails {
+			float: left;
+			width: 135px;
+		}
+
+		.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .planVendorLogo {
+			width: 100px;
+		}
+
+		.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .planType {
+			float: left;
+			margin-right: 10px;
+			width: 80px;
+		}
+
+		.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .planName {
+			margin-bottom: 10px;
+		}
+
+		.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .planCost {
+			color: #1a4a7a;
+			float: left;
+			font-size: 38px;
+			font-family: 'Avenir_Black';
+			line-height: 20px;
+			width: 90px;
+		}
+
+		.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .planDeductible {			
+			float: left;			
+			width: 222px;
+		}
+
+			.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .planDeductible h5 {
+				background: none;
+				border: 0;
+				font-size: 12px;
+				padding: 0 0 5px 0;
+			}
+
+			.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .planDeductible p {
+				color: #999;
+				padding-bottom: 0;
+			}
+
+			.dashboardContentArea .availablePlansContainer .planBox .planLineWrapper .planDeductible p span {
+				float: right;
+			}
+
+
+/*  Dashboard Tabbed Area */
+
+#dashboard_tabbed_area .tabContent{
+	padding: 20px 0;
+}
+
+#dashboard_tabbed_area ul.tabs {
+	border-bottom: 0;
+	background: #f1f0ef;
+	background: linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -o-linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -moz-linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -webkit-linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -ms-linear-gradient(bottom, #D9D6D3 0%, #EAE8E6 50%, #F1F0EF 100%);
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #D9D6D3),
+		color-stop(0.5, #EAE8E6),
+		color-stop(1, #F1F0EF)
+	);
+	-pie-background: linear-gradient(#f1f0ef, #d9d6d3);
+    behavior: url(scripts/PIE.htc);
+    margin: 0 -34px 0 -34px;
+	padding: 15px 0 0 50px;
+}
+
+
+	#dashboard_tabbed_area ul.tabs li {
+		border-top: 1px solid #dddbdb;
+		border-left: 1px solid #dddbdb;
+		border-bottom: 1px solid #dddbdb;
+		border-right: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	#dashboard_tabbed_area ul.tabs li:last-child {
+		border-right: 1px solid #dddbdb;
+	}
+
+		#dashboard_tabbed_area ul.tabs li.ui-state-default a {
+			background: #f1efef;
+			color: #063c5b;
+			font-family: 'Avenir_Black';
+			padding: 9px 11px;
+			text-transform: uppercase;
+		}
+
+		#dashboard_tabbed_area ul.tabs li.ui-state-active {
+			border-bottom: 0;
+		}
+
+			#dashboard_tabbed_area ul.tabs li.ui-tabs-selected a,		
+			#dashboard_tabbed_area ul.tabs li.ui-state-active a,		
+			#dashboard_tabbed_area ul.tabs li.ui-state-hover a {
+				background: #FFF;
+				color: #059bd7;
+			}
+
+
+/* Plan Information Containers */ 
+
+.dashboardContentArea .planInfoContainer {}
+
+	.planInfoContainer .planInfo {
+		float: left;
+		margin: 0 10px 0 0;
+		width: 430px;
+	}
+
+		.planInfo .rightCol,
+		.planInfo .leftCol,
+		.planInfo .middleCol {
+			width: 195px;
+		}
+
+	/* Tabs within PLan Info page*/
+	#dashboard_tabbed_area ul.tabs.noBkgr {
+		background: none;
+		border-bottom: 1px solid #dddbdb;
+	}
+
+	#dashboard_tabbed_area ul.tabs.noBkgr li {
+		-webkit-border-radius: 0;
+    	-moz-border-radius: 0;
+    	border-radius: 0;
+    	border-bottom: 0;
+	}
+
+/* Dashboard Help Drawer  */
+
+#helpDrawer {
+	position: relative;
+	top: -704px;
+	right: -440px;
+}
+
+
+/* =============================================================================
+   Dashboard Application Incomplete Nav
+   ========================================================================== */
+
+#dashboardContent aside nav.appNav ul li {
+	border-bottom: 1px solid #c0bebe;
+	font-family: 'Avenir_Medium';
+}
+
+	#dashboardContent aside nav.appNav ul li a {
+		color: #999999;
+		font-size: 12px;
+		text-decoration: none;
+		text-transform: uppercase;
+		line-height: 14px;
+		padding: 10px 28px;
+		display: block;
+	}
+
+	#dashboardContent aside nav.appNav ul li.inactive {
+		background: url("img/grey_arrow_sm.png") left center no-repeat;
+	}
+
+	#dashboardContent aside nav.appNav ul li.active {
+		padding: 0;
+	}
+
+	#dashboardContent aside nav.appNav ul li.active a {
+		color: #7bc5e7;
+		font-size: 12px;
+		text-decoration: none;
+		text-transform: uppercase;
+		line-height: 14px;
+		padding: 15px 28px;
+		background: #093750;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#093750), to(#0f82ad));
+		background: -webkit-linear-gradient(#093750, #0f82ad);
+		background: -moz-linear-gradient(#093750, #0f82ad);
+		background: -ms-linear-gradient(#093750, #0f82ad);
+		background: -o-linear-gradient(#093750, #0f82ad);
+		background: linear-gradient(#093750, #0f82ad);
+		-pie-background: linear-gradient(#093750, #0f82ad);
+		behavior: url(scripts/PIE.htc);		
+	}
+
+	#dashboardContent aside nav.appNav ul li.visited {
+		background: url("img/check_mark_sm.png") left center no-repeat;
+	}
+
+		#dashboardContent aside nav.appNav ul li.visited a {
+			color: #034664;
+			padding: 10px 15px;
+		}
+
+	#dashboardContent aside nav.appNav ul li ul {
+		padding: 0 0 15px 19px;
+	}
+
+		#dashboardContent aside nav.appNav ul li ul li {
+			background: none;
+			border-bottom: none;
+		}
+
+		#dashboardContent aside nav.appNav ul li ul li a,
+		#dashboardContent aside nav.appNav ul li.active ul li a {
+	      text-transform: none;
+	      padding: 5px 10px 5px 30px
+	    }
+
+	    #dashboardContent aside nav.appNav ul li.active ul li a {
+	    	background: none;
+	    	color: #909090;
+	    }
+
+	    #dashboardContent aside nav.appNav ul li ul li a:hover,
+	    #dashboardContent aside nav.appNav ul li.active ul li a:hover,
+	    #dashboardContent aside nav.appNav ul li.active ul li.active a  {
+	    	background: url(img/green_arrow.png) no-repeat left center;
+		    border-bottom: none;
+		    color: #063c5b;
+	    }		    
+	     
+	   #dashboardContent aside nav.appNav ul li.active ul li.visited {
+	    	background: none;
+	    	padding: 5px 0;
+	    }
+
+	     #dashboardContent aside nav.appNav ul li.active ul li.visited a {	      
+	      color: #007bb0;
+	      margin-left: 0;
+	      padding: 0 10px 0 30px
+	    }
+
+	    /*#dashboardContent aside nav.appNav ul li.active ul li.inactive a {
+	    	background: none;
+	    	color: #909090;
+	    }*/
+
+/* =============================================================================
+   Dashboard Resources: Carrier Information
+   ========================================================================== */
+
+.dashboardContentArea .carrierLeftCol {
+	float: left;
+	margin-right: 20px;
+	width: 415px;
+}
+
+.dashboardContentArea .carrierRightCol {
+	float: left;
+	width: 415px;
+}
+
+	.dashboardContentArea .carrierLeftCol tr td,
+	.dashboardContentArea .carrierRightCol tr td { 
+		border-top:  0;
+	}

@@ -1,0 +1,505 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  utilities.css
+ * ===== VERSION: v0.5
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+/* Table of Contents
+	  1. Filters (E.g. Contribution, Deductible etc.)
+    2. Secondary Filters (E.g. Primary Co-pay, ER Co-pay etc.)
+	  3. Pagination 
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+*/
+
+
+
+/* =============================================================================
+   Filters
+   ========================================================================== */
+
+#pageContentAreaNoMargin .planFiltersContainer {
+  background: #f3f5f6;
+
+}
+
+.planFiltersContainer .planFilters {
+  border-bottom: 1px solid #CFD0D2;
+  padding: 15px 10px;
+  text-align: center;
+  -webkit-box-shadow: #666 0px 1px 3px;
+  -moz-box-shadow: #666 0px 1px 3px;
+  box-shadow: #666 0px 1px 3px;
+  background: #F1F0EF;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#F1F0EF), to(#d9d6d3));
+  background: -webkit-linear-gradient(#F1F0EF, #d9d6d3);
+  background: -moz-linear-gradient(#F1F0EF, #d9d6d3);
+  background: -ms-linear-gradient(#F1F0EF, #d9d6d3);
+  background: -o-linear-gradient(#F1F0EF, #d9d6d3);
+  background: linear-gradient(#F1F0EF, #d9d6d3);
+  -pie-background: linear-gradient(#F1F0EF, #d9d6d3);
+  behavior: url(scripts/PIE.htc);
+}
+
+ .planFilters .filterButton { 
+    float: right;
+    padding: 15px 0;
+  }
+
+    .planFilters .filterButton button,
+    .planFilters .filterButton a.button {
+      width: 84px;
+    }
+
+  .secondaryPlanFilters .filterButton {
+    float: right;
+  }
+
+    .secondaryPlanFilters .filterButton a.button {
+      margin: 0;
+    }
+
+.planFilters .iconDivider {
+  float: left;
+  height: 65px;
+}
+
+/* ===== View Plans Template Icons  ==================================== */
+
+.planFilters .filterType {  
+  color: #00324d;
+  float: left;
+  font-family: 'Avenir_Black';
+  font-size: 12px;  
+  margin: 0 20px 0 20px;
+  padding: 0;
+  width: 100px;
+  text-transform: uppercase;
+}
+
+.planFilters .filterType a {  
+  color: #00324d;
+  display: block;  
+  margin: 0 auto 5px auto;
+  height: 26px;
+  width: 33px;
+}
+
+
+  /* Company Info Icon */
+  .planFilters .filterType a#company_info {
+    background: url(img/company_info_new.png);
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#company_info {
+      background-position: 0 0;
+    }
+
+  /* Primary Contact Icon */
+  .planFilters .filterType a#primary_contact {
+    background: url(img/primary_contact_icons_new.png) no-repeat;
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#primary_contact {
+      background-position: 0 0;
+    }    
+
+  /* Household Icon */
+  .planFilters .filterType a#household {
+    background: url(img/household_icons_new.png) no-repeat;
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#household {
+      background-position: 0 0;
+    }
+
+  /* Relationships Icon */
+  .planFilters .filterType a#relationships {
+    background: url(img/relationships_icons.png) no-repeat;
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#relationships {
+      background-position: 0 0;
+    }
+
+  /* Income Icon */
+  .planFilters .filterType a#income {
+    background: url(img/income_icons_new.png) no-repeat;
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#income {
+      background-position: 0 0;
+    }
+
+  /* Questions Icon */
+  .planFilters .filterType a#questions {
+    background: url(img/questions_icons_new.png) no-repeat;
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#questions {
+      background-position: 0 0;
+    }
+  
+  /* Plan Info Icon */
+  .planFilters .filterType a#plan_info {
+    background: url(img/plan_info.png);
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#plan_info {
+      background-position: 0 0;
+    }
+
+  /* Agent Icon */
+  .planFilters .filterType a#agent {
+    background: url(img/agent_icon.png);
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#agent {
+      background-position: 0 0;
+    }
+
+  /* Additional Info Icon */
+  .planFilters .filterType a#add_info {
+    background: url(img/additional_info.png);
+    background-position: -33px 0;
+  }
+
+    .planFilters .filterType a:hover#add_info {
+      background-position: 0 0;
+    }
+
+
+      /* Temporary, Only for illustration purposes on the template. Remove later */
+      .planFilters .filterType a.active#company_info,
+      .planFilters .filterType a.active#primary_contact,
+      .planFilters .filterType a.active#household,
+      .planFilters .filterType a.active#relationships,
+      .planFilters .filterType a.active#income,
+      .planFilters .filterType a.active#questions,
+      .planFilters .filterType a.active#plan_info,
+      .planFilters .filterType a.active#agent,
+      .planFilters .filterType a.active#add_info {
+        background-position: 0 0;
+      }
+
+/* Employer SHOP Review Template Icons */
+.planFilters.empreviewIcons .filterType { 
+   margin: 0 14px 0 14px;
+  width: 90px;
+}
+
+/* Employer SHOP Review Template Icons */
+.planFilters.employeereviewIcons .filterType { 
+   margin: 0 25px 0 25px;
+  width: 125px;
+}
+
+  /* Contribution Icon */
+  .planFilters .filterType a#contribution {
+    background: url(img/contribution.png);
+  }
+
+    .planFilters .filterType a:hover#contribution {
+      background-position: -73px 0;
+    }
+
+    .planFilters .filterType a:active#contribution {
+      background-position: -145px 0;
+    }
+
+  /* Metal Icon */
+  .planFilters .filterType a#metal {
+    background: url(img/metal.png);
+  }
+
+    .planFilters .filterType a:hover#metal {
+      background-position: -74px 0;
+    }
+
+    .planFilters .filterType a:active#metal {
+      background-position: -147px 0;
+    }
+
+  /* Rating Icon */
+  .planFilters .filterType a#rating {
+    background: url(img/rating.png);
+  }
+
+    .planFilters .filterType a:hover#rating {
+      background-position: -73px 0;
+    }
+
+    .planFilters .filterType a:active#rating {
+      background-position: -146px 0;
+    }
+
+  /* Deductible Icon */
+  .planFilters .filterType a#deductible {
+    background: url(img/deductible.png);
+  }
+
+    .planFilters .filterType a:hover#deductible {
+      background-position: -72px 0;
+    }
+
+    .planFilters .filterType a:active#deductible {
+      background-position: -144px 0;
+    }
+
+  /* Out of Pocket Icon */
+  .planFilters .filterType a#outofpocket {
+    background: url(img/outofpocket.png);
+  }
+
+    .planFilters .filterType a:hover#outofpocket {
+      background-position: -73px 0;
+    }
+
+    .planFilters .filterType a:active#outofpocket {
+      background-position: -145px 0;
+    }
+
+  /* Plan Type Icon */
+  .planFilters .filterType a#plantype {
+    background: url(img/plantype.png);
+  }
+
+    .planFilters .filterType a:hover#plantype {
+      background-position: -72px 0;
+    }
+
+    .planFilters .filterType a:active#plantype {
+      background-position: -144px 0;
+    }
+
+/* =============================================================================
+   Secondary Filters
+   ========================================================================== */
+
+#pageContentAreaNoMargin .secondaryPlanFilters {
+  padding: 10px 15px;
+}
+
+  .secondaryPlanFilters .secondaryFilterType,
+  .secondaryFilterType {
+    float: left;
+    /*margin: 0 100px 0 0;*/
+    margin: 0 85px 0 0;
+  }
+
+  .secondaryPlanFilters .secondaryFilterType a,
+  .secondaryFilterType a {  
+    color: #00324D;
+    display: block;
+    font-size: 12px;
+    font-family: 'Avenir_Medium';
+    height: 22px;
+    text-decoration: none;
+    width: 28px;
+  }
+
+    .secondaryPlanFilters .secondaryFilterType a:hover,
+    .secondaryFilterType a:hover {
+      text-decoration: underline;
+    }
+
+  /* Carrier Icon */
+  .secondaryPlanFilters .secondaryFilterType a#carrier,
+  .secondaryFilterType a#carrier {
+    background: url(img/carrier.png);
+    text-indent: 34px;
+  }
+
+    .secondaryPlanFilters .secondaryFilterType a:hover#carrier,
+    .secondaryFilterType a:hover#carrier {
+      background-position: 0 49px;
+    }
+
+
+    .secondaryPlanFilters .secondaryFilterType a:active#carrier,
+    .secondaryFilterType a:active#carrier {
+      background-position: 0 25px;
+    }
+
+  /* Primary Co-Pay Icon */
+  .secondaryPlanFilters .secondaryFilterType a#primary_copay {
+    background: url(img/primary_copay.png);
+    text-indent: 34px;
+  }
+
+    .secondaryPlanFilters .secondaryFilterType a:hover#primary_copay {
+      background-position: 0 48px;
+    }
+
+
+    .secondaryPlanFilters .secondaryFilterType a:active#primary_copay {
+      background-position: 0 24px;
+    }
+
+  /* Prescription Co-Pay Icon */
+  .secondaryPlanFilters .secondaryFilterType a#prescription_copay {
+    background: url(img/prescription_copay.png);
+    text-indent: 34px;
+  }
+
+    .secondaryPlanFilters .secondaryFilterType a:hover#prescription_copay {
+      background-position: 0 47px;
+    }
+
+
+    .secondaryPlanFilters .secondaryFilterType a:active#prescription_copay {
+      background-position: 0 22px;
+    }
+
+  /* ER Co-Pay Icon */
+  .secondaryPlanFilters .secondaryFilterType a#er_copay {
+    background: url(img/er_copay.png);
+    text-indent: 34px;
+  }
+
+    .secondaryPlanFilters .secondaryFilterType a:hover#er_copay {
+      background-position: 0 47px;
+    }
+
+
+    .secondaryPlanFilters .secondaryFilterType a:active#er_copay {
+      background-position: 0 23px;
+    }
+
+  /* Coverage Tier Icon */
+  .secondaryPlanFilters .secondaryFilterType a#coverage_tier {
+    background: url(img/coverage_tier.png);
+    text-indent: 34px;
+  }
+
+    .secondaryPlanFilters .secondaryFilterType a:hover#coverage_tier {
+      background-position: 0 48px;
+    }
+
+
+    .secondaryPlanFilters .secondaryFilterType a:active#coverage_tier {
+      background-position: 0 24px;
+    }
+
+.secondaryPlanFilters .moreFilters {
+  float: left;
+  margin: 0 50px 0 0;
+}
+
+  .secondaryPlanFilters .moreFilters a { 
+    font-family: 'Avenir_Medium';
+  }
+
+.secondaryPlanFilters .selectContainer,
+.pageResultsWrapper .selectContainer {
+  background-color: #EDEEEF;
+  background: url(img/selectorArrow.png) no-repeat scroll 156px 6px #F8F8F8;
+  border: 1px solid #FBFBFB;
+  color: #034564;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 1px 1px 11px #D1D2D3;
+  float: right;
+  overflow: hidden;
+  width: 180px;
+}
+
+    .selectContainer select {  
+      background: transparent;
+      border: 0;
+      color: #00324D;
+      float: left;
+      font-size: 12px;  
+      font-weight: bold;
+      padding: 5px;
+      -webkit-appearance: none;
+      width: 180px;
+    }
+
+  .pageResultsWrapper .selectContainer.browsePlans {
+    background: url(img/selectorArrow.png) no-repeat scroll 154px 6px #F8F8F8;
+    margin-right: 20px;
+    width: 170px;
+    float: left;
+  }
+
+  .selectContainer.browsePlans select {
+    width: 170px;
+  }
+
+  .pageResultsWrapper .selectContainer.pageCount {
+    background: url(img/selectorArrow.png) no-repeat scroll 90px 6px #F8F8F8;
+    margin-right: 20px;
+    width: 110px;
+    float: left;
+  }
+
+  .selectContainer.pageCount select {
+    width: 110px;
+  }
+
+/* =============================================================================
+   Pagination
+   ========================================================================== */
+
+ .paginationWrapper {
+  padding: 5px 5px 5px 10px;
+}
+
+  .paginationWrapper .availablePlans,
+  .availablePlans {
+    color: #b2b2b2;
+    float: left;
+    font-size: 18px;
+    font-family: 'Avenir_Black';
+    margin-top: 10px;
+    padding-bottom: 0;
+  }
+
+    .paginationWrapper .availablePlans span,
+    .availablePlans span {
+      text-decoration: underline;
+    }
+
+  .paginationWrapper .pageResultsWrapper {
+    color: #00324d;
+    float: right;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  .paginationWrapper .pageResultsWrapper .paginationNavCtrl {
+    float: left;
+    margin-right: 30px;
+  }
+
+    .paginationNavCtrl a,
+    .paginationNavCtrl span.divider {
+      color: #00324d;
+      display: block;
+      font-family: 'Avenir_Medium';
+      float: left;
+      margin: 10px 0;
+      padding: 2px 4px;
+      text-decoration: none;
+    }  
+
+    .paginationNavCtrl a.current,    
+    .paginationNavCtrl a:hover {
+      text-decoration: underline;
+    }

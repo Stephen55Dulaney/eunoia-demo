@@ -1,177 +1,38 @@
-/* Global CSS for Cover Oregon Prototype */
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  global.css
+ * ===== VERSION: v0.5
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio & Mike Jackson)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
 
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
-}
+/*  Table of Contents:
+      1. INCLUDES all CSS files which are used across the whole site    
+*/
 
-/* Header styles */
-.header {
-    background-color: #2c5aa0;
-    color: white;
-    padding: 1rem 0;
-}
+@import url(boilerplate.css);
+@import url(account_management.css);
+@import url(buttons.css);
+@import url(compare_plans.css);
+@import url(content.css);
+@import url(content2.css);
+@import url(dashboard.css);
+@import url(fonts.css);
+@import url(footer.css);
+@import url(forms.css);
+@import url(header.css);
+@import url(layout.css);
+@import url(media_queries.css);
+@import url(navigation.css);
+@import url(overlay.css);
+@import url(review.css);
+@import url(slider.css);
+@import url(static_pages.css);
+@import url(tabs.css);
+@import url(typography.css);
+@import url(utilities.css);
+@import url(widgets.css);
 
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* Navigation styles */
-.nav {
-    background-color: #1e3a5f;
-    padding: 0.5rem 0;
-}
-
-.nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.nav a:hover {
-    background-color: #2c5aa0;
-}
-
-/* Main content styles */
-.main-content {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Button styles */
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #2c5aa0;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #1e3a5f;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-}
-
-.btn-secondary:hover {
-    background-color: #545b62;
-}
-
-/* Form styles */
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #2c5aa0;
-    box-shadow: 0 0 0 2px rgba(44, 90, 160, 0.2);
-}
-
-/* Footer styles */
-.footer {
-    background-color: #1e3a5f;
-    color: white;
-    padding: 2rem 0;
-    margin-top: 3rem;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    text-align: center;
-}
-
-/* Utility classes */
-.text-center {
-    text-align: center;
-}
-
-.mt-2 {
-    margin-top: 1rem;
-}
-
-.mb-2 {
-    margin-bottom: 1rem;
-}
-
-.p-2 {
-    padding: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .header-content,
-    .nav-content,
-    .main-content,
-    .footer-content {
-        padding: 0 1rem;
-    }
-    
-    .nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-} 

@@ -1,0 +1,216 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  account_management.css
+ * ===== VERSION: v0.1
+ * ===== UPDATED: 7/9/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+/* Table of Contents
+  1. Account Management Forms
+  2. Authenticator
+  3. Security Profile & Questions
+  4. Roles
+*/
+
+ 
+/* =============================================================================
+   Account Management Forms
+   ========================================================================== */
+   
+fieldset.memberForm .ctrlHolder .left,
+fieldset .ctrlHolder .left {
+  float: left;
+  margin-right: 20px;
+  width: 400px;
+}
+
+fieldset.memberForm .ctrlHolder .right,
+fieldset .ctrlHolder .right {
+  float: left;
+  width: 400px;
+}
+
+fieldset.memberForm .ctrlHolder input.floatLeft {
+  float: left;
+}
+
+fieldset.memberForm .ctrlHolder .fieldSuplimentText {
+  float: left;
+  margin-left: 20px;
+}
+
+fieldset.memberForm .ctrlHolder .captcha {
+  float: left;
+  margin-top: 15px;
+}
+
+/* =============================================================================
+   Authenticator 
+   ========================================================================== */
+
+fieldset .ctrlHolder .authenticator {
+  /*background: url(img/authenticator.jpg) no-repeat;*/
+  background: url(img/baseball.jpg) no-repeat;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+  border: 1px solid #ccc;
+  width: 128px;
+  height: 176px;
+  padding: 37px 10px 10px 10px;
+}
+
+  fieldset .ctrlHolder .authenticator label {
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  fieldset .ctrlHolder .authenticator input {
+    background: #edeeef;
+    padding: 3px;
+  }
+
+  fieldset .ctrlHolder .authenticator .button {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    float: right;
+    margin: 101px 0 0 0;
+    padding: 1px;
+  }
+
+  fieldset .ctrlHolder .authenticator p {    
+    font-size: .9em;
+    padding: 0;
+  }
+
+/* =============================================================================
+   Security Profile & Questions
+   ========================================================================== */
+
+.securityProfile p {
+  float: left;
+  width: 500px;
+}
+
+.securityProfileImg {
+  float: right;
+  margin-bottom: 20px;
+}
+
+.questionCount {
+  float: left;
+}
+
+
+/* =============================================================================
+   Roles
+   ========================================================================== */
+
+nav.rolesContainer {
+  background: none;
+  border: 0;
+  margin: 20px auto;
+}
+
+nav.rolesContainer ul li {
+  font-family: 'Avenir_Medium';
+  float: left;
+  list-style: none;
+  margin: 0 10px 0 0;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+}
+
+nav.rolesContainer ul li label {
+  margin-left: -20px;
+}
+
+nav.rolesContainer ul li a {
+  color: #063C5B;
+  display: block;
+  /*float: left;*/
+  height: 126px;
+  width: 84px;
+}
+
+nav.rolesContainer ul li a.families {
+  background: url(img/families.png);
+  width: 166px;
+}
+
+  nav.rolesContainer ul li a.families:hover,
+  nav.rolesContainer ul li a.families.active {
+    background-position: -166px 0px;
+  }
+
+nav.rolesContainer ul li a.employers {
+  background: url(img/employers.png);
+}
+
+  nav.rolesContainer ul li a.employers:hover,
+  nav.rolesContainer ul li a.employers.active {
+    background-position: -84px 0px;
+  }
+
+nav.rolesContainer ul li a.tribal {
+  background: url(img/tribal.png);
+}
+
+  nav.rolesContainer ul li a.tribal:hover,
+  nav.rolesContainer ul li a.tribal.active {
+    background-position: -84px 0px;
+  }
+
+
+nav.rolesContainer ul li a.employees {
+  background: url(img/employees.png);
+}
+
+  nav.rolesContainer ul li a.employees:hover,
+  nav.rolesContainer ul li a.employees.active {
+    background-position: -84px 0px;
+  }
+
+
+nav.rolesContainer ul li a.agent {
+  background: url(img/agent.png);
+}
+
+  nav.rolesContainer ul li a.agent:hover,
+  nav.rolesContainer ul li a.agent.active {
+    background-position: -84px 0px;
+  }
+
+
+nav.rolesContainer ul li a.community {
+  background: url(img/community.png);
+}
+
+  nav.rolesContainer ul li a.community:hover,
+  nav.rolesContainer ul li a.community.active {
+    background-position: -84px 0px;
+  }   
+
+.pendingStatus {
+  text-transform: uppercase;
+  float: left;
+  font-size: 0.8657em;
+  font-weight: bold;
+  width: 175px;
+}
+
+.pendingStatus span {
+  color: red;
+  text-transform: none;
+}
+
+.selectedMsg {
+  font-family: 'Avenir_Book';
+  font-weight: bold;
+  text-transform: uppercase;
+}

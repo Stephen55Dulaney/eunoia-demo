@@ -1,0 +1,308 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  media_queries.css
+ * ===== VERSION: v0.1
+ * ===== UPDATED: 3/20/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+/*
+	Table of Contents:
+    	1. Large screens 
+    	2. iPads (portrait) 
+    	3. iPads (landscape) 
+
+*/
+
+
+/* Large screens ----------- */
+
+
+
+
+
+/* Medium Sized screens */
+
+@media only screen and (min-width : 1400px) {
+
+	/* Styles */
+	.heroContent {
+		margin-left: 19%;
+		width: 37%;
+	}
+}
+
+
+/* ----------- iPads (Portrait) ----------- */
+@media (orientation: portrait) {
+
+	/* Styles */
+
+	body {
+		overflow-x:hidden;
+	}
+
+	/*----------- Header -----------*/
+
+	header {
+		width: 784px;
+	}
+
+	#globalNavContainer {
+		padding: 30px 8px 15px 8px;
+		width: 100%;
+	}
+
+	.globalLoginContainer {
+		width: 40%;
+		right: 2%;
+	}
+
+	.utilities {
+		top: 0%;
+		right: 2%;
+	}
+
+
+	/*----------- Footer -----------*/
+
+	footer {
+		width: 784px;
+	}
+
+	#directoryNav {
+		padding: 15px 8px;
+		width: 752px;
+	}
+
+	#footerHeader {
+		padding: 0 8px;
+		width: 752px;
+	}
+
+	.globalFooterCopyright {
+		padding: 10px 8px;
+		width: 752px;
+	}
+
+	#footerHeader .language {
+		width: 17%;
+	}
+
+	#footerHeader .language .selLanguage {
+		background: url(img/selectorArrow.png) no-repeat scroll 100px 5px #f8f8f8;
+	}
+
+	#footerHeader .language .selLanguage select{
+		padding: 2px 5px;
+	}
+
+
+	/*----------- Hero Image Section -----------*/
+	
+	#modalTemplate .heroImage {
+		/*background: url(img/carousel_img_ipad_potrait.jpg) no-repeat;*/
+		width: 784px;
+		height: 320px;
+	}
+
+	.heroContent {
+		margin-left: 7%;
+		width: 48%;
+	}
+
+	.heroContent h1 {
+		font-size: 1.8em;
+	}
+
+	.heroContent p {
+		font-size: 1em;
+	}
+
+	.heroBottomBar {
+		margin-top: 152px;
+	}
+
+
+	/*----------- Home Page Content -----------*/
+	
+	#homeContainer {
+		width: 784px;
+	}
+
+	#homeContainer nav.home {		
+		width: 73%;
+	}
+
+	.homeContentContainer {
+		width: 748px;
+		padding: 0 10px;
+	}
+
+	.homeContentContainer .homeImageContainer {
+		margin: -115px 20px 0 30px;
+	}
+
+	.homeContentContainer nav.levelTwo ul li {
+		margin: 0;
+		padding: 15px 5px 0 5px;
+		width: 23%;
+	}
+
+	.homeContentContainer h2 {
+		font-size: 2em;
+	}
+
+
+
+	/*----------- Home Page Resources -----------*/
+
+	.resourcesContainer {
+		width: 784px;
+	}
+
+	.resourcesContainer .resourcesWrapper {
+		width: 100%;
+	}
+
+	.resourcesWrapper .resource {
+		margin: 0 .5% .5% .5%;
+		width: 19%;	
+	} 
+
+	.resourcesWrapper .resource h5 {
+		font-size: .7em;
+	}
+
+
+	/*----------- Home Page Utility Bar -----------*/
+
+	aside.utilityBar {
+		left: 553px;
+		min-height: 512px;
+		width: 175px;
+		top: 219px;
+		padding: 60px 20px 19px 20px;
+	}
+
+	aside.utilityBar section {
+		margin-bottom: 170px;
+	}
+
+	aside.utilityBar a.button.green {
+		font-size: 12px;
+		margin-left: 12px;
+		margin-bottom: 0;
+	}
+
+
+}/*END  iPads (portrait) */
+
+
+
+/* ----------- iPads (landscape) ----------- */
+@media (orientation: landscape) and (max-width : 1024px) {
+
+	/* Styles */
+
+	body {
+		overflow-x: hidden;
+	}
+
+	/*----------- Header -----------*/
+
+	header {
+		width: 1024px;
+	}
+	
+	#globalNavContainer {
+		padding: 30px 10px 15px 10px;
+		width: 100%;
+	}
+
+	.globalLoginContainer {
+		right: 1em;
+		width: 30%;
+	}
+
+	.globalLoginContainer p.small {
+		width: 33.8%;
+	}
+
+	.utilities {		
+		right: -20.5em;
+	}
+
+
+	/*----------- Footer -----------*/
+	
+	footer {
+		width: 1024px;
+	}
+
+	#directoryNav,
+	#footerHeader {		
+		width: 1000px;
+	}
+
+	.globalFooterCopyright {
+		padding: 15px 12px;
+		width: 1000px;
+	}
+
+
+	/*----------- Home Page Content -----------*/
+	#homeContainer {
+		width: 1024px;
+	}
+
+
+	/*----------- Hero Image Section -----------*/
+	.heroImage {
+		width: 1024px;
+		height: 350px;
+	}
+
+	.heroContent {
+		width: 50%;
+	}
+
+	.heroBottomBar {
+		margin-top: 166px;
+	}
+
+	/*----------- Home Page Resources -----------*/
+
+	.resourcesContainer {
+		width: 1024px;
+	}
+
+	.resourcesContainer .resourcesWrapper {
+		width: 100%;
+	}
+
+	.resourcesWrapper .resource {
+		margin: 0 .7% .5% 0;
+		width: 19%;	
+	}
+
+	.resourcesWrapper .resource:first-child {
+		margin: 0 .7% .5% .5%;
+	}
+
+
+	/*----------- Home Page Utility Bar -----------*/
+
+	aside.utilityBar {
+		left: 729px;
+		width: 215px;
+		min-height: 560px;
+	}
+
+	aside.utilityBar section {
+		margin-bottom: 241px;
+	}
+
+}/*END  iPads (landscape) */
+

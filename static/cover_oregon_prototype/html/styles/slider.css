@@ -1,0 +1,82 @@
+.clearfix {clear:both;}
+.floatl {float:left;} .floatr {float:right;} .inline{display:inline;}
+/*.fontbold{font-weight:bold;}  .fontwhite {color:#ffffff !important;} .fontblack {color:#333333 !important;} .fontgreen {color:#1ABE07 !important;} .fontblue {color:#0198D1 !important;} .fontgrey {color:#9d9d9d !important;} .fontred {color:#A30004 !important;}*/
+
+/*.progressBar {position: relative; width: 176px; height: 23px; background: #d7dbdd; border-left: 148px solid #57666d; -moz-border-radius: 15px; border-radius: 15px;}*/
+
+.meter { 
+	height: 23px;  /* Can be anything */
+	width: 176px;
+	position: relative;
+	background: #d7dbdd;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 10px;
+	-webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+	-moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+	box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.meter > span {
+	display: block;
+	height: 100%;
+	   -webkit-border-top-right-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	       -moz-border-radius-topright: 8px;
+	    -moz-border-radius-bottomright: 8px;
+	           border-top-right-radius: 8px;
+	        border-bottom-right-radius: 8px;
+	    -webkit-border-top-left-radius: 20px;
+	 -webkit-border-bottom-left-radius: 20px;
+	        -moz-border-radius-topleft: 20px;
+	     -moz-border-radius-bottomleft: 20px;
+	            border-top-left-radius: 20px;
+	         border-bottom-left-radius: 20px;
+	background-color: #57666d;
+	background-image: -webkit-gradient(
+	  linear,
+	  left bottom,
+	  left top,
+	  color-stop(0, #57666d),
+	  color-stop(1, #57666d)
+	 );
+	background-image: -webkit-linear-gradient(
+	  center bottom,
+	  #57666d 37%,
+	  #57666d 69%
+	 );
+	background-image: -moz-linear-gradient(
+	  center bottom,
+	  #57666d 37%,
+	  #57666d 69%
+	 );
+	background-image: -ms-linear-gradient(
+	  center bottom,
+	  #57666d 37%,
+	  #57666d 69%
+	 );
+	background-image: -o-linear-gradient(
+	  center bottom,
+	  #57666d 37%,
+	  #57666d 69%
+	 );
+	-webkit-box-shadow: 
+	  inset 0 2px 9px  rgba(255,255,255,0.3),
+	  inset 0 -2px 6px rgba(0,0,0,0.4);
+	-moz-box-shadow: 
+	  inset 0 2px 9px  rgba(255,255,255,0.3),
+	  inset 0 -2px 6px rgba(0,0,0,0.4);
+	position: relative;
+	overflow: hidden;
+}
+
+.progressMarker {height: 36px; width: 47px; background: url(../images/progressMarker.png) no-repeat;cursor: pointer;}
+
+
+
+
+
+
+
+

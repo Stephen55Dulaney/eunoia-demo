@@ -1,0 +1,436 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  navigation.css
+ * ===== VERSION: v0.5
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio and Michael Jackson)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+/* Table of Contents
+	1. Home Page Navigation
+	2  Left Side Navigation
+	3  Level Two Navigation (For SHOP, Individual, Agent, & FIVE landing pages)	
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+*/
+
+
+/* =============================================================================
+   Home Page Navigation
+   ========================================================================== */
+
+nav.home {
+  border-top: 2px solid #e9e5e3;
+  border-left: 2px solid #e9e5e3;
+  border-right: 2px solid #e9e5e3;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;  
+  background: #e9e5e3; 
+  background: url(img/nav_bg_overlay.png), url(img/nav_bg.png);
+  behavior: url(scripts/PIE.htc);    
+  margin: 0 auto;
+  min-height: 110px;
+  padding: 20px 15px 0 15px;
+  position: relative;
+  top: -95px;
+  right: 0;
+  width: 465px;
+}
+
+	.ie8 nav.home,
+	.ie7 nav.home {		
+		border: 2px solid #e9e5e3;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		behavior: url(scripts/PIE.htc);
+		margin-bottom: 20px;		
+		width: 460px;
+	}
+
+nav.home ul li {
+  /*background: url(img/nav_divider.png) no-repeat right center;*/
+  font-family: 'Avenir_Medium';
+  float: left;
+  list-style: none;
+  margin: 0 10px 0 0;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+}
+
+nav.home ul li:last-child {
+  background: none;
+  margin-right: 0;
+}
+
+nav.home ul li a {  
+  color: #063C5B;
+  display: block;
+  height: 126px;
+  width: 84px;
+}
+
+  /* Families Nav Icon */
+  nav.home ul li a#families  {
+    background: url(img/families.png);
+    width: 166px;
+  }
+
+	  nav.home ul li a:hover#families,
+	  nav.home ul li a:focus#families,
+	  nav.home ul li a:active#families {
+	    background-position: -166px 0px;
+	  }
+
+	  /*For illustration purposes only*/
+	  nav.home ul li a#families.active  {
+	    background-position: -166px 0px;
+	  }
+
+  /* Employees Nav Icon */
+  nav.home ul li a#employees {
+    background: url(img/employees.png);
+  }
+
+	  nav.home ul li a:hover#employees,
+	  nav.home ul li a:focus#employees,
+	  nav.home ul li a:active#employees {
+	    background-position: -85px 0px;
+	  }
+
+	  /*For illustration purposes only*/
+	  nav.home ul li a#employees.active  {
+	    background-position: -85px 0px;
+	  }
+
+  /* Employers Nav Icon */
+  nav.home ul li a#employers {
+    background: url(img/employers.png);
+  }
+
+	  nav.home ul li a:hover#employers,
+	  nav.home ul li a:focus#employers,
+	  nav.home ul li a:active#employers {
+	    background-position: -84px 0px;
+	  }
+
+	  /*For illustration purposes only*/
+	   nav.home ul li a#employers.active  {
+	    background-position: -84px 0px;
+	  }
+
+
+  /* Agent Nav Icon */
+  nav.home ul li a#agent {
+    background: url(img/agent.png);
+  }
+
+	  nav.home ul li a:hover#agent,
+	  nav.home ul li a:focus#agent,
+	  nav.home ul li a:active#agent {
+	    background-position: -84px 0px;
+	  }
+
+	  /*For illustration purposes only*/
+	  nav.home ul li a#agent.active  {
+	    background-position: -84px 0px;
+	  }
+
+
+
+  /* Tribal Nav Icon */
+  nav.home ul li a#tribal {
+    background: url(img/tribal.png);
+  }
+
+	  nav.home ul li a:hover#tribal,
+	  nav.home ul li a:focus#tribal,
+	  nav.home ul li a:active#tribal {
+	    background-position: -84px 0px;
+	  }
+
+	  /*For illustration purposes only*/
+	   nav.home ul li a#tribal.active  {
+	    background-position: -84px 0px;
+	  }
+
+/* =============================================================================
+   Left Side Navigation
+   ========================================================================== */
+
+nav.leftNav {
+  background: #eae9e8;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eae9e8), to(#fdfdfd));
+  background: -webkit-linear-gradient(#eae9e8, #fdfdfd);
+  background: -moz-linear-gradient(#eae9e8, #fdfdfd);
+  background: -ms-linear-gradient(#eae9e8, #fdfdfd);
+  background: -o-linear-gradient(#eae9e8, #fdfdfd);
+  background: linear-gradient(#eae9e8, #fdfdfd);
+  -pie-background: linear-gradient(#eae9e8, #fdfdfd);
+  behavior: url(scripts/PIE.htc);
+  float: left;
+  width: 23%;
+}
+
+  nav.leftNav ul li {
+    border-bottom: 1px solid #c0bebe;
+	font-family: 'Avenir_Medium';
+  }
+
+    nav.leftNav ul li:last-child {
+      border-bottom: none;
+    }
+
+    nav.leftNav ul li.dashboardLink {
+    	border-bottom: 0;
+    }
+
+    nav.leftNav ul li.dashboardLink a {    	
+    	background: #1584b5;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1584b5), to(#0170a1));
+		background: -webkit-linear-gradient(#1584b5, #0170a1);
+		background: -moz-linear-gradient(#1584b5, #0170a1);
+		background: -ms-linear-gradient(#1584b5, #0170a1);
+		background: -o-linear-gradient(#1584b5, #0170a1);
+		background: linear-gradient(#1584b5, #0170a1);
+		-pie-background: linear-gradient(#1584b5, #0170a1);
+		behavior: url(scripts/PIE.htc);
+		color: #FFF;
+		font-size: 14px;
+		text-transform: capitalize; 
+    }
+
+    	nav.leftNav ul li.dashboardLink a:visited {
+    		color: #FFF;
+    	}
+
+    nav.leftNav ul li a {
+      color: #909090;
+      font-size: 0.857em;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: 18px;
+      padding: 15px 15px 15px 12px;
+      display: block;
+    } 
+
+	    nav.leftNav ul li a:active,
+	    nav.leftNav ul li a:hover,
+	    nav.leftNav ul li.active a,
+	    nav.leftNav ul li.visited a:hover {
+			color: #7bc5e7;
+			background: #093750;
+			background: -webkit-gradient(linear, 0 0, 0 bottom, from(#093750), to(#0f82ad));
+			background: -webkit-linear-gradient(#093750, #0f82ad);
+			background: -moz-linear-gradient(#093750, #0f82ad);
+			background: -ms-linear-gradient(#093750, #0f82ad);
+			background: -o-linear-gradient(#093750, #0f82ad);
+			background: linear-gradient(#093750, #0f82ad);
+			-pie-background: linear-gradient(#093750, #0f82ad);
+			behavior: url(scripts/PIE.htc);
+	    }
+
+	    nav.leftNav ul li a.navTitle  {
+			color: #7bc5e7;
+			cursor: none;
+			text-decoration: none;
+			text-transform: uppercase;
+			line-height: 18px;
+			padding: 15px 15px;
+			display: block;
+			background: #093750;
+			background: -webkit-gradient(linear, 0 0, 0 bottom, from(#093750), to(#0f82ad));
+			background: -webkit-linear-gradient(#093750, #0f82ad);
+			background: -moz-linear-gradient(#093750, #0f82ad);
+			background: -ms-linear-gradient(#093750, #0f82ad);
+			background: -o-linear-gradient(#093750, #0f82ad);
+			background: linear-gradient(#093750, #0f82ad);
+			-pie-background: linear-gradient(#093750, #0f82ad);
+			behavior: url(scripts/PIE.htc);		
+	    }
+
+	    nav.leftNav ul li.visited a {
+	      color: #1a4a7a;      
+	    }
+
+	    nav.leftNav ul li.inactive a {
+      	  background: none;
+      	  color: #909090;
+  		}
+
+  	 	nav.leftNav .content{
+  	    padding: 10px 2px;
+  	}	
+
+	nav.leftNav ul li ul {
+		padding: 0 0 15px 10px;
+	}
+
+		nav.leftNav ul li ul li {	 
+		  border-bottom: none;	 
+		}
+
+		    nav.leftNav ul li ul li a {
+		      text-transform: none;
+		      padding: 5px 10px 5px 20px
+		    }
+
+		    nav.leftNav ul li.active ul li a {
+		    	background: none;
+		    	color: #909090;
+		    }
+
+		    nav.leftNav ul li ul li a:active,
+		    nav.leftNav ul li ul li a:hover,
+		    nav.leftNav ul li.active ul li a:active,
+		    nav.leftNav ul li.active ul li a:hover,
+		    nav.leftNav ul li.active ul li.active a  {
+		    	background: url(img/green_arrow.png) no-repeat left center;
+			    border-bottom: none;
+			    color: #063c5b;
+		    }		    
+		     
+		    nav.leftNav ul li.active ul li.visited a {
+		      color: #007bb0;      
+		    }
+
+		    nav.leftNav ul li.active ul li.inactive a {
+		    	background: none;
+		    	color: #909090;
+		    }
+
+nav.leftNav ul li.filter {
+    border-bottom: none;
+	font-family: 'Avenir_Medium';
+	color: #063c5b;
+	padding-left: 20px;
+	margin: 3px 3px 3px 4px;
+  }		    
+	   
+
+/* =============================================================================
+   Right Side Navigation
+   ========================================================================== */
+
+nav.rightNav {
+  background: #eae9e8;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eae9e8), to(#fdfdfd));
+  background: -webkit-linear-gradient(#eae9e8, #fdfdfd);
+  background: -moz-linear-gradient(#eae9e8, #fdfdfd);
+  background: -ms-linear-gradient(#eae9e8, #fdfdfd);
+  background: -o-linear-gradient(#eae9e8, #fdfdfd);
+  background: linear-gradient(#eae9e8, #fdfdfd);
+  -pie-background: linear-gradient(#eae9e8, #fdfdfd);
+  behavior: url(scripts/PIE.htc);
+  float: right;
+  padding: 14px 0 0 0;
+  width: 180px;
+}
+
+  nav.rightNav ul li {
+    border-bottom: 1px solid #c0bebe;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+    nav.rightNav ul li:last-child {
+      border-bottom: none;
+    }
+
+    nav.rightNav ul li a {
+      color: #999;  
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: 18px;
+      padding: 7px 10px;
+      display: block;
+    } 
+
+	    nav.rightNav ul li a:active,
+	    nav.rightNav ul li a:hover {
+	      color: #7bc5e7;
+	      background: #0f82ad;
+	      background: -webkit-gradient(linear, 0 0, 0 bottom, from(#0f82ad), to(#093750));
+	      background: -webkit-linear-gradient(#0f82ad, #093750);
+	      background: -moz-linear-gradient(#0f82ad, #093750);
+	      background: -ms-linear-gradient(#0f82ad, #093750);
+	      background: -o-linear-gradient(#0f82ad, #093750);
+	      background: linear-gradient(#0f82ad, #093750);
+	      -pie-background: linear-gradient(#0f82ad, #093750);
+	      behavior: url(scripts/PIE.htc);
+	    }
+
+	    nav.rightNav ul li a:visited {
+	      color: #1a4a7a;      
+	    }   
+
+	nav.rightNav ul li ul li {
+	  border-bottom: none;
+	}
+
+	    nav.rightNav ul li ul li a {
+	      text-transform: none;
+	      padding: 5px 10px 5px 30px
+	    }
+
+	    nav.rightNav ul li ul li:last-child a {
+	      padding-bottom: 15px;
+	    }
+
+	    nav.rightNav ul li ul li a:active,
+	    nav.rightNav ul li ul li a:hover {
+	      background: none;
+	      border-bottom: none;
+	    }
+
+/* =============================================================================
+   Level Two Navigation (SHOP, Individual, Agent, & FIVE landing pages)
+   ========================================================================== */
+
+nav.levelTwo {
+	margin: 10px 0 50px 0;
+	min-height: 110px;
+	padding: 10px;
+	position: relative;
+}
+
+	nav.levelTwo ul li {	
+		color: #063C5B;
+		float: left;
+		font-family: 'Avenir_Medium';
+		margin: 0 15px 0 0;
+		padding: 35px 20px 0 25px;
+		position: relative;
+		min-height: 150px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 25%;
+	}
+
+		nav.levelTwo ul li a.button {
+			margin-left: 30px;
+			min-width: 150px;
+		}
+
+/*nav.levelTwo ul li.active {
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-right-radius: 10px;
+	border-top: 2px solid #f4f2eb;
+	border-left: 2px solid #f4f2eb;
+	border-right: 2px solid #f4f2eb;
+	background: url(img/bkgrd_level_two_nav.png) repeat-x;
+	behavior: url(scripts/PIE.htc);
+}*/
+

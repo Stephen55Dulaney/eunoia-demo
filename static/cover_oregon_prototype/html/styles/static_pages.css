@@ -1,0 +1,1689 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  static_pages.css
+ * ===== VERSION: v0.1
+ * ===== UPDATED: 8/12/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+ /* Table of Contents
+    1.  Content
+    2.  Hero Image & Hero Content
+    3.  Features, Highlights & Carrier Logos 
+    4.  Information Center
+    5.  Glossary & FAQ
+    6.  Board and Committees
+    7.  Sidebar Content
+    8.  Featured Stories
+    9.  News and Media
+    10. Meetings and Events
+    11. Language Help
+    12. FAQ Maximize Minimize Section
+    13. Carrier Pages Content
+    14. Misc
+
+ */
+
+
+/* =============================================================================
+   Content
+   ========================================================================== */
+
+.corpContentArea {
+	padding: 2.5%;
+	width: 95%;
+}
+
+	.corpContentArea h1 {
+		color: #00324d;
+	}
+
+	.corpContentArea h2,
+	article h2 {
+	  color: #00324d;
+	}
+
+	.corpContentArea h3 {
+	    margin-bottom: 15px;
+	}
+
+	.corpContentArea .sectionHeader h4 {
+		float: left;
+	}
+
+	.corpContentArea .sectionHeader h5 {
+		float: left;
+		margin-top: 15px;
+	}
+
+	.corpContentArea .sectionHeader a {
+		float: right;
+	}
+
+	.corpContentArea .carriersOptions {
+		padding: 5px 0;
+	}
+
+	.carriersOptions .selectCarrier {		
+		background: url(img/selectorArrow.png) no-repeat scroll 245px 8px #e2e3e3;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		color: #034564;
+		float: left;
+		margin-right: 20px;
+		overflow: hidden;
+		width: 267px;
+	}
+
+		.selectCarrier select {
+			border: 0;
+			color: #034564;
+			background: transparent;
+			font-size: 12px;
+			font-weight: bold;
+			height: 28px;
+			padding: 2px 5px;
+			width: 267px;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+
+	.corpContentArea section {    
+		border-bottom: 0;
+		margin: 15px 0;
+		padding-left: 15px;
+	}
+
+	.corpContentArea .twoColumn {    
+		border-bottom: 1px solid #E4E4E4;
+		margin: 20px 20px;
+		width: 96%;
+	}
+
+		.corpContentArea .twoColumn fieldset {
+			margin-bottom: 20px;
+		}
+
+.corpContentArea .contentWrapper {
+	margin-bottom: 40px;
+}
+
+	.contentWrapper .leftColumn {
+		float: left;
+		height: 270px;
+		margin-right: 4%;		
+		overflow: hidden;
+		width: 46%;
+	}
+
+	.contentWrapper .rightColumn {
+		float: left;
+		width: 50%;
+		min-height: 270px;
+	}
+
+	.contentWrapper .colOne,
+	.contentWrapper .colTwo {
+		float: left;
+		margin-right: 5%;
+		text-align: center;
+		width: 30%;
+	}
+
+	.contentWrapper .colThree {
+		float: left;
+		text-align: center;
+		width: 30%;
+	}
+
+	.contentWrapper ul {
+		padding: 20px;
+	}
+
+.corpContentArea .twoColumnPage {
+	margin-bottom: 25px;
+}
+
+	.twoColumnPage .leftCol {
+		float: left;
+		margin-right: 5%;
+		width: 45%;
+	}
+
+	.twoColumnPage .rightCol {
+		float: left;
+		width: 50%;
+	}
+
+	.twoColumnPage .content {		
+		margin-bottom: 15px;
+		height: 110px;
+	}
+
+		.twoColumnPage .content img {
+			float: left;
+			margin: 0  20px 40px 0;
+			width: 70px;
+		}
+
+		.twoColumnPage .content h4 {
+			font-size: 1.4em;
+		}
+
+		.twoColumnPage .content ul {
+			margin: 10px 0 10px 20px;
+		}
+
+		.twoColumnPage .content ul li {
+			background: url(img/right_arrow_blue.png) no-repeat left center;
+			list-style: none;
+			padding: 5px 0 5px 20px;
+		}
+
+		.twoColumnPage .content.colFooterContent {
+			padding: 0 30px;
+		}
+
+	.twoColumnPage .highlightsContainer {
+		margin: 0 10px 30px 10px;
+		min-height: 164px;
+		padding: 10px;
+	}
+
+		.twoColumnPage .leftCol .highlightsContainer,
+		.twoColumnPage .rightCol .highlightsContainer {
+			min-height: 184px;
+		}
+
+	.twoColumnPage .highlightsContainer .highlightsContent {
+		margin-right: 0;
+	}
+
+		.twoColumnPage .highlightsContainer .highlightsContent h4 {
+			font-size: 20px;
+		}
+
+		.ie9 .twoColumnPage .highlightsContainer .highlightsContent h4 {
+			font-size: 19px;
+		}
+
+.startButton {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.startButton a.button {
+	float: none;
+}
+
+
+.corpContentArea .pageContent {
+	float: left;
+	width: 68%;
+	margin-right: 3%;
+}
+
+	.corpContentArea .pageContent table {
+		margin: 0;
+		padding: 0;
+	}
+
+	.corpContentArea .pageContent table tr td {
+		border: 0;		
+	}
+
+		.corpContentArea .pageContent table tr td:first-child {
+			padding: 10px 0;
+		}
+
+	.corpContentArea .pageContent .newsletter {
+		float: none;
+	}
+
+.corpContentArea .pageContent .highlightsContainer {
+	margin: 10px;
+}
+
+.corpContentArea fieldset.contactUsForm .ctrlHolder label {
+	float: left;
+	width: 178px;
+}
+
+.corpContentArea fieldset.contactUsForm .ctrlHolder label.long {
+	width: 420px;
+}
+
+/* Error Messages*/
+ .corpContentArea fieldset .ctrlHolder label.error { 	
+	color: red;
+	font-family: 'Avenir_Book';
+	font-size: 12px;	
+	font-weight: normal;
+	margin: 5px 0 0 180px;
+	width: 200px;
+ }
+
+.corpContentArea .contactList {
+	margin-left: 20px;
+}
+.corpContentArea .contactInfo {
+	margin-bottom: 10px;
+}
+.corpContentArea h4.category {
+	background: #eee;
+	font-size: 16px;
+	color: #3c3a37;
+	padding: 8px 5px;	
+}
+
+	.corpContentArea h4.category.active {
+		color: #FFF;
+		background: #0099FF;
+	}
+
+	.corpContentArea h4.category a {
+		font-size: 16px;
+		color: #3c3a37;
+		text-decoration: none;
+	}
+
+	.corpContentArea h4.category a:active,
+	.corpContentArea h4.category.active a,
+	.corpContentArea h4.category.active a:active {
+		color: #FFF;
+		background: #0099FF;
+		text-decoration: none;
+	}
+
+
+.corpContentArea .pieChart {
+	text-align: center;
+}
+
+
+/*Subscribe to Newsletters */
+#emailsubscribe {
+	margin: 25px 0;
+}
+
+#emailsubscribe label {
+	color: #00324d;
+	font-family: 'Brandon_Grotesque_Regular';
+	font-size: 1.714em;
+	line-height: 1.2em;
+	float: left;
+	margin: 5px 10px 0 0;
+}
+
+#emailsubscribe input {
+	
+}
+
+/* =============================================================================
+   Hero Image & Hero Content
+   ========================================================================== */
+
+
+/* Hero Container */
+.corpHeroContainer {
+	background: #00A5FF;
+	height: 260px;
+	position:relative;
+	width: 100%;
+}
+
+.corpHeroContainer.dental {
+	background: #00334E;
+}
+
+.corpHeroContainer.medicaidCHIP {
+	background: #9900CC;
+}
+
+.corpHeroContainer.aboutUs {
+	background: #FFCC66;
+}
+
+.corpHeroContainer.joinUs {
+	background: #9900CC;
+}
+
+.corpHeroContainer.usingTheExchange {
+	background: #89c560 ;
+}
+
+.corpHeroContainer.applicationProcess {
+	background: #C9DE21;
+}
+
+
+/* Hero Content */
+	.corpHeroContainer .corpHeroContent {		
+		padding: 20px 35px 10px 35px;
+		position:absolute;
+		width: 50%;
+		z-index: 50;
+	}
+
+	.corpHeroContent div {
+	    display:none;    
+	}
+
+	.corpHeroContent div.default {
+	    display:block;    
+	}
+
+		.corpHeroContent h1 {
+			color: #FFF;
+			margin-bottom: 15px;
+		}
+
+		.corpHeroContent p {
+			color: #FFF;
+			line-height: 18px;
+		}
+
+		.corpHeroContent p a,
+		.corpHeroContent p a:visited {
+			color: #FFF;
+		}
+
+	.corpHeroContainer .corpHeroContent.black {
+		float: left;
+		padding: 30px 50px;
+		width: 480px;
+	}
+
+		.corpHeroContent.black h1 {
+			color: #000;
+		}
+
+		.corpHeroContent.black p {
+			color: #000;
+		}
+
+
+/* Hero Image */
+
+.corpHeroContainer .corpHeroImage {	
+	position:absolute;
+	top: 0;
+	right: 39.5%;
+	z-index:10;
+}
+
+	.corpHeroContainer .corpHeroImage img {		
+		position:absolute;
+	}
+
+	.corpHeroContainer#carousel .corpHeroImage img {
+		display: none;
+	}
+
+	.corpHeroContainer#carousel .corpHeroImage img.default {    
+	    display:block;
+	}
+
+	.corpHeroContainer#carousel .corpHeroImage img.current {
+	    z-index:10;
+	}
+
+	.corpHeroContainer#carousel .corpHeroImage img.previous {
+	    z-index:5;
+	}
+
+
+/* Hero Nav */
+
+	.corpHeroContainer .corpHeroNav {
+		bottom: 0;
+		padding: 10px 0 10px 35px;
+		position:absolute;
+		z-index: 20;
+	} 
+
+	.corpHeroContainer .corpHeroNav ul {		
+		margin: 0;
+		padding: 0;	
+	}
+
+		.corpHeroContainer .corpHeroNav ul li {
+			font-size: 0;
+			float: left;
+			line-height: 0;
+			list-style: none;
+			padding-left: 3px;
+		}
+
+			.corpHeroContainer .corpHeroNav ul li a {
+				background: #00324d;
+				display: block;
+				height: 16px;
+				width: 16px;
+				font-size: 0;
+				line-height: 0;
+				text-decoration: none;
+			}
+
+			.corpHeroContainer .corpHeroNav ul li a.current {
+				background: #97c84b;
+			}
+
+
+
+/* =============================================================================
+   Features, Highlights
+   ========================================================================== */
+
+
+/*Features */
+.featuresContainer {
+	min-height: 308px;
+	padding: 20px 0;
+}
+
+
+.featuresContainer .featureBox {
+	float: left;
+	margin-right: 30px;
+	/*min-height: 402px;*/
+	padding: 0;
+	width: 280px;	
+}
+
+.featuresContainer .featureBox.smallBox {
+	width: 192px;
+	min-height: 280px;
+}
+
+	.featureBox.last {
+		margin-right: 0;
+	}
+
+	.featureBox .featureBoxTitle {
+		text-align: center;
+	}
+
+	.featureBox .featureBoxTitle img {
+		margin-bottom: 10px;
+	}
+
+	.featureBox .featureBoxTitle h4 {
+		font-size: 1.4em;
+	}
+
+	.featureBox p {
+		font-size: 14px;
+		padding-bottom: 10px;
+	}
+
+	.featureBox p a {
+		font-size: 14px;
+	}
+
+	.featureBox p img {
+		margin-right: 10px;
+	}
+
+	.featureBox ul {
+		margin: 0 0 0 20px;
+	}
+
+		.featureBox ul li {
+			background: url(img/right_arrow_blue.png) no-repeat left center;			
+			list-style: none;
+			padding: 5px 0 5px 20px;
+		}
+
+		.featureBox ul.noBkgr li {
+			background: none;
+			padding: 0 0 0 10px;
+		}
+
+/* Highlights */
+.highlightsContainer {
+	border: 1px solid #A7A7A7;
+	margin: 0 100px 20px 100px;
+	padding: 10px 15px;
+}
+
+	.highlightsContainer .highlightsContent {
+		float: left;
+		margin-right: 20px;
+	}
+
+	.highlightsContent ul {
+		margin-left: 20px; 
+	}
+
+	.highlightsContainer .button {
+		float: right;
+		margin: 45px 30px 35px 0;
+	}
+
+
+/* =============================================================================
+   Information Center
+   ========================================================================== */
+
+   .corpContentArea .firstColumn {
+   	width: 30%;
+   	min-height: 40px;
+   	margin-right: 10px;
+   	float: left;
+   }
+
+   	.corpContentArea .firstColumn h4 {
+   		color: #3c3a37;
+   		font-size: 1.4em;
+   	}
+   
+   .corpContentArea .secondColumn {
+   	width: 68%;
+  	min-height: 40px;
+   	float: left;
+   }
+
+      .corpContentArea .secondColumn ul {
+      	padding: 0 20px;
+
+      }
+      .corpContentArea .secondColumn ul.noListStyle li {
+      	list-style: none;
+      }
+
+      .corpContentArea .secondColumn .billName {
+      	margin-left: 20px;
+      }
+
+
+
+/* =============================================================================
+   Glossary & FAQ
+   ========================================================================== */
+
+.corpContentArea section.mainContent {
+	float: left;
+	margin-top: 0;
+	width: 74%
+}
+
+aside.sidebarNav {
+	float: left;
+	width: 24%
+}
+
+	aside.sidebarNav input.searchBox {
+		background: #eee url("img/icon-search.png") no-repeat 197px 5px;
+		margin-bottom: 10px;
+		width: 95%;
+	}
+
+	aside.sidebarNav ul {
+		margin: 10px 0;
+	}
+
+		aside.sidebarNav ul li {
+			border-bottom: 1px solid #A7A7A7;		
+			padding: 8px 8px;
+			text-align: center;
+		}
+			
+			aside.sidebarNav ul li a {
+				font-size: 14px;
+				font-family: 'Avenir_medium';
+				text-decoration: none;
+			}
+
+		
+			aside.sidebarNav ul li.hover {
+				background: #eee;
+			}
+
+			aside.sidebarNav ul li.active {				
+				background: #0099FF;
+			}
+
+			aside.sidebarNav ul li.active a,
+			aside.sidebarNav ul li.active a:active,
+			aside.sidebarNav ul li.active a:hover,
+			aside.sidebarNav ul li.active a:visited {
+				color: #FFF;
+				text-decoration: none;
+			}
+
+		/* FAQ menu*/
+		aside.sidebarNav ul.faq li {
+			text-align: left;
+		}
+
+/* =============================================================================
+   Board and Committees
+   ========================================================================== */
+
+nav.boardNav {
+	margin-top: -20px;
+}
+
+	nav.boardNav ul li {
+		text-align: left;
+	}
+
+	nav.boardNav ul li:first-child {
+		border-top: 1px solid #A7A7A7;
+	}
+
+	nav.boardNav ul li a {
+		color: #3c3a37;
+		text-decoration: none;
+	}
+
+
+.corpContentArea .mainContent .boardContent {
+	margin: 0;
+}
+
+	.boardContent .members {
+		float: left;
+		margin: 0 10px 0 0;
+		width: 70%;
+	}
+
+	.boardContent .members th {
+		text-transform: none;
+		color: #3c3a37;
+		font-family: 'Avenir_Light' ;
+	}
+
+	.boardContent .members td {
+		border-top: 0;
+	}
+
+	.boardContent .members tr:first-child {
+		border-bottom: 1px solid #DEDEDE;
+	}
+
+	.boardContent .members td:first-child {
+		width: 23%
+	}
+
+	.boardContent .members td:last-child {
+		width: 50%;
+	}
+
+	.boardContent .secondColumn {
+		width: 28%;		
+		float: right;
+	}
+
+		.boardContent .secondColumn ul {
+			padding: 0 10px;
+		}
+
+		.boardContent .secondColumn ul li {				
+			padding: 6px 0;
+			list-style: none;
+		}
+
+		/*.boardContent .secondColumn ul li a {
+			font-size: 12px;
+		}*/
+		
+/* =============================================================================
+   Sidebar Content
+   ========================================================================== */
+
+aside.sidebarImage {
+	float: right;
+	position: relative;
+}
+
+	aside.sidebarImage figcaption {
+		bottom: 20px;
+		position: absolute;	
+	}
+
+
+		aside.sidebarImage figcaption p {		
+			color: #fff;
+			font-family: 'Brandon_Grotesque_Medium';
+			font-size: 24px;
+			font-weight: normal;
+			letter-spacing: 1px;
+			line-height: 30px;
+			margin: 0 0 5px;
+			padding: 0 15px;
+			text-transform: uppercase;
+		}
+
+			aside.sidebarImage figcaption p.source {
+				font-family: 'Brandon_Grotesque_Bold';
+				font-size: 14px;
+				letter-spacing: 1px;
+				line-height: 18px;
+				text-transform: uppercase;
+			}
+
+/* =============================================================================
+   Featured Stories
+   ========================================================================== */
+
+article.featuredStories {
+	float: left;
+	padding: 2.5%;
+	width: 652px;
+}
+
+	article.featuredStories .story {
+		padding-top: 10px;
+	}
+
+
+.featuredStoriesWrapper {
+	background: #009edb url('img/bkg-grad-feature-grid.png') repeat-x 0 0;
+	border-top: 1px solid rgba(137, 145, 151, 0.7);
+}
+
+	.featuredStoriesWrapper ul {
+		margin: 0;
+		padding-bottom: 16px;
+	}
+
+		.featuredStoriesWrapper ul li {
+			display: inline-block;
+			margin: 0;
+			padding: 0 10px 0 0;
+			position: relative;
+			width: 220px;
+		}
+		
+			.featuredStoriesWrapper ul li:last-child {
+				padding: 0 0 0 0;
+			}
+
+			.featuredStoriesWrapper ul li a,
+			.featuredStoriesWrapper ul li a:hover {
+				text-decoration: none;
+			}
+
+
+	.featuredStoriesWrapper figure {
+		position: relative;
+	}
+
+		.featuredStoriesWrapper figure figcaption {
+			background: transparent url('img/bkg-grad-feature-name-bar.png') repeat 0 0;
+			bottom: 12px;
+			margin: 0;
+			position: absolute;
+			width: 100%;
+		}
+
+		.featuredStoriesWrapper ul li.no-img figcaption {
+			background: transparent url('img/bkg-grad-feature-name-no-img.png') repeat-y 0 0;
+			display: block;
+			position: relative;
+			top: 0;
+		}
+
+		.featuredStoriesWrapper a:hover figcaption {
+			background: rgba(255,255,255,0.7);			
+		}
+
+		.featuredStoriesWrapper figure figcaption p {
+			color: #FFF;			
+			font-family: 'Brandon_Grotesque_Medium';
+			font-size: 10px;
+			letter-spacing: 1px;
+			line-height: 15px;
+			margin: 0;
+			padding: 5px 5px 5px 10px;
+			text-transform: uppercase;
+		}
+
+		.featuredStoriesWrapper figcaption p strong {
+			font-family: 'Brandon_Grotesque_Bold';
+			font-weight: normal;
+		}
+
+		.featuredStoriesWrapper a:hover figcaption p {
+			color: #3c3a37;
+		}
+
+
+/* Featured Stories Sidebar */
+
+aside.sidebarImage.featuredStoriesSidebar figcaption  {	
+	background: transparent url('img/bkg-grad-feature-sidebar.png') repeat-x 0 0;
+	bottom: 0;
+	width: 100%;
+}
+
+	aside.sidebarImage.featuredStoriesSidebar figcaption p {		
+		font-size: 12px;
+		line-height: 15px;
+		padding: 10px 15px;
+	}
+
+/* =============================================================================
+   News and Media
+   ========================================================================== */			
+
+.corpContentArea .newsArticles {
+	margin-bottom: 20px;
+}
+
+.newsArticles .newsItem {
+	width: 96%;
+	padding: 0 0 15px 14px;
+}
+
+    .newsArticles .newsItem a {
+      	float: left;
+      	margin-right: 1%;
+      	text-decoration: none;
+      	width: 84%;      	
+  	}
+
+    .newsArticles .newsItem a:hover {
+      	text-decoration: underline;   	
+   	}
+
+    .newsArticles .newsItem .newsDate {
+   		float: right;
+   		width: 14%;   		
+   	}
+
+    .newsArticles .lastnewsItem {
+   	  	width: 96%;
+   		padding: 0 0 60px 14px;
+      	color: #00324d;
+   }
+     
+	    .newsArticles .lastnewsItem a {
+	      	width: 90%;
+	      	float: left;   	
+	   	}
+
+	    .newsArticles .lastnewsItem .newsDate {
+	   		width: 10%;
+	   		float: right;
+	   	}
+
+aside.sidebarCopy  {
+	float: right;
+	padding: 13% 1% 0 1%;
+	width: 27%;
+}
+
+aside.sidebarCopy h4 {
+	border-bottom: 1px solid #A7A7A7;
+	float: none;
+}
+
+aside.sidebarCopy section {
+	margin: 10px 0;
+	padding: 0;
+}
+
+
+/* =============================================================================
+   Meetings and Events
+   ========================================================================== */
+
+   aside.meetings .searchDate {
+   		margin-bottom: 10px;
+   		/*background:  url("img/blue_calendar_icon_sm.png") no-repeat right center ;*/
+   }
+
+   aside.meetings .searchDate label {
+   		float: left;
+   		width: 50px;
+   }
+
+
+
+   aside.meetings {
+   		float: left;
+		width: 24%;
+   }
+
+   aside.meetings ul li {
+   		padding: 8px 0;
+   		list-style-type: none;
+   		font-size: 14px;
+
+   }
+
+   aside.meetings ul li input {
+   	margin-right: 10px;
+
+   }
+
+   .corpContentArea h4.meetingsTitle {
+	   	font-size: 18px;
+		padding: 8px 5px;
+		border-bottom: 1px solid #A7A7A7;
+   }
+
+
+.corpContentArea .meetings {
+	float: left;
+/*	width: 94%;
+	margin-right: 3%;
+	margin-left: 3%;*/
+}
+
+.corpContentArea .meetings.columnOne {
+	float: left;
+	width: 60%;
+	margin-right: 3%;
+}
+
+.corpContentArea .meetings.columnTwo {
+	float: left;
+	width: 35%;
+	margin-right: 0%;
+}
+
+.corpContentArea .meetings table {
+		margin: 0;
+		padding: 0;
+	}
+
+	.corpContentArea .meetings table tr td {
+		border: 0;		
+	}
+
+		.corpContentArea .meetings table tr td:first-child {
+			padding: 10px 0;
+		}
+
+	.corpContentArea .meetings .newsletter {
+		float: none;
+	}
+
+	.meetings fieldset.meetingsForm .ctrlHolder label {
+		float: left;
+		width: 165px;
+	}
+
+	.meetings fieldset.meetingsForm .ctrlHolder .formEntryContentSelect {
+		background: url(img/selectorArrow.png) no-repeat scroll 85px 8px #e2e3e3;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		color: #034564;
+		float: left;
+		margin-top: 0;
+		overflow: hidden;
+		width: 106px;
+	}
+
+		.meetings fieldset.meetingsForm .ctrlHolder .formEntryContentSelect select {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border: 0;
+			background: transparent;
+			color: #034564;			
+			font-size: 12px;
+			font-weight: bold;
+			height: 28px;
+			padding: 2px 5px;
+			width: 106px;			
+		}
+
+	.corpContentArea fieldset.meetingsForm .ctrlHolder label.error {
+		margin: 5px 0 0 165px;
+	}
+
+/* =============================================================================
+   Language Help
+   ========================================================================== *
+
+/*languages */
+
+.corpContentArea .languagesOptions {
+	padding: 20px 200px;
+}
+
+
+	.languagesOptions .languageBox {
+		float: left;
+		margin-right: 30px;
+		padding: 0;
+		text-align: center;		
+	}
+
+
+.corpContentArea .languagesContainer {
+	padding: 10px;
+}
+
+	.languagesContainer .laguageContent {
+		float: left;
+		margin-right: 2%;
+		width: 31%;
+	}
+
+		.languagesContainer .laguageContent:last-child {
+			margin-right: 0;
+		}
+
+
+/* =============================================================================
+   FAQ Maximize Minimize Section
+   ========================================================================== */
+
+
+.twoColumn .faqHeader { }
+
+	.faqHeader .minimize-button {
+		background: url(img/accordion-minus-plus.png) no-repeat 0 -36px;
+		float: left;
+		margin: -10px 10px 0 0;
+		width: 36px;
+		height: 36px;
+		display: -moz-inline-box;
+		display: inline-block;
+	}
+
+	.faqHeader .minimize-button.open {
+		background: url(img/accordion-minus-plus.png) no-repeat 0 0;
+	}
+
+	.faqHeader p {
+		float: left;
+		width: 92%;
+	}
+
+.twoColumn .faqContent {
+	margin-left: 50px;
+}
+
+
+
+/* =============================================================================
+   Carrier Pages Content
+   ========================================================================== */
+
+.corpContentArea .carrierPageHeader {
+	margin: 0 0 35px 0;
+}
+
+	.carrierPageHeader img {
+			float: left;
+			margin-right: 20px;
+	}
+
+	.carrierPageHeader h3 {
+			float: left;
+			margin: 10px 15px 0 0;
+	}
+
+.corpContentArea .carrierContent {
+	margin-bottom: 10px;	
+}
+
+	.carrierContent .colOne {
+		float: left;
+		margin-right: 10%;
+		width: 60%;
+	}
+
+	.carrierContent .colTwo {
+		float: left;		
+		width: 30%;
+	}
+
+.corpContentArea table.carrierDetails th:nth-child(2),
+.corpContentArea table.carrierDetails th:last-child {	
+	padding: 1% 8%;
+}
+
+.corpContentArea table.carrierDetails td {
+	border-top: 0;
+	border-bottom: 1px solid #DEDEDE;
+	padding: 3% 1%;
+	width: 20%;
+}
+
+.corpContentArea table.carrierDetails td:first-child {
+	font-size: 18px;
+}
+
+.corpContentArea table.carrierDetails td:nth-child(2) {
+	/*border-right: 1px solid #DEDEDE;*/
+	padding: 3% 4%;
+	width: 35%;
+}
+
+.corpContentArea table.carrierDetails td:last-child {	
+	padding: 3% 4%;
+	width: 35%;
+}
+
+.corpContentArea table.carrierDetails td span {
+/*	float: right;*/
+	font-size: 14px;
+}
+
+	.ie8 .corpContentArea table.carrierDetails td span {
+		margin-right: 130px;
+	}
+
+.corpContentArea table.carrierDetails tr:last-child td {
+	border: 0;
+}
+
+
+/* Carrier Logos  */
+.carrierLogosContainer {
+	background: #f3f3f3;	
+	padding: 15px;	
+}
+
+.carrierLogosContainer.noBkgr {
+	background: none;
+}
+
+.carrierLogosContainer ul {
+	margin: 0;
+}
+
+.carrierLogosContainer ul li {
+	float: left;
+	list-style: none;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
+.carrierLogosContainer ul li a {
+	display: block;
+	height: 70px;
+	width: 156px;
+}
+
+
+/*Carrier Logos with hover feature*/
+
+/* atrio */
+.carrierLogosContainer ul li a#atrio {
+	background: url(img/atrio_max_bw.png) no-repeat;
+}
+
+.carrierLogosContainer ul li a#atrio:hover,
+.carrierLogosContainer ul li a#atrio.active {
+	background: url(img/atrio_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* bridgespan */
+.carrierLogosContainer ul li a#bridgespan {
+	background: url(img/bridgespan_max_bw.png) no-repeat;
+}
+
+.carrierLogosContainer ul li a#bridgespan:hover,
+.carrierLogosContainer ul li a#bridgespan.active {
+	background: url(img/bridgespan_max_nobkgr.png) no-repeat;
+}
+
+
+/* healthnet */
+.carrierLogosContainer ul li a#healthnet {
+	background: url(img/healthnet_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#healthnet:hover,
+.carrierLogosContainer ul li a#healthnet.active {
+	background: url(img/healthnet_max_nobkgr.png) no-repeat;
+}
+
+
+/* healthrepublic */
+.carrierLogosContainer ul li a#healthrepublic {
+	background: url(img/healthrepublic_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#healthrepublic:hover,
+.carrierLogosContainer ul li a#healthrepublic.active {
+	background: url(img/healthrepublic_max_nobkgr.png) no-repeat;
+}
+
+
+/* kaiserpermanente */
+.carrierLogosContainer ul li a.kaiserpermanente {
+	background: url(img/kaiserpermanente_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a.kaiserpermanente:hover,
+.carrierLogosContainer ul li a.kaiserpermanente.active {
+	background: url(img/kaiserpermanente_max_nobkgr.png) no-repeat;
+}
+
+
+/* lifewise */
+.carrierLogosContainer ul li a#lifewise {
+	background: url(img/lifewise_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#lifewise:hover,
+.carrierLogosContainer ul li a#lifewise.active {
+	background: url(img/lifewise_max_nobkgr.png) no-repeat;
+}
+
+
+/* modahealth */
+.carrierLogosContainer ul li a#modahealth {
+	background: url(img/modahealth_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#modahealth:hover,
+.carrierLogosContainer ul li a#modahealth.active {
+	background: url(img/modahealth_max_nobkgr.png) no-repeat;
+}
+
+
+/* oregonhealth */
+.carrierLogosContainer ul li a#oregonhealth {
+	background: url(img/oregonhealth_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#oregonhealth:hover,
+.carrierLogosContainer ul li a#oregonhealth.active {
+	background: url(img/oregonhealth_max_nobkgr.png) no-repeat;
+}
+
+
+/* pacificsource */
+.carrierLogosContainer ul li a.pacificsource {
+	background: url(img/pacificsource_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a.pacificsource:hover,
+.carrierLogosContainer ul li a.pacificsource.active {
+	background: url(img/pacificsource_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* providence */
+.carrierLogosContainer ul li a.providence {
+	background: url(img/providence_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a.providence:hover,
+.carrierLogosContainer ul li a.providence.active {
+	background: url(img/providence_max_nobkgr.png) no-repeat;
+}
+
+
+/* trillium */
+.carrierLogosContainer ul li a.trillium {
+	background: url(img/trillium_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a.trillium:hover,
+.carrierLogosContainer ul li a.trillium.active {
+	background: url(img/trillium_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* best life */
+.carrierLogosContainer ul li a#bestlife {
+	background: url(img/bestlife_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#bestlife:hover,
+.carrierLogosContainer ul li a#bestlife.active {
+	background: url(img/bestlife_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* dentalhealthservices */
+.carrierLogosContainer ul li a#dentalhealthservices {
+	background: url(img/dentalhealthservices_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#dentalhealthservices:hover,
+.carrierLogosContainer ul li a#dentalhealthservices.active {
+	background: url(img/dentalhealthservices_max_nobkgr.png) no-repeat;
+}
+
+
+/* dentegra */
+.carrierLogosContainer ul li a#dentegra {
+	background: url(img/dentegra_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#dentegra:hover,
+.carrierLogosContainer ul li a#dentegra.active {
+	background: url(img/dentegra_max_nobkgr.png) no-repeat;
+}
+
+
+/* guardian */
+.carrierLogosContainer ul li a#guardian {
+	background: url(img/guardian_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#guardian:hover,
+.carrierLogosContainer ul li a#guardian.active {
+	background: url(img/guardian_max_nobkgr.png) no-repeat;
+}
+
+
+/* ods */
+.carrierLogosContainer ul li a#ods {
+	background: url(img/ods_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#ods:hover,
+.carrierLogosContainer ul li a#ods.active {
+	background: url(img/ods_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* williamette */
+.carrierLogosContainer ul li a#williamette,
+.carrierLogosContainer ul li a#williametteCCO {
+	background: url(img/williamette_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#williamette:hover,
+.carrierLogosContainer ul li a#williamette.active,
+.carrierLogosContainer ul li a#williametteCCO:hover,
+.carrierLogosContainer ul li a#williametteCCO.active {
+	background: url(img/williamette_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* allcare */
+.carrierLogosContainer ul li a#allcare {
+	background: url(img/allcare_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#allcare:hover,
+.carrierLogosContainer ul li a#allcare.active {
+	background: url(img/allcare_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* columbiapacific */
+.carrierLogosContainer ul li a#columbiapacific {
+	background: url(img/columbiapacific_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#columbiapacific:hover,
+.carrierLogosContainer ul li a#columbiapacific.active {
+	background: url(img/columbiapacific_max_nobkgr.png) no-repeat;
+}
+
+
+/* familycare */
+.carrierLogosContainer ul li a#familycare {
+	background: url(img/familycare_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#familycare:hover,
+.carrierLogosContainer ul li a#familycare.active {
+	background: url(img/familycare_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* healthshare */
+.carrierLogosContainer ul li a#healthshare {
+	background: url(img/healthshare_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#healthshare:hover,
+.carrierLogosContainer ul li a#healthshare.active {
+	background: url(img/healthshare_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* intercommunity */
+.carrierLogosContainer ul li a#intercommunity {
+	background: url(img/intercommunity_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#intercommunity:hover,
+.carrierLogosContainer ul li a#intercommunity.active {
+	background: url(img/intercommunity_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* jacksoncare */
+.carrierLogosContainer ul li a#jacksoncare {
+	background: url(img/jacksoncare_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#jacksoncare:hover,
+.carrierLogosContainer ul li a#jacksoncare.active {
+	background: url(img/jacksoncare_max_nobkgr.png) no-repeat;
+}
+
+
+
+
+/* pacificsourcecommunity */
+.carrierLogosContainer ul li a#pacificsourcecommunity {
+	background: url(img/pacificsourcecommunity_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#pacificsourcecommunity:hover,
+.carrierLogosContainer ul li a#pacificsourcecommunity.active {
+	background: url(img/pacificsourcecommunity_max_nobkgr.png) no-repeat;
+}
+
+
+
+
+/* josephinePH */
+.carrierLogosContainer ul li a#josephinePH {
+	background: url(img/josephinePH_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#josephinePH:hover,
+.carrierLogosContainer ul li a#josephinePH.active {
+	background: url(img/josephinePH_max_nobkgr.png) no-repeat;
+}
+
+
+
+
+/* trilliumcommunity */
+.carrierLogosContainer ul li a#trilliumcommunity {
+	background: url(img/trilliumcommunity_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#trilliumcommunity:hover,
+.carrierLogosContainer ul li a#trilliumcommunity.active {
+	background: url(img/trilliumcommunity_max_nobkgr.png) no-repeat;
+}
+
+
+
+
+/* umpqua */
+.carrierLogosContainer ul li a#umpqua {
+	background: url(img/umpqua_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#umpqua:hover,
+.carrierLogosContainer ul li a#umpqua.active {
+	background: url(img/umpqua_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* westernoregon */
+.carrierLogosContainer ul li a#westernoregon {
+	background: url(img/westernoregon_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#westernoregon:hover,
+.carrierLogosContainer ul li a#westernoregon.active {
+	background: url(img/westernoregon_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* wvch */
+.carrierLogosContainer ul li a#wvch {
+	background: url(img/wvch_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#wvch:hover,
+.carrierLogosContainer ul li a#wvch.active {
+	background: url(img/wvch_max_nobkgr.png) no-repeat;
+}
+
+
+
+/* yamhill */
+.carrierLogosContainer ul li a#yamhill {
+	background: url(img/yamhill_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#yamhill:hover,
+.carrierLogosContainer ul li a#yamhill.active {
+	background: url(img/yamhill_max_nobkgr.png) no-repeat;
+}
+
+
+/* EOCCO */
+.carrierLogosContainer ul li a#eocco {
+	background: url(img/eocco_max_bw.png) no-repeat;	
+}
+
+.carrierLogosContainer ul li a#eocco:hover,
+.carrierLogosContainer ul li a#eocco.active {
+	background: url(img/eocco_max_nobkgr.png) no-repeat;
+}
+
+
+/* =============================================================================
+   Misc.
+   ========================================================================== */
+
+ul.socialMediaIcons li {
+	float: left;
+	list-style: none;
+	margin-right: 10px;
+}
+
+/* =============================================================================
+  Financial Assistance Pages
+   ========================================================================== */
+   #corpFinAssistance {
+	margin:0px 50px 0px 50px;
+}
+   
+	#corpFinAssistancetwoColumnPage {
+		margin:0% 5% 0% 5%;
+	}
+
+	#corpFinAssistancetwoColumnPage table th {
+		text-align: center;
+	}
+
+	#corpFinAssistancetwoColumnPage .leftCol {
+		float: left;
+		width: 40%;
+	}
+
+	#corpFinAssistancetwoColumnPage .rightCol {
+		float: left;
+		width: 40%;
+	}
+
+
+
+/* =============================================================================
+  Exemptions
+   ========================================================================== */
+.corpContentArea table.exemptions td:nth-child(2),
+.corpContentArea table.exemptions td:last-child {
+	text-align: center;
+}
+
+/* =============================================================================
+  Fixes for Meetings and Events table list and left hand nav
+   ========================================================================== */
+
+.corpContentArea ul.meetingType {
+	width: 228px;
+}
+
+  .corpContentArea table.meetingsEventsTable tr td:first-child {
+    width: 25%;
+  }
+
+
+  .corpContentArea table.meetingsEventsTable tr td:nth-child(2) {
+  	width: 15%;
+  }
+
+    .corpContentArea table.meetingsEventsTable tr td:nth-child(3) {
+  	width: 50%;
+  }
+
+    .corpContentArea table.meetingsEventsTable tr td:last-child {
+  	width: 10%;
+  }
+.corpContentArea .indResults {
+  	padding-left: 45px;
+  	padding-bottom: 24px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #034564;
+}
+
+.corpContentArea .indResultsRow {
+  	padding-top: 14px;
+	font-size: 14px;
+}
+.corpContentArea .indResultsKey {
+  	float: left;
+}
+.corpContentArea .indResultsValue {
+  	padding-left: 425px;
+	font-size: 14px;
+}
+
+.corpContentArea .empResults {
+  	padding-left: 45px;
+  	padding-bottom: 24px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #034564;
+}
+.corpContentArea .empResultsValue {
+  	padding-left: 400px;
+	font-size: 14px;
+}
+
+.corpContentArea .error {
+	color: Red;
+	padding: 2px 17px;
+}
+
+#pressReleaseDetails ul {
+	padding: 0 15px;
+}

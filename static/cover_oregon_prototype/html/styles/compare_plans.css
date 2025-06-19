@@ -1,0 +1,123 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  content.css
+ * ===== VERSION: v0.2
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+/* Table of Contents
+    1. Compare Plans Columns
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+ 
+*/
+
+/* =============================================================================
+   Compare Plans Columns
+   ========================================================================== */
+
+.comparePlansContainer { 
+	margin: 0 2px;
+}
+
+	.comparePlansContainer .compareColumnsWrapper { 
+		border-bottom: 1px solid #bfbfbf;
+	}
+
+		.comparePlansContainer .compareColumnsWrapper.last { 
+			border-bottom: 0;
+		}
+
+	.comparePlansContainer span.openCloseIcon {
+		float: right;
+		font-size: 20px;
+		margin-right: 20px;
+	}
+
+	.comparePlansContainer .columnSectionHeader {
+		background: #ededed;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ededed), to(#d2d2d2));
+		background: -webkit-linear-gradient(#ededed, #d2d2d2);
+		background: -moz-linear-gradient(#ededed, #d2d2d2);
+		background: -ms-linear-gradient(#ededed, #d2d2d2);
+		background: -o-linear-gradient(#ededed, #d2d2d2);
+		background: linear-gradient(#ededed, #d2d2d2);
+		-pie-background: linear-gradient(#ededed, #d2d2d2);
+		behavior: url(scripts/PIE.htc);		
+		color: #00324d;
+		font-family: 'Avenir_Black';
+		padding: 20px 10px;
+		text-transform: uppercase;
+	}
+
+	.comparePlansContainer .planDetailsTitle,
+	.planDetailsTitle,
+	.comparePlansContainer .columnsTitle {		
+		color: #00324d;
+		float: left;
+		font-family: 'Avenir_Light';
+		font-weight: bold;
+		padding: 10px;
+		width: 160px;
+	}
+
+	.comparePlansContainer .columnsTitle { 
+		border-bottom: 1px solid #bfbfbf;
+		margin: 0 auto;
+		text-align: center;
+		width: 705px;
+	}
+
+	.comparePlansContainer .planDetailsColumn {
+		color: #666666;
+		font-family: 'Avenir_Book';
+		float: left;
+		padding: 10px;
+		text-align: center;
+		width: 147px;
+	}
+
+		.comparePlansContainer .planDetailsColumn .cost {
+			color: #1a4a7a;
+			font-size: 30px;
+			font-family: 'Avenir_Black';
+			line-height: 16px;
+			margin: 20px 0 20px 44px;
+			width: 60px;
+		}
+
+		.ie7 .comparePlansContainer .planDetailsColumn .cost {
+			line-height: 28px;
+		}
+
+
+			.comparePlansContainer .planDetailsColumn .cost span {
+				font-size: 12px;
+				font-family: 'Avenir_Medium';
+				line-height: 16px;
+			}
+
+		.comparePlansContainer .planDetailsColumn .planRating {
+			float: none;
+			padding: 0 40px;
+		}
+
+		.comparePlansContainer .planDetailsColumn.altBkgrColor {
+			background: #def1f8;
+		}
+
+.inNetwork {
+	text-align: right;
+	padding: 5px 0px;
+
+}	
+
+.comparePlansContainer h3 {
+	border: 0;
+	margin: 30px 0;
+}	

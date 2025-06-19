@@ -1,0 +1,620 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  header.css
+ * ===== VERSION: v0.5
+ * ===== UPDATED: 2/25/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Michael Jackson, Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+/* Table of Contents
+    1. Global Header 
+    2  Global Navigation
+    3. Global Log in/Log out Container
+    4. Global Utilities
+    5. Dashboard Header
+    6. Dashboard Navigation
+
+
+  NB: Indentation of the CSS styles is intentional as those are sub styles of
+  the preceding classes/ids.
+*/
+
+/* =============================================================================
+   Global Header
+   ========================================================================== */
+
+header {
+  background: #1e789b;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1e789b), to(#053750));
+  background: -webkit-linear-gradient(#1e789b, #053750);
+  background: -moz-linear-gradient(#1e789b, #053750);
+  background: -ms-linear-gradient(#1e789b, #053750);
+  background: -o-linear-gradient(#1e789b, #053750);
+  background: linear-gradient(#1e789b, #053750);
+  -pie-background: linear-gradient(#1e789b, #053750);
+  behavior: url(scripts/PIE.htc);
+}
+
+#globalNavContainer {
+  margin: 0 auto;
+  padding: 30px 0 15px 0;
+  width: 960px;  
+}
+
+  #globalNavContainer .logo {
+    float: left;
+  }
+
+  #globalNavContainer .logo a img {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+/* =============================================================================
+   Global Navigation
+   ========================================================================== */
+
+.globalNav {
+  float: left;
+}
+
+  .globalNav nav {
+    float: left;
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+
+
+  /* LEVEL ONE */
+  .globalNav nav ul {
+    position: relative;
+    width: 100%;
+  }
+
+  .globalNav nav ul a:hover { 
+    color: #dad8d5;
+  }
+
+  .globalNav nav ul a:active {
+     color: #9acc55;     
+  }
+
+  .globalNav nav ul li {  
+    border-left: 1px solid #173f63;
+    color: #f8fbff;
+    display: block;
+    font-family: 'Brandon_Grotesque_Regular';
+    font-size: 18px;
+    float: left;    
+    list-style: none; 
+    margin: 0;
+    padding: 15px 20px;    
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 110px;
+  }
+
+    .globalNav nav ul li:hover {
+      cursor: pointer;
+    }
+
+    .ie8 .globalNav nav ul li {
+      width: 108px;
+    }
+
+    .globalNav nav ul li a {
+      color: #f8fbff;
+      display: block;
+      font-size: 18px;
+      font-family: 'Brandon_Grotesque_Regular';
+      padding: 15px 10px; 
+      text-transform: uppercase;
+      text-decoration: none;
+      float: left;
+    }
+
+      .globalNav nav ul li.mega-hover a,
+      .globalNav nav ul li a:hover {
+        background-position: 100% -40px;
+        color: #dad8d5;
+      }
+
+      .globalNav nav ul li a:active,
+      .globalNav nav ul li a.active {      
+        background-position: 100% -40px;
+        color: #9acc55;
+      }
+
+
+/* LEVEL TWO */
+.globalNav nav ul li .sub-container {
+  position: absolute;
+}
+
+.globalNav nav ul li .sub {  
+  padding: 15px 15px 15px 10px;
+}
+
+.globalNav nav ul li .sub-container.mega .sub {
+  padding: 15px 0 0 0;
+  height: 100%
+}
+
+.globalNav nav ul li .sub .row {
+  overflow: hidden; 
+  width: 100%; 
+}
+
+.globalNav nav ul li .sub li {
+  border: 0;
+  float: none;   
+  padding: 0;
+  text-align: left;
+  text-transform: none;
+  width: 286px;
+}
+
+  .ie9 .globalNav nav ul li .sub li {
+    width: 245px;
+  }
+
+.globalNav nav ul ul {
+  background: #146181;  
+  display: none;
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+}
+
+.globalNav nav ul .sub ul {
+  display: block;
+}
+
+.globalNav nav ul li .sub li.mega-hdr { 
+  float: left;
+  width: 250px;
+  margin: 0 10px 10px 10px;
+}
+
+    .ie9 .globalNav nav ul li .sub li.mega-hdr {
+      width: 245px;
+    }
+
+.globalNav nav ul li .sub a {
+  color: #FFF;
+  float: none;
+  padding: 7px 10px;
+  text-transform: none;
+}
+
+.globalNav nav ul li .sub a span {
+  margin-left: 75px;
+  text-align: left;
+}
+
+  .globalNav nav ul li .sub a span.vm {
+    margin-left: 45px;
+  }
+
+  .globalNav nav ul li .sub a span.ch {
+    margin-left: 17px;
+  }
+
+.globalNav nav ul li .sub a:hover {
+  color: #9acc55;
+}
+
+/* =============================================================================
+   Global Log in/Log out Container
+   ========================================================================== */
+
+.globalLoginContainer {
+  float: right;
+  top: -1em;
+  right: 0;
+  position: relative;
+  width: 32%;  
+}
+
+  #login.globalLoginContainer {}
+
+  #logout.globalLoginContainer {    
+    margin: 0 0 30px 0;
+  }
+
+  .globalLoginContainer .loginFields {
+    border: 1px solid #1f305c;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #134963;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#134963), to(#114964));
+    background: -webkit-linear-gradient(#134963, #114964);
+    background: -moz-linear-gradient(#134963, #114964);
+    background: -ms-linear-gradient(#134963, #114964);
+    background: -o-linear-gradient(#134963, #114964);
+    background: linear-gradient(#134963, #114964);
+    -pie-background: linear-gradient(#134963, #114964);
+    behavior: url(scripts/PIE.htc);
+    float: right;
+    margin-bottom: 5px;
+    padding: 5px 2px 5px 6px;
+  }
+
+    #login.globalLoginContainer .loginFields {
+      background: none;
+      border: 0;
+      width: 97%;
+    }
+
+      .ie8 #login.globalLoginContainer .loginFields,
+      .ie9 #login.globalLoginContainer .loginFields {
+        behavior: none;
+      }
+
+      .ie8 #login.globalLoginContainer .loginFields .button,
+      .ie9 #login.globalLoginContainer .loginFields .button {
+        behavior: url(scripts/PIE.htc);
+      }
+
+
+    #logout.globalLoginContainer .loginFields {
+      width: 97%;
+    }
+
+    .globalLoginContainer .loginFields input {
+      background: #eee;
+      border: 1px solid #ccc;
+      color: #999;
+      font-family: 'Avenir_Book';
+      font-size: 12px;
+      height: 15px;
+      margin: 7px 3px;
+      padding: 4px 10px 3px 4px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      width: 75px;
+    }
+
+    .globalLoginContainer .loginFields a.button {
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      float: right;
+      padding: 1.3%;
+    }
+
+      #login.globalLoginContainer .loginFields a.button {
+        width: 136px;
+      }
+
+      #login.globalLoginContainer .loginFields p {
+        font-size: 0.857em;
+        width: 50%;
+      }
+
+.globalLoginContainer p {
+  color: #FFF;
+  float: right;
+  padding: 0;
+  width: 48%;
+}
+
+  .globalLoginContainer p.small {
+    width: 32.8%;
+  }
+
+  #logout.globalLoginContainer p {    
+    float: left;
+  }
+
+  .globalLoginContainer p a {
+    color: #c0c3d2;
+    font-size: 12px;
+    text-decoration: underline;
+  }
+
+    .globalLoginContainer p a:hover { 
+      text-decoration: underline;
+    }
+
+    #logout.globalLoginContainer p a.accountName {
+      color: #FFF;
+      font-size: 14px;
+      text-decoration: none;
+    }   
+
+
+/* =============================================================================
+   Header Utilities
+   ========================================================================== */
+
+.utilities {
+  color: #40b0df;
+  font-family: 'Avenir_Medium';
+  float: right;
+  top: 0;
+  right: -22em;
+  position: relative;
+}
+
+  .utilities nav ul li {
+    background: url(img/grey_line.png) no-repeat right center;
+    float: left;
+    padding: 0 10px;
+  }
+
+    .utilities nav ul li:last-child {
+      background: none;
+      padding-right: 0;
+    }
+
+    .utilities nav ul li a {
+      color: #FFF;
+      text-decoration: none;
+    }
+
+      .utilities nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .utilities nav ul li a img {
+        border: 0;
+        margin-right: 5px;
+      }
+
+  .utilities input.searchBox {
+    background: #eee url("img/icon-search.png") no-repeat 100px 5px;
+    border: 1px solid #ccc;
+    color: #999;
+    font-family: 'Avenir_Book';
+    font-size: 12px;
+    height: 15px;
+    padding: 4px 10px 3px 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 110px;
+  }
+
+  .utilities nav ul li #phoneHover {
+    background: #FFF;
+    position: absolute;
+    top: 28px;
+    left: -32px;
+    padding: 5px 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.75);
+    box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.75);
+    z-index: 1000;
+  }
+
+    .utilities nav ul li #phoneHover .hoverArrow {
+      position: relative;
+      top: -18px;
+      right: -62px;
+    }
+
+  .utilities nav ul li #agentHover {
+    background: #FFF;
+    position: absolute;
+    top: 28px;
+    right: 70px;
+    padding: 5px 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.75);
+    box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.75);
+    width: 190px;
+    z-index: 1000;
+  }
+
+    .utilities nav ul li #agentHover .hoverArrow {
+      position: relative;
+      top: -18px;
+      right: -84px;
+    }
+
+  .utilities nav ul li #agentHover p,
+  .utilities nav ul li #phoneHover p {
+    color: #073c5b;
+    padding-bottom: 8px;
+  }
+
+  .utilities nav ul li #agentHover p a,
+  .utilities nav ul li #phoneHover p a {
+    color: #009bd8;
+  }  
+
+/* =============================================================================
+   Dashboard Header
+   ========================================================================== */
+
+.dashboardWelcomeContainer {
+  background: url(img/dashboard_image.jpg) no-repeat;
+  height: 130px;
+  padding: 20px 25px 0 25px;
+}
+
+  .dashboardWelcomeContainer .welcomeMsg {
+    float: left;
+  }
+
+  .dashboardWelcomeContainer .welcomeMsg p {
+    color: #FFF;
+    font-family: 'Avenir_Medium';
+    font-size: 1.2em;
+    padding-bottom: 0;
+  } 
+
+    .dashboardWelcomeContainer .welcomeMsg p.name {
+      color: #FFF;
+      font-family: 'Brandon_Grotesque_Medium';
+      font-size: 38px;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+    }
+
+    .dashboardWelcomeContainer .welcomeMsg p.welcome {      
+      font-size: 22px;
+      padding-bottom: 20px;
+    }
+
+.dashboardWelcomeContainer .role {
+  float: right;
+  margin-top: 75px;
+}
+
+  .dashboardWelcomeContainer .role ul {
+    margin: 0;
+  }
+
+  .dashboardWelcomeContainer .role ul li {
+    background: #46a3d0;
+    color: #d5e1ec;
+    float: left;
+    font-family: 'Avenir_Medium';
+    font-size: 12px;
+    height: 60px;
+    list-style: none;
+    margin: 0 3px 0 0;
+    padding: 10px 8px 0 8px;
+    width: 57px;
+    text-align: center;
+  }
+
+    .dashboardWelcomeContainer .role ul li a {
+      background: url(img/members3.png);
+      display: block;
+      float: left;
+      height: 33px;
+      margin: 0 0 0 13px;
+      width: 32px;
+    }
+
+    .dashboardWelcomeContainer .role ul li a#tribal:hover,
+    .dashboardWelcomeContainer .role ul li a#tribal:active {
+      background-position: 0 1px;
+    }
+
+    .dashboardWelcomeContainer .role ul li a#individual {
+      background-position: 0 -33px;
+    }
+
+      .dashboardWelcomeContainer .role ul li a#individual:hover,
+      .dashboardWelcomeContainer .role ul li a#individual:active {
+        background-position: 0 -31px;
+      }
+
+    .dashboardWelcomeContainer .role ul li a#employer {
+      background-position: 0 -66px;
+    }
+
+      .dashboardWelcomeContainer .role ul li a#employer:hover,
+      .dashboardWelcomeContainer .role ul li a#employer:active {
+        background-position: 0 -64px;
+      }     
+    
+    .dashboardWelcomeContainer .role ul li a#agent {
+      background-position: 0 -99px
+    }
+
+      .dashboardWelcomeContainer .role ul li a#agent:hover,
+      .dashboardWelcomeContainer .role ul li a#agent:active {
+        background-position: 0 -97px
+      }
+    
+    .dashboardWelcomeContainer .role ul li a#admin {
+      background-position: 0 32px;
+    }
+
+      .dashboardWelcomeContainer .role ul li a#admin:hover,
+      .dashboardWelcomeContainer .role ul li a#admin:active {
+        background-position: 0 34px;
+      }
+
+/* === START For illustration purposes only  ================================*/
+    .dashboardWelcomeContainer .role ul li.active {      
+      background: #FFF;
+      color: #1c9ccc;
+    }
+
+    .dashboardWelcomeContainer .role ul li.active a {
+      background: url(img/members3_hover.png);
+    } 
+
+    .dashboardWelcomeContainer .role ul li.active a.active#employer {
+      background-position: 0 -64px;
+    }
+/* ===END For illustration purposes only====================================*/
+
+
+/* =============================================================================
+   Dashboard Navigation
+   ========================================================================== */
+
+nav.dashboardNav {  
+  border-top: 2px solid #fff;
+}
+
+  nav.dashboardNav ul li {    
+    border-right: 1px solid #fff;
+    float: left;
+    line-height: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 105px;
+  }
+
+    nav.dashboardNav ul li:last-child {  
+      border: 0;
+      width: 112px;
+    }
+    
+    /*IE HACK */
+    .ie7 nav.dashboardNav ul li.last-child,
+    .ie8 nav.dashboardNav ul li.last-child  {  
+      border: 0;
+      width: 112px;
+    }
+
+    .ie9 nav.dashboardNav ul li a {
+      height: 70px;
+    }
+
+    nav.dashboardNav ul li a {   
+      background: #e4e5e5;
+      color: #686868;
+      display: block;
+      font-family: 'Avenir_Medium';
+      font-size: 10px;
+      padding: 15px 8px;
+      text-decoration: none;
+    }
+
+    nav.dashboardNav ul li a:hover,
+    nav.dashboardNav ul li a:active,
+    nav.dashboardNav ul li.active a {
+      background: #c5e3f4;
+    }
+
+.dashboardNav .count {
+  background: url(img/messages_bkgr.png);
+  color: #FFF;
+  height: 17px;
+  padding-top: 2px;
+  position: absolute;
+  top: 227px;
+  right: 975px;
+  width: 18px;
+}

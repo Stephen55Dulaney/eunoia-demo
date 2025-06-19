@@ -1,0 +1,85 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  layout.css
+ * ===== VERSION: v0.3
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+/* Table of Contents
+    1. Page Layout
+    2.  
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+*/
+
+
+/* =============================================================================
+   Page Layout
+   ========================================================================== */
+
+body {
+  background: url(img/bg.png);
+}
+
+  body#dashboardBkgr {
+    background: url(img/dashboard_bkgr.png);
+  }
+
+.homeContentContainer {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 960px;
+}
+
+  .ie7 .homeContentContainer {
+    width: 1100px;
+  }
+
+  .homeContentContainer .homeImageContainer {
+    float: left;
+    margin: -130px 40px 0 55px;
+  }
+
+.homeContentArea {
+  float: left;
+  width: 400px;
+}
+
+#pageContainer {
+  background: #fefefe;
+  margin: 0 auto;
+  min-height: 700px;
+  width: 960px;
+}
+
+	#pageContainer .twoColumnsWrapper {
+		margin: 25px 0;
+	}
+
+#pageContentArea {
+  float: left;
+  margin: 1% 2.5%;
+  width: 72%;
+}
+
+#pageContentAreaNoLeftNav {
+  float: left;
+  margin: 1% 2.6%;
+  width: 94.8%;
+}
+
+#pageContentAreaNoMargin {
+  float: left;
+  margin: 0;
+  width: 77%;
+}
+
+/*#pageContentArea .pageContent {
+  padding: 15px 0;
+}*/
+

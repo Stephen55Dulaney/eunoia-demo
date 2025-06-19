@@ -1,0 +1,340 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  review.css
+ * ===== VERSION: v0.2
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+/* Table of Contents
+    1. Review Template
+    2. See Plan Details Modal
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+*/
+
+
+/* =============================================================================
+   Review Template
+   ========================================================================== */
+.bottomGrayBorder {
+	border-bottom: 1px solid #bfbfbf;
+}
+
+#pageContentArea .twoColumnsWrapper h3 {	
+	border-bottom: 0;
+	font-family: 'Brandon_Grotesque_Medium';
+	padding: 0;
+	text-transform: uppercase;
+}
+
+	.twoColumnsWrapper h3 a,
+	.twoColumnsWrapper .ctrlHolder .rightColumn a {
+		float: right;
+		margin: 0;
+	}
+
+.twoColumnsWrapper h4 {
+
+	margin: 0 20px;
+	padding: 0 0 10px 0;
+}
+
+	.twoColumnsWrapper .collapsibleActionLink {
+		margin: 10px 10px 5px 0;
+	}
+
+		.twoColumnsWrapper .collapsibleActionLink a {
+			float: right;
+			font-size: 14px;
+		}
+
+	.twoColumnsWrapper .ctrlHolder .rightColumn a {
+		float: right;
+		font-size: 14px;
+		font-family: 'Avenir_Black';
+		text-transform: uppercase;
+		text-decoration: underline;
+	}	
+
+.twoColumnsWrapper .subHeader {
+	background: #fefefe;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fefefe), to(#f1f1f1));
+	background: -webkit-linear-gradient(#fefefe, #f1f1f1);
+	background: -moz-linear-gradient(#fefefe, #f1f1f1);
+	background: -ms-linear-gradient(#fefefe, #f1f1f1);
+	background: -o-linear-gradient(#fefefe, #f1f1f1);
+	background: linear-gradient(#fefefe, #f1f1f1);
+	-pie-background: linear-gradient(#fefefe, #f1f1f1);
+	behavior: url(scripts/PIE.htc);
+	border-radius: 0;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #dadada;
+	padding: 15px 10px;
+}
+
+.twoColumnsWrapper .ctrlHolder {
+	border-bottom: 1px solid #d6d5d5;
+	padding: 15px 10px;
+}
+
+	.twoColumnsWrapper .ctrlHolder .leftColumn {
+		margin-right: 20px;
+	}
+
+	.twoColumnsWrapper .ctrlHolder .leftColumn {
+		float: left;
+    	width: 330px;
+	}
+
+	.twoColumnsWrapper .ctrlHolder .rightColumn {
+		float: left;
+    	width: 310px;	
+	}
+
+	.twoColumnsWrapper .ctrlHolder .fieldName.extraLong {
+		width: 370px;
+	}
+
+	.twoColumnsWrapper .ctrlHolder .fieldName.extraLonger {
+		width: 518px;
+	}
+
+	.twoColumnsWrapper .ctrlHolder .fieldName.fullLength {
+		width: 630px;
+	}
+
+		.twoColumnsWrapper .ctrlHolder .leftColumn .planRating {
+			float: none;
+		}
+
+	.twoColumnsWrapper .ctrlHolder .fieldName {
+		color: #00324d;
+		float: left;
+		font-family: 'Avenir_Black';
+		font-size: 12px;
+		margin-right: 10px;
+		text-transform: uppercase;
+		width: 220px;
+	}
+
+		.twoColumnsWrapper .ctrlHolder .leftColumn .fieldName {
+			float: left;
+			height: 40px;
+	    	width: 165px;	
+		}
+
+			.twoColumnsWrapper .ctrlHolder .leftColumn .fieldName.small {
+				width: 148px;
+			}
+
+		.twoColumnsWrapper .ctrlHolder .rightColumn .fieldName {
+			float: left;
+	    	width: 163px;
+	    	margin-right: 8px;
+		}
+
+/* Overwrite Left & Right column widths within SHOP Contact Info Modal*/
+.twoColumnsWrapper .ctrlHolder .leftColumn .fieldName.contactInfoModal {
+	width: 160px;
+}
+
+.twoColumnsWrapper .ctrlHolder .rightColumn.contactInfoModal {
+	width: 320px;
+}
+
+	.twoColumnsWrapper .ctrlHolder .rightColumn .fieldName.contactInfoModal {
+		width: 205px;
+	}
+
+/* Overwrite Left & Right column widths within DASH Individual Contact Info Modal*/
+.twoColumnsWrapper .ctrlHolder .leftColumn .fieldName.contactInfoModalCityStateZip {
+	width: 39px;
+}
+
+.twoColumnsWrapper .ctrlHolder .rightColumn.contactInfoModalCityStateZip {
+	width: 32px;
+}
+
+	.twoColumnsWrapper .ctrlHolder .rightColumn .fieldName.contactInfoModalCityStateZip {
+		width: 31px;
+	}	
+
+/* Overwrite Left & Right column widths within Modals*/
+.twoColumnsWrapper .ctrlHolder .rightColumn.empInfoModal {
+	width: 325px;
+}
+
+.twoColumnsWrapper .ctrlHolder .leftColumn.empInfoModal ul,
+.twoColumnsWrapper .ctrlHolder .rightColumn.empInfoModal ul {
+	float: left;
+	margin: 0;
+}
+
+.twoColumnsWrapper .ctrlHolder .leftColumn .fieldName.empInfoModal {
+	width: 145px;
+}
+
+.twoColumnsWrapper .ctrlHolder .rightColumn .fieldName.empInfoModal {
+	width: 210px;
+}
+
+
+
+
+	.twoColumnsWrapper .ctrlHolder label {
+		color: #3c3a37;
+		font-family: 'Avenir_Medium';
+		/*margin-left: 10px;*/
+		text-transform: none;
+	}
+
+	.twoColumnsWrapper .ctrlHolder .fieldValue {
+		color: #00324d;
+		font-family: 'Avenir_Medium';
+		float: none;
+	}
+
+	.twoColumnsWrapper .ctrlHolder .cost {
+		color: #00324d;
+		font-size: 30px;
+		font-family: 'Avenir_Black';
+		line-height: 16px;
+	}
+
+		.twoColumnsWrapper .ctrlHolder span {
+			color: #00324d;
+			font-size: 14px;
+			font-family: 'Avenir_Medium';
+			line-height: 16px;
+		}	
+
+	.twoColumnsWrapper .ctrlHolder .planFeature {
+		color: #999999;
+		float: left;
+		font-size: 15px;
+		font-family: 'Avenir_Medium';
+		line-height: 22px;
+		padding: 15px;
+		width: 185px;
+	}
+		
+		.planFeature .featureIcon {
+			display: block;
+			float: left;
+			height: 37px;
+			margin-right: 10px;			
+		}
+
+			/* Deductible Feature Icon */
+			.planFeature .featureIcon#deductibleFeature {
+				background: url(img/deductible_lg.png);
+				width: 49px;
+			}
+
+		    /* Out of Pocket Feature Icon */
+			.planFeature .featureIcon#oopFeature {
+				background: url(img/oop_lg.png);
+				width: 43px;
+			}
+
+			/* Primary Copay Feature Icon */
+			.planFeature .featureIcon#pimaryCopayFeature {
+				background: url(img/primary_copay_lg.png);
+				width: 38px;
+			}
+
+			/* Prescription Copay Feature Icon */
+			.planFeature .featureIcon#prescriptionFeature {
+				background: url(img/prescription_copay_lg.png);
+				width: 43px;
+			}
+
+			/* ER Copay Feature Icon */
+			.planFeature .featureIcon#erFeature {
+				background: url(img/er-copay_lg.png);
+				width: 38px;
+			}
+
+			/* Coverage Tier Feature Icon */
+			.planFeature .featureIcon#coverageFeature {
+				background: url(img/coverage_tier_lg.png);
+				width: 40px;
+			}
+
+	.twoColumnsWrapper .ctrlHolder .featureColumn {
+		float: left;
+		width: 220px;
+	}
+
+
+	.twoColumnsWrapper .ctrlHolder .addPlanFeatures { }
+
+		.twoColumnsWrapper .ctrlHolder .addPlanFeatures .value {
+			color: #00324d;
+			float: right;
+			font-family: 'Avenir_Black';
+			font-size: 13px;			
+			margin: 0 15px 0 10px;
+			/*width: 45px;*/
+		}
+
+		.twoColumnsWrapper .ctrlHolder .addPlanFeatures span {
+			color: #504f4c;
+			font-size: 12px;
+			font-family: 'Avenir_Book';
+			float: left;
+			margin: 0 0 5px 0;
+		}
+
+		.twoColumnsWrapper .ctrlHolder h6 {
+			background: #eeeeef;
+			color: #323232;
+			font-family: 'Avenir_Book';
+			font-size: 14px;
+			margin: 10px 0px;
+			padding: 10px;
+		}
+
+	.twoColumnsWrapper .ctrlHolder button.secondary {
+		float: right;
+	}	
+		.twoColumnsWrapper .ctrlHolder .dentalFeatureColumn {
+		float: left;
+		width: 330px;
+	}
+	.twoColumnsWrapper .ctrlHolder .addDentalPlanFeatures { 
+		margin-right: 20px;
+	}
+
+		.twoColumnsWrapper .ctrlHolder .addDentalPlanFeatures .value {
+			color: #00324d;
+			float: left;
+			font-family: 'Avenir_Medium';
+			font-size: 13px;
+			margin-left: 10px;
+			width: 180px;
+	}
+
+		.twoColumnsWrapper .ctrlHolder .addDentalPlanFeatures span {
+			float: right;
+			color: #504f4c;
+			font-size: 12px;
+			font-family: 'Avenir_Book';
+			margin-left: 10px;
+		}
+
+
+.twoColumnsWrapper fieldset.memberForm .ctrlHolder label {
+	font-family: 'Avenir_Book';
+	margin: 0;
+}
+
+.twoColumnsWrapper section .imageHolder {
+	float: left;
+	margin: 0 10px 20px 20px;
+}

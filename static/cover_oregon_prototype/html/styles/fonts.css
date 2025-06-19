@@ -1,0 +1,141 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  fonts.css
+ * ===== VERSION: v0.3
+ * ===== UPDATED: 1/18/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+/* Table of Contents
+    1. Headlines - Brandon Grotesque for 
+    2  Body Copy - Avenir
+*/
+
+ /* Font Source Files Formats
+  eot -> IE 5-8
+  woff format -> FF 3.6, Chrome 5, IE9
+  truetype format ->  Opera, Safari
+  svg format -> iOS
+*/
+
+/* =============================================================================
+   Headline Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Brandon_Grotesque_Black';
+    src: url('fonts/brandon/brandon_blk-webfont.eot');
+    src: url('fonts/brandon/brandon_blk-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon/brandon_blk-webfont.woff') format('woff'),
+         url('fonts/brandon/brandon_blk-webfont.ttf') format('truetype'),
+         url('fonts/brandon/brandon_blk-webfont.svg#Brandon_Grotesque_Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon_Grotesque_Bold';
+    src: url('fonts/brandon/brandon_bld-webfont.eot');
+    src: url('fonts/brandon/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon/brandon_bld-webfont.woff') format('woff'),
+         url('fonts/brandon/brandon_bld-webfont.ttf') format('truetype'),
+         url('fonts/brandon/brandon_bld-webfont.svg#Brandon_Grotesque_Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon_Grotesque_Medium';
+    src: url('fonts/brandon/brandon_med-webfont.eot');
+    src: url('fonts/brandon/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon/brandon_med-webfont.woff') format('woff'),
+         url('fonts/brandon/brandon_med-webfont.ttf') format('truetype'),
+         url('fonts/brandon/brandon_med-webfont.svg#Brandon_Grotesque_Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Brandon_Grotesque_Regular';
+    src: url('fonts/brandon/brandon_reg-webfont.eot');
+    src: url('fonts/brandon/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon/brandon_reg-webfont.woff') format('woff'),
+         url('fonts/brandon/brandon_reg-webfont.ttf') format('truetype'),
+         url('fonts/brandon/brandon_reg-webfont.svg#Brandon_Grotesque_Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon_Grotesque_Light';
+    src: url('fonts/brandon/brandon_light-webfont.eot');
+    src: url('fonts/brandon/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon/brandon_light-webfont.woff') format('woff'),
+         url('fonts/brandon/brandon_light-webfont.ttf') format('truetype'),
+         url('fonts/brandon/brandon_light-webfont.svg#Brandon_Grotesque_Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon_Grotesque_Thin';
+    src: url('fonts/brandon/brandon_thin-webfont.eot');
+    src: url('fonts/brandon/brandon_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon/brandon_thin-webfont.woff') format('woff'),
+         url('fonts/brandon/brandon_thin-webfont.ttf') format('truetype'),
+         url('fonts/brandon/brandon_thin-webfont.svg#Brandon_Grotesque_Thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* =============================================================================
+   Body Copy Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Avenir_Black';
+    src: url('fonts/avenir/avenir-black-webfont.eot');
+    src: url('fonts/avenir/avenir-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/avenir/avenir-black-webfont.woff') format('woff'),
+         url('fonts/avenir/avenir-black-webfont.ttf') format('truetype'),
+         url('fonts/avenir/avenir-black-webfont.svg#Avenir_Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir_Medium';
+    src: url('fonts/avenir/avenir-medium-font.eot');
+    src: url('fonts/avenir/avenir-medium-font.eot?#iefix') format('embedded-opentype'),
+         url('fonts/avenir/avenir-medium-font.woff') format('woff'),
+         url('fonts/avenir/avenir-medium-font.ttf') format('truetype'),
+         url('fonts/avenir/avenir-medium-font.svg#Avenir_Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir_Book';
+    src: url('fonts/avenir/avenir-book-font.eot');
+    src: url('fonts/avenir/avenir-book-font.eot?#iefix') format('embedded-opentype'),
+         url('fonts/avenir/avenir-book-font.woff') format('woff'),
+         url('fonts/avenir/avenir-book-font.ttf') format('truetype'),
+         url('fonts/avenir/avenir-book-font.svg#Avenir_Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir_Light';
+    src: url('fonts/avenir/avenir-light-font.eot');
+    src: url('fonts/avenir/avenir-light-font.eot?#iefix') format('embedded-opentype'),
+         url('fonts/avenir/avenir-light-font.woff') format('woff'),
+         url('fonts/avenir/avenir-light-font.ttf') format('truetype'),
+         url('fonts/avenir/avenir-light-font.svg#Avenir_Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

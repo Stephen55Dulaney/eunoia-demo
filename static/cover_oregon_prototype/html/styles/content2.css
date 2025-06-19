@@ -1,0 +1,633 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  content.css
+ * ===== VERSION: v0.6
+ * ===== UPDATED: 2/25/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio, Michael Jackson)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+/* Table of Contents
+    1. Employer Resources
+    2. Resources
+    3. Glossary
+    4. Message Center
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+ 
+*/
+
+/* =============================================================================
+   Employer Resources
+   ========================================================================== */
+
+  .empSrchPaginationWrapper .empSrchPageResultsWrapper {
+    color: #00324d;
+    float: right;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  .empSrchPaginationWrapper .empSrchPageResultsWrapper .empSrchPaginationNavCtrl {
+    float: left;
+  }
+
+    .empSrchPaginationWrapper .empSrchPageResultsWrapper .empSrchPaginationNavCtrl a,
+    .empSrchPaginationNavCtrl a {
+      color: #00324d;
+      display: block;
+      font-family: 'Avenir_Medium';
+      float: left;
+      margin: 10px 0;
+      padding: 2px 4px;
+      text-decoration: none;
+    }  
+
+    .empSrchPaginationWrapper .empSrchPageResultsWrapper .empSrchPaginationNavCtrl a.current,
+    .empSrchPaginationNavCtrl a.current {
+      text-decoration: underline;
+    }
+
+  #dashboardContent .searchHeader .resourceSearchInput {
+    width: 170px;
+    float: left;
+    padding: 7px 5px 7px 0px;
+  }
+
+    #dashboardContent .searchHeader .resourceSearchInput input {
+      border: 1px solid #FFF;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-box-shadow: inset 1px 1px 5px #ccc , 0px 0px 3px #ccc;
+      -moz-box-shadow: inset 1px 1px 5px #ccc , 0px 0px 3px #ccc;
+      box-shadow: inset 1px 1px 5px #ccc, 0px 0px 3px #ccc;
+      background: #edeeef;
+      color: #a8a8a8;
+      font-size: 12px;
+      font-weight: bold;
+      margin-right: 3px;
+      overflow: hidden;
+    }
+
+  #dashboardContent .searchHeader .resourceSearchSelect {
+    background: url(img/selectorArrow.png) no-repeat scroll 150px 8px #e2e3e3;
+    margin: 7px;
+    float: left;
+    width: 170px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #034564;
+    overflow: hidden;
+  }
+
+  #dashboardContent .searchHeader .resourceSearchSelect select {
+    width: 170px;
+    border: 0;
+    color: #034564;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    padding: 5px;
+    -webkit-appearance: none;
+  }
+
+  #dashboardContent .searchHeader { 
+    margin: 5px 0;
+  }
+
+  #dashboardContent .searchHeader .leftSection {
+    float: left;  
+  }
+
+  #dashboardContent .searchHeader .rightSection {
+    float: right;
+  }
+
+  #dashboardContent .resourcesHeaderBar {
+    background: #eeeeef;
+    width: 865px;
+    height: 20px;
+    overflow: hidden;
+  }
+
+  #dashboardContent .resourcesHeaderBar .resourceColumnSpacer {
+    float: left;
+    width: 30px;
+  }
+
+  #dashboardContent .resourcesHeaderBar .resourceColumn {
+    color: #063C5B;
+    font-family: 'Avenir_Book';
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+    margin: 2px 25px;
+    width: 110px;
+  }
+
+  #dashboardContent .resourceContent {
+    width: 865px;
+    height: 25px;
+    margin: 3px 0px;
+    overflow: hidden;
+  }
+
+  #dashboardContent .resourceContent .resourceColumnSpacer {
+    float: left;
+    width: 30px;
+  }
+
+  #dashboardContent .resourceContent .resourceContentColumn {
+    color: #063C5B;
+    font-family: 'Avenir_Book';
+    font-size: 12px;
+    float: left;
+    margin: 2px 25px;
+    width: 110px;
+  }
+
+  #dashboardContent .resourceContent .resourceContentColumnSubLevel {
+    color: #063C5B;
+    font-family: 'Avenir_Book';
+    font-size: 12px;
+    float: left;
+    margin: 2px 18px;
+    padding-left: 15px;
+    width: 110px;
+  }
+
+  #dashboardContent .resourceContentDivider {
+    width: 865px;
+    border-bottom: 1px solid #eeeeef;
+  }
+
+/* =============================================================================
+   Resources
+   ========================================================================== */
+
+   #dashboardContent .resourceHeader {
+    width: 865px;
+    height: 40px;
+    overflow: hidden;
+    float: left;  
+  }
+
+    #dashboardContent .resourceHeader .leftSection {
+      width: 390px;
+      height: 40px;
+      overflow: hidden;
+      float: left;  
+      margin-right: 50px;
+      margin-left: 15px;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+
+      #dashboardContent .resourceHeader .leftSection label {   
+        color: #063C5B;
+        font-family: 'Avenir_Book';
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+    #dashboardContent .resourceHeader .rightSection {
+      width: 390px;
+      height: 40px;
+      overflow: hidden;
+      float: left;  
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+
+      #dashboardContent .resourceHeader .rightSection label {   
+        color: #063C5B;
+        font-family: 'Avenir_Book';
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+#dashboardContent .resourceHeaderBarDiv {
+  width: 865px;
+  height: 30px;
+  overflow: hidden;
+  float: left;
+}
+
+  #dashboardContent .resourceHeaderBarDiv .leftResourcesColumnHeader {
+    width: 410px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+    background: #eeeeef;
+    padding-top: 5px
+  }
+
+    #dashboardContent .resourceHeaderBarDiv .leftResourcesColumnHeader .resourceColumn {
+      color: #063C5B;
+      font-family: 'Avenir_Book';
+      font-size: 12px;
+      font-weight: bold;
+      float: left;
+      margin: 2px 25px;
+      width: 80px;
+    }
+
+  #dashboardContent .resourceHeaderBarDiv .midResourcesColumnHeader {
+    width: 40px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+  }
+
+  #dashboardContent .resourceHeaderBarDiv .rightResourcesColumnHeader {
+    width: 415px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+    background: #eeeeef;
+    padding-top: 5px
+  }
+
+    #dashboardContent .resourceHeaderBarDiv .rightResourcesColumnHeader .resourceColumn {
+      color: #063C5B;
+      font-family: 'Avenir_Book';
+      font-size: 12px;
+      font-weight: bold;
+      float: left;
+      margin: 2px 25px;
+      width: 80px;
+    }
+
+
+#dashboardContent .resourceContentDiv {
+  width: 865px;
+  height: 30px;
+  overflow: hidden;
+  float: left;
+}
+
+  #dashboardContent .resourceContentDiv .leftResourcesColumnContent {
+    width: 410px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+  }
+
+    #dashboardContent .resourceContentDiv .leftResourcesColumnContent .resourceColumn {
+      color: #063C5B;
+      font-family: 'Avenir_Book';
+      font-size: 12px;
+      font-weight: bold;
+      float: left;
+      margin: 2px 25px;
+      width: 80px;
+    }
+
+      #dashboardContent .resourceContentDiv .leftResourcesColumnContent .resourceColumn a {
+        color: #009bd8;
+      }
+
+  #dashboardContent .resourceContentDiv .midResourcesColumnHeader {
+    width: 40px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+  }
+
+  #dashboardContent .resourceContentDiv .rightResourcesColumnContent {
+    width: 410px;
+    height: 30px;
+    overflow: hidden;
+    float: left;
+  }
+
+    #dashboardContent .resourceContentDiv .rightResourcesColumnContent .resourceColumn {
+      color: #063C5B;
+      font-family: 'Avenir_Book';
+      font-weight: bold;
+      font-size: 12px;
+      float: left;
+      margin: 2px 25px;
+      width: 80px;
+    }
+
+    #dashboardContent .resourceContentDiv .rightResourcesColumnContent .resourceColumn a {
+      color: #009bd8;
+   }
+
+/* =============================================================================
+   Glossary
+   ========================================================================== */
+
+  #dashboardContent .glossaryHeader {
+    width: 865px;
+    height: 40px;
+    overflow: hidden;
+    float: left;  
+  }
+
+    #dashboardContent .glossaryHeader .leftSection {
+      float: left;  
+      margin-right: 30px;
+    }
+
+      #dashboardContent .glossaryHeader .leftSection input {
+        float: left;
+      }
+
+      #dashboardContent .glossaryHeader .leftSection a.button {
+        margin: 0px;
+        padding: 4px 15px 4px 15px;
+      }
+
+    #dashboardContent .glossaryHeader .rightSection {
+      float: left;
+    }
+
+      #dashboardContent .glossaryHeader .rightSection ul li {
+        float: left;
+        margin-right: 0;
+      }
+
+      #dashboardContent .glossaryHeader .rightSection ul li.glossarySelectedValue a {
+        color: #9acc55;
+        font-family: 'Avenir_Book';
+        font-size: 16px;
+        float: left;
+        margin: 2px 4px;
+        font-weight: bold;
+      }
+
+      #dashboardContent .glossaryHeader .rightSection ul li.glossaryValue a {
+        color: #059bd7;
+        font-family: 'Avenir_Book';
+        font-size: 12px;
+        float: left;
+        margin: 4px 4px 2px 4px;
+        font-weight: bold;
+      }
+
+  #dashboardContent .glossaryContentArea {
+    width: 865px;
+    min-height: 200px;
+    overflow: hidden;
+    float: left;  
+  }
+
+    #dashboardContent .glossaryContentArea label {
+      width: 865px;
+      color: #073c5b;
+      font-family: 'Avenir_Book';
+      font-size: 14px;
+      float: left;
+      font-weight: bold;
+    }
+
+    #dashboardContent .glossaryContentArea .glossaryText {
+      color: #3c3a37;
+      font-family: 'Avenir_Book';
+      font-size: 12px;
+      float: left;
+      margin: 0px 0px 10px 0px;
+    }
+
+/* =============================================================================
+   Message Center
+   ========================================================================== */
+
+   #dashboardContent .messageHeader {    
+    font-family: 'Avenir_Book';
+    font-size: 12px;
+    min-height: 500px;    
+  }
+
+    #dashboardContent .messageHeader .leftSection {      
+      float: left;  
+      margin-right: 10px;
+      min-height: 500px;   
+    }
+
+    #dashboardContent .messageHeader .leftSectionTop {
+      float: left;
+      font-size: 14px;
+      margin-right: 20px;
+      width: 225px;
+    }
+
+      #dashboardContent .messageHeader .leftSectionTop .sortLeft {
+        float: left;
+        margin: 10px 0;        
+      }
+
+      #dashboardContent .messageHeader .leftSectionTop .sortRight {
+        float: right;
+        margin: 10px 0;
+      }
+
+    #dashboardContent .messageHeader .leftSectionBottom {
+      border: 1px solid #dddbdb;
+      height: 590px;
+      float: left;  
+      margin-right: 20px;      
+      overflow: auto;
+      width: 225px;
+    }
+
+      #dashboardContent .messageHeader .leftSectionBottom .emailContainer {
+        border-bottom: 1px solid #dcdbdb;
+        float: left;  
+        min-height: 20px;
+        width: 225px;
+      }
+
+      #dashboardContent .messageHeader .leftSectionBottom .emailContainer:last-child {
+        border-bottom: 0;
+      }
+
+      #dashboardContent .messageHeader .leftSectionBottom .emailContainer.unopen {
+        background: #eeeeef;        
+      }
+
+      #dashboardContent .messageHeader .leftSectionBottom .emailContainer .emailOptions {        
+        float: right;
+        margin: 10px 30px 0 0;
+      }
+
+
+      #dashboardContent .messageHeader .leftSectionBottom .emailContainer .emailDetails {
+        width: 130px;
+        float: left;
+        margin: 10px 0px 10px 5px;
+      }
+
+        #dashboardContent .messageHeader .leftSectionBottom .emailContainer .emailDetails label {          
+          font-weight: bold;       
+        }
+
+        #dashboardContent .messageHeader .leftSectionBottom .emailContainer .emailDetails span {
+          white-space: nowrap;      
+        }
+
+    #dashboardContent .messageHeader .rightSection {
+      width: 640px;
+      min-height: 500px;
+      float: left;
+      border: 1px solid #dddbdb;
+    }
+
+      #dashboardContent .messageHeader .rightSection .messageContentHeader {
+        border-bottom: 1px solid #dddbdb;
+        background: #f1f0ef;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f1f0ef), to(#d9d6d3));
+        background: -webkit-linear-gradient(#f1f0ef, #d9d6d3);
+        background: -moz-linear-gradient(#f1f0ef, #d9d6d3);
+        background: -ms-linear-gradient(#f1f0ef, #d9d6d3);
+        background: -o-linear-gradient(#f1f0ef, #d9d6d3);
+        background: linear-gradient(#f1f0ef, #d9d6d3);
+        -pie-background: linear-gradient(#f1f0ef, #d9d6d3);
+        behavior: url(scripts/PIE.htc);
+        height: 28px;
+      }
+
+        #dashboardContent .messageHeader .rightSection .messageContentHeader .msgColumn {
+          float: left;
+          margin: 4px 20px;
+          width: 80px;          
+        }
+
+          #dashboardContent .messageHeader .rightSection .messageContentHeader .msgColumn img {
+            width: 17px;
+            margin-right: 5px;
+            float: left;
+          }
+
+          #dashboardContent .messageHeader .rightSection .messageContentHeader .msgColumn label {
+            color: #063C5B;
+            font-family: 'Avenir_Book';
+            font-weight: bold;
+          }
+
+        #dashboardContent .messageHeader .rightSection .messageContentHeader .msgColumnRt {
+          float: left;
+          margin: 4px 20px;
+          width: 120px;          
+        }
+
+          #dashboardContent .messageHeader .rightSection .messageContentHeader .msgColumnRt img {
+            width: 17px;
+            margin-right: 5px;
+            float: left;
+          }
+
+          #dashboardContent .messageHeader .rightSection .messageContentHeader .msgColumnRt label,
+          #dashboardContent .messageHeader .rightSection .messageContentHeader .msgColumnRt label a {
+            color: #063C5B;
+            font-family: 'Avenir_Book';
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+          }
+
+          #dashboardContent .messageHeader .rightSection .messageContentHeader .msgColumnDiv img {
+            width: 3px;
+            margin-top: 8px;
+            float: left;
+          }
+
+          #dashboardContent .messageHeader .rightSection .messageContentHeader .msgSpacer {
+            width: 210px;
+            margin-right: 5px;
+            float: left;
+          }
+
+    #dashboardContent .messageHeader .rightSection .messageContentHighDetails {
+      background: #f6f6f7;
+      overflow: hidden;
+    }
+
+       #dashboardContent .messageHeader .rightSection .messageContentHighDetails .content {        
+        float: left;        
+       }
+
+       #dashboardContent .messageHeader .rightSection .messageContentHighDetails .messageContentHighDetailsRow {        
+        float: left;
+        padding: 15px;
+        width: 610px;
+       }
+
+       #dashboardContent .messageHeader .rightSection .messageContentHighDetails .messageContentHighDetailsRow p {
+        padding-bottom: 5px;
+       }
+
+       #dashboardContent .messageHeader .rightSection .messageContentHighDetails .messageContentHighDetailsRow .left {
+        float: left;
+       }
+
+      #dashboardContent .messageHeader .rightSection .messageContentHighDetails .messageContentHighDetailsRow .right {
+        float: right;
+        margin-right: 15px;
+       }      
+
+       #dashboardContent .messageHeader .rightSection .messageContentHighDetails .content .textArea {        
+        float: left;        
+        background: #ffffff;
+        padding: 15px;
+        width: 610px;
+       }
+
+       #dashboardContent .messageHeader .rightSection .messageContentHighDetails .content .replyArea {        
+        float: left;
+        margin: 15px;
+        width: 610px;  
+       }
+
+         #dashboardContent .messageHeader .rightSection .messageContentHighDetails .content .replyArea textarea {
+          width: 595px;
+          float: left; 
+          min-height: 40px;
+          margin-bottom: 10px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;  
+          border-color: #dcdbdb;
+         }
+
+         #dashboardContent .messageHeader .rightSection .messageContentHighDetails .content .replyButtons button {
+          float: right;
+         }
+
+
+
+/* New Message Styles*/
+
+fieldset.newMessage .ctrlHolder label {
+  float: left;
+  width: 70px;
+}
+
+fieldset.newMessage .ctrlHolder .newMessagesContacts {
+  margin: 10px 0 0 70px;
+}
+
+
+fieldset.newMessage .ctrlHolder textarea {
+  margin: 0;
+  padding: 10px;
+  min-height: 200px;
+  width: 610px;
+}
+
+
+fieldset.newMessage .newMessageButtons {
+  margin-top: 10px;
+  width: 635px;  
+}
+
+fieldset.newMessage .newMessageButtons button.green {
+  float: right;
+}

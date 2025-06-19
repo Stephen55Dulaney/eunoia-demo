@@ -1,0 +1,53 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  overlay.css
+ * ===== VERSION: v0.1
+ * ===== UPDATED: 12/5/2012
+ * ===== AUTHOR: Deloitte Consulting LLP (Michael Jackson)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+/* Table of Contents
+    1. Page Overlay
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+*/
+
+
+/* =============================================================================
+   Page Overlay
+   ========================================================================== */
+
+#overlay {
+  z-index:1000;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#000;
+  opacity:0.45;
+  -moz-opacity:0.45;
+  filter:alpha(opacity=45);
+  visibility:hidden;
+}
+
+#overlay h3 {
+  color:#FFF;  
+  font-family:Tahoma, Geneva, sans-serif;  
+  font-size:0.9em;  
+  margin-top:17px;  
+  padding-left:10px;
+}
+
+#overlayDottedBox {
+  position:fixed;
+  left:100px;
+  top:150px;
+  border: 2px dashed #f3f3f3;
+  padding: 25px; 
+}
+ 

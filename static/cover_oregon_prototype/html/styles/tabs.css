@@ -1,0 +1,462 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  tabs.css
+ * ===== VERSION: v0.3
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+ /* Table of Contents
+    1. Tabbed Area
+    2. Form Content within Tabbed Area
+    3. Styles to Overwrite jquery UI css
+
+ NB: Indentation of the CSS styles is intentional as those are sub styles of
+ the preceding classes/ids.
+ 
+*/
+
+/* =============================================================================
+   Tabbed Area
+   ========================================================================== */
+
+section#tabbed_area{
+	margin-top: 0;
+}
+
+	#tabbed_area .tabContent  {
+		border: 1px solid #b3d7e5;
+		padding: 10px 0;
+	}
+
+#tabbed_area ul.tabs {	
+	border-radius: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+	#tabbed_area ul.tabs li {
+		background: none;
+		border: none;
+	}
+
+		#tabbed_area ul.tabs li a,
+		#tabbed_area ul.tabs li.ui-state-default a {	
+			border-top: 1px solid #b3d7e5;
+			border-right: 1px solid #b3d7e5;
+			border-left: 1px solid #b3d7e5;
+			color: #1571cd;
+			font-family: 'Brandon_Grotesque_Bold';
+			font-size: 14px;
+			padding: 10px 20px 10px 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			-webkit-border-top-left-radius: 8px;
+			-webkit-border-top-right-radius: 8px;
+			-moz-border-radius-topleft: 8px;
+			-moz-border-radius-topright: 8px;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+			background: #b3d7e5;
+			background: -webkit-gradient(linear, 0 0, 0 bottom, from(#b3d7e5), to(#dff3fc));
+			background: -webkit-linear-gradient(#b3d7e5, #dff3fc);
+			background: -moz-linear-gradient(#b3d7e5, #dff3fc);
+			background: -ms-linear-gradient(#b3d7e5, #dff3fc);
+			background: -o-linear-gradient(#b3d7e5, #dff3fc);
+			background: linear-gradient(#b3d7e5, #dff3fc);
+			-pie-background: linear-gradient(#b3d7e5, #dff3fc);
+			behavior: url(scripts/PIE.htc);
+		}
+
+			#tabbed_area ul.tabs li a:active,
+			#tabbed_area ul.tabs li a:hover,
+			#tabbed_area ul.tabs li.ui-tabs-selected,
+			#tabbed_area ul.tabs li.ui-tabs-selected a,
+			#tabbed_area ul.tabs li.ui-state-active,
+			#tabbed_area ul.tabs li.ui-state-active a,
+			#tabbed_area ul.tabs li.ui-state-hover,
+			#tabbed_area ul.tabs li.ui-state-hover a {
+				color: #FFF;				
+				border-top: 1px solid #1584b5;
+				border-right: 1px solid #1584b5;
+				border-left: 1px solid #1584b5;
+				-webkit-border-top-left-radius: 8px;
+				-webkit-border-top-right-radius: 8px;
+				-moz-border-radius-topleft: 8px;
+				-moz-border-radius-topright: 8px;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				background: #1584b5;
+				background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1584b5), to(#0170a1));
+				background: -webkit-linear-gradient(#1584b5, #0170a1);
+				background: -moz-linear-gradient(#1584b5, #0170a1);
+				background: -ms-linear-gradient(#1584b5, #0170a1);
+				background: -o-linear-gradient(#1584b5, #0170a1);
+				background: linear-gradient(#1584b5, #0170a1);
+				-pie-background: linear-gradient(#1584b5, #0170a1);
+				behavior: url(scripts/PIE.htc);
+				cursor: pointer;						
+			}
+
+
+/* =============================================================================
+   Form Content within Tabbed Area
+   ========================================================================== */
+
+#tabbed_area fieldset.memberForm {
+	margin: 0 8px 10px 8px;
+}
+
+	#tabbed_area fieldset .ctrlHolder {
+	  color: #063c5b;	  
+	  font-size: 12px;
+	  margin-bottom: 15px;
+	  padding: 10px 15px 0 15px;
+	}
+
+	#tabbed_area fieldset.memberForm .ctrlHolder {
+		margin-bottom: 10px;
+		padding: 5px;
+	}
+
+	#tabbed_area fieldset.memberForm .ctrlHolder p {
+		font-size: 14px;
+	}
+
+	#tabbed_area fieldset #adjustmentForm .ctrlHolder {
+	  color: #063c5b;
+	  font-family: 'Avenir_Medium';
+	  font-size: 12px;
+	  padding: 10px 15px 0 15px;
+	}
+
+		.incomeTabs #tabbed_area fieldset .ctrlHolder label {
+			margin: 0 10px;
+			font-family: 'Avenir_Medium';
+			float: left;
+			font-size: 12px;
+			width: 142px;
+		}
+
+		.incomeTabs #tabbed_area fieldset .ctrlHolder label.coverageYearLabel {
+			width: 218px;
+		}
+
+		#tabbed_area fieldset .ctrlHolder label.long {
+			width: 418px;	
+		}
+
+		#tabbed_area fieldset .ctrlHolder img {
+		  margin: 0;
+		}
+
+		#tabbed_area fieldset .ctrlHolder label.small {
+			float: left;
+			width: 50px;
+		}
+
+		#tabbed_area fieldset .ctrlHolder a.button {
+			float: left;
+			margin: 0 15px 0 0;
+		}
+
+		#tabbed_area fieldset .ctrlHolder h6 {
+			float: left;
+			font-size: 12px;
+			font-family: 'Avenir_Light';
+			font-weight: bold;
+			margin: 0px;
+			text-decoration: underline;
+			
+		}
+
+			#tabbed_area fieldset .ctrlHolder h6.formTitle {
+				text-align: center;
+				width: 190px;
+			}
+
+			#tabbed_area fieldset .ctrlHolder h6.longFormTitle {
+				margin: 0 0 0 100px;
+				width: 370px;
+				text-align: center;
+			}
+
+		#tabbed_area fieldset .ctrlHolder .leftColumn {
+			float: left;
+			margin-left: 75px;
+			width: 220px;
+		}
+
+		#tabbed_area fieldset .ctrlHolder .rightColumn {
+			float: left;
+		}
+
+		#tabbed_area fieldset .ctrlHolder .leftColumn a,
+		#tabbed_area fieldset .ctrlHolder .rightColumn a,
+		#tabbed_area fieldset .ctrlHolder a {
+			color: #009bd8;
+			font-size: 1em;
+		}
+
+	#tabbed_area fieldset .ctrlHolder .formEntryContentSelect  {
+		background: url(img/selectorArrow.png) no-repeat scroll 150px 8px #e2e3e3;			
+		margin: 0 50px 0 0;
+		float: left;
+		width: 170px;
+	}
+
+		#tabbed_area fieldset .ctrlHolder .formEntryContentSelect  select {
+			width: 170px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+	#tabbed_area fieldset.memberForm a.remove {
+		color: #009bd8;
+		float: right;
+		margin: 0 20px 10px 0;
+	}
+			
+		#tabbed_area fieldset .ctrlHolder .monthlyTotals  {
+			float: left;
+		}
+
+		#tabbed_area fieldset .ctrlHolder .monthlyTotals input {
+			margin-right: 10px;
+		}
+
+		#tabbed_area fieldset .ctrlHolder .monthlyTotals input.currentMonth {
+			margin-right: 30px;
+		}
+
+		#tabbed_area fieldset .ctrlHolder .monthlyTotals a {
+			color: #009bd8;
+			font-size: 10px;
+		}
+
+#tabbed_area fieldset .ctrlHolder .inputLabelHolder {
+	float: left;
+	margin-right: 10px;
+	width: 155px;
+}
+
+	#tabbed_area fieldset .ctrlHolder .inputLabelHolder label {
+		width: 80px;
+	}
+
+	#tabbed_area fieldset .ctrlHolder .inputLabelHolder input {
+		float: left;
+	}
+
+	#tabbed_area fieldset .ctrlHolder .inputLabelHolder.long {
+		width: 200px;
+	}
+
+	#tabbed_area fieldset .ctrlHolder .inputLabelHolder.medium {
+		width: 160px;
+	}
+
+	#tabbed_area fieldset .ctrlHolder .inputLabelHolder.last {
+		width: 105px;
+	}
+
+	#tabbed_area fieldset .ctrlHolder .inputLabelHolder.extraLong {
+		float: left;
+		margin-bottom: 20px;
+		width: 650px;
+	}
+
+		#tabbed_area fieldset .ctrlHolder .inputLabelHolder.extraLong label {
+			float: left;
+			width: 500px;
+		}
+
+		#tabbed_area fieldset .ctrlHolder .inputLabelHolder.extraLong ul {
+			float: left;
+			margin: 0;
+		}
+
+	#tabbed_area fieldset .ctrlHolder .inputLabelHolder .formEntryContentSelect {    
+	    background: url(img/selectorArrow.png) no-repeat scroll 124px 8px #e2e3e3;
+	    float: left;
+	    margin-top: 0;
+	    width: 145px;
+	 }
+
+    #tabbed_area fieldset .ctrlHolder .inputLabelHolder .formEntryContentSelect select { 
+      width: 145px;
+    }
+
+
+#tabbed_area .personTotalIncomeHolder {
+	border-top: 1px solid #A7A7A7;
+	color: #063c5b;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 10px;
+	padding-top: 10px;
+}
+
+	#tabbed_area .personTotalIncomeHolder div {
+		float: left;
+	}
+
+	#tabbed_area .personTotalIncomeHolder div.incomeTotal {		
+		margin-left: 15px;
+		width: 242px;
+	}
+
+	#tabbed_area .personTotalIncomeHolder div.incomeTotal.long {
+		width:480px;
+	}
+
+		#tabbed_area .personTotalIncomeHolder div.monthlyIncome {
+			font-size: 24px;
+			width: 128px;
+		}
+
+			#tabbed_area .personTotalIncomeHolder div.monthlyIncome input {
+				box-shadow: none;
+				color: #1a4a7a;
+				font-size: 24px;
+			}
+
+		#tabbed_area .personTotalIncomeHolder div.monthlyIncome.long {
+			width: 215px;
+		}
+
+#pageContentArea .incomeTotalsHeader {
+	border-bottom: 1px solid #A7A7A7;
+}
+
+	#pageContentArea .incomeTotalsHeader h3 {
+		border: 0;
+		float: left;
+	}
+
+#pageContentArea .incomeTotals {
+	float: right;	
+	padding-top: 5px;
+	width: 230px;
+}
+
+	#pageContentArea .incomeTotals .totalMonthlyIncomeTitle {
+		color: #063c5b;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 0;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	#pageContentArea .incomeTotals .totalMonthlyIncome {
+		color: #999;
+		font-weight: bold;	
+		margin: 0 0 0 10px;
+		text-align: right;
+	}
+
+		#pageContentArea .incomeTotals .totalMonthlyIncome input,
+		#pageContentArea .incomeTotals .totalMonthlyIncome span {
+			color: #063c5b;
+			font-size: 14px;
+			font-family: 'Avenir_Book';
+			font-weight: bold;
+			width: 60px;			
+		}
+
+/* =============================================================================
+   Styles to Overwrite jquery UI css
+   ========================================================================== */
+#pageContentArea section#tabbed_area.ui-widget-content {
+	border: 0;
+	background: none;
+	margin-top: 20px;
+}
+
+
+/* =============================================================================
+   Form Content within collapsibleContent div
+   ========================================================================== */
+
+.collapsibleContent fieldset.memberForm {
+	margin: 10px 8px 10px 8px;
+}
+
+.collapsibleContent fieldset .ctrlHolder {
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+	.collapsibleContent fieldset .ctrlHolder .inputLabelHolder {
+		float: left;
+		margin-right: 2px;
+		width: 152px;
+	}
+
+		.collapsibleContent fieldset .ctrlHolder .inputLabelHolder.long {
+			width: 181px;
+		}
+
+		.collapsibleContent fieldset .ctrlHolder .inputLabelHolder.last {
+			width: 110px;
+		}
+
+		.collapsibleContent fieldset .ctrlHolder .inputLabelHolder label {
+			width: 80px;
+		}
+
+		.collapsibleContent fieldset .ctrlHolder .inputLabelHolder input {
+			float: left;
+		}	
+
+		.collapsibleContent fieldset .ctrlHolder .inputLabelHolder .formEntryContentSelect {
+			background: url(img/selectorArrow.png) no-repeat scroll 124px 8px #e2e3e3;
+			float: left;
+			margin-top: 0;
+			width: 145px;
+		}
+
+			.collapsibleContent fieldset .ctrlHolder .inputLabelHolder .formEntryContentSelect select {
+				width: 145px;
+			}
+
+		.collapsibleContent fieldset .ctrlHolder .inputLabelHolder .formEntryContentSelect.coverage {
+			background: url(img/selectorArrow.png) no-repeat scroll 172px 8px #e2e3e3;
+			float: left;
+			margin-top: 0;
+			width: 194px;
+		}
+
+			.collapsibleContent fieldset .ctrlHolder .inputLabelHolder .formEntryContentSelect.coverage select {
+				width: 194px;
+			}
+
+		.collapsibleContent fieldset .ctrlHolder .inputLabelHolder.extraLong {
+			float: left;
+			margin-bottom: 20px;
+			width: 650px;
+		}
+
+			.collapsibleContent fieldset .ctrlHolder .inputLabelHolder.extraLong label {
+				float: left;
+				/*width: 500px;*/
+				width: 450px;
+			}
+
+			.collapsibleContent fieldset .ctrlHolder .inputLabelHolder.extraLong ul {
+				/*float: left;*/
+				float: right;
+				margin: 0;
+			}
+
+	.collapsibleContent fieldset.memberForm a.remove {
+		color: #009bd8;
+		float: right;
+		margin: 0 20px 10px 0;
+	}

@@ -1,0 +1,855 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  widgets.css
+ * ===== VERSION: v0.1
+ * ===== UPDATED: 2/1/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Nina Mokoosio)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+
+/* Table of Contents
+    1. Modal Window
+    2  Styles to Overwrite jquery UI css
+    3. Accordion
+    4. Form Content within Accordions
+    5. Tooltips
+    6. Tax Credit & Shopping Cart
+    7. Misc.
+
+*/
+
+/* =============================================================================
+   Modal Window
+   ========================================================================== */
+#modalTemplate .ui-dialog-content .ctrlHolder {
+    padding: 10px 0;
+}
+
+
+    #modalTemplate .ui-dialog-content .ctrlHolder label {
+        margin: 0 10px 0 0;
+        float: left;
+    }
+
+    #modalTemplate .ui-dialog-content .ctrlHolder input {
+        float: left;
+        background: #FFF;
+    }
+
+    #modalTemplate .ui-dialog-content .ctrlHolder .tribeSearchResults {
+        background: #FFF;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        border: 1px solid #D7D7D7;
+        height: 60px;
+        overflow-y: scroll;
+        padding: 10px;
+        width: 393px;        
+    }
+
+
+/* Agent Details Modal */
+
+.viewAgent .agentPhoto {
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    width: 160px;
+}
+
+.viewAgent .agentDetails {
+    float: right;
+}
+
+    .viewAgent .agentDetails table td {
+        border: 0;
+    }
+
+    .viewAgent .agentDetails table td:first-child {
+        font-weight: bold;
+    }
+
+    .viewAgent .agentDetails table td input {
+        background: #FFF;
+    }
+
+.centerModalButtons {
+    float: right;
+}
+
+/* =============================================================================
+   Styles to Overwrite jquery UI css
+   ========================================================================== */
+
+#modalTemplate .ui-dialog.ui-widget {
+    background: #FFFFFF;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFFFFF), to(#ebebeb));
+    background: -webkit-linear-gradient(#FFFFFF, #ebebeb);
+    background: -moz-linear-gradient(#FFFFFF, #ebebeb);
+    background: -ms-linear-gradient(#FFFFFF, #ebebeb);
+    background: -o-linear-gradient(#FFFFFF, #ebebeb);
+    background: linear-gradient(#FFFFFF, #ebebeb);
+    -pie-background: linear-gradient(#FFFFFF, #ebebeb);
+    behavior: url(scripts/PIE.htc);
+    color: #333;
+    padding: 10px;
+}
+
+#modalTemplate #product_premium_slider  a.ui-state-hover,
+#modalTemplate #slider-range4 a.ui-state-hover,
+#modalTemplate #slider-range3 a.ui-state-hover,
+#modalTemplate #slider-range2 a.ui-state-hover,
+#modalTemplate #slider-range a.ui-state-hover,
+#modalTemplate #taxCreditSlider a.ui-state-hover,
+#modalTemplate #taxCreditSlider a.ui-state-hover,
+#modalTemplate #OOP_slider_range a.ui-state-hover,
+#modalTemplate #office_visit_slider_range a.ui-state-hover,
+#modalTemplate #annualMaxDentalSlider a.ui-state-hover,
+#modalTemplate #deductibleDentalSlider a.ui-state-hover{
+    background: url(img/slider_arrow.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/;
+    border: 0;
+    font-weight: normal;
+}
+
+#modalTemplate #product_premium_slider a.ui-state-default,
+#modalTemplate #slider-range4 a.ui-state-default,
+#modalTemplate #slider-range3 a.ui-state-default,
+#modalTemplate #slider-range2 a.ui-state-default,
+#modalTemplate #slider-range a.ui-state-default,
+#modalTemplate #taxCreditSlider a.ui-state-default,
+#modalTemplate #taxCreditSlider2 a.ui-state-default,
+#modalTemplate #OOP_slider_range a.ui-state-default,
+#modalTemplate #office_visit_slider_range a.ui-state-default,
+#modalTemplate #annualMaxDentalSlider a.ui-state-default,
+#modalTemplate #deductibleDentalSlider a.ui-state-default,
+#modalTemplate #taxCreditSlider a.ui-state-default {
+    background: url(img/slider_arrow.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/;
+}
+
+#modalTemplate #product_premium_slider .ui-widget-header,
+#modalTemplate #slider-range4 .ui-widget-header,
+#modalTemplate #slider-range3 .ui-widget-header,
+#modalTemplate #slider-range2 .ui-widget-header,
+#modalTemplate #slider-range .ui-widget-header,
+#modalTemplate #taxCreditSlider .ui-widget-header,
+#modalTemplate #taxCreditSlider2 .ui-widget-header,
+#modalTemplate #OOP_slider_range .ui-widget-header,
+#modalTemplate #office_visit_slider_range .ui-widget-header,
+#modalTemplate #annualMaxDentalSlider .ui-widget-header,
+#modalTemplate #deductibleDentalSlider .ui-widget-header,
+#modalTemplate #taxCreditSlider .ui-widget-header {
+  background: #57666d;
+}
+
+#modalTemplate .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 7px;
+    height: 20px;
+    cursor: default;
+    top: -.4em;
+    margin-left: -.4em;
+}
+
+#modalTemplate .ui-widget-header {
+    color: #1a4a7a;
+    font-family: 'Brandon_Grotesque_Bold';
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#modalTemplate .ui-icon-circle-close {
+    /*background:url(img/close_icon.png);*/
+    background:url(img/close_icon_small.png);
+
+}
+
+#modalTemplate button.ui-button {
+    color: #FFF;
+    font-size: 12px;
+    font-family: 'Avenir_Black';
+    margin: 5px;
+    padding: 7px 15px 7px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    position: relative;
+    text-shadow: 1px 1px 1px #000;
+    border: 1px solid #559b1e;
+    background: #7BC93D;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#7BC93D), to(#559b1e));
+    background: -webkit-linear-gradient(#7BC93D, #559b1e);
+    background: -moz-linear-gradient(#7BC93D, #559b1e);
+    background: -ms-linear-gradient(#7BC93D, #559b1e);
+    background: -o-linear-gradient(#7BC93D, #559b1e);
+    background: linear-gradient(#7BC93D, #559b1e);
+    -pie-background: linear-gradient(#7BC93D, #559b1e);
+    behavior: url(scripts/PIE.htc);
+}
+
+/* Select plan Modal */
+#modalTemplate .vendorLogo {
+    float: left;
+    height: 50px;
+    margin-right: 15px;
+}
+
+#modalTemplate .selectPlanModalHeader {
+    
+}
+
+    #modalTemplate .selectPlanModalHeader p {
+        float: left;
+    }
+
+#modalTemplate .planDetails { }
+    
+
+    #modalTemplate .planDetails .planName {
+        color: #1a4a7a;
+        font-family: 'Avenir_Medium';
+        font-size: 18px;
+        float: left;
+        margin-right: 15px;
+    }
+
+    #modalTemplate .planDetails .planType {
+        color: #1a4a7a;
+        float: left;
+        font-family: 'Avenir_Black';
+        font-size: 12px;
+        margin-right: 15px;
+    }
+
+    #modalTemplate .planDetails .planRating {
+        float: left;
+    }
+
+    #modalTemplate .compareLink {
+        margin: 20px 10px;
+    }
+
+#modalTemplate .ui-dialog .ui-dialog-buttonpane {
+    background: none;
+}
+
+#modalTemplate .ui-dialog .ui-dialog-content {
+    padding: 10px
+}
+
+/* =============================================================================
+   Accordion
+   ========================================================================== */
+
+#pageContentArea section.widget,
+.dashboardContentWrapper section.widget {
+    border-bottom: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 8px #000;
+    -moz-box-shadow: 2px 2px 8px #000;
+    box-shadow: 2px 2px 8px #000;
+    background: #484542;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#484542), to(#403d3a));
+    background: -webkit-linear-gradient(#484542, #403d3a);
+    background: -moz-linear-gradient(#484542, #403d3a);
+    background: -ms-linear-gradient(#484542, #403d3a);
+    background: -o-linear-gradient(#484542, #403d3a);
+    background: linear-gradient(#484542, #403d3a);
+    -pie-background: linear-gradient(#484542, #403d3a);
+    behavior: url(scripts/PIE.htc);
+    padding: 20px 0;
+    width: 250px;
+}
+
+#pageContentArea section.contentAreaWidget {
+    border-bottom: 0;
+}
+
+aside#help {
+    float: left;
+    position: absolute;
+    right: 140px;
+}
+
+.accordion.ui-accordion {
+    width: 250px;
+}
+
+#pageContentArea section.widget .accordionHeader,
+.dashboardContentWrapper section.widget .accordionHeader,
+.widget#helpModal .accordionHeader,
+.widget#helpDashboardModal .accordionHeader {
+    float: left;
+    padding: 0 20px 10px 20px;
+    width: 210px;
+}
+
+    #pageContentArea section.widget .accordionHeader h5,
+    .dashboardContentWrapper section.widget .accordionHeader h5,
+    .widget#helpModal .accordionHeader h5,
+    .widget#helpDashboardModal .accordionHeader h5 {        
+        color: #FFF;
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+        #pageContentArea section.widget .accordionHeader h5 span,
+        .dashboardContentWrapper section.widget .accordionHeader h5 span,
+        .widget#helpModal .accordionHeader h5 span,
+        .widget#helpDashboardModal .accordionHeader h5 span {
+            float: right;
+        }
+
+    #pageContentArea section.widget .accordionHeader h6,
+    .dashboardContentWrapper section.widget .accordionHeader h6 { 
+        color: #FFF;
+        font-size: 10px;
+        margin-bottom: 2px;
+        margin-left: -1px;
+    }
+
+    #pageContentArea section.widget .accordionHeader  p,
+    .dashboardContentWrapper section.widget .accordionHeader p {        
+        color: #FFF;
+        padding-bottom: 0;
+    }
+    
+
+#pageContentArea section.widget .accordion.ui-accordion,
+.dashboardContentWrapper section.widget .accordion.ui-accordion,
+.widget#helpModal .accordion.ui-accordion,
+.widget#helpDashboardModal .accordion.ui-accordion {
+    color: #d5d5d5;
+}
+
+    #pageContentArea section.widget .accordion.ui-accordion .title,
+    .dashboardContentWrapper section.widget .accordion.ui-accordion .title,
+    .widget#helpModal .accordion.ui-accordion .title,
+    .widget#helpDashboardModal .accordion.ui-accordion .title {
+        border: 1px solid #103c55;
+        color: #0093cb;
+        padding: 15px 25px;
+    }
+
+#pageContentArea section.widget .accordion.ui-accordion h5.ui-accordion-header,
+.dashboardContentWrapper section.widget .accordion.ui-accordion h5.ui-accordion-header,
+.widget#helpModal .accordion.ui-accordion h5.ui-accordion-header,
+.widget#helpDashboardModal .accordion.ui-accordion h5.ui-accordion-header {
+    background: #eaecec;
+    border-bottom: 1px solid #d1d3d3;
+    border-radius: 0;
+    color: #07354d;
+    font-family: 'Avenir_Medium';
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+    #pageContentArea section.widget .accordion.ui-accordion h5.ui-accordion-header span,
+    .dashboardContentWrapper section.widget .accordion.ui-accordion h5.ui-accordion-header span,
+    .widget#helpModal .accordion.ui-accordion h5.ui-accordion-header span,
+    .widget#helpDashboardModal .accordion.ui-accordion h5.ui-accordion-header span {
+        background: url(img/selectorArrowHor.png) no-repeat;
+        display: block;
+        float: right;
+        height: 13px;
+        width: 10px;
+    }
+
+        #pageContentArea section.widget .accordion.ui-accordion h5.ui-accordion-header.ui-accordion-header-active span,
+        .dashboardContentWrapper section.widget .accordion.ui-accordion h5.ui-accordion-header.ui-accordion-header-active span,
+        .widget#helpModal .accordion.ui-accordion h5.ui-accordion-header.ui-accordion-header-active span,
+        .widget#helpDashboardModal .accordion.ui-accordion h5.ui-accordion-header.ui-accordion-header-active span  {
+            background: url(img/selectorArrow.png) no-repeat;
+            height: 10px;
+            width: 13px;
+        }
+
+
+/* Glossary Header oh Help Drawer*/
+a.disable.ui-state-disabled  {
+    background: #eaecec;
+    border-bottom: 1px solid #d1d3d3;
+    border-radius: 0;
+    color: #07354d;
+    cursor: pointer;
+    font-family: 'Avenir_Medium';
+    font-size: 14px;    
+    margin: 0;
+    opacity: 1;
+    padding: 10px 20px;
+    text-transform: capitalize;
+}
+
+a.disable.ui-state-disabled span  {
+    background: url(img/selectorArrowHor.png) no-repeat;
+    display: block;
+    float: right;
+    height: 13px;
+    width: 10px;
+}
+
+#pageContentArea section.widget .accordion.ui-accordion .ui-accordion-content,
+.dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content {    
+    background: #FFF;
+    border-radius: 0;
+    color: #45423f;
+    padding: 10px 10px 0 10px;
+}
+
+    #pageContentArea section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader,
+    .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader {
+        background: #b1c6d1;
+        color: #FFF;
+        font-family: 'Avenir_Black';
+        margin: -10px -10px 0 -10px;
+        padding: 8px;
+    }
+
+    .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader.faq,
+    .widget#helpModal .accordion.ui-accordion .ui-accordion-content .contentHeader.faq,
+    .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content .contentHeader.faq {
+        margin-bottom: 5px;
+    }
+
+    .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader.faq ul,
+    .widget#helpModal .accordion.ui-accordion .ui-accordion-content .contentHeader.faq ul,
+    .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content .contentHeader.faq ul {
+        margin: 0;
+    }
+
+    .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader.faq ul li,
+    .widget#helpModal .accordion.ui-accordion .ui-accordion-content .contentHeader.faq ul li,
+    .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content .contentHeader.faq ul li {
+        float: left;
+        margin-right: 0;
+        padding: 0 3px;
+        background: none;
+        list-style: none;
+    }
+
+    .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader.faq ul li a,
+    .widget#helpModal .accordion.ui-accordion .ui-accordion-content .contentHeader.faq ul li a,
+    .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content .contentHeader.faq  ul li a {
+        color: #FFF;
+        font-family: 'Avenir_Black';
+        text-decoration: none;
+    }
+
+         #pageContentArea section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader button,
+         .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader button,
+         .widget#helpModal .accordion.ui-accordion .ui-accordion-content .contentHeader button,
+         .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content .contentHeader button  {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            font-size: 11px;
+            padding: 5px 8px 5px 8px
+         }
+
+            #pageContentArea section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader button:last-child,
+            .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader button:last-child,
+            .widget#helpModal .accordion.ui-accordion .ui-accordion-content .contentHeader button:last-child,
+            .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content .contentHeader button:last-child {
+                float: right;
+            }
+
+        #pageContentArea section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader input.searchBox,
+        .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content .contentHeader input.searchBox,
+        .widget#helpModal .accordion.ui-accordion .ui-accordion-content .contentHeader input.searchBox,
+        .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content .contentHeader input.searchBox {
+            background: #edeeef url("img/icon-search.png") no-repeat 207px 5px;
+            border: 2px solid #FFF;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            -webkit-box-shadow: inset 1px 1px 5px #ccc , 0px 0px 3px #ccc;
+            -moz-box-shadow: inset 1px 1px 5px #ccc , 0px 0px 3px #ccc;
+            box-shadow: inset 1px 1px 5px #ccc, 0px 0px 3px #ccc;
+            color: #07354d;            
+            font-family: 'Avenir_Medium';
+            font-size: 12px;
+            height: 15px;
+            padding: 4px 10px 3px 4px;
+            width: 215px;
+         }
+
+     #pageContentArea section.widget .accordion.ui-accordion .ui-accordion-content ul li,
+     .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content ul li,
+     .widget#helpModal .accordion.ui-accordion .ui-accordion-content ul li,
+     .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content ul li {
+        /*background: url(img/list_style.png) no-repeat left center;*/
+        list-style: disc;
+        font-family: 'Avenir_Medium';
+        padding: 5px 15px;
+     }
+
+      .dashboardContentWrapper section.widget .accordion.ui-accordion .ui-accordion-content ul li a,
+      .widget#helpModal .accordion.ui-accordion .ui-accordion-content ul li a,
+      .widget#helpDashboardModal .accordion.ui-accordion .ui-accordion-content ul li a {
+        color: #333;        
+      }
+
+    .dashboardContentWrapper section.widget .accordion.ui-accordion .glossary.ui-accordion-content  p.alphabet,
+    .widget#helpModal .accordion.ui-accordion .glossary.ui-accordion-content p.alphabet,
+    .widget#helpDashboardModal .accordion.ui-accordion .glossary.ui-accordion-content p.alphabet {
+        padding-bottom: 8px;
+    }
+
+        .dashboardContentWrapper section.widget .accordion.ui-accordion .glossary.ui-accordion-content  p.alphabet a,
+        .widget#helpModal .accordion.ui-accordion .glossary.ui-accordion-content p.alphabet a,
+        .widget#helpDashboardModal .accordion.ui-accordion .glossary.ui-accordion-content p.alphabet a {
+            color: #07354d;
+            font-family: 'Avenir_Medium';
+            font-size: 18px;
+        }
+
+    .dashboardContentWrapper section.widget .accordion.ui-accordion .glossary.ui-accordion-content  p,
+    .widget#helpModal .accordion.ui-accordion .glossary.ui-accordion-content p,
+    .widget#helpDashboardModal .accordion.ui-accordion .glossary.ui-accordion-content p {
+        padding-bottom: 5px;
+    }
+
+        .dashboardContentWrapper section.widget .accordion.ui-accordion .glossary.ui-accordion-content  p a,
+        .widget#helpModal .accordion.ui-accordion .glossary.ui-accordion-content p a,
+        .widget#helpDashboardModal .accordion.ui-accordion .glossary.ui-accordion-content p a {
+            color: #009bd8;
+            font-family: 'Avenir_Medium';            
+        }           
+
+    #pageContentArea section.widget .accordion.ui-accordion .ui-accordion-content .alphabet {
+        color: #07354d;
+        font-family: 'Avenir_Medium';
+        font-size: 18px;
+    }
+
+#pageContentArea section.widget .accordion .ctrlHolder,
+.dashboardContentWrapper section.widget .accordion .ctrlHolder {
+   padding: 5px 0 0 0;
+   margin-bottom: 5px;
+}
+
+    #pageContentArea section.widget .accordion .ctrlHolder label,
+    .dashboardContentWrapper section.widget .accordion .ctrlHolder label {        
+        font-size: 12px;
+        float: left;
+        margin: 0 5px 0 0;
+        text-decoration: underline;
+        width: 135px;
+    }
+
+    #pageContentArea section.widget .accordion .ctrlHolder input,
+    .dashboardContentWrapper section.widget .accordion .ctrlHolder input {        
+        float: left;
+        margin: 0 10px;
+        width: 55px;
+    }
+
+     #pageContentArea section.widget .accordion .ctrlHolder input.button,
+     .dashboardContentWrapper section.widget .accordion .ctrlHolder input.button {   
+        width: 80px;
+     }
+
+        #pageContentArea section.widget .accordion .ctrlHolder input.button.green,
+        .dashboardContentWrapper section.widget .accordion .ctrlHolder input.button.green {      
+            text-shadow: 1px 1px 1px #000;
+            border: 1px solid #559b1e;
+            color: #FFF;
+            float: right;
+        }
+
+
+    #pageContentArea section.widget .accordion .ctrlHolder .total,
+    #pageContentArea section.widget .accordion .ctrlHolder .totalCost,
+    .dashboardContentWrapper section.widget .accordion .ctrlHolder .total,
+    .dashboardContentWrapper section.widget .accordion .ctrlHolder .totalCost {
+        float: left;
+        font-size: 12px;
+        margin: 10px 5px 0 0;
+        text-decoration: underline;
+        width: 135px;   
+    }
+
+    #pageContentArea section.widget .accordion .ctrlHolder button,
+    .dashboardContentWrapper section.widget .accordion .ctrlHolder button {
+        float: right;
+        margin: 10px 10px 0 0;
+    }
+
+#pageContentArea section.widget .accordion fieldset,
+.dashboardContentWrapper section.widget .accordion fieldset {
+    margin: 0;
+}
+
+#pageContentArea section.widget .accordion fieldset h5,
+.dashboardContentWrapper section.widget .accordion .ctrlHolder fieldset h5 {    
+    float: left;
+    margin-left: 26px;
+}
+
+/* Income Totals Help Tray Positions */
+#pageContentArea section.widget#widget_1,
+#pageContentArea section.widget#widget_5,
+#pageContentArea section.widget#widget_9 {
+    margin: 0;
+    position: absolute;
+    top: 103px;
+    right: -219px;
+    z-index: 1;
+}
+
+#pageContentArea section.widget#widget_2,
+#pageContentArea section.widget#widget_6,
+#pageContentArea section.widget#widget_10 {
+    position: absolute;
+    top: 156px;
+    right: -219px;
+    z-index: 1;
+}
+
+#pageContentArea section.widget#widget_3,
+#pageContentArea section.widget#widget_7,
+#pageContentArea section.widget#widget_11 {
+    position: absolute;
+    top: 209px;
+    right: -219px;
+    z-index: 1;
+}
+
+#pageContentArea section.widget#widget_4,
+#pageContentArea section.widget#widget_8,
+#pageContentArea section.widget#widget_12 {
+    position: absolute;
+    top: 250px;
+    right: -219px;
+    z-index: 1;
+}
+
+#pageContentArea section.widget#widget_13 {
+    position: absolute;
+    top: 103px;
+    right: -219px;
+    z-index: 1;
+}
+
+/* ==  Content Area Accordion ================================================== */
+
+#pageContentArea section.contentAreaWidget .accordion.ui-accordion {    
+    width: 689px;
+}
+
+#pageContentArea section.contentAreaWidget .accordion.ui-accordion h5.ui-accordion-header {
+    -webkit-box-shadow: 0px 2px 3px #ccc;
+    -moz-box-shadow: 0px 2px 3px #ccc;
+    box-shadow: 0px 2px 3px #ccc;
+    background: #fefefe;    
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fefefe), to(#f1f1f1));
+    background: -webkit-linear-gradient(#fefefe, #f1f1f1);
+    background: -moz-linear-gradient(#fefefe, #f1f1f1);
+    background: -ms-linear-gradient(#fefefe, #f1f1f1);
+    background: -o-linear-gradient(#fefefe, #f1f1f1);
+    background: linear-gradient(#fefefe, #f1f1f1);
+    -pie-background: linear-gradient(#fefefe, #f1f1f1);
+    behavior: url(scripts/PIE.htc);
+    border-radius: 0;
+    border-top: 1px solid #e3e2e1;
+    border-bottom: 1px solid #bebdbd;
+    color: #1a4a7a;
+    margin: 0;
+    padding: 15px 25px;
+}
+
+#pageContentArea section.contentAreaWidget .accordion.ui-accordion h5.ui-accordion-header.ui-state-default span {
+    background: url(img/selectorArrow_left_facing.png) no-repeat;
+    display:block;
+    float: right;
+    height: 13px;
+    width: 10px;        
+}
+
+    #pageContentArea section.contentAreaWidget .accordion.ui-accordion h5.ui-accordion-header.ui-accordion-header-active span {    
+        background: url(img/selectorArrow.png) no-repeat;
+        height: 10px;
+        width: 13px;
+    }
+
+/* =============================================================================
+   Form Content within Accordions
+   ========================================================================== */
+   #pageContentArea section.contentAreaWidget .accordion.ui-accordion .ctrlHolder label {
+    float: left;
+    margin: 0 15px 5px 0;
+   }
+
+   #pageContentArea section.contentAreaWidget .accordion.ui-accordion .ctrlHolder ul {
+    float: left;
+    margin: 0 15px 0 0;
+   }
+
+
+/* =============================================================================
+   Tooltips
+   ========================================================================== */
+#modalTemplate .ui-tooltip {
+    background: #F1F4F9; 
+    border: #A8C5E3 2px solid;
+    float: left;
+    font-size: 12px;
+    max-width: 300px;
+    padding: 8px;
+    position: relative;
+    z-index: 0;
+}
+
+
+/* =============================================================================
+   Tax Credit & Shopping Cart
+   ========================================================================== */
+.cartTaxCreditWrapper {
+    background: #5daad4;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#5daad4), to(#1f9ccc));
+    background: -webkit-linear-gradient(#5daad4, #1f9ccc);
+    background: -moz-linear-gradient(#5daad4, #1f9ccc);
+    background: -ms-linear-gradient(#5daad4, #1f9ccc);
+    background: -o-linear-gradient(#5daad4, #1f9ccc);
+    background: linear-gradient(#5daad4, #1f9ccc);
+    -pie-background: linear-gradient(#5daad4, #1f9ccc);
+    behavior: url(scripts/PIE.htc);
+    height: 37px;
+}
+
+.cartTaxCreditWrapper .cartContainer {
+    margin: 0 auto;
+    padding: 0;
+    width: 960px;
+}
+
+    .cartContainer .cart {           
+        float: right;
+        margin-right: 10px;
+        padding: 8px;
+        width: 152px;        
+    }
+
+    .cartContainer .cart:first-child {        
+        width: 170px;
+    }
+
+    .cartContainer .cart img {
+        margin-right: 10px;
+    }
+
+    .cartContainer .cart a {
+        color: #FFF;
+        font-size: .85em;
+        font-family: 'Avenir_Black';
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .cartContainer .cart input.cartCount {
+        color: #FFF;
+        font-size: 1em;
+        font-family: 'Avenir_Book';
+        font-weight: bold;
+        margin-left: 6px;
+        padding: 0;
+        width: 15px;
+    }
+
+#modalTemplate .ui-dialog.ui-widget.shoppingCartContainer {
+    background: #fbfbfb;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #9a9a9a;
+    padding: 15px 7px;
+}
+
+#modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table {
+    margin: 0;
+    font-size: 0.857em;
+}
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table th,
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table td {
+        padding: 5px;
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table td:first-child {
+        width: 18%
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table td:nth-child(3),
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table td:nth-child(4){
+        width: 13%;
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table td:nth-child(2),    
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table td:nth-child(5) {
+        width: 16%;
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table td:nth-child(6),
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table td:last-child {
+        width: 12%
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table th {
+        text-transform: none;
+        font-family: 'Avenir_Book';
+        font-weight: 600;
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table th a {
+        color: #009bd8;
+        font-weight: normal;
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table tr td.cost {
+        color: #1a4a7a;
+        font-size: 1.2em;
+        font-family: 'Avenir_Black';
+        line-height: 0.6em;
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table tr td.cost span{
+        font-size: 0.6em;
+    }
+
+    #modalTemplate .ui-dialog .shoppingCart.ui-dialog-content table tr td .button {
+        font-size: 0.714em;
+        padding: 5px 8px 5px 8px;
+    }
+
+/* =============================================================================
+   Misc.
+   ========================================================================== */
+   input.hideChild {
+        background: none;
+        border: 0;
+        float: right;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-size: 0.857em;
+        color: #009bd8;
+   }
+
+#modalTemplate #selectAgentConfrimationModal .ui-widget-header {
+    color: #000;
+}
+
+
+#selectAgentConfrimationModal .ui-dialog .ui-dialog-title {
+    white-space: normal;
+}

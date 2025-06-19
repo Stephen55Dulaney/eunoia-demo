@@ -1,0 +1,1352 @@
+/* =============================================================================
+/* ===== DOCUMENT INFO  ========================================================
+/* =============================================================================
+ * ===== NAME:  forms.css
+ * ===== VERSION: v0.6
+ * ===== UPDATED: 2/15/2013
+ * ===== AUTHOR: Deloitte Consulting LLP (Michael Jackson)
+ * ===== CLIENT: Oregon Health Insurance Exchange (OR-HIX)
+ ========================================================================== */
+
+ /* Table of Contents
+    1. Page Content Area - Standard Field Width
+    2  Page Content Area - 220 Field width
+    3. Page Content Area - Utility Field
+    4. Page Content Area - Standard Selector
+    5. Page Content Area - 90 Width Selector
+    6. Error MSG Warning
+    7. Radio Button
+    8. Plan Selector with Radio Buttons
+    9. Generic Form Content
+    10. Household Member Forms
+    11. SHOP Forms
+ */
+
+
+fieldset {
+  margin: 0 0 15px 0;
+}
+
+  fieldset input,
+  input {      
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;           
+      background: #edeeef;   
+      color: #a8a8a8;
+      font-size: 12px;
+      margin-right: 3px;
+      overflow: hidden;    
+    }
+
+fieldset .formEntryContent .watermarkify-wrap{
+  position:relative;
+  overflow:hidden;
+}
+
+fieldset .formEntryContent .watermarkify-watermark {
+  position:absolute;
+  left:10px;
+  display:block;
+  color:#999;
+  padding-left:2px;  
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow:hidden;
+}
+
+fieldset .formEntryContent .watermarkify-watermark-blurred{
+  opacity:0.5;
+  filter: alpha(opacity = 50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+/** Page Content Area - Standard Field Width - Start **/
+
+  fieldset .formEntryContent {
+    float: left;
+    width: 320px;
+    margin-bottom: 10px;
+  }
+
+    fieldset .formEntryContent input {      
+      width: 300px;  
+    }
+
+    fieldset .formEntryContent label {
+      color: #3c3a37;
+      font-family: 'Avenir_Book';
+    }
+  
+/** Page Content Area - Standard Field Width - End **/
+
+
+
+/** Page Content Area - 220 Field Width - Start **/
+
+  fieldset .formEntryContent220 {
+    float: left;
+    width: 210px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+    fieldset .formEntryContent220 input {      
+      width: 195px;  
+      float: left;
+    }
+
+/** Page Content Area - 220 Field Width - End **/
+
+
+
+/** Page Content Area - Utility Field - Start **/
+
+  fieldset .formEntryContentSpacer {
+    float: left;
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  fieldset .formEntryContentRTBT {
+    width:248px;
+    float: right;
+  }
+
+/** Page Content Area - Utility Field - End **/
+
+
+
+/** Page Content Area - Standard Selector - Start **/
+
+  fieldset .formEntryContentSelect,
+  fieldset .householdAdjustmentSelect {    
+    background: url(img/selectorArrow.png) no-repeat scroll 245px 8px #e2e3e3;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #034564;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 267px;
+  }
+
+  fieldset.memberForm .ctrlHolder .formEntryContentSelect.securityQuestion {
+    background: url(img/selectorArrow.png) no-repeat scroll 280px 8px #e2e3e3;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #034564;
+    margin: 0 0 40px 20px;
+    overflow: hidden;
+    width: 305px;
+  }
+
+  fieldset.memberForm .ctrlHolder .formEntryContentSelect.securityQuestion select {
+    border: 0;
+    color: #034564;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    padding: 2px 5px;
+    width: 305px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+
+fieldset .formEntryContentSelect.planBenefit {
+  background: url(img/selectorArrow.png) no-repeat scroll 335px 8px #e2e3e3;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #034564;
+  margin: 0;
+  overflow: hidden;
+  width: 355px;
+}
+
+  fieldset .formEntryContentSelect.planBenefit select {
+      border: 0;
+      color: #034564;
+      background: transparent;
+      font-size: 12px;
+      font-weight: bold;
+      height: 28px;
+      padding: 2px 5px;
+      width: 355px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+
+
+
+.formEntryContentSelect.agentSelect {
+  background: url(img/selectorArrow.png) no-repeat scroll 108px 8px #e2e3e3;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #034564;
+  margin-top: 0px;
+  overflow: hidden;
+  width: 130px;
+}
+
+  .formEntryContentSelect.agentSelect select {
+    border: 0;
+    color: #034564;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    padding: 2px 5px;
+    width: 130px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.formEntryContentSelect.suffix {
+    background: url(img/selectorArrow.png) no-repeat scroll 35px 8px #e2e3e3;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #034564;
+    margin-top: 0px;
+    overflow: hidden;
+    width: 55px;
+  }
+
+  .formEntryContentSelect.suffix select {
+    border: 0;
+    color: #034564;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    padding: 2px 5px;
+    width: 55px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+  .formEntryContentSelect.upload {
+    background: url(img/selectorArrow.png) no-repeat scroll 108px 8px #e2e3e3;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #034564;
+    margin-top: 0px;
+    overflow: hidden;
+    width: 130px;
+  }
+
+
+.formEntryContentSelect.upload select {
+    border: 0;
+    color: #034564;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    padding: 2px 5px;
+    width: 130px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+   #pageContentAreaNoLeftNav fieldset.memberForm .formEntryContentSelect {
+    margin-top: 0px;
+   }
+
+    fieldset .formEntryContentSelect select,
+    fieldset .householdAdjustmentSelect select {
+      border: 0;
+      color: #034564;
+      background: transparent;
+      font-size:12px;
+      font-weight: bold; 
+      height: 28px;
+      padding:2px 5px; 
+      width:267px;
+      *width:267px; 
+      *background:transparent; 
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+    }
+
+  fieldset .calculatorEntrySelect {    
+    background: url(img/selectorArrow.png) no-repeat scroll 58px 8px #e2e3e3;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #034564;
+    overflow: hidden;
+    width: 81px;
+  } 
+
+    fieldset .calculatorEntrySelect select {
+      border: 0;
+      color: #034564;
+      background: transparent;
+      font-size:12px;
+      font-weight: bold; 
+      height: 28px;
+      padding:2px 5px; 
+      width:81px;
+      *background:transparent; 
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+    }
+
+/** Page Content Area - Standard Selector - End **/
+
+
+
+/** Page Content Area - 90 Width Selector - Start **/
+
+  fieldset .formEntryContentSelect90 {
+    overflow:hidden; width:90px;
+    background: url(img/selectorArrow.png) no-repeat scroll 70px 8px #e2e3e3;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-right: 25px;
+    float: left;
+    color: #034564;
+  } 
+
+    fieldset .formEntryContentSelect90 select {
+      border:0; 
+      color:#00324d; 
+      background:transparent;
+      font-size:12px; 
+      font-weight:bold;
+      height: 25px;
+      padding:2px 10px; 
+      width:90px;
+      *width:90px; 
+      *background:transparent; 
+      -webkit-appearance: none;
+    }
+
+/** Page Content Area - 90 Width Selector - End **/
+
+.formEntryDivider {
+  border-bottom: 1px solid #a7a7a7;
+  padding: 15px 0;
+}
+
+/** Error MSG Warning - Start **/
+
+fieldset .formEntryContent .errorField {
+  border: 1px solid #f71717;
+  background-color: #fff;
+  color: #999999;
+}
+
+#errorMsg {
+  padding-left: 5px;
+  font-size:12px; 
+  color: #f71717;
+}
+
+/** Error MSG Warning - End **/
+
+
+/** Radio Button - Start **/
+
+fieldset .declarationLabel {
+  color: #00334e;
+  padding-bottom: 10px;
+  font-family: 'Avenir_Black';
+  font-size: 17px;
+  float: left;
+  width:50%;
+}
+
+fieldset .declarationLabelSpacer {
+  float: left;
+  margin-bottom: 10px;
+  color:#fff;
+}
+
+fieldset .declarationText {
+  padding-bottom: 10px;
+  font-size: 17px;
+  float: left;
+  width:50%;
+}
+
+    fieldset .declarationText label {
+      font-family: 'Avenir_Light';
+    }
+ 
+fieldset .checkBoxDeclaration {
+  float: left;
+  margin-right: 20px;
+  width: 20px;
+}
+
+/** Radio Button - End **/
+
+
+/* =============================================================================
+   Plan Selector with Radio Buttons
+   ========================================================================== */
+
+.planSelector fieldset {
+  border-top: 1px solid #a7a7a7;
+  margin-bottom: 25px;
+  min-height: 80px;
+  padding: 10px 0 0 5px;
+}
+
+.planSelector .profileHeaderColumnHeader { }
+
+  .planSelector .profileHeaderColumnHeader h5 {
+    float: left;
+    width: 140px;
+    margin-bottom: 10px;
+    margin-right: 10px; 
+  }
+
+.planSelector .profileHeaderColumns {
+  float: left;
+  width: 140px;
+  margin-bottom: 10px;
+  margin-right: 10px; 
+}
+
+.planSelector .profileHeaderColumns label {
+    float: left;
+    font-family: 'Avenir_Medium';
+  }
+
+    .planSelector .profileHeaderColumns label .extra {
+      color: #00324d;
+      text-align: right;
+    }
+
+  .planSelector .profileTitle {
+    color: #063c5b;
+    font-family: 'Avenir_Medium';
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+    .planSelector .profileTitle span {
+      margin-top: -5px;
+    }
+
+/* =============================================================================
+   Generic Form Content
+   ========================================================================== */
+
+  fieldset .ctrlHolder {
+    padding: 10px 15px 15px 15px;
+  }
+
+  fieldset .ctrlHolder .ctrlHolder {
+    padding: 5px 10px;
+  }
+  
+    fieldset .ctrlHolder input.counter {
+      border: 0;
+      color: #034564;      
+      float: left;
+    }
+
+    #modalTemplate fieldset .ctrlHolder input.counter.add {      
+      background: url(img/add_subtract_icons.png) 22px 0;
+      box-shadow: none;
+      display: block;
+      float: left;
+      height: 21px;
+      width: 24px;
+    }
+
+    #modalTemplate fieldset .ctrlHolder input.counter.subtract {
+      background: url(img/add_subtract_icons.png);
+      box-shadow: none;
+      display: block;
+      height: 21px;
+      width: 25px;  
+    }
+
+    fieldset .ctrlHolder ul {
+      margin: 10px 0 0 0; 
+    }
+
+      fieldset ul li,
+      fieldset .ctrlHolder ul li {
+        float: left;
+        font-size: 14px;
+        list-style: none;
+        margin-right: 15px;
+      }
+        
+        fieldset .ctrlHolder ul li label {
+          margin-right: 10px;
+        }
+
+fieldset .ctrlHolder .inputLabelHolder {
+    float: left;
+    margin-right: 10px;
+    width: 155px;
+  }
+
+     fieldset .ctrlHolder .inputLabelHolder.long {
+      width: 200px;
+    }
+
+    fieldset .ctrlHolder .inputLabelHolder.last {
+      width: 140px;
+    }
+
+    fieldset .ctrlHolder .inputLabelHolder label {
+      width: 80px;
+    }
+
+    fieldset .ctrlHolder .inputLabelHolder input {
+      float: left;
+    } 
+
+    fieldset .ctrlHolder .inputLabelHolder .formEntryContentSelect {
+      background: url(img/selectorArrow.png) no-repeat scroll 124px 8px #e2e3e3;
+      float: left;
+      margin-top: 0;
+      width: 145px;
+    }
+
+      fieldset .ctrlHolder .inputLabelHolder .formEntryContentSelect select {
+        width: 145px;
+      }
+
+    fieldset .ctrlHolder .inputLabelHolder.extraLong {
+      float: left;
+      margin-bottom: 20px;
+      width: 650px;
+    }
+
+      fieldset .ctrlHolder .inputLabelHolder.extraLong label {
+        float: left;
+        /*width: 500px;*/
+        width: 435px;
+        margin-right: 5px;
+      }
+
+      fieldset .ctrlHolder .inputLabelHolder.extraLong ul {
+        float: left;
+        margin: 0;
+      }
+
+      fieldset .ctrlHolder .inputLabelHolder.extraLong  .formEntryContentSelect {
+        background: url(img/selectorArrow.png) no-repeat scroll 190px 8px #e2e3e3;
+        width: 208px;
+      }
+
+        fieldset .ctrlHolder .inputLabelHolder.extraLong  .formEntryContentSelect select {
+          width: 208px;
+        }
+
+fieldset.memberForm a.remove {
+  color: #009bd8;
+  float: right;
+  margin: 0 20px 10px 0;
+}
+
+/* Drop down styles */
+
+.dropDown {    
+  background: url(img/selectorArrow.png) no-repeat scroll 124px 8px #e2e3e3;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #034564;
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+  width: 145px;
+}
+
+  .dropDown select  {
+    border: 0;
+    color: #034564;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    padding: 2px 5px;
+    width: 145px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+/* =============================================================================
+   Household Member Forms
+   ========================================================================== */
+
+fieldset.memberForm {
+  border-bottom: 1px solid #a7a7a7;
+}
+
+    fieldset.memberForm .ctrlHolder div {      
+      margin: 0 0 5px 0;
+    }
+
+    fieldset .ctrlHolder label {      
+      color: #034564;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+      fieldset.memberForm .ctrlHolder div.fullName{
+        float: left;
+      }
+
+    fieldset.memberForm .ctrlHolder input.address {
+      margin-right: 10px;
+      float: left;
+    }
+
+  fieldset.memberForm .ctrlHolder .formColumn {
+    float: left;
+    width: 150px;
+  }
+
+     fieldset.memberForm .ctrlHolder .formColumn.DOB {      
+      width: 168px;
+    }
+
+      fieldset.memberForm .ctrlHolder .formColumn.DOB div input {
+        float: left;
+      }
+
+    fieldset.memberForm .ctrlHolder .formColumn.last {      
+      width: 45px;
+    }
+
+  fieldset.memberForm .ctrlHolder .formColumn img {
+    margin: 11px 0 0 15px;
+  }
+
+  fieldset.memberForm .ctrlHolder.noFixedAddress a.button {
+    margin: 0;
+  }
+
+  fieldset.memberForm .ctrlHolder.noFixedAddress .noFixedAddressCheckBox {
+    float: left;
+    margin: 10px 30px;
+  }
+
+  fieldset.memberForm .ctrlHolder .checkboxRow {
+    float: left;
+    width: 640px;
+  }
+
+    fieldset.memberForm .ctrlHolder .checkboxRow .checkboxText {
+      float: left;
+      width: 590px;      
+    }
+
+  fieldset.memberForm .highlight_box {
+    padding: 10px 15px 20px 15px;
+    background: #eaeaea;
+    border: 1px solid #a7a7a7;
+  }
+
+    fieldset.memberForm .highlight_box input {
+      background: #FFF;
+    }
+
+fieldset.memberForm .ctrlHolder .memberRelationshipContainer,
+fieldset .ctrlHolder .memberRelationshipContainer {
+  float: left;
+  margin: 10px 45px 10px 15px;
+  width: 104px;
+}
+
+  fieldset.memberForm .ctrlHolder .memberRelationshipContainer .memberRelationship, 
+  fieldset .ctrlHolder .memberRelationshipContainer .memberRelationship  {
+    background: #eaeaea;
+    border: 1px solid #a7a7a7;
+    min-height: 68px;
+    padding: 15px;  
+    text-align: center;
+    text-decoration: none; 
+  }
+
+  fieldset.memberForm .ctrlHolder .memberRelationshipContainer p,
+  fieldset .ctrlHolder .memberRelationshipContainer p {
+    float: left;
+    font-size: 13px;
+    margin: 5px 0 0 0;
+    padding: 0 0 5px 0;
+  }
+
+  fieldset.memberForm .ctrlHolder .memberRelationshipContainer .memberRelationship div.selCheckbox {
+    margin: 10px 0 0 0;
+
+  }
+
+#pregnancyHeader {
+  padding-bottom: 20px;
+  font-weight: bold;
+}  
+
+  fieldset.memberForm .formEntryContentSelect.suffix,
+  fieldset .formEntryContentSelect.suffix {    
+    background: url(img/selectorArrow.png) no-repeat scroll 47px 8px #e2e3e3;
+    float: left;
+    margin: 0;
+    width: 64px;
+  }
+
+     fieldset.memberForm .formEntryContentSelect.suffix select,
+     fieldset .formEntryContentSelect.suffix select { 
+      width: 64px; 
+     }
+
+  fieldset.memberForm .formEntryContentSelect.relationshipType,
+  fieldset .formEntryContentSelect.relationshipType {    
+    background: url(img/selectorArrow.png) no-repeat scroll 110px 8px #e2e3e3;
+    float: left;
+    margin: 0 10px 0 0;
+    width: 128px;
+  }
+
+     fieldset.memberForm .formEntryContentSelect.relationshipType select,
+     fieldset .formEntryContentSelect.relationshipType select { 
+      width: 128px; 
+     }
+
+  fieldset.memberForm .formEntryContentSelect.address {    
+    background: url(img/selectorArrow.png) no-repeat scroll 96px 8px #e2e3e3;
+    margin-top: 0;
+    width: 118px;
+  }
+
+    fieldset.memberForm .formEntryContentSelect.address select { 
+      width: 118px;
+    }
+
+  fieldset.memberForm .formEntryContentSelect.state {    
+    background: url(img/selectorArrow.png) no-repeat scroll 50px 9px #e2e3e3;
+    float: left;
+    margin-top: 0;
+    margin-right: 10px;
+    width: 68px;
+  }
+
+    fieldset.memberForm .formEntryContentSelect.state select {
+      width: 60px;
+    }
+
+  fieldset.adjustmentForm .householdAdjustmentSelect.adjustment {    
+    background: url(img/selectorArrow.png) no-repeat scroll 147px 8px #e2e3e3;
+    margin-top: 0;
+    width: 175px;
+  }
+
+     fieldset.adjustmentForm .householdAdjustmentSelect.adjustment select { 
+      width: 175px; 
+     }
+
+  fieldset.memberForm .formEntryContentSelect.relationship { 
+    background: url(img/selectorArrow.png) no-repeat scroll 307px 8px #e2e3e3;
+    margin-top: 0;
+    width: 330px;
+  }
+
+    fieldset.memberForm .formEntryContentSelect.relationship select { 
+      width: 330px;
+    }
+
+  fieldset.memberForm .formEntryContentSelect.businessType { 
+    background: url(img/selectorArrow.png) no-repeat scroll 294px 8px #e2e3e3;
+    float: left;
+    margin-top: 0;
+    width: 314px;
+  }
+
+    fieldset.memberForm .formEntryContentSelect.businessType select { 
+      width: 314px;
+    }
+
+  fieldset.memberForm .formEntryContentSelect.probationaryPeriod {
+    background: url(img/selectorArrow.png) no-repeat scroll 628px 8px #e2e3e3;
+    width: 655px;
+  }
+
+    fieldset.memberForm .formEntryContentSelect.probationaryPeriod select {
+      width: 655px;
+    }
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+fieldset.memberForm .formEntryContentSelect.accessPeriod {
+  float: left;
+  margin-right: 10px;
+}
+
+fieldset.memberForm .formEntryContent input {
+  margin-bottom: 5px;
+}
+
+fieldset.memberForm .formEntryContentSpacer select {
+  margin-right: 20px;
+}
+
+fieldset.memberForm .ctrlHolder .leftCol {
+  float: left;
+  width: 145px;
+}
+
+fieldset.memberForm .ctrlHolder .rightCol {
+  float: left;
+  width: 320px;
+}
+
+fieldset.memberForm .ctrlHolder .leftWideCol {
+  float: left;
+  width: 320px;
+}
+
+fieldset.memberForm .ctrlHolder .rightWideCol {
+  float: left;
+  width: 470px;
+}
+
+fieldset.confirmationForm .signature {
+  background: #eaeaea;
+  border: 1px solid #a7a7a7;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+  fieldset.confirmationForm .signature .signatureRow {
+    float: left;
+    margin: 0 0 5px 0;
+    width: 640px;
+  }
+
+    fieldset.confirmationForm .signature .signatureRow label {
+      font-family: 'Avenir_Medium';
+      color: #3c3a37;
+    }
+
+      fieldset.confirmationForm .signature .signatureRow label.title {
+        color: #034564;
+        font-family: 'Avenir_Black';
+        font-size: 17px;
+      }
+
+  fieldset.confirmationForm .signature label {
+    margin-right: 20px;
+  }
+
+  fieldset.confirmationForm .signature input.sig {
+    background-color: #FFF;
+    margin-right: 20px;
+  }
+
+  fieldset.confirmationForm .signature ul {
+    margin: 0 0 8px 0;
+  }
+
+  fieldset.confirmationForm .signature ul li {
+    color: #1a4a7a;
+    font-weight: bold;
+    text-align: center;
+  }
+
+   fieldset.confirmationForm .signature ul li span {
+    font-weight: normal;
+   }
+
+fieldset.combinePayrollTaxForm .leftHandContent {
+  padding: 20px;
+  margin: 0px 0px 0px 100px;
+  color: #063c5b;
+  font-family: 'Avenir_Black';
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  width: 170px;
+  text-align: center;
+}
+
+/*fieldset.combinePayrollTaxForm .leftHandContent img {
+  margin: 0px 0px 1px 0px;
+}*/
+
+fieldset.combinePayrollTaxForm .midHandContent {
+  color: #063c5b;
+  margin-top: 80px;
+  font-family: 'Avenir_Black';
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  width: 80px;
+}
+
+fieldset.combinePayrollTaxForm .rightHandContent {
+  padding: 20px;
+  margin: 0px 50px 0px 0px;
+  color: #063c5b;
+  font-family: 'Avenir_Black';
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  width: 180px;
+  text-align: right;
+}
+
+fieldset.combinePayrollTaxForm .rightHandContent .payrolltax{
+  padding: 20px;
+  margin: 0px 50px 0px 0px;
+  color: #063c5b;
+  font-family: 'Avenir_Black';
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  width: 180px;
+  text-align: center;
+}
+
+
+/*fieldset.combinePayrollTaxForm .rightHandContent img {
+  margin: 0px 0px 10px 0px;
+}*/
+
+fieldset.confirmationCongratsForm {
+  margin: 15px 0px 0px 0px;
+  font-family: 'Avenir_Medium';
+  font-size: 14px;
+  float: left;
+  margin-bottom: 50px;
+}
+
+  fieldset.confirmationCongratsForm label {
+    font-family: 'Avenir_Black';
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+/* =============================================================================
+   SHOP Forms
+   ========================================================================== */
+
+   fieldset.shop .ctrlHolder {
+    padding: 10px 15px 15px 15px;
+  }
+
+  fieldset.shop .ctrlHolder .column {
+    float: left;
+    margin-right: 40px;
+  } 
+
+    fieldset.shop .ctrlHolder .column label {
+      width: 110px;
+    }
+
+    fieldset.shop .ctrlHolder .column a img {
+      margin-top: 20px;
+    }
+
+  fieldset.shop .ctrlHolder label {
+    float: left;
+    margin: 5px 0;
+    width: 185px;
+  }   
+
+  fieldset.shop .ctrlHolder input {
+    float: left;
+  }
+
+    fieldset.shop .ctrlHolder label.long {
+      width: 310px;
+    }
+
+    fieldset.shop .ctrlHolder label.extraLong {
+      width: 420px;
+    }
+
+    fieldset.shop .ctrlHolder button {
+      float: none;
+      margin: 0 0 0 8px;
+    }
+
+    fieldset.shop .ctrlHolder ul {
+      margin: 0;
+    }
+
+   fieldset.shop .leftColumn {
+      border-right: 1px solid #ccc;
+      float: left;
+      margin-right: 20px;
+      width: 350px;
+   }
+
+   fieldset.shop .rightColumn {
+      float: left;
+      width: 300px;
+   }
+
+    fieldset.shop .leftColumn a,
+    fieldset.shop .rightColumn a {
+      font-size: 14px;
+    }
+
+    fieldset.shop .findAgentFields {
+      float: left;
+      width: 428px;
+    }
+
+      fieldset.shop .findAgentFields .ctrlHolder {
+        padding: 5px;
+      }
+
+        fieldset.shop .findAgentFields .ctrlHolder label,
+        fieldset.shop .findAgentFields .ctrlHolder input {
+          width: 160px;
+        }
+
+          fieldset.shop .findAgentFields .ctrlHolder label.name {
+            width: 60px;
+          }
+
+        fieldset.shop .findAgentFields .ctrlHolder .formEntryContentSelect {
+          background: url(img/selectorArrow.png) no-repeat scroll 152px 8px #e2e3e3;
+          float: left;
+          margin: 0;
+          width: 173px;
+        }
+
+          fieldset.shop .findAgentFields .ctrlHolder .formEntryContentSelect select {
+            width: 173px;
+          }
+
+
+/* Find Agent */
+fieldset.findAgent { }
+
+#pageContentAreaNoLeftNav  fieldset.findAgent section,
+#dashboardContent fieldset.findAgent section { 
+  border: 0;
+  float: left;
+}
+
+fieldset.findAgent .ctrlHolder {
+  padding: 10px 15px 10px 15px;
+  float: left;
+  width: 680px;
+}
+
+  fieldset.findAgent .ctrlHolder .leftCol {
+    float: left;
+    margin-right: 20px;
+    width: 330px;
+  }
+
+  fieldset.findAgent .ctrlHolder .rightCol {
+    float: left;
+    width: 330px;
+  }
+
+    fieldset.findAgent .ctrlHolder .leftCol label,
+    fieldset.findAgent .ctrlHolder .rightCol label {
+      float: left;
+      margin-right: 10px;
+      width: 125px;
+    }
+
+    fieldset.findAgent .ctrlHolder .formEntryContentSelect {
+      background: url(img/selectorArrow.png) no-repeat scroll 163px 8px #e2e3e3;
+      float: left;
+      margin-top: 0;
+      width: 189px;
+    }
+
+      fieldset.findAgent .ctrlHolder .formEntryContentSelect select {
+        width: 189px;
+      }
+
+
+    fieldset.findAgent .CPASarchButton {
+      float: left;
+      margin: 75px 20px;
+    }
+
+
+/* Table - SHOP */
+
+  table.shop {
+    border: 1px solid #DEDEDE ;
+  }
+    
+    table.shop th {
+      background: #063c5b;
+      border: 1px solid #FFF;
+      color: #FFF;
+    }
+
+    table.shop tr td {
+      border: 1px solid #FFF;
+      padding: 6px 20px 6px 10px;
+    }
+
+    table.shop tr:nth-child(even) {
+      background: #cccccc;
+    }
+
+    table.shop tr:nth-child(odd) {
+      background: #eaeaea;
+    }
+
+
+  #pageContentArea .coveragePlanSummary {  }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader1 {
+      font-family: 'Avenir_Medium';
+      font-size: 12px; 
+      margin-bottom: 10px;
+    }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader1 .column1 {
+        float: left;
+        width: 110px;
+        margin-left: 5px;
+        margin-right: 20px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader1 .column2 {
+        float: left;
+        width: 140px;
+        margin-right: 170px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader1 .column3 {
+        float: left;
+        width: 50px;
+        margin-right: 15px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader1 .column4 {
+        float: left;
+        width: 130px;
+      }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader2 {
+      font-family: 'Avenir_Black';
+      font-size: 16px; 
+      font-weight: bold;
+      background: #eaeaea;
+      margin-bottom: 10px;
+      padding: 5px 0;
+    }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader2 .column1 {
+        float: left;
+        width: 50px;
+        margin-left: 5px;
+        margin-right: 20px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader2 .column2 {
+        float: left;
+        width: 140px;
+        margin-right: 175px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader2 .column3 {
+        float: left;
+        width: 140px;
+        margin-right: 35px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryHeader2 .column4 {
+        float: left;
+        width: 70px;
+      }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryDetails {
+      font-family: 'Avenir_Medium';
+      font-size: 12px;
+      padding: 10px;
+      border-bottom: 1px solid #a7a7a7;
+    }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryDetails .column1 {
+        float: left;
+        width: 50px;
+        margin-left: 5px;
+        margin-right: 20px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryDetails .column2 {
+        float: left;
+        width: 300px;
+        margin-right: 15px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryDetails .column2 .column2_1 {
+        float: left;
+        width: 170px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryDetails .column2 .column2_2 {
+        float: left;
+        width: 130px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryDetails .column3 {
+        float: left;
+        width: 140px;
+        margin-right: 35px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryDetails .column4 {
+        float: left;
+        width: 70px;
+      }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryQuestions {
+      font-family: 'Avenir_Medium';
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryBalanceDue {
+      font-family: 'Avenir_Black';
+      font-size: 14px;
+      padding: 10px;
+      font-weight: bold;
+      background: #eaeaea;
+    }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryBalanceDue .column1 {
+        float: left;
+        width: 200px;
+        margin-right: 390px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryBalanceDue .column2 {
+        float: left;
+        width: 40px;
+      }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryPayState {
+      font-family: 'Avenir_Medium';
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryPayOptions {
+      font-family: 'Avenir_Medium';
+      font-size: 14px;
+      padding-left: 10px ;
+    }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryPayOptions h4 {
+      float: none;
+    }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryPayOptions .column1 label {        
+        font-weight: bold;
+        font-size: 18px;
+        margin: 5px 0px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryPayOptions .column2 label{
+        margin: 5px 0px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryPayOptions .column3 {
+        margin-bottom: 10px;
+        padding: 5px 0px;
+      }
+
+        #pageContentArea .coveragePlanSummary .coveragePlanSummaryPayOptions .column3 ul li {
+          float: none;
+          margin-bottom: 5px;
+        }
+
+    #pageContentArea .coveragePlanSummary .coveragePlanSummaryFinal {
+      font-family: 'Avenir_Medium';
+      font-size: 14px;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      color: #3c3a37;
+    }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryFinal .column {
+        float: left;
+        margin-right: 20px;
+        width: 160px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryFinal .column2 {
+        float: left;
+        width: 40px;
+        margin: 0px 5px;
+      }
+
+       #pageContentArea .coveragePlanSummary .coveragePlanSummaryFinal .column1,
+       #pageContentArea .coveragePlanSummary .coveragePlanSummaryFinal .column3 {
+        float: left;
+        margin-right: 20px;
+        width: 250px;
+      }
+
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryFinal .column p,
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryFinal .column1 p,
+      #pageContentArea .coveragePlanSummary .coveragePlanSummaryFinal .column3 p {
+        font-family: 'Avenir_Book';
+        padding-bottom: 10px;
+      }
+
+/* =============================================================================
+   Access to Coverage Form
+   ========================================================================== */
+
+  fieldset .ctrlHolder label.coverage {
+    float: left;
+    width: 465px;
+  }
+
+  fieldset .formEntryContentSelect.coverage {
+    background: url(img/selectorArrow.png) no-repeat scroll 142px 8px #e2e3e3;
+    width: 165px;
+  }
+
+  fieldset .formEntryContentSelect.coverage select {
+    width: 165px;
+  }
+
+ fieldset .ctrlHolder ul.coverage {
+  float: left;
+  margin: 0;
+}
