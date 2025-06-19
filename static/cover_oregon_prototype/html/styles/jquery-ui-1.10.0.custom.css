@@ -1,0 +1,314 @@
+/* jQuery UI 1.10.0 Custom CSS for Cover Oregon Prototype */
+
+/* jQuery UI Theme - Custom Blue Theme */
+.ui-widget {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+.ui-widget .ui-widget {
+    font-size: 1em;
+}
+
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+.ui-widget-content {
+    border: 1px solid #2c5aa0;
+    background: #ffffff;
+    color: #333333;
+}
+
+.ui-widget-content a {
+    color: #2c5aa0;
+}
+
+.ui-widget-header {
+    border: 1px solid #1e3a5f;
+    background: #2c5aa0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.ui-widget-header a {
+    color: #ffffff;
+}
+
+/* Button styles */
+.ui-button {
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 1em;
+    line-height: 1.4;
+    margin-right: 0.1em;
+    cursor: pointer;
+    text-align: center;
+    zoom: 1;
+    overflow: visible;
+    text-decoration: none;
+    background: #2c5aa0;
+    color: #ffffff;
+    border: 1px solid #1e3a5f;
+    border-radius: 4px;
+}
+
+.ui-button:hover,
+.ui-button:focus {
+    background: #1e3a5f;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ui-button:active {
+    background: #1e3a5f;
+    color: #ffffff;
+}
+
+/* Dialog styles */
+.ui-dialog {
+    position: fixed;
+    padding: 0.2em;
+    outline: 0;
+    border: 1px solid #2c5aa0;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0.4em 1em;
+    position: relative;
+    background: #2c5aa0;
+    color: #ffffff;
+    border-radius: 4px 4px 0 0;
+}
+
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: 0.1em 0;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    position: absolute;
+    right: 0.3em;
+    top: 50%;
+    width: 20px;
+    margin: -10px 0 0 0;
+    padding: 1px;
+    height: 20px;
+    background: #1e3a5f;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ui-dialog .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: 0.5em 1em;
+    background: transparent;
+    overflow: auto;
+    zoom: 1;
+}
+
+/* Accordion styles */
+.ui-accordion .ui-accordion-header {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 2px 0 0 0;
+    padding: 0.5em 0.5em 0.5em 0.7em;
+    font-size: 100%;
+    background: #2c5aa0;
+    color: #ffffff;
+    border: 1px solid #1e3a5f;
+    border-radius: 4px;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 1em 2.2em;
+    border-top: 0;
+    overflow: auto;
+    zoom: 1;
+    background: #ffffff;
+    border: 1px solid #2c5aa0;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Tabs styles */
+.ui-tabs {
+    position: relative;
+    padding: 0.2em;
+    zoom: 1;
+}
+
+.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: 0.2em 0.2em 0;
+    background: #2c5aa0;
+    border-radius: 4px 4px 0 0;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 0;
+    margin: 1px 0.2em 0 0;
+    border-bottom-width: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    float: left;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #ffffff;
+    background: #1e3a5f;
+    border-radius: 4px 4px 0 0;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    background: #ffffff;
+    color: #2c5aa0;
+}
+
+.ui-tabs .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 1em 1.4em;
+    background: #ffffff;
+    border: 1px solid #2c5aa0;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Datepicker styles */
+.ui-datepicker {
+    width: 17em;
+    padding: 0.2em 0.2em 0;
+    background: #ffffff;
+    border: 1px solid #2c5aa0;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: 0.2em 0;
+    background: #2c5aa0;
+    color: #ffffff;
+    border-radius: 4px 4px 0 0;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
+    background: #1e3a5f;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    left: 2px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+    right: 2px;
+}
+
+.ui-datepicker table {
+    width: 100%;
+    font-size: 0.9em;
+    border-collapse: collapse;
+    margin: 0 0 0.4em;
+}
+
+.ui-datepicker th {
+    padding: 0.7em 0.3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+    background: #f8f9fa;
+}
+
+.ui-datepicker td {
+    border: 0;
+    padding: 1px;
+}
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+    display: block;
+    padding: 0.2em;
+    text-align: right;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.ui-datepicker td a {
+    background: #ffffff;
+    color: #333333;
+}
+
+.ui-datepicker td a:hover {
+    background: #2c5aa0;
+    color: #ffffff;
+}
+
+.ui-datepicker td a.ui-state-active {
+    background: #2c5aa0;
+    color: #ffffff;
+}
+
+/* Autocomplete styles */
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+    background: #ffffff;
+    border: 1px solid #2c5aa0;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ui-autocomplete .ui-menu-item {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.ui-autocomplete .ui-menu-item:hover {
+    background: #2c5aa0;
+    color: #ffffff;
+}
+
+.ui-autocomplete .ui-menu-item:last-child {
+    border-bottom: none;
+} 
