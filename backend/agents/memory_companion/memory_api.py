@@ -137,13 +137,20 @@ def chat():
         else:
             return jsonify({'error': 'Unsupported provider'}), 400
         
-        # Add the interaction to timeline
+        # Add the conversation as a single timeline entry with unique ID
+        timeline_id = len(memory['timeline']) + 1
         memory['timeline'].append({
+            'id': timeline_id,
             'timestamp': datetime.utcnow().isoformat(),
-            'type': 'chat',
+            'type': 'conversation',
             'user_id': current_user.id,
-            'message': message,
-            'response': response_text
+            'content': f"User: {message}\nEunoia: {response_text}",
+            'details': {
+                'user_message': message,
+                'eunoia_response': response_text,
+                'provider': provider,
+                'model': model
+            }
         })
         save_memory(memory)
         
@@ -160,7 +167,11 @@ def add_timeline_event():
     data = request.get_json()
     memory = load_memory()
     
+    # Generate unique ID for the timeline event
+    timeline_id = len(memory['timeline']) + 1
+    
     event = {
+        'id': timeline_id,
         'timestamp': datetime.utcnow().isoformat(),
         'type': data.get('type', 'note'),
         'content': data.get('content'),
@@ -214,11 +225,15 @@ def update_timeline_event(event_id):
     data = request.get_json()
     memory = load_memory()
     
-    # Find the event by index (since we don't have explicit IDs)
-    if event_id < 0 or event_id >= len(memory['timeline']):
-        return jsonify({'error': 'Timeline event not found'}), 404
+    # Find the event by ID
+    event = None
+    for timeline_event in memory['timeline']:
+        if timeline_event.get('id') == event_id:
+            event = timeline_event
+            break
     
-    event = memory['timeline'][event_id]
+    if not event:
+        return jsonify({'error': 'Timeline event not found'}), 404
     
     # Update fields if provided
     if 'content' in data:

@@ -176,6 +176,9 @@
                         <div class="form-text text-muted mt-1">
                             Eunoia is connected to a real LLM. API responses may take a moment to process.
                         </div>
+                        <div class="form-text text-muted mt-1">
+                            <small><strong>Quick Commands:</strong> "refresh timeline", "add timeline: [event]", "add opportunity: [title] | [description] | [priority]"</small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,9 +314,19 @@
                 data.timeline.forEach(event => {
                     const item = document.createElement('div');
                     item.classList.add('timeline-item');
+                    
+                    // Format the content based on event type
+                    let displayContent = event.content || 'No content';
+                    if (event.type === 'conversation' && event.details) {
+                        // For conversations, show a more compact format
+                        const userMessage = event.details.user_message || '';
+                        const eunoiaResponse = event.details.eunoia_response || '';
+                        displayContent = `User: ${userMessage.substring(0, 100)}${userMessage.length > 100 ? '...' : ''}`;
+                    }
+                    
                     item.innerHTML = `
-                        <strong>${new Date(event.timestamp).toLocaleDateString()}</strong>
-                        <p>${event.content}</p>
+                        <strong>${new Date(event.timestamp).toLocaleDateString()} (ID: ${event.id || 'N/A'})</strong>
+                        <p>${displayContent}</p>
                     `;
                     timelineContainer.appendChild(item);
                 });
@@ -430,6 +443,48 @@
             // Check for commands
             const lowerMessage = message.toLowerCase();
             
+            // Help command
+            if (lowerMessage === 'help' || lowerMessage === 'commands') {
+                addMessage(`Here are the available commands:
+
+**Refresh Commands:**
+- "refresh timeline" or "refresh memory" - Updates the memory journal with latest data
+
+**Timeline Commands (for significant milestones only):**
+- "add timeline: [event description]" - Adds a new timeline event
+- "add event: [event description]" - Same as above
+- "update timeline [ID]: [new content]" - Updates a specific timeline event by ID
+- "update event [ID]: [new content]" - Same as above
+
+**Opportunity Commands:**
+- "add opportunity: [title] | [description] | [priority]" - Adds a new opportunity
+- "add opp: [title] | [description] | [priority]" - Same as above
+- "update opportunity [number]: [updates]" - Updates a specific opportunity
+- "update opp [number]: [updates]" - Same as above
+
+**Examples of good timeline entries:**
+- "add timeline: Sprint 1 started - Initial project setup"
+- "add timeline: Database migration to PostgreSQL completed"
+- "add timeline: User authentication system implemented"
+- "add timeline: Memory Companion feature deployed"
+
+**Examples of opportunities:**
+- "add opportunity: AWS Deployment | Set up AWS infrastructure | high"
+- "add opportunity: Add TTS Features | Implement text-to-speech | medium"
+
+You can also just chat normally with me about your project!`, 'eunoia');
+                return;
+            }
+            
+            // Refresh timeline command
+            if (lowerMessage === 'refresh timeline' || lowerMessage === 'refresh memory' || lowerMessage === 'refresh') {
+                showThinking();
+                await initializeMemoryJournal();
+                hideThinking();
+                addMessage("I've refreshed my memory journal. The timeline and other project data are now up to date.", 'eunoia');
+                return;
+            }
+            
             // Timeline event commands
             if (lowerMessage.startsWith('add timeline:') || lowerMessage.startsWith('add event:')) {
                 const content = message.substring(message.indexOf(':') + 1).trim();
@@ -445,7 +500,7 @@
             if (lowerMessage.startsWith('update timeline') || lowerMessage.startsWith('update event')) {
                 const match = message.match(/(\d+):\s*(.+)/);
                 if (match) {
-                    const eventId = parseInt(match[1]) - 1; // Convert to 0-based index
+                    const eventId = parseInt(match[1]); // Use the ID directly, not as array index
                     const content = match[2].trim();
                     showThinking();
                     await updateTimelineEvent(eventId, content);
