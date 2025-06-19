@@ -1,1 +1,65 @@
-<!DOCTYPE html><html><head><title>Home</title></head><body><h1>Eunoia Demo</h1><p>AI/UX Portfolio</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eunoia Demo - AI/UX Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .case-studies { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .case-study { background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease; }
+        .case-study:hover { transform: translateY(-5px); }
+        .case-study img { width: 100%; height: 200px; object-fit: cover; }
+        .case-study-content { padding: 20px; }
+        .case-study h3 { margin: 0 0 10px 0; color: #333; }
+        .case-study p { color: #666; margin: 0 0 15px 0; }
+        .btn { background: #667eea; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block; transition: background 0.3s ease; }
+        .btn:hover { background: #5a6fd8; }
+        .hero { text-align: center; margin-bottom: 60px; }
+        .hero h1 { font-size: 3em; margin: 0 0 20px 0; }
+        .hero p { font-size: 1.2em; opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="hero">
+            <h1>Eunoia Demo</h1>
+            <p>AI/UX Portfolio & Case Studies</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Featured Case Studies</h2>
+        <div class="case-studies">
+            <div class="case-study">
+                <img src="https://via.placeholder.com/400x200/0066cc/ffffff?text=Cover+Oregon" alt="Cover Oregon">
+                <div class="case-study-content">
+                    <h3>Cover Oregon Healthcare Exchange</h3>
+                    <p>UX/UI design for Oregon's healthcare exchange platform, helping residents find and enroll in affordable health insurance plans.</p>
+                    <a href="/cover-oregon" class="btn">View Case Study</a>
+                </div>
+            </div>
+            
+            <div class="case-study">
+                <img src="https://via.placeholder.com/400x200/667eea/ffffff?text=AI+Agents" alt="AI Agents">
+                <div class="case-study-content">
+                    <h3>AI Agent Systems</h3>
+                    <p>Multi-agent AI systems for intelligent automation and decision support in complex workflows.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </div>
+            
+            <div class="case-study">
+                <img src="https://via.placeholder.com/400x200/764ba2/ffffff?text=Research" alt="Research">
+                <div class="case-study-content">
+                    <h3>Research & Development</h3>
+                    <p>Innovative approaches to user experience design and artificial intelligence integration.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
