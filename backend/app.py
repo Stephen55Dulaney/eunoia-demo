@@ -21,20 +21,20 @@ except ImportError:
     prompt_bp = None
 
 try:
-    from backend.agents.orchestrator import orchestrator
+    from .agents.orchestrator import orchestrator
 except ImportError:
     print("Warning: orchestrator module not found. Some features may be disabled.")
     orchestrator = None
 
 try:
-    from backend.agents.messaging import send_message, get_messages
+    from .agents.messaging import send_message, get_messages
 except ImportError:
     print("Warning: messaging module not found. Some features may be disabled.")
     send_message = None
     get_messages = None
 
 try:
-    from backend.agents.memory_companion import memory_companion_bp
+    from .agents.memory_companion import memory_companion_bp
 except ImportError:
     print("Warning: memory_companion module not found. Some features may be disabled.")
     memory_companion_bp = None
@@ -451,6 +451,12 @@ def eunoia_research_council():
 @demo_or_login_required
 def eunoia_memory_companion():
     return render_template('case_studies/eunoia_memory_companion.html')
+
+# This is a placeholder for a potential future route
+@app.route('/case_studies/cover-oregon-prototype')
+@demo_or_login_required
+def cover_oregon_prototype(filename='index.html'):
+    return redirect(url_for('static', filename=f'cover_oregon_prototype/html/{filename}'))
 
 # User management routes
 @app.route('/users')
@@ -1309,11 +1315,6 @@ if memory_companion_bp:
 @demo_or_login_required
 def memory_companion_demo():
     return render_template('agents/memory_companion/eunoia_memory_companion.html')
-
-@app.route('/cover-oregon-prototype/')
-@app.route('/cover-oregon-prototype/<path:filename>')
-def cover_oregon_prototype(filename='index.html'):
-    return redirect(url_for('static', filename=f'cover_oregon_prototype/html/{filename}'))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5050) 

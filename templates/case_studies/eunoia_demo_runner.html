@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eunoia Research Council - Workflow Simulation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .agent-message {
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            max-width: 90%;
+            animation: fadeIn 0.5s ease-in-out;
+            margin-bottom: 1rem;
+        }
+        .from-eunoia { background-color: #4a5568; color: white; align-self: flex-start; }
+        .to-eunoia { background-color: #2f855a; color: white; align-self: flex-start; margin-left: 2rem; }
+        .artifact-display {
+            background-color: #1a202c;
+            border: 1px solid #4a5568;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 2rem;
+            animation: flashIn 0.8s ease-in-out;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            color: #cbd5e0;
+        }
+        .artifact-display h4 {
+            font-weight: bold;
+            border-bottom: 1px solid #4a5568;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes flashIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1.02); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+<section id="demo" class="max-w-6xl mx-auto">
+  <h1 class="text-3xl md:text-4xl font-bold mb-2 text-gray-800 text-center">Live Agentic Workflow Simulation</h1>
+  <p class="text-center text-gray-600 mb-6">A step-by-step demonstration of the Eunoia Research Council in action.</p>
+  <div class="text-center mb-6">
+    <button id="start-demo-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">▶️ Start Discovery Workflow</button>
+  </div>
+  <div class="bg-gray-800 rounded-lg shadow-inner p-4" style="height: 80vh; display: flex; flex-direction: column;">
+    <div id="demo-header" class="text-white font-mono border-b border-gray-600 pb-2 mb-2">
+      > Eunoia Research Council - Live Feed
+    </div>
+    <div id="demo-screen" class="flex-1 overflow-y-auto space-y-4 font-mono text-sm text-gray-300 p-2">
+      <!-- Demo content will be injected here -->
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const startBtn = document.getElementById('start-demo-btn');
+    const demoScreen = document.getElementById('demo-screen');
+    const artifacts = {
+        discoveryPlan: `<h4>Artifact: Discovery Plan (JSON)</h4><pre>{\n  "project_id": "PROJ-2025-01",\n  "project_name": "New Mobile App Feature",\n  "timeline_weeks": 8,\n  "phases": [\n    { "phase": 1, "name": "Kick-off & Alignment", "duration": 1 },\n    { "phase": 2, "name": "Individual Interviews", "duration": 4 },\n    { "phase": 3, "name": "Synthesis & Analysis", "duration": 2 },\n    { "phase": 4, "name": "Opportunity & Debrief", "duration": 1 }\n  ]\n}</pre>`,
+        interviewGuide: `<h4>Artifact: Interview Discussion Guide</h4><pre>**Objective:** Understand user needs for the new mobile feature.\n\n**Core Topics:**\n- What are your biggest challenges with [task]?\n- If you had a magic wand, what would you change?\n- How would a feature like [description] impact your workflow?</pre>`,
+        persona: `<h4>Artifact: Sample Persona</h4><div style="border-left: 4px solid #764ba2; padding-left: 1rem;"><h5 style="color: white;">Alex "The Efficient Achiever"</h5><p><strong>Goal:</strong> Track team progress without constant meetings.</p><p><strong>Frustration:</strong> "I waste too much time chasing status updates."</p></div>`,
+        journeyMap: `<h4>Artifact: Sample Journey Map</h4><pre>**Awareness:** Learns about new feature from newsletter.\n  - Pain Point: "Is this another feature I don't need?"\n\n**Usage:** Tries the feature for the first time.\n  - Pain Point: "The UI is not intuitive."\n\n**Adoption:** Uses feature regularly.\n  - Delight: "This saves me an hour a day!"</pre>`,
+        opportunityReport: `<h4>Artifact: Opportunity Analysis</h4><pre>1. **Simplify Onboarding:** Create an in-app tutorial. (Impact: High)\n2. **Improve UI Clarity:** Redesign the main dashboard. (Impact: High)\n3. **Automate Reporting:** Add a weekly summary email. (Impact: Medium)</pre>`,
+        assumptionReport: `<h4>Artifact: Assumption Report (by Skeptica)</h4><pre>- **Assumption:** Users read the newsletter.\n  - **Finding:** Only 3/10 participants did.\n  - **Risk:** Low. Mitigate with in-app notifications.\n\n- **Assumption:** Users understand technical jargon.\n  - **Finding:** 8/10 were confused.\n  - **Risk:** High. We must simplify our language.</pre>`,
+        debriefGuide: `<h4>Artifact: Discovery Debrief Guide</h4><pre>**Agenda:**\n1. Review Key Findings (15 mins)\n2. Walkthrough of Personas & Journey Map (20 mins)\n3. Align on Next Steps (10 mins)</pre>`
+    };
+    const demoScript = [
+        { delay: 1000, sender: 'You', receiver: 'Synthia', message: 'Hi Synthia, we have a new project. Can you help stand up a discovery plan?' },
+        { delay: 2000, sender: 'Synthia', receiver: 'Eunoia', message: 'Of course. I have drafted a discovery plan. Sending to you for orchestration, Eunoia.', artifact: artifacts.discoveryPlan },
+        { delay: 1000, sender: 'Inspectica', receiver: 'Eunoia', message: 'Audit Log: Synthia created discovery plan. Conforms to schema.' },
+        { delay: 2000, sender: 'Eunoia', receiver: 'Askia', message: 'Thanks, Synthia. Askia, please generate discussion guides.' },
+        { delay: 3000, sender: 'Askia', receiver: 'Thesea', message: 'Guides are ready. Thesea, please begin scheduling the interviews.', artifact: artifacts.interviewGuide },
+        { delay: 2000, sender: 'Thesea', receiver: 'Participants', message: 'Simulating conducting 10 interviews... [Time Passes]' },
+        { delay: 3000, sender: 'Thesea', receiver: 'Eunoia', message: 'Interviewing complete. I have synthesized a primary persona.', artifact: artifacts.persona },
+        { delay: 2000, sender: 'Eunoia', receiver: 'Odessia', message: 'Excellent work. Odessia, please generate a journey map.' },
+        { delay: 3000, sender: 'Odessia', receiver: 'Eunoia', message: 'Journey map is complete.', artifact: artifacts.journeyMap },
+        { delay: 1000, sender: 'Inspectica', receiver: 'Eunoia', message: 'Audit Log: Personas and Journey Map artifacts are stored. Integrity check passed.'},
+        { delay: 2000, sender: 'Eunoia', receiver: 'Eurekia', message: 'Great progress. Eurekia, please generate an opportunity report.'},
+        { delay: 3000, sender: 'Eurekia', receiver: 'Eunoia', message: 'Opportunity analysis is complete.', artifact: artifacts.opportunityReport },
+        { delay: 2000, sender: 'Eunoia', receiver: 'Skeptica', message: 'Skeptica, please review for faulty assumptions.'},
+        { delay: 3000, sender: 'Skeptica', receiver: 'Eunoia', message: 'Review complete. I found two critical assumptions.', artifact: artifacts.assumptionReport },
+        { delay: 2000, sender: 'Eunoia', receiver: 'Askia', message: 'Discovery work is complete. Askia, prepare a debrief guide.'},
+        { delay: 2000, sender: 'Askia', receiver: 'Team', message: 'Debrief guide is ready.', artifact: artifacts.debriefGuide },
+        { delay: 1000, sender: 'Eunoia', receiver: 'System', message: 'Workflow demo complete.'},
+    ];
+    async function runDemo() {
+        if (!startBtn || !demoScreen) return;
+        startBtn.disabled = true;
+        startBtn.innerHTML = '▶️ Running Workflow...';
+        demoScreen.innerHTML = '';
+        for (const step of demoScript) {
+            await new Promise(resolve => setTimeout(resolve, step.delay));
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'agent-message from-eunoia';
+            messageDiv.innerHTML = `<strong>${step.sender} → ${step.receiver}:</strong> ${step.message}`;
+            demoScreen.appendChild(messageDiv);
+            if (step.artifact) {
+                const artifactDiv = document.createElement('div');
+                artifactDiv.className = 'artifact-display';
+                artifactDiv.innerHTML = step.artifact;
+                demoScreen.appendChild(artifactDiv);
+            }
+            demoScreen.scrollTop = demoScreen.scrollHeight;
+        }
+        startBtn.disabled = false;
+        startBtn.innerHTML = '▶️ Re-run Discovery Workflow';
+    }
+    startBtn.addEventListener('click', runDemo);
+});
+</script>
+
+</body>
+</html> 
