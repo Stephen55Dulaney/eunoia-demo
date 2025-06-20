@@ -14,7 +14,7 @@
   <!-- Eunoia Research Council Card -->
   <div class="eo-card bg-white rounded-xl shadow-xl overflow-hidden flex flex-col justify-between">
     <div class="p-8 flex-1 flex flex-col">
-      <h2 class="text-2xl font-bold text-indigo-700 mb-3">Eunoia Research Council</h2>
+      <h2 class="text-2xl font-bold text-indigo-700 mb-3"><a href="{{ url_for('eunoia_research_council') }}" class="text-indigo-700 hover:underline">Eunoia Research Council</a></h2>
       <p class="text-gray-700 mb-4 flex-1">A modular, version-controlled prompt management system for AI-powered research assistants.</p>
       <a href="{{ url_for('eunoia_research_council') }}" class="eo-btn eo-btn-primary w-full">View Case Study</a>
     </div>
@@ -22,15 +22,15 @@
   <!-- Cover Oregon Card -->
   <div class="eo-card bg-white rounded-xl shadow-xl overflow-hidden flex flex-col justify-between">
     <div class="p-8 flex-1 flex flex-col">
-      <h2 class="text-2xl font-bold text-indigo-700 mb-3">Cover Oregon</h2>
+      <h2 class="text-2xl font-bold text-indigo-700 mb-3"><a href="{{ url_for('cover_oregon_prototype', filename='index.html') }}" class="text-indigo-700 hover:underline">Cover Oregon</a></h2>
       <p class="text-gray-700 mb-4 flex-1">UX Case Study: Experience Architecture & Usability Lead – Stephen Dulaney</p>
-      <a href="{{ url_for('cover_oregon') }}" class="eo-btn eo-btn-primary w-full">View Case Study</a>
+      <a href="{{ url_for('cover_oregon_prototype', filename='index.html') }}" class="eo-btn eo-btn-primary w-full">View Interactive Prototype</a>
     </div>
   </div>
   <!-- Eunoia Memory Companion Card -->
   <div class="eo-card bg-white rounded-xl shadow-xl overflow-hidden flex flex-col justify-between">
     <div class="p-8 flex-1 flex flex-col">
-      <h2 class="text-2xl font-bold text-indigo-700 mb-3">Eunoia Memory Companion</h2>
+      <h2 class="text-2xl font-bold text-indigo-700 mb-3"><a href="{{ url_for('eunoia_memory_companion') }}" class="text-indigo-700 hover:underline">Eunoia Memory Companion</a></h2>
       <p class="text-gray-700 mb-4 flex-1">A modular, persistent memory system for AI research assistants. Enables continuity, structured journaling, and context-aware LLM responses across research projects.</p>
       <a href="{{ url_for('eunoia_memory_companion') }}" class="eo-btn eo-btn-primary w-full">View Case Study</a>
     </div>
