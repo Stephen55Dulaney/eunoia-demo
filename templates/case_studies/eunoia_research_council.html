@@ -574,50 +574,52 @@
 
   <!-- Outcomes & Impact -->
   <section id="outcomes" class="eo-card bg-white p-8 rounded-xl shadow-xl mb-8">
-    <h2 class="text-3xl font-bold mb-6 text-gray-800">Outcomes & Impact</h2>
-    <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
-      <div>
-        <h3 class="text-2xl font-semibold mb-4">Before & After</h3>
-        <ul class="space-y-3">
-          <li class="flex items-center">
-            <span class="text-red-500 mr-2">❌</span>
-            <span class="line-through mr-2">~50% manual tracking</span>
-            <span class="text-green-500 mr-2">→</span>
-            <span class="font-semibold text-green-600">100% tracked & diffed</span>
-          </li>
-          <li class="flex items-center">
-            <span class="text-red-500 mr-2">❌</span>
-            <span class="line-through mr-2">~5 days</span>
-            <span class="text-green-500 mr-2">→</span>
-            <span class="font-semibold text-green-600">~2 days</span>
-          </li>
-          <li class="flex items-center">
-            <span class="text-red-500 mr-2">❌</span>
-            <span class="line-through mr-2">20% reproducible</span>
-            <span class="text-green-500 mr-2">→</span>
-            <span class="font-semibold text-green-600">100% reproducible in saved sessions</span>
-          </li>
-        </ul>
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Outcomes & Impact</h2>
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
+          <div>
+              <h3 class="text-2xl font-semibold mb-4 text-gray-700">Before & After</h3>
+              <ul class="space-y-3">
+                  <li class="flex items-center text-lg">
+                      <span class="text-red-500 mr-3 text-xl">❌</span>
+                      <span class="line-through text-gray-500">~50% manual tracking</span>
+                      <span class="text-green-500 mx-2">→</span>
+                      <span class="font-semibold text-green-600">100% tracked & diffed</span>
+                  </li>
+                  <li class="flex items-center text-lg">
+                      <span class="text-red-500 mr-3 text-xl">❌</span>
+                      <span class="line-through text-gray-500">~5 days</span>
+                      <span class="text-green-500 mx-2">→</span>
+                      <span class="font-semibold text-green-600">~2 days</span>
+                  </li>
+                  <li class="flex items-center text-lg">
+                      <span class="text-red-500 mr-3 text-xl">❌</span>
+                      <span class="line-through text-gray-500">20% reproducible</span>
+                      <span class="text-green-500 mx-2">→</span>
+                      <span class="font-semibold text-green-600">100% reproducible in saved sessions</span>
+                  </li>
+              </ul>
+          </div>
+          <div class="text-center bg-gray-50 p-4 rounded-lg">
+              <img src="{{ url_for('static', filename='case_studies/impact-outcomes.png') }}" alt="Impact and outcomes visualization showing before/after comparisons" class="rounded-lg shadow-md mx-auto">
+              <p class="text-sm text-gray-600 mt-2 italic">Impact and outcomes visualization showing before/after comparisons for tracking coverage, onboarding speed, and reproducibility with detailed metrics and charts.</p>
+          </div>
       </div>
-      <div class="text-center">
-        <img src="{{ url_for('static', filename='images/eunoia_impact_outcomes.svg') }}" 
-             alt="Impact and outcomes visualization showing before/after comparisons for tracking coverage, onboarding speed, and reproducibility with detailed metrics and charts."
-             class="w-full h-auto rounded-lg shadow-lg">
+      
+      <h3 class="text-2xl font-semibold mb-4 text-gray-700">Testimonials</h3>
+      <div class="space-y-4">
+          <div class="testimonial p-4 bg-gray-50 rounded-lg border-l-4 border-green-500">
+              <p class="italic text-gray-800">"The modular prompt manager made it easy to experiment, iterate, and scale our research agents."</p>
+              <footer class="text-right text-gray-600 font-semibold mt-2">— UX Researcher</footer>
+          </div>
+          <div class="testimonial p-4 bg-gray-50 rounded-lg border-l-4 border-green-500">
+              <p class="italic text-gray-800">"Agent chaining UI eliminated endless scripting; I can visually validate data flows."</p>
+              <footer class="text-right text-gray-600 font-semibold mt-2">— AI Engineer</footer>
+          </div>
+          <div class="testimonial p-4 bg-gray-50 rounded-lg border-l-4 border-green-500">
+              <p class="italic text-gray-800">"Audit logs and replay feature give me confidence for compliance."</p>
+              <footer class="text-right text-gray-600 font-semibold mt-2">— Research Ops Manager</footer>
+          </div>
       </div>
-    </div>
-    
-    <h3 class="text-2xl font-semibold mb-4">Testimonials</h3>
-    <div class="space-y-4">
-      <div class="testimonial">
-        "The modular prompt manager made it easy to experiment, iterate, and scale our research agents." — UX Researcher
-      </div>
-      <div class="testimonial">
-        "Agent chaining UI eliminated endless scripting; I can visually validate data flows." — AI Engineer
-      </div>
-      <div class="testimonial">
-        "Audit logs and replay feature give me confidence for compliance." — Research Ops Manager
-      </div>
-    </div>
   </section>
 
   <!-- Reflections & Next Steps -->
