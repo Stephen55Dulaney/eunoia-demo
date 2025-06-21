@@ -24,6 +24,32 @@
     .eo-btn-primary:hover {
         background-color: #4338ca;
     }
+    .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ url_for('static', filename='cover_oregon_prototype/html/styles/img/CO_Mt. Hood-edited copy.jpg') }}") center center/cover no-repeat;
+    }
+    .info-box {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+        color: #FFFFFF;
+    }
+    .info-box p {
+        color: #FFFFFF;
+        padding-bottom: 0;
+    }
+    a.button.ghost {
+        background-color: transparent;
+        border: 2px solid #FFF;
+        color: #FFF;
+        text-shadow: none;
+    }
+    a.button.ghost:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #FFF;
+        text-decoration: none;
+    }
 </style>
 {% endblock %}
 
@@ -32,9 +58,20 @@
     <div class="container mx-auto px-6 py-12">
 
         <!-- Hero Section -->
-        <header class="text-center mb-16">
-            <h1 class="text-5xl font-extrabold text-gray-800 mb-4">Cover Oregon UX Case Study</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">A deep dive into the experience architecture and usability leadership for Oregon's Affordable Care Act health insurance exchange.</p>
+        <header class="hero-section text-white text-center py-20 rounded-2xl shadow-2xl mb-16">
+            <div class="hero-content">
+                <h1 class="text-5xl font-extrabold" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">Cover Oregon UX Case Study</h1>
+                <p class="text-xl mt-4 mb-8" style="color: #e5e7eb; text-shadow: 1px 1px 6px rgba(0,0,0,0.8);">Experience Architecture & Usability Lead: Stephen Dulaney</p>
+                <div class="info-box mb-8">
+                    <p class="mb-2"><strong>Role:</strong> UX Lead, Experience Architecture & Usability</p>
+                    <p class="mb-2"><strong>Engagement Period:</strong> July 2012 – May 2013</p>
+                    <p><strong>Focus:</strong> Enrollment workflow design & extensive usability testing</p>
+                </div>
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="{{ url_for('cover_oregon_prototype', filename='index.html') }}" class="button green getStarted">View Interactive Prototype</a>
+                    <a href="#context" class="button ghost">Learn More</a>
+                </div>
+            </div>
         </header>
 
         <!-- Key Info Cards -->
@@ -125,13 +162,13 @@
                     <p class="text-gray-700 text-sm italic border-t pt-4 mt-auto">"I want a quick overview of options and to know if my employees are enrolled."</p>
                 </div>
                 <div class="eo-card bg-white p-6 rounded-xl shadow-lg text-center flex flex-col">
-                    <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/persona-susan.png') }}" alt="Persona: Susan, The Assister" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/persona-eleanor.png') }}" alt="Persona: Susan, The Assister" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h4 class="text-lg font-bold text-indigo-700 mb-2">Susan, The Assister</h4>
                     <p class="text-gray-600 text-sm mb-4">Community health worker; needs multi-client support; requires clear admin tools.</p>
                     <p class="text-gray-700 text-sm italic border-t pt-4 mt-auto">"I need a dashboard to track my clients' progress and help them remotely."</p>
                 </div>
                 <div class="eo-card bg-white p-6 rounded-xl shadow-lg text-center flex flex-col">
-                    <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/persona-james.png') }}" alt="Persona: James, The Rural User" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <img src="{{ url_for('static', filename='cover_oregon_prototype/html/images/persona-robert.png') }}" alt="Persona: James, The Rural User" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
                     <h4 class="text-lg font-bold text-indigo-700 mb-2">James, The Rural User</h4>
                     <p class="text-gray-600 text-sm mb-4">Farmer with unreliable internet; values save/resume; needs clear offline options.</p>
                     <p class="text-gray-700 text-sm italic border-t pt-4 mt-auto">"My internet cuts out. I need to be able to save my application and come back later."</p>
@@ -210,7 +247,7 @@
 
         <!-- Final CTA -->
         <section class="text-center">
-             <a href="{{ url_for('cover_oregon_prototype', filename='index.html') }}" class="eo-btn-primary inline-block">View Interactive Prototype</a>
+             <a href="{{ url_for('cover_oregon_prototype', filename='index.html') }}" class="button green getStarted">View Interactive Prototype</a>
         </section>
 
     </div>

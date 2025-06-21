@@ -3,7 +3,7 @@
 {% block title %}Home - Eunoia{% endblock %}
 
 {% block content %}
-<section class="eo-hero-section" style="background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('/static/cover_oregon_prototype/html/styles/img/Homepage1.png') center center/cover no-repeat; color: #fff; min-height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 2.5rem; padding: 3rem 1rem;">
+<section class="eo-hero-section" style="background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('/static/cover_oregon_prototype/html/styles/img/multnomah_falls_homepage.jpg') center center/cover no-repeat; color: #fff; min-height: 340px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 1rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin-bottom: 2.5rem; padding: 3rem 1rem;">
   <h1 class="eo-hero-title text-5xl font-extrabold mb-4">Welcome to Eunoia</h1>
   <div style="background: rgba(0,0,0,0.7); color: #fff; border-radius: 0.5rem; padding: 0.75rem 1.5rem; max-width: 700px; margin: 0 auto 0.5rem auto;">
     <p class="text-xl font-medium mb-2" style="color: #fff;">Agentic AI for Research, Discovery, and Opportunity Mapping</p>
@@ -22,9 +22,9 @@
   <!-- Cover Oregon Card -->
   <div class="eo-card bg-white rounded-xl shadow-xl overflow-hidden flex flex-col justify-between">
     <div class="p-8 flex-1 flex flex-col">
-      <h2 class="text-2xl font-bold text-indigo-700 mb-3"><a href="{{ url_for('cover_oregon_prototype', filename='index.html') }}" class="text-indigo-700 hover:underline">Cover Oregon</a></h2>
+      <h2 class="text-2xl font-bold text-indigo-700 mb-3"><a href="{{ url_for('cover_oregon') }}" class="text-indigo-700 hover:underline">Cover Oregon</a></h2>
       <p class="text-gray-700 mb-4 flex-1">UX Case Study: Experience Architecture & Usability Lead – Stephen Dulaney</p>
-      <a href="{{ url_for('cover_oregon_prototype', filename='index.html') }}" class="eo-btn eo-btn-primary w-full">View Interactive Prototype</a>
+      <a href="{{ url_for('cover_oregon') }}" class="eo-btn eo-btn-primary w-full">View Case Study</a>
     </div>
   </div>
   <!-- Eunoia Memory Companion Card -->
